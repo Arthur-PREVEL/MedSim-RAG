@@ -18,6 +18,19 @@
 - **Inference**: 4-bit NF4 Quantization & SDPA (Scaled Dot Product Attention)
 - **Environment**: Python 3.11 / Conda
 
+## 📂 Data Information & Acquisition
+
+To keep this repository lightweight and respect storage limits, the provided `knowledge_base_extract.json` contains only **4 sample clinical records** for testing purposes. 
+
+To utilize the full simulation potential with the complete database of **9,500+ pathologies**, you must generate the dataset locally:
+
+1. Ensure you have the `pubmed-statpearls-set.txt` file in your directory.
+2. Run the acquisition script:
+   ```bash
+   python web_scrapping.py
+
+Note: The scraping process respects server *rate limits* and may take several hours to complete the full *9,500+* record set.
+
 ## 🚀 Getting Started
 
 ### 1. Environment Setup
