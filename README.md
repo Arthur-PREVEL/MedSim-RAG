@@ -4,7 +4,7 @@
 
 ## 🌟 Key Features
 
-- **Dual-Agent Architecture**:[cite: 1]
+- **Dual-Agent Architecture**:
   - **The Patient (Jean)**: A 70-year-old persona that describes symptoms in plain language, avoiding medical jargon to simulate a real-life clinical encounter.
   - **The Supervisor**: An AI evaluator that reviews the conversation transcript against gold-standard clinical data to provide feedback and a grade.
 - **Clinical Grounding (RAG)**: Powered by a database of **9,500+ pathologies** (StatPearls), ensuring responses are strictly based on verified medical knowledge.
@@ -27,18 +27,18 @@ conda create -n medsim_env python=3.11 -y
 conda activate medsim_env
 pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
 pip install transformers accelerate bitsandbytes sentencepiece
-```[cite: 1]
+```
 
-### 2. Knowledge Base[cite: 1]
+### 2. Knowledge Base
 Ensure your `knowledge_base_clean.json` (containing the 9,500 pathologies) is in the root directory.
 
-### 3. Run the Simulation[cite: 1]
-Launch the interactive patient simulation:[cite: 1]
+### 3. Run the Simulation
+Launch the interactive patient simulation:
 ```bash
 python medsim_patient.py
-```[cite: 1]
+```
 
-## 📊 Project Architecture[cite: 1]
+## 📊 Project Architecture
 
 1. **Retrieval**: System fetches relevant clinical data from the JSON database.
 2. **Context Injection**: Medical facts are formatted into a "System Prompt" to guide the LLM's persona.
