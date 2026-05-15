@@ -20,7 +20,7 @@ torch.cuda.empty_cache()
 JUDGE_MODEL = "BioMistral/BioMistral-7B-DARE"
 
 # UPDATED: Point to the new results directory
-TRANSCRIPT_PATH = "../results/biomistral/session_transcript.json"
+TRANSCRIPT_PATH = "../results/llama/session_transcript.json"
 
 def evaluate_session():
     orchestrator = MedSimOrchestrator()
@@ -67,7 +67,12 @@ def evaluate_session():
     {final_diagnosis_given}
     
     ### TASK:
-    Evaluate the student's performance based on the transcript and the clinical truth. Provide a grade out of 20 and specific feedback.
+    Evaluate the student on exactly these 4 criteria, each graded out of 5 points:
+    1. Diagnosis Comparison (out of 5)
+    2. Key Symptoms Comparison (out of 5)
+    3. Interview Technique (out of 5)
+    4. Clinical Justification (out of 5)
+    5. Then sum the 4 scores and give a TOTAL GRADE out of 20.
     [/INST]
 ### EVALUATION REPORT
 1. Diagnosis Comparison:""" # <-- The scaffolding hangs here!
@@ -78,18 +83,20 @@ def evaluate_session():
     with torch.inference_mode():
         outputs = model.generate(
             **inputs, 
-            max_new_tokens=400, 
+            max_new_tokens=600, 
             temperature=0.3, # Slightly higher to encourage more detailed feedback
             do_sample=True,
             repetition_penalty=1.1,
-            pad_token_id=tokenizer.eos_token_id
+            pad_token_id=tokenizer.eos_token_id,
+        eos_token_id=None
         )
     
     # 4. Clean up and format the output
     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
     # We re-attach the scaffold string so the final output reads cleanly
     evaluation = "1. Diagnosis Comparison:" + generated_text.split("1. Diagnosis Comparison:")[-1].strip()
-    
+    import re
+    evaluation = re.sub(r'(?<!\/)(\d+\.)\s', r'\n\1 ', evaluation).strip()
     print("\n" + "="*50)
     print("🎓 PROFESSOR EVALUATION")
     print("="*50)
