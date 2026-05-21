@@ -9,35 +9,35 @@
         },
         {
             "role": "Patient",
-            "content": "I'm so glad to be here. I've been having some trouble with my joints lately. My hands and knees are bothering me the most. Sometimes my fingers feel stiff in the morning, and it takes me a little while to get them moving. My hands also ache when I'm doing things like gardening or cooking. It's like my joints are creaking and groaning, you know? And my knees... well, they're just sore, especially after I've been sitting for a while. It's like I've been doing a lot of climbing stairs or something. I'm not as active as I used to be, but it's not like I've been doing anything out of the ordinary, either. It's just... it's"
+            "content": "Good morning, doc. I'm so glad I finally got an appointment. To be honest, I've been having a bit of trouble lately. My knees have been aching something fierce, especially after I've been sitting for a while. It's like my joints are creaky, you know? And sometimes I feel like my knees are going to buckle out from under me. I've been having trouble getting out of the car, or standing up from a chair without feeling a bit unsteady. My hands are okay, but my knees are really the problem. I've also been noticing that my feet hurt a bit when I walk, especially in the mornings. I'm not sure what's going on, but I thought it was time to"
         },
         {
             "role": "Doctor",
-            "content": "Have you noticed any redness or warmth in your joints?"
+            "content": "Have you noticed any swelling or redness in your joints?"
         },
         {
             "role": "Patient",
-            "content": "No, I don't think so. My hands and knees have been aching something awful, but I don't see any swelling or redness. It's more like a dull ache, especially after I've been gardening or doing some other activity. I've been resting more lately, trying to give my joints a break. It's just been hard to move around and do the things I love without feeling like I'm 90 years old instead of 70!"
+            "content": "No, not really. My joints just ache, especially when I'm doing something like gardening or cooking. My hands get sore, too. Sometimes my fingers feel stiff in the morning, and it takes me a while to get them to loosen up. My knees can get a bit swollen after a long walk, but that's about it. It's not like I have a fever or anything, just a general feeling of stiffness and soreness."
         },
         {
             "role": "Doctor",
-            "content": "Do you have any difficulty with climbing stairs or walking uphill?"
+            "content": "Do you have any rashes or bumps on your skin?"
         },
         {
             "role": "Patient",
-            "content": "Oh dear, yes. You know, it's been getting harder for me to climb stairs lately. My knees ache something awful when I have to go up or down the stairs. And walking uphill is just a real chore. I have to stop and catch my breath every few feet. It's like my joints are protesting, you know? Sometimes I have to lean on the handrail just to make it up the stairs without feeling like I'm going to collapse."
+            "content": "No, nothing on my skin that I've noticed. But to be honest, I've been having some issues with my joints. My hands, knees, and hips have been bothering me a lot lately. I've been having trouble doing things I used to be able to do without a problem, like gardening or taking long walks. And sometimes when I get up from sitting, I feel like I'm a little wobbly. It's like my legs don't want to cooperate."
         },
         {
             "role": "Doctor",
-            "content": "Have you noticed any swelling in your joints?"
+            "content": "What kind of joint pain are you experiencing? Is it sharp or dull? Is it constant or does it come and go?"
         },
         {
             "role": "Patient",
-            "content": "Yes, I've noticed that my hands have been feeling a bit swollen lately. My fingers feel a bit puffy, especially in the morning. And my knuckles, too. It's not too bad, but it's definitely noticeable. Sometimes I wake up and my fingers feel stiff, like they're locked in place. It takes a bit of movement to get them going again."
+            "content": "It's a dull ache, really. It's always there, but it gets worse when I'm doing things like gardening or walking. If I'm just sitting or lying down, it's not as bad. But if I'm standing or moving around, it starts to throb a bit. Sometimes it feels like it's going to give way, like my knee is going to buckle or something. It's hard to describe, but it's just a nagging discomfort. I've had it for a while now, but it's getting worse."
         },
         {
             "role": "Final Diagnosis",
-            "content": "FINAL DIAGNOSIS: Osteoarthritis.\n\nCLINICAL JUSTIFICATION: The patient's symptoms of joint pain, stiffness, and swelling, along with the lack of redness and warmth, are consistent with osteoarthritis. The patient's age, history of gardening and cooking, and difficulty with climbing stairs and walking uphill are also risk factors for osteoarthritis. The patient's history of joint pain and stiffness in the morning, which improves with movement, is also consistent with osteoarthritis."
+            "content": "FINAL DIAGNOSIS: Osteoarthritis.\n\nCLINICAL JUSTIFICATION: The patient's symptoms of joint pain, stiffness, and swelling, especially in the knees, hips, and hands, are consistent with osteoarthritis. The patient's age (50s) and history of joint pain and stiffness that worsens with activity are also consistent with this diagnosis. The patient's lack of redness or warmth in the affected joints is also consistent with osteoarthritis rather than rheumatoid arthritis."
         }
     ]
 }
