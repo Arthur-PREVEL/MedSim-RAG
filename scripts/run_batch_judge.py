@@ -111,7 +111,7 @@ def evaluate_batch():
     del model
     gc.collect()
     torch.cuda.empty_cache()
-    print("✨ VRAM successfully freed.
+    print("✨ VRAM successfully freed.")
 
 if __name__ == "__main__":
     evaluate_batch()

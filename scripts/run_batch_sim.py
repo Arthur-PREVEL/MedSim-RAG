@@ -143,7 +143,7 @@ def run_batch():
     del shared_model
     gc.collect()
     torch.cuda.empty_cache()
-    print("✨ VRAM successfully cleaned.")
+    print("✨ VRAM successfully clean")
 
 if __name__ == "__main__":
     # Create the results folder if it does not exist
