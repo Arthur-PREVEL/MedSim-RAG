@@ -88,15 +88,26 @@ def evaluate_session():
             do_sample=True,
             repetition_penalty=1.1,
             pad_token_id=tokenizer.eos_token_id,
-        eos_token_id=None
+            eos_token_id=None
         )
     
     # 4. Clean up and format the output
     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
     # We re-attach the scaffold string so the final output reads cleanly
-    evaluation = "1. Diagnosis Comparison:" + generated_text.split("1. Diagnosis Comparison:")[-1].strip()
     import re
+    evaluation = "1. Diagnosis Comparison:" + generated_text.split("1. Diagnosis Comparison:")[-1].strip()
+
+    # Tronquer tout ce qui vient après le point 5
+    evaluation = re.split(r'\n?6\.', evaluation)[0].strip()
+
+    # Corriger le total en recalculant les scores
+    scores = re.findall(r'(\d+)/5', evaluation)
+    if len(scores) >= 4:
+        total = sum(int(s) for s in scores[:4])
+        evaluation = re.sub(r'Total Grade.*', f'Total Grade: {total}/20.', evaluation)
+    # Formatage : retours à la ligne entre les critères
     evaluation = re.sub(r'(?<!\/)(\d+\.)\s', r'\n\1 ', evaluation).strip()
+    
     print("\n" + "="*50)
     print("🎓 PROFESSOR EVALUATION")
     print("="*50)

@@ -9,7 +9,23 @@
         },
         {
             "role": "Patient",
-            "content": "Good morning, doc. I'm so glad I finally got an appointment. To be honest, I've been having a bit of trouble lately. My knees have been aching something fierce, especially after I've been sitting for a while. It's like my joints are creaky, you know? And sometimes I feel like my knees are going to buckle out from under me. I've been having trouble getting out of the car, or standing up from a chair without feeling a bit unsteady. My hands are okay, but my knees are really the problem. I've also been noticing that my feet hurt a bit when I walk, especially in the mornings. I'm not sure what's going on, but I thought it was time to"
+            "content": "Good morning, doctor. It's nice to finally get some help. To be honest, I've been having some real trouble lately. My knees have been killing me. Every time I get up from sitting, I feel a sharp pain in my knees. And when I'm standing, I can feel the ache in them. Sometimes, after I walk a bit, my knees start to creak and feel all stiff. I've been noticing that my knees have been getting a bit swollen too. My hands aren't too bad, but my back has been acting up as well. It's just a dull ache, but it's there all the time. I'm not sure what's going on, but I'm hoping you can help me figure it"
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any redness or warmth on your knees?"
+        },
+        {
+            "role": "Patient",
+            "content": "No, no, nothing like that. It's more like a creaky feeling when I move my knees. And it's painful, especially when I get up from sitting or after I've been standing for a while. It's like my knees are complaining about it."
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any swelling or redness in your knees?"
+        },
+        {
+            "role": "Patient",
+            "content": "No, nothing like that. My knees just ache, especially when I'm getting up from sitting or after I've been on my feet for a while. It's a dull, nagging pain, like my joints are just creaky. I've been feeling it for a while now, but it's getting worse. Sometimes my knee will feel like it's giving way, like it's not stable. That's a bit scary. And my fingers, they're stiff in the morning, it takes me a while to get them moving."
         },
         {
             "role": "Doctor",
@@ -17,27 +33,11 @@
         },
         {
             "role": "Patient",
-            "content": "No, not really. My joints just ache, especially when I'm doing something like gardening or cooking. My hands get sore, too. Sometimes my fingers feel stiff in the morning, and it takes me a while to get them to loosen up. My knees can get a bit swollen after a long walk, but that's about it. It's not like I have a fever or anything, just a general feeling of stiffness and soreness."
-        },
-        {
-            "role": "Doctor",
-            "content": "Do you have any rashes or bumps on your skin?"
-        },
-        {
-            "role": "Patient",
-            "content": "No, nothing on my skin that I've noticed. But to be honest, I've been having some issues with my joints. My hands, knees, and hips have been bothering me a lot lately. I've been having trouble doing things I used to be able to do without a problem, like gardening or taking long walks. And sometimes when I get up from sitting, I feel like I'm a little wobbly. It's like my legs don't want to cooperate."
-        },
-        {
-            "role": "Doctor",
-            "content": "What kind of joint pain are you experiencing? Is it sharp or dull? Is it constant or does it come and go?"
-        },
-        {
-            "role": "Patient",
-            "content": "It's a dull ache, really. It's always there, but it gets worse when I'm doing things like gardening or walking. If I'm just sitting or lying down, it's not as bad. But if I'm standing or moving around, it starts to throb a bit. Sometimes it feels like it's going to give way, like my knee is going to buckle or something. It's hard to describe, but it's just a nagging discomfort. I've had it for a while now, but it's getting worse."
+            "content": "No, it's more of a stiffness in the mornings that gets better as I get moving. My hands and knees have been acting up something fierce lately. I have a bit of a creaky knee when I get up from the couch, and my hands feel a bit stiff when I'm trying to grip things. It's like my joints are just a little bit...grumbly."
         },
         {
             "role": "Final Diagnosis",
-            "content": "FINAL DIAGNOSIS: Osteoarthritis.\n\nCLINICAL JUSTIFICATION: The patient's symptoms of joint pain, stiffness, and swelling, especially in the knees, hips, and hands, are consistent with osteoarthritis. The patient's age (50s) and history of joint pain and stiffness that worsens with activity are also consistent with this diagnosis. The patient's lack of redness or warmth in the affected joints is also consistent with osteoarthritis rather than rheumatoid arthritis."
+            "content": "FINAL DIAGNOSIS: Osteoarthritis\n\nCLINICAL JUSTIFICATION: Based on the patient's symptoms of joint pain, stiffness, and creaking, as well as the absence of redness and warmth, the most likely diagnosis is osteoarthritis. Osteoarthritis is a degenerative joint disease that affects the cartilage surrounding the joints, leading to pain, stiffness, and limited mobility. It is common in the knees, hips, and hands, and can cause joints to creak and feel grumbly. The patient's description of stiffness in the mornings and after prolonged sitting or standing is also consistent with osteoarthritis. While osteoarthritis can be managed with medication and physical therapy, it is a chronic condition that may require long-term management."
         }
     ]
 }
