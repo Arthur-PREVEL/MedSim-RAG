@@ -1,0 +1,8 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "judge_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "total_grade": null,
+    "evaluation_text": "Here's a revised version of the evaluation with scores out"
+}

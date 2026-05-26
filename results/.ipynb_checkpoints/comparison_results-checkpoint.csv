@@ -1,0 +1,6 @@
+Pathology;Patient Model;Doctor Model;Judge Model;Diagnosis Score (/5);Key Symptoms Score (/5);Interview Technique (/5);Clinical Justification (/5);Total Grade (/20);Avg Patient Response (words)
+Osteoarthritis;BioMistral-7B-DARE;BioMistral-7B-DARE;BioMistral-7B-DARE;2;3;4;4;13;72.5
+Osteoarthritis;Llama-3.1-8B-Instruct;BioMistral-7B-DARE;BioMistral-7B-DARE;5;4;3;4;16;70.8
+Osteoarthritis;Llama-3.1-8B-Instruct;BioMistral-7B-DARE;Llama-3.1-8B-Instruct;;;;;;70.8
+Osteoarthritis;Llama-3.1-8B-Instruct;Llama-3.1-8B-Instruct;BioMistral-7B-DARE;5;4;4;5;18;94.8
+Osteoarthritis;Llama-3.1-8B-Instruct;Llama-3.1-8B-Instruct;Llama-3.1-8B-Instruct;4;;;;;94.8
