@@ -9,35 +9,35 @@
         },
         {
             "role": "Patient",
-            "content": "It's nice to finally get in to see someone about this. To be honest, I've been having some trouble with my joints. My knees and hips have been hurting a lot lately. It's especially bad after I've been sitting or standing for a while. Sometimes I feel like my knees creak and groan, like they're just complaining about everything. And when I get up from a chair, it takes me a few seconds to get going, you know? It's like my joints are stiff and don't want to move.\n\nMy hands have been bothering me too. My fingers get sore after I do some tasks, like gardening or cooking. And I've been having trouble buttoning my shirt, if you can believe it! I"
+            "content": "Good morning, doctor. I'm having a lot of trouble with my joints lately. My knees, hips, and hands all hurt when I move them. It's like my joints are creaky and stiff, especially after I've been sitting or standing for a while. Sometimes it feels like my knees are going to buckle under me, if you know what I mean. I've been feeling this way for a while now, but it's gotten worse over the past few months.\n\nIt's also hard for me to do things I love, like gardening or even just walking my dog. My hands ache when I'm cooking or doing the dishes, and my fingers get all stiff and hard to bend. I just want to be able to do my"
         },
         {
             "role": "Doctor",
-            "content": "Have you ever had any trauma or injury to your joints, such as a fall or a sports injury, that might have triggered these symptoms?"
+            "content": "Have you experienced any morning stiffness that lasts for more than an hour?"
         },
         {
             "role": "Patient",
-            "content": "No, I don't think so. I've always been a bit of a clumsy person, so I've had my fair share of scrapes and bruises over the years, but I don't think any of them were serious enough to cause lasting damage. I've always been pretty active, though, and I used to love dancing and gardening, but I haven't done either of those things in years because my knees just can't take it. It's more like... I just woke up one morning and my knees were sore, and it's just gotten worse from there."
+            "content": "Goodness, yes. I wake up every morning feeling like I've been run over by a truck. My hips and knees ache something fierce, and my fingers feel like they're stuck together. It takes me at least an hour to get moving, and even then, it's a struggle to get out of bed. Sometimes I'll even have to use my cane to get up, and that's just not how I want to start the day. My joints are all stiff, and it feels like I'm 90 years old, not 70!"
         },
         {
             "role": "Doctor",
-            "content": "Have you experienced any morning stiffness in your hips or shoulders that lasts for more than an hour?"
+            "content": "Have you ever experienced any morning stiffness that lasts for more than an hour after you've been active?"
         },
         {
             "role": "Patient",
-            "content": "Goodness, yes! I wake up in the morning and my hips feel like they're stuck together. It takes me a good hour or so to get moving, and even then, it's a bit of a struggle to get out of bed. I have to kinda...groan my way through it, you know? And it's not just the morning, either. If I sit for a long time, like when I'm watching TV or something, I'll feel it again. It's like my joints are just...stiff, I suppose. My shoulders, too. They ache a bit, especially after I've been doing something that's been straining them."
+            "content": "Goodness, yes. I wake up every morning with a bit of a groan, you know? My joints feel stiff, like they're stuck. It's not too bad, but it's there. Sometimes it takes me a while to get moving, and I have to take my time getting out of bed. I'll get up slowly, and just kinda... move. It's like my body is saying, \"Okay, Jean, we're gonna get going, but slowly.\" The stiffness usually goes away after I've been up and moving around for a bit. But yeah, it's a regular thing for me now."
         },
         {
             "role": "Doctor",
-            "content": "Have you ever experienced any episodes of sudden, severe joint pain or swelling, especially in your fingers or toes, that would wake you up at night?"
+            "content": "Have you ever experienced any morning stiffness in your joints that lasts for more than an hour after you've been up and moving around?"
         },
         {
             "role": "Patient",
-            "content": "Goodness, yes. There have been times when my hands would swell up so much, I could hardly move them. And the pain! It was like someone was squeezing my fingers with a tight clamp. It would keep me awake at night, I couldn't even sleep with it. My poor joints would ache like they were on fire. And the stiffness! Lord have mercy, it would take me hours to get my hands moving again in the morning."
+            "content": "Goodness, yes. I wake up in the morning, and my knees feel like they're made of lead. It's hard to get out of bed, and the first few steps are just agony. It takes me a good 20, 30 minutes to get the stiffness out of my knees. I've just learned to take it easy for a bit, have a cup of coffee, and then slowly get up and moving."
         },
         {
             "role": "Final Diagnosis",
-            "content": "FINAL DIAGNOSIS: Osteoarthritis\n\nClinical justification: The patient's symptoms of joint pain and stiffness, particularly in the knees, hips, and shoulders, are consistent with osteoarthritis. The patient's description of creaking and groaning joints, morning stiffness lasting more than an hour, and difficulty with activities such as buttoning shirts and gardening are all characteristic of osteoarthritis, which is often associated with wear and tear on the joints due to age or previous trauma."
+            "content": "FINAL DIAGNOSIS: Osteoarthritis (OA)\n\nClinical justification: The patient's symptoms of morning stiffness lasting for more than an hour, joint pain and stiffness after periods of inactivity, and difficulty with activities such as gardening and walking suggest a degenerative joint condition. The absence of redness, warmth, and swelling typically associated with inflammatory conditions like Rheumatoid Arthritis, combined with the patient's age and the gradual onset of symptoms, are consistent with Osteoarthritis."
         }
     ]
 }
