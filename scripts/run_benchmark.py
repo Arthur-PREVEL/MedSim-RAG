@@ -27,6 +27,18 @@ MODELS_TO_BENCHMARK = {
     "mistral": {
         "hf_path": "mistralai/Mistral-7B-Instruct-v0.3",
         "output_dir": "../results/benchmark/mistral/"
+    },
+    "biomistral": {
+        "hf_path": "BioMistral/BioMistral-7B-DARE",
+        "output_dir": "../results/benchmark/biomistral/"
+    },
+    "gemma2": {
+        "hf_path": "google/gemma-2-9b-it",
+        "output_dir": "../results/benchmark/gemma2/"
+    },
+    "phi3": {
+        "hf_path": "microsoft/Phi-3-mini-4k-instruct",
+        "output_dir": "../results/benchmark/phi3/"
     }
 }
 
@@ -160,10 +172,13 @@ def run_evaluation_for_model(model_key, config):
 
 Please provide your evaluation now using the requested JSON format."""
 
-        # Use the universal translator (apply_chat_template)
+        # Combine SYSTEM and USER prompts into a single USER message
+        # This prevents template errors on older models (like BioMistral) 
+        # that do not natively support the "system" role.
+        combined_content = f"{SYSTEM_PROMPT}\n\n{user_content}"
+        
         messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_content}
+            {"role": "user", "content": combined_content}
         ]
         
         prompt_text = tokenizer.apply_chat_template(
