@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, it's so nice to finally see someone about this. My knee's been killing me lately. Every time I stand up from sitting, I feel this sharp stabbing pain in my left knee. It's like it's giving out on me, ya know? And sometimes when I'm walking, I feel like it's going to buckle beneath me. I've been having trouble getting out of bed without holding onto something, too. I just don't feel steady anymore. I've also noticed that my hands have been bothering me - my fingers get stiff after doing chores, especially if I overdo it with the gardening. I've tried resting them, but it doesn't seem to help for long. Do these things sound normal to you?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any numbness or tingling sensations in your legs or arms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! My hands have been bothering me something awful lately. You see, I've been having trouble with my fingers stiffening up, especially when I get out of bed in the morning. It takes me a good 10 minutes just to get my fingers to move properly. And sometimes, if I don't use them right away after getting up, they'll ache so much it feels like someone's squeezing them tight.\n\nAs for numbness, well... I'd say about six months ago, I started noticing that my big toes tingle if I leave my feet hanging down off the side of the bed at night. It doesn't last long, but it's quite annoying. I've gotten used to it, though. Just",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent trauma or injury to your neck or spine?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness, I don't think so. Although, I did take a tumble on my front porch about three months ago. I was getting up from sitting and didn't notice the step was uneven. But I didn't hurt my back or neck, really. It was just my knee that bothered me for a bit afterwards. Now, to be honest, I've been having some trouble with my hands lately. My fingers get stiff in the morning, especially after washing dishes or doing the laundry. And sometimes when I'm cooking, my wrist hurts if I grip things too tightly. It's nothing too bad, but it's definitely annoying. And now that you mention it, my lower back has been feeling a bit achy lately. Like it's",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any numbness, tingling, or weakness in your arms or legs?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning, doc. I think I've been feeling a bit off lately. My hands have been acting up something awful. You see, my fingers get these cramps when I'm trying to grip things, like my cane or even just holding onto the sink while washing my hands. It's like they're asleep, but not really. And sometimes it takes me a moment to get the strength back in them after I let go. It's not too bad, but it's enough to make me worried. Now about my feet... my toes feel funny too. Like they're heavy or something. Not exactly numb, but... I don't know how to explain it. It's hard for me to stand on one foot without feeling unsteady.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from osteoarthritis (OA) of the knees, hands, and possibly early stages of OA in the lumbar spine, likely exacerbated by her age-related wear and tear.\n\nClinical justification: The patient's complaints of sharp stabbing pain in her knee upon standing, stiffness in her hands, particularly after morning activities, and difficulty with mobility suggest degenerative joint disease. Additionally, her history of previous trauma and age-related wear and tear support the likelihood of osteoarthritis. While she does report some neurological symptoms such as numbness and tingling, these appear to be secondary to her musculoskeletal issues rather than indicative of a primary neuropathic condition.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 106,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 106,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone, e.g., 'goodness gracious'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes various symptoms, including knee pain, hand stiffness, and toe tingling, which are all consistent with osteoarthritis. However, the progression and severity of these symptoms are not clearly explained, making it difficult to assess their coherence."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character as a concerned patient seeking medical attention, but occasionally exhibits behaviors inconsistent with a typical patient, such as providing detailed explanations of their condition and using phrases like 'it's nothing too bad'."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of osteoarthritis symptoms, but could benefit from more coherent symptom progression and adherence to a consistent patient role. The language used is mostly natural, but with occasional lapses into formality."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore key symptoms such as bony swelling, joint deformity, and instability, which are crucial for diagnosing osteoarthritis. Questions also did not adequately assess the impact on activities of daily living."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the symptoms presented. However, it lacked specificity regarding the exact joints affected and the stage of disease progression. The mention of 'early stages' in the lumbar spine was not supported by the provided information."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding unprofessional behavior."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic skills, but could improve by asking more comprehensive questions to cover all aspects of osteoarthritis symptoms and exploring the impact on daily life. With minor adjustments, they would have arrived at a more precise diagnosis."
+    },
+    "llm_judge_total_out_of_20": 14
+}

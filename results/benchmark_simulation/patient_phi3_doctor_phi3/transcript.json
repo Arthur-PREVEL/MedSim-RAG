@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well hello doc! Lately it feels like my hands have gone full on dance party when they should still just hold up signs for me. They start achin', especially after spendin' too many hours whittlin'. And gettin' dressed has turned into quite an adventure—feels all squishy underneath sometimes. My right big toe gets hotter than a summer day if I stand around too long which makes me limp by evening times. Whenever I reach out over here... Oh wait, forget about specific parts; how would ya describe this whole thing without getting tangled up in fancy words? It kinda hurts something fierce whenever I try doing things with these bad boys. Sleep doesn'",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Could your symptoms be related to repetitive motions or prolonged periods of activity during woodworking that might lead to inflammation and discomfort in your joints?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I appreciate you asking how my feelings might relate to working on furniture for days without stopping. I have been feeling soreness when moving about lately; it usually bothers me after long hours spent cutting or shaping wood but seems better once I sit down. My hands don't hurt all day though – just when they get tired from doing things over again and again throughout each project phase. It feels kinda tight now sometimes too if not given some time off between tasks because these small finger movements become harder than usual before any break occurs– especially near where knuckles meet nails while handling tools repeatedly until completion takes shape into desired forms! This sensation isn't new either since we started talking earlier today regarding ar",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 129,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Do your symptoms improve with rest periods during work?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor Mary asked me if my condition gets better when I take breaks while working. My hands hurt especially after hours spent typing on the computer keyboard; they get sore from holding down keys for too long without giving them a break. If it helps ease some discomfort even just slightly, then yes - taking brief pauses does seem beneficial! But otherwise... well let's discuss this further over lunch? Maybe we could explore other ways to help manage these aches throughout daylight tasks again soon—what say you? Doesn't sound so bad now thinking about potential solutions together instead right off bat though ;-) Yes indeed! We should definitely talk more – how about breakfast tomorrow before diving into anything else? What",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 121,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do your symptoms improve with rest or worsen during periods of inactivity at work?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Hello Doctor! It feels better when I stop moving around; it seems my hands hurt less after sitting down for long enough.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 22,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Primary osteoarthritis (OA) affecting multiple joints including fingers/hands and possibly the foot due to occupational strain associated with carpentry activities. The patient experiences pain exac0lutely correlated with use suggesting mechanical wear rather than systemic autoimmune pathology as seen in rheumatoid arthritis. Rest provides temporary relief indicating localized stress response within affected synovial structures. Further assessment is warranted through physical examination, imaging studies such as X-rays or MRI, and laboratory tests to rule out differential diagnoses and confirm degenerative changes consistent with primary OA.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 129,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 121,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 22,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used colloquial expressions ('dance party', 'bad boys') and avoided complex medical terminology, making their responses relatively easy to understand."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's descriptions of symptoms were somewhat inconsistent across turns, particularly regarding the involvement of the right big toe and the impact of rest on pain levels."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient occasionally deviated from their role as a patient, displaying a conversational tone and suggesting meeting for meals rather than focusing solely on their health concerns."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language and describing symptoms, but struggled with maintaining a consistent narrative and adhering to the patient role. Further refinement is needed to create a more cohesive and believable patient experience."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were generally targeted but not all were clinically relevant; question 1 was well-directed towards occupational strain, while questions 2 and 3 were somewhat redundant and did not fully explore other possible causes of the patient's symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis of primary osteoarthritis was accurate, considering the patient's symptoms and clinical presentation. However, the conclusion about 'occupational strain associated with carpentry activities' could have been supported by more specific details from the patient's history."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor mostly stayed professional throughout the interaction, but occasionally used colloquial expressions ('exac0lutely') which detract from their authority and expertise."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic skills, particularly in identifying the key features of osteoarthritis. However, they could benefit from refining their questioning strategy to cover a broader range of potential causes and improving their communication style to maintain a professional tone consistently."
+    },
+    "llm_judge_total_out_of_20": 13
+}
