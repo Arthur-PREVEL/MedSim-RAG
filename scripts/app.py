@@ -10,7 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 # STREAMLIT PAGE CONFIGURATION
 # ==========================================
 st.set_page_config(page_title="MedSim UI - Llama3 Test", page_icon="🩺", layout="wide")
-st.title("🩺 MedSim: High-Fidelity Clinical Simulator)")
+st.title("🩺 MedSim: High-Fidelity Clinical Simulator")
 
 # ==========================================
 # 0. MLOPS TOOLS (JSON AUTO-REPAIR & MEMORY CLEANUP)
