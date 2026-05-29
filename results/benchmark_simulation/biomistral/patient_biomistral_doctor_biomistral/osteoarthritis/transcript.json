@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello, Doctor. Well, I have been experiencing joint pain for quite some time now. It's a regular thing that happens especially when I wake up in the morning or if I stand up after sitting down for a long time. Sometimes, it's so bad that my legs feel weak and unstable, and I struggle to walk. My hands seem to feel quite swollen too, and they are really uncomfortable to hold things. It just feels like everything is very tight and locked up. Is this normal?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any redness or warmth around your affected joints?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I'm Jean and I have arthritis affecting my joints. The pain is quite uncomfortable and makes it difficult to move around. It's not always easy to explain how much pain I'm feeling but when I'm trying to do something that involves moving one of my arthritic joints, I feel a sharp pain in that area. Sometimes I even get a feeling of \"clicking\" in certain joints, which doesn't hurt but it's definitely not normal. There's been times where my hands, wrists, knees and hips have felt really swollen and hot, especially after being outside for a while or when I get too active. It makes it hard to do everyday tasks like",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What type of arthritis do you have?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have osteoarthritis, but it's not easy to explain. It causes me a lot of pain when I move my hands or walk. Sometimes, my fingers feel swollen and I can't bend them well. It makes simple tasks very difficult for me.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 42,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Can you describe the location and severity of your pain?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Sure, doc. I have pain in my hands, specifically in my thumbs and index fingers. It's not too bad, just feels like a constant dull ache sometimes. Thanks for asking.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Osteoarthritis\nClinical Justification: Based on the patient's description of chronic joint pain, stiffness, and swelling, as well as their difficulty with movement and performing daily tasks, the most likely diagnosis is osteoarthritis. This condition is characterized by the degeneration of cartilage and bone in the joints, leading to inflammation, pain, and limited mobility. The patient's report of clicking sounds in certain joints may also be indicative of osteoarthritis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 70,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 42,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 70,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "Patient used everyday language in turns 1 and 3, but used somewhat formal tone in turn 4. Turn 2 had a mix of informal and formal expressions."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Patient's descriptions of symptoms were generally consistent with the clinical context provided, but lacked specificity about the progression of the condition and its impact on daily life in turns 1 and 3. Turn 2 mentioned 'sharp pain' and 'clicking,' which could indicate other conditions, but overall was coherent."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "Patient deviated from their role by providing a clear diagnosis ('I have osteoarthritis') in turns 2 and 3, which is not typical of a patient-presenter scenario."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed potential, but struggled with maintaining a consistent patient persona and providing detailed symptom descriptions. With further refinement, the patient could better convey their experiences and maintain a more authentic role."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 3 were targeted and clinically relevant, but Question 2 was not; it did not help narrow down the differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was correct, but the justification could be improved by mentioning specific clinical findings such as joint crepitus, limited range of motion, and Heberden’s/Bouchard’s nodes."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional, but occasionally used phrases that could be interpreted as somewhat conversational, e.g., \"This condition is characterized by...\""
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "The doctor demonstrated good question-asking skills, provided a correct diagnosis, and maintained a professional demeanor. However, some questions could be more targeted and justifications for diagnoses could be more detailed."
+    },
+    "llm_judge_total_out_of_20": 12
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I would say: \"Well, doc, it seems like my joints are getting worse. They hurt a lot when I walk around or do regular things. Sometimes they feel like they're going to give out from under me. And everything feels tight and uncomfortable.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent trauma or injury that could have triggered this sudden onset of joint pain?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Answer from Jean, 70 years old patient: Thank you for asking me about my joint pain, Dr. [Doctor's name]. I am Jean, and I am 70 years old. My hands have been feeling a bit cranky lately, especially my thumbs. It feels like they are sore and stiff when I try to hold things or do tasks around the house. It's not really a dull ache or anything sharp, but it is uncomfortable. I don't remember doing anything out of the ordinary that might have caused this. But then again, I can't remember everything!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any similar symptoms in your knees or hips?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am sorry but I cannot answer that question because I don't have knees or hips. I am just an AI language model that assists people with their questions.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 29,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Are you experiencing any symptoms that affect your ability to perform daily activities?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I am having trouble getting around because of my arthritis. It's really hard for me to walk for long periods of time, and sometimes it feels like one leg is heavier than the other. Even simple things like picking up groceries or cooking dinner become challenging. Sometimes I fall down when I try to stand back up from sitting on my stool. It's frustrating and makes me embarrassed to leave my house because I don't want anyone to see me struggling.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\n**Osteoarthritis**\n\nClinical Justification: Based on Jean's complaints of chronic joint pain, stiffness, and limited mobility, particularly affecting her hands, knees (implied by difficulty walking), and hips (implied by difficulty standing up from a seated position), I diagnose osteoarthritis as the underlying condition. The gradual onset of these symptoms over time, combined with the absence of any recent trauma or injury, supports this diagnosis, which is consistent with the degenerative nature of osteoarthritis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 74,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 29,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 74,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "Patient used everyday language, but occasionally slipped into formal tone ('doc', 'Dr. [Doctor's name]')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Patient's symptoms were somewhat coherent with osteoarthritis, but lacked specificity and consistency across turns. Turn 3 was unrelated to the clinical context."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "Patient failed to maintain role as a 70-year-old patient; Turn 3 response was inappropriate and uncharacteristic."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "Jean's responses demonstrated some understanding of her condition, but lacked clarity and consistency throughout the conversation. She struggled to maintain her role as a patient, particularly in Turn 3. With further refinement, she could improve her symptom description and adherence to the patient role."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore other key symptoms such as muscle weakness, balance issues, and specific joint deformities. Questions 1 and 2 showed some relevance, but Question 3 was too vague."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis of osteoarthritis was generally accurate, considering the symptoms described. However, the justification relied heavily on implied information rather than direct evidence from the interview. A clearer connection between the symptoms and the diagnosis would strengthen the conclusion."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interaction, avoiding any unprofessional behavior or language."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic skills, but could improve by asking more comprehensive and targeted questions to gather a fuller understanding of the patient's symptoms. Additionally, providing clear connections between the symptoms and the diagnosis will enhance the confidence in their conclusions."
+    },
+    "llm_judge_total_out_of_20": 13
+}

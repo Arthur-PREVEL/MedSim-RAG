@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: Hi doctor, I have been feeling very tired all the time, even when I have taken plenty of rest. I have also been having difficulty sleeping lately and I tend to wake up in the middle of the night. I used to snore really loud but I haven't done that in a while. My husband also mentioned that he had seen me stop breathing a few times while I was asleep. I would say my weight has increased quite a bit recently too, which could be why.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snore"
+                ],
+                "word_count": 90,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any episodes of chest pain or shortness of breath during these periods of fatigue?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "My response would be: \"I have been feeling very tired lately and also experience some snoring while I sleep. Sometimes, my husband tells me that I stop breathing during my sleep too. I was diagnosed with high blood pressure a few years back and I am sure I'm considered obese. But I don't always pay attention to this because I feel fine otherwise. I haven't noticed any shortness of breath during my sleep.\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever woken up with headaches or pain in your chest?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I'm sorry, could you please rephrase your question?",
+            "score": {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Can you tell me what brings you in to see me today?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I would likely say that my excessive daytime sleepiness has been causing problems in my life recently. Sometimes I even fall asleep while driving, which makes me feel quite unsafe. My husband notices that I snore loudly and gasp when I sleep. He is worried about me because he has heard that those symptoms can lead to serious health issues. On top of that, I have been waking up feeling unrested and groggy in the mornings, which affects my mood throughout the day. I am not sure why this is happening, but it has been going on for a long time now.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snore"
+                ],
+                "word_count": 104,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nObstructive Sleep Apnea (OSA)\n\nClinical Justification: The patient's complaints of excessive daytime sleepiness, loud snoring, witnessed apneic events by her husband, and obesity strongly suggest obstructive sleep apnea. Additionally, the patient's history of hypertension and morning headaches may be related to the intermittent hypoxia associated with OSA, further supporting this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 53,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snore"
+                ],
+                "word_count": 90,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            },
+            {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snore"
+                ],
+                "word_count": 104,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 53,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally uses phrases like 'difficulty sleeping' instead of explaining the specific symptoms. They also mention their weight increase, which is relevant but not directly asked."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistently with the clinical context, mentioning excessive daytime sleepiness, snoring, and apneic episodes. However, they do not explicitly mention morning headaches, nocturnal reflux, or nocturia, which are also possible symptoms of OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but in Turn 3, they ask to rephrase the question, which slightly disrupts the role-playing scenario. In Turn 2, they seem to be playing a more passive role, providing information without actively engaging with the conversation."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good symptom coherence and natural language usage, but shows some inconsistencies in role adherence. The patient effectively conveys their experiences and concerns, but occasionally deviates from the expected role-playing behavior. With minor adjustments, this simulation could better align with the clinical context and maintain a consistent patient persona."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as snoring, observed breathing cessation, and excessive daytime sleepiness. Questions 1 and 2 were not directly related to the clinical truth of OSA."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was correct, but the justification could have been stronger. The doctor mentioned several key symptoms that support the diagnosis, but did not explicitly state how they led to the conclusion of OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional, but Question 3 seemed somewhat informal and conversational, which slightly detracted from their role adherence."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor demonstrated good diagnostic accuracy, but could improve question quality by targeting more specific symptoms related to OSA. They should also work on providing clearer justifications for their diagnoses and maintaining a more formal tone throughout the interview."
+    },
+    "llm_judge_total_out_of_20": 14
+}

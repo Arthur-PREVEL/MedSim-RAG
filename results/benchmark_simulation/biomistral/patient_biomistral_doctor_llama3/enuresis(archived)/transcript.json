@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, the 70-year-old patient, I would say, \"I have been experiencing trouble sleeping at night because I tend to have accidents while I'm asleep. I feel embarrassed because I wet my sheets and pillowcase almost every night. Sometimes, I even wet myself while going for walks or watching TV. I don't remember doing this when I was younger. Is there anything that can help me? It's really starting to impact my daily life.\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 74,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any other symptoms such as difficulty getting started with urination, feeling an urgent need to urinate, or pain while urinating?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER AS JEAN: Well, I do have times when I notice that I have to hurry if I want to make it to the bathroom before it's too late, but I don't think that's the worst of it. I don't usually get this sudden urge to go and it feels like nothing comes out. Sometimes I wake up in the morning and my sheets are soaked, but I don't even remember going to the bathroom or drinking anything. But overall, I guess I'm just worried because I know I'm getting older and I don't want to deal with this for the rest of my life.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any other symptoms such as urinary frequency, urgency, or leakage during the day?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I'm sorry, but I don't have personal experiences. I am here to assist you by answering any questions you may have.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you been experiencing any physical symptoms that brought you to seek medical attention?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I would provide a brief overview of my life experiences and mention that my primary concern is my current health status. I would then explain that I experience frequent urination and soiling of bedding at night while asleep, which has led me to seek medical help. I would describe how this issue has caused discomfort and made it difficult to fall asleep, stressing that I wish to find a solution to improve my quality of life.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 78,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\n**Nocturnal Enuresis (Bedwetting)**\n\nClinical Justification: Based on the patient's history of nocturnal enuresis, characterized by recurrent involuntary urination during sleep, accompanied by episodes of daytime urinary frequency and urgency, I diagnose Nocturnal Enuresis. The absence of significant lower urinary tract symptoms, such as dysuria or hematuria, and the presence of nocturnal enuresis, suggest that this condition is likely related to age-related changes in bladder control rather than an underlying urological disorder.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 73,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 74,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 78,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 73,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "Patient used everyday language, but occasionally slipped into somewhat formal tone in Turn 4"
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Patient described nocturnal enuresis, but lacked clarity on frequency and duration; also failed to mention potential underlying causes or associated factors in Turns 1 and 2"
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "Patient deviated from role in Turn 3 by stating they didn't have personal experiences, which contradicts their stated goal of seeking medical help as Jean"
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "Jean's responses were generally coherent and relatable, but showed some inconsistencies and deviations from the expected patient role. While they effectively conveyed their concerns and symptoms, they could benefit from providing more specific details about the frequency and duration of their issues, as well as exploring potential underlying causes. Additionally, they should maintain their patient role throughout the interaction."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore key aspects of enuresis, such as toileting habits, fluid intake, and sleep patterns. Questions 1 and 2 were relevant, but Question 3 was too broad and did not directly address potential causes of enuresis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis of Nocturnal Enuresis was partially accurate, considering the patient's history of nocturnal enuresis and associated symptoms. However, the justification lacked specificity, failing to consider alternative explanations, such as underlying urological disorders or sleep apnea."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding unprofessional language or behaviors."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient encounter demonstrated some strengths in maintaining a professional tone and asking relevant questions. However, there were opportunities to improve question targeting and diagnostic accuracy by exploring additional factors contributing to enuresis. Further consideration of alternative explanations and more comprehensive questioning would enhance the overall quality of care."
+    },
+    "llm_judge_total_out_of_20": 14
+}

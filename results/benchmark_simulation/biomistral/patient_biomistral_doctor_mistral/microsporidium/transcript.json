@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Thank you, Doctor. Good morning. Well, I would say that my skin has been feeling red and bumpy lately. It feels like there are tiny grains of sand all over it. Sometimes it hurts a bit too.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have these symptoms been accompanied by any itching or rash development, and do they worsen in warm weather or after physical activity?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 22,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "INTERVIEW WITH THE DOCTOR: Hello, I am experiencing a lot of back pain recently. It's the kind that feels sharp and stabbing occasionally, like tiny needles poking at me when I turn or stand up. I can feel it in my neck too, sometimes, but mostly in my lower back. I've noticed that it's worse after I get finished gardening around noon, and I always make sure to use my hoe more than my hands so I don't overdo it. I've tried acetaminophen, but that didn't seem to help much. I have heard of microsporidia before, but I wasn't aware that it could cause such intense",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "microsporidia"
+                ],
+                "word_count": 106,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever traveled to areas where microsporidiosis is common, or do you have any contact with animals that might be carriers of this parasite?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Answer from  I lived in rural area as a child, and my family had pigs. We also occasionally ate their meat. So, I could have been exposed to microsporidiosis then. It's hard to say how old I would have been because I don't remember everything about my youth. I want to know more about this parasite that causes such painful symptoms so I can better understand why my quality of life has been affected by it. Can you tell me more about what microsporidiosis does, exactly?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "microsporidiosis"
+                ],
+                "word_count": 86,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you ever experienced any watery diarrhea, eye problems, or respiratory issues associated with your symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hi there, I am Jean, a 70-year-old patient. Can you please repeat that question so I can fully understand it? Thank you.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 22,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided history, the final diagnosis is Microsporidiosis. The clinical justification for this diagnosis is that the patient has reported skin lesions resembling tiny grains of sand (consistent with Microsporidiosis cutaneous infection), along with a history of exposure to pigs, which are known carriers of this parasite. Additionally, the patient's report of back pain, especially after physical activity, is not typically associated with cutaneous Microsporidiosis, suggesting potential involvement of other organs, such as the musculoskeletal system, which can occur in systemic Microsporidiosis infections. The patient's age and rural childhood environment further support the possibility of past exposure to the parasite. Further diagnostic tests, such as microscopic examination of skin samples or blood tests, may be necessary to confirm the diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 122,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "microsporidia"
+                ],
+                "word_count": 106,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "microsporidiosis"
+                ],
+                "word_count": 86,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 22,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 22,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 122,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally mentions specific details that might indicate some knowledge of medical terminology, such as 'microsporidiosis'. However, overall, the language remains accessible and easy to understand."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes two different sets of symptoms: skin issues and back pain. While the skin issue seems unrelated to the provided clinical context, the back pain description aligns somewhat with the information about microsporidia affecting invertebrates and fish, but lacks specificity regarding the connection to the parasite."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays within the role of a concerned individual seeking information about their condition, but occasionally slips into a more inquisitive tone, asking questions that demonstrate some understanding of the medical aspects of the topic."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good balance between expressing concern and curiosity about their condition. While the language is generally clear and relatable, there are moments where the patient's knowledge of medical terminology and concepts slightly disrupts the coherence of the conversation. With further refinement, the patient's responses could better align with the provided clinical context and maintain a more consistent narrative voice."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but Question 3 could be more specific about gastrointestinal symptoms directly linked to Microsporidiosis. Questions did not fully cover all possible symptoms and risk factors."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis of Microsporidiosis seems plausible based on the patient's history of exposure to pigs and skin lesions. However, the association between back pain and physical activity is less typical for cutaneous Microsporidiosis, suggesting a possible systemic infection. More information about the patient's symptoms and medical history would be needed to solidify the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor demonstrated good questioning skills and a reasonable approach to diagnosis, but could benefit from more comprehensive questioning and consideration of atypical presentations of Microsporidiosis. Further investigation, including laboratory tests, is warranted to confirm the diagnosis."
+    },
+    "llm_judge_total_out_of_20": 14
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon, Doctor. I've been noticing a lot of discomfort and pain in my hands for quite some time now. It mostly hurts when I try to grip or hold things, particularly small objects like pens or keys. The pain usually eases off when I rest. Sometimes, it gets hard to perform daily tasks like opening jars or turning door knobs. In addition, my thumbs feel rather squared or enlarged, and they seem to be getting bigger over time. I also find it difficult to bend my fingers completely straight due to some sort of stiffness. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Could there be any history of trauma, injury, or inflammation affecting your hands, or is this issue gradual and without any specific incident causing it?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, this issue with my hands has been gradually getting worse over time. I haven't had any specific injuries or incidents that I can recall causing this problem. It's just something that seems to have developed on its own, unfortunately. The pain and stiffness are especially noticeable after long periods of inactivity, such as waking up in the morning or resting for extended periods during the day. There doesn't seem to be any significant swelling or redness, but it's been difficult to perform certain tasks due to the discomfort and limitation in movement. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Could you describe the specific types of activities or movements that cause the most discomfort and difficulty in your hands?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As I go about my day, I find that certain tasks and movements cause me significant discomfort in my hands. For instance, when I try to grasp small objects like buttons on a shirt or pick up a book from the shelf, I often feel a sharp pain in my fingers, particularly near the ends. Also, turning doorknobs or twisting a key in the lock becomes challenging due to the stiffness and occasional swelling. Sometimes, even walking or making a fist seems difficult, leading to discomfort in my wrists. These issues cause me a lot of trouble during daily activities and make things much harder than they should be.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any redness, warmth, or decreased range of motion in your affected joints, which might suggest inflammation?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As a patient, I want to share that in my affected joints, I have felt a persistent discomfort, particularly when I try to move them. But, unlike earlier when my pain would ease with rest, this pain seems to linger regardless of how long I rest. I haven't observed any changes in color or heat in these areas, nor have I found it difficult to move them through their full range as I used to.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 75,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided history, the FINAL DIAGNOSIS is OSTEOARTHRITIS (OA) of the hand joints. This diagnosis is supported by the patient's description of chronic joint pain, stiffness, and limited range of motion, particularly in the fingers and thumbs, which worsens with inactivity and improves with rest. Additionally, the patient reports no signs of acute inflammation, such as redness, warmth, or swelling, which would suggest an alternative diagnosis. The progressive enlargement of the thumbs and difficulty bending the fingers further support the diagnosis of OA.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 20.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 75,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient uses everyday language, avoiding complex medical terminology throughout all turns."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently describes symptoms that align with osteoarthritis, including joint pain, stiffness, and difficulty performing daily tasks. However, the progression of the condition is not perfectly clear, and some statements could be clarified for better coherence."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient generally stays within the role of a patient, asking questions and describing symptoms without displaying knowledge typical of a healthcare professional. However, some phrases suggest a level of self-awareness regarding their condition, which slightly compromises adherence to the role."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation demonstrates strong natural language usage, symptom coherence, and role adherence. While minor adjustments could enhance the progression of the condition and maintain role consistency, overall performance is impressive. The patient effectively communicates their experiences and concerns, providing valuable insights into the impact of osteoarthritis on daily life."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 3,
+            "justification": "Questions were targeted towards understanding the nature of the condition, its impact on daily life, and ruling out other possible causes, but could have been more comprehensive in exploring systemic symptoms and comorbidities."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis of osteoarthritis was mostly accurate, considering the symptoms described, but the lack of mention of other potential differential diagnoses, such as rheumatoid arthritis or psoriatic arthritis, reduces the score."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, but occasionally slipped into a somewhat conversational tone when discussing the patient's experiences, which slightly detracted from their role."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills and diagnostic acumen, but could benefit from refining their approach to consider broader differential diagnoses and maintaining a consistent professional tone throughout the consultation."
+    },
+    "llm_judge_total_out_of_20": 17
+}

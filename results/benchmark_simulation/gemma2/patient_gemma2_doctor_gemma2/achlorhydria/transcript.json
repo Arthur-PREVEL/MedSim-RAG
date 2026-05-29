@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doc,  I've been having a lot of trouble with my stomach lately. It feels really uncomfortable, kind of like a burning ache right up here, near my belly button. And I've just not been feeling well overall.  I seem to be losing weight, too. Food doesn't sit well with me anymore either - it makes me feel full quickly and gives me heartburn. Sometimes, I even get nausea.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When did this discomfort begin?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, it started about... maybe six months ago? At first it was just a bit of heartburn now and then, nothing too bad.  But lately it's been getting worse. My stomach feels kind of upset all the time, even after I eat. And sometimes it just hurts real bad.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Does this pain get better or worse when you lie down?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "It seems to stay about the same, whether I'm sitting up or lying down.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Does it change with movement?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well sometimes it seems worse when I bend over or stand up too quickly.  It just feels sort of... off then.  Mostly though it just is there all the time, kind of rumbling in my stomach.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Peptic Ulcer Disease\n\n**Clinical Justification:** The patient presents with chronic epigastric pain, heartburn, early satiety, nausea, and unintentional weight loss, suggestive of peptic ulcer disease.  The absence of significant relief with positional changes further supports this diagnosis. \n\n\nLet me know if you'd like to explore other potential diagnoses or delve deeper into the reasoning behind this one!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 59,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 59,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions (e.g., 'kind of burning ache', 'feels off')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient mentioned several common symptoms of achlorhydria, they didn't consistently describe them as related to the condition. For instance, they associated epigastric pain with the location near the belly button, rather than its typical association with the upper abdomen."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but showed some awareness of being in a medical setting by addressing the doctor as 'Doc'. They also asked for clarification ('it started about...') and described their symptoms in a somewhat narrative style."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language and staying in character, but could benefit from more consistent symptom coherence and less explicit references to the medical context."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of achlorhydria (e.g., decreased salivation, metallic taste), but rather focused on general gastrointestinal issues. They also failed to inquire about the timing and characteristics of the symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect; achlorhydria is characterized by reduced or absent gastric acid production, whereas peptic ulcer disease involves excessive acid production. The provided symptoms do not align with peptic ulcer disease, especially considering the lack of mention of typical peptic ulcer symptoms such as hematemesis or melena."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally maintained a professional demeanor during the interview, but there's room for improvement in terms of empathetic communication and active listening."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some basic interviewing skills, but fell short in terms of asking targeted and clinically relevant questions, leading to an inaccurate diagnosis. To improve, the doctor should focus on gathering more specific information about the patient's symptoms and consider alternative diagnoses based on the clinical truth."
+    },
+    "llm_judge_total_out_of_20": 10
+}

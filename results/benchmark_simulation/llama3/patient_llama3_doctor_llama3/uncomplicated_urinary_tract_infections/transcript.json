@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, it's been going on for days now. I'm so uncomfortable. Every time I have to go to the bathroom, I feel like I'm burning inside. It hurts to pee, ya know? And I have to get up like five times during the night to use the bathroom too. Sometimes I even leak a little bit before I make it to the toilet. That's just embarrassing.\n\nAnd when I do finally sit down to pee, it's like my bladder is trying to squeeze out everything at once. I feel really full, but then nothing comes out right away. It's like my body's trying to warn me something's wrong.\n\nOh, and I've noticed some blood in my urine too. Just tiny specks, but",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent changes or infections that could be contributing to these symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dear doctor, I've been having such a miserable time lately. Every time I go to the bathroom, it hurts to pee. It's like my insides are burning. And sometimes, I feel like I really have to go, but nothing comes out. It's so frustrating! I'm also getting up in the middle of the night quite frequently to use the restroom. I just hope it's not something serious... my husband keeps telling me I'm being paranoid, but I know how my body feels.\n\nAs for any changes, I think I might have eaten some spicy food last week, and maybe some beans too. My grandson came over and made me try his garlic shrimp dish, and now I'm wondering if that might be the culprit.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any blood in your urine or difficulty starting to urinate?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dear, yes... I've been feeling quite uncomfortable lately. Every time I go to the bathroom, I feel like I have to rush because it hurts to start peeing. And sometimes I notice a bit of blood in my urine, but it's just a tiny bit, not much. It's really frustrating because it makes me want to hurry up and get done with it before it gets worse.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any pain or discomfort elsewhere in your lower abdomen, such as below your belly button?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dear doc, I've been having some problems down there lately. It's been bothering me something awful. Down near my pubic bone, I feel this... ache, I suppose. Like a dull pressure. It's hard to explain. Sometimes it feels like someone's pressing on me, but it's not really painful, just uncomfortable. It's been going on for a few days now. And every time I go to the bathroom, I feel like I have to hurry up and get out, you know? Like I'm not sure I'll make it if I don't get there right away. But other than that, I haven't had much else wrong besides a bit of fatigue, which I thought might just be old age catching up with",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient has an uncomplicated urinary tract infection (UTI).\n\nClinical justification: The patient presents with classic symptoms of a UTI, including dysuria (painful urination), frequency, urgency, nocturia (getting up multiple times at night to urinate), and hematuria (blood in the urine). Additionally, her history of consuming potentially irritating foods such as spicy dishes and beans may have triggered the onset of the infection. The absence of fever, flank pain, or other systemic symptoms suggests that this is an uncomplicated UTI, rather than a more severe condition such as pyelonephritis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 91,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 91,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally employed colloquial expressions ('ya know', 'down there')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient consistently reported symptoms typical of uncomplicated UTIs, such as dysuria, urinary frequency, and hematuria. However, they did not mention suprapubic pain or discomfort until Turn 4, which was somewhat inconsistent with their previous descriptions."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but occasionally exhibited behaviors more characteristic of a healthcare provider, such as asking about possible causes of their symptoms (e.g., spicy food, garlic shrimp)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good symptom coherence and role adherence, but could benefit from more consistency in reporting symptoms and staying within the patient role. The patient's language was mostly natural, but included some colloquialisms and occasional slips into healthcare provider mode."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed some key aspects of the case, such as asking about urinary frequency, hesitancy, and suprapubic pain or discomfort. Question 3 was also unclear and did not directly address the possibility of a UTI."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, but the doctor failed to consider alternative explanations for the symptoms, such as the consumption of certain foods. The mention of 'classic symptoms' was also overly simplistic and didn't account for atypical presentations."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally stayed professional and avoided acting like a patient during the interview."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor demonstrated good diagnostic skills, but could improve by asking more comprehensive questions and considering alternative explanations for the patient's symptoms. They also showed a good understanding of the clinical presentation of uncomplicated UTIs, but could benefit from further education on atypical presentations and the importance of considering the patient's diet and lifestyle factors."
+    },
+    "llm_judge_total_out_of_20": 14
+}

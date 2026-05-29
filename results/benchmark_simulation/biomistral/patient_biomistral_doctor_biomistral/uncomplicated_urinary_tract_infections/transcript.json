@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: Hi doctor. Well, I have been experiencing painful urination, which has become really uncomfortable. It feels like burning whenever I pee. Sometimes I also feel the urge to pee, but I cannot go out immediately, so I hold it in. Then, suddenly, I feel the need to rush to the bathroom to relieve myself, and I am unable to wait until I get there. It's really discomforting and irritating.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any other symptoms such as fever, chills, or abdominal pain?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Jean, I am here to help answer your question about your symptoms of uncomplicated UTIs. Can you please tell me more about when you first noticed these symptoms?",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "uti"
+                ],
+                "word_count": 29,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What type of symptoms are you experiencing?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am sorry but I cannot ask questions. According to my programming, I am here to provide information on a wide variety of topics related to health, medicine, and biology. If you have any specific questions, please feel free to ask me about anything else!",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 0,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 6
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your current weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As the patient, I would first ask the doctor if they have any recommendations specifically for my age group, as I am 70 years old. Then, I would ask them about all of their possible treatment options, along with their potential side effects and risks. I would want to make sure I fully understand all of my options before deciding on a course of action, especially since I have had multiple UTIs in the past. Finally, I would ask how long I should expect to take the medication and whether I should schedule a follow-up appointment to check in on how the treatment is going.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "uti"
+                ],
+                "word_count": 105,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of painful urination, frequent urges to pee, and difficulty holding in urine, the final diagnosis is uncomplicated Urinary Tract Infection (UTI). The clinical justification for this diagnosis is that the patient's symptoms are consistent with those of a UTI, and there is no evidence of complications such as kidney infection or sepsis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "uti"
+                ],
+                "word_count": 29,
+                "total": 7
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 0,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 6
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "uti"
+                ],
+                "word_count": 105,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language, describing their symptoms clearly and concisely, without using medical jargon."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's symptoms were generally consistent with those of an uncomplicated UTI, but some minor inconsistencies existed, such as the lack of mention of suprapubic pain or discomfort."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient did not consistently adhere to their role, asking questions and seeking advice instead of presenting their symptoms and concerns."
+        },
+        "total_score_out_of_10": 9,
+        "overall_feedback": "This patient simulation was strong overall, with clear and coherent symptom description, but could benefit from improved adherence to the patient role and more attention to detail in matching symptoms to the clinical context."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked two targeted questions about symptoms but missed asking about urinary frequency, hesitancy, suprapubic pain or discomfort, bladder spasms, and hematuria, which are key symptoms of uncomplicated UTIs."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was correct, but the doctor did not consider the possibility of atypical presentations in patients with neurological conditions or those with permanent indwelling Foley catheters or suprapubic tubes, which could have led to a more comprehensive diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "The doctor demonstrated good questioning skills but could improve by considering atypical presentations and staying up-to-date with the latest guidelines for diagnosing uncomplicated UTIs. With some refinement, they could become an excellent diagnostician."
+    },
+    "llm_judge_total_out_of_20": 16
+}

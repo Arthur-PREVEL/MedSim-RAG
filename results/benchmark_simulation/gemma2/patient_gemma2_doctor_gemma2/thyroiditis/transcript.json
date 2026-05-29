@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, for the past few weeks, I've been feeling really tired all the time.  I haven't been sleeping well either. And lately, my throat feels sore, especially when I swallow. It just aches.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any other symptoms like a runny nose or cough?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I've had a bit of a stuffy nose and been coughing lately.  Not terrible, just something that's been bothering me for a few days now.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have a fever?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been feeling pretty feverish lately.  My throat feels scratchy too, kind of sore.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any other symptoms like a cough or runny nose?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I've had a bit of a tickle in my throat lately, and my nose feels a little stuffy.  I just thought it was a bit of a cold coming on.  Mostly though, it's this pain in my neck that's really bothering me.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Subacute thyroiditis (De Quervain's thyroiditis)\n\n**Clinical Justification:** The patient presents with symptoms consistent with subacute thyroiditis, including fatigue, sore throat, fever, and a recent history of upper respiratory symptoms. These findings suggest inflammation of the thyroid gland, likely triggered by a viral infection. \n\n\nLet me know if you'd like to explore other potential diagnoses or discuss the management of this condition!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 63,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 63,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language, but occasionally mentioned symptoms without directly relating them to their overall condition. They avoided complex medical terminology, but some phrases were somewhat ambiguous (e.g., 'feverish' instead of 'feeling hot')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient's symptoms were somewhat inconsistent across turns. Initially, they reported fatigue, sore throat, and sleep issues. Later, they added respiratory symptoms (stuffy nose, cough), which seemed unrelated to their initial complaints. Fever was introduced in turn 3, but its connection to previous symptoms wasn't clear."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient generally stayed within the role of a patient, describing their symptoms and experiences without displaying knowledge of medical concepts or diagnostic processes."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation showed potential, but the narrative felt disjointed, with symptoms presented in a somewhat disconnected manner. The patient's language was mostly accessible, but some expressions could be clarified for better clarity. To improve, consider refining symptom presentation and ensuring consistency throughout the conversation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions about symptoms, but they were not comprehensive enough to cover all possible causes of thyroiditis. Questions 1 and 3 were similar and did not address key symptoms such as neck pain, difficulty swallowing, or recent radiation exposure."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was partially correct, but it was based on incomplete information. The doctor missed several potential causes of thyroiditis, such as chronic thyroiditis, drug-induced thyroiditis, and Riedel thyroiditis. The justification provided was also brief and lacked specific details about the clinical presentation."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor simulation showed promise, but fell short in terms of asking comprehensive questions and providing a thorough diagnosis. To improve, the doctor should strive to ask more targeted and inclusive questions that consider multiple potential causes of thyroiditis. Additionally, the final diagnosis should be supported by more detailed clinical reasoning and evidence-based justifications."
+    },
+    "llm_judge_total_out_of_20": 12
+}

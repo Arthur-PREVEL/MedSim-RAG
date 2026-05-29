@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, thank you for seeing me. I've been feeling quite weak lately, and I often find myself cold even when others around me seem comfortable. I've noticed that my body has started holding onto more water, especially in my legs, which makes walking difficult at times. I also tend to feel tired very easily, no matter how much rest I get.\n\nRegarding my eating habits, I try to eat less than before and sometimes I feel the need to purge after meals. But lately, I've found it hard to stick to my usual routine, and this worries me. I've lost track of when my last period was, and I know that's unusual for me. Sometimes I worry about my weight",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any changes in your heart rate or irregularities, such as a fast or slow pulse?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doctor, I've noticed that my heart seems to race sometimes when I'm doing certain activities, and there have been instances where it feels like it's beating too slowly – especially during rest. It worries me because it doesn't feel right, you know? I just hope everything is alright.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any episodes of dizziness, fainting, or chest pain associated with these changes in heart rate?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh, dear doctor, yes, I have indeed encountered some unpleasant sensations that worry me quite a bit. Sometimes when I stand up too quickly, I feel dizzy, almost light-headed, almost as if the room spins around me. I wouldn't exactly call it fainting, but it certainly makes me weak at the knees.\n\nAs for my chest, there have been times when it feels tight and heavy, particularly after I've overexerted myself during exercise. And occasionally, I get this strange fluttering sensation in my chest. I don't know if it's just anxiety or something else, but it does scare me a little.\n\nI guess the constant worry about",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 107,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any symptoms of palpitations, shortness of breath, or excessive sweating, especially during rest or at night?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I must admit that there have been times when my heart seems to be racing a little too fast - almost as if it's skipping a beat sometimes. And yes, I find myself short of breath quite easily these days, even during regular activities or conversations. As for sweating, there have been nights when I wake up drenched in sweat for no apparent reason. But I've just put it down to getting older, Doc. I hope I'm not worrying you too much.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms, including significant weight loss, self-induced vomiting or purging, menstrual irregularities, feelings of coldness, fatigue, and signs of possible cardiac issues such as irregular heartbeat, racing heart, chest pain, dizziness, and shortness of breath, the most likely diagnosis is Anorexia Nervosa with potential complications related to cardiovascular problems.\n\nThe clinical justification for this diagnosis lies in the combination of psychological factors (preoccupation with weight, fear of gaining weight) and physical symptoms (weight loss, amenorrhea, cold intolerance, fatigue, cardiac issues). The presence of cardiac symptoms such as palpitations, shortness of breath, and chest pain may indicate electrolyte imbalances or other cardiovascular complications commonly seen in individuals with anorexia nervosa.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 112,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 107,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 112,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions (e.g., 'it feels like my heart is beating too slowly')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Some symptoms were inconsistent with the clinical context (e.g., mention of rapid heartbeat and slow heartbeat in Turn 2) or seemed unrelated to the expected presentation of anorexia nervosa (e.g., night sweats)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient deviated from their role by mentioning age-related concerns (in Turn 4), which is not relevant to the clinical context provided."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed potential, but could benefit from further refinement to ensure consistency with the clinical context and adherence to the role. The patient's language was generally clear, but some symptoms were unclear or unrelated to the expected presentation of anorexia nervosa. Role adherence was compromised by age-related comments."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were partially targeted but missed key symptoms such as restrictive eating behaviors, purging methods, and extremity edema. Questions focused more on cardiac symptoms rather than overall presentation of anorexia nervosa."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "Final diagnosis was mostly accurate, considering the symptoms presented, but lacked comprehensive consideration of the full spectrum of anorexia nervosa manifestations, particularly the psychological aspects and some physical symptoms like extremity edema."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy and professionalism, but could improve by asking more comprehensive questions that cover all key symptoms of anorexia nervosa, ensuring a well-rounded understanding of the condition before making a diagnosis."
+    },
+    "llm_judge_total_out_of_20": 14
+}

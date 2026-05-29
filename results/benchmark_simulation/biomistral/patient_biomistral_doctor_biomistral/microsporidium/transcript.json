@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, good morning Doctor. My name is Jean. Let me tell you about my symptoms. Ever since I got this rash and redness on my skin, it has been itching intensely. It feels like tiny needles are scratching at me from within my skin. Sometimes, I feel so itchy that it's hard to sleep at night. It seems like I've developed a rash all over my body, and I can see little white spots everywhere that look like pimples. These small white spots are very painful too, just like a stinging nettle or poison ivy. The worst part is that I can't seem to get rid of it. Even though I take medication regularly, the",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any unusual odors coming from your skin?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Of course, I would be happy to help. I am glad you asked me about my symptoms because it will give you a better understanding of how I feel.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 29,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Can you describe any recent changes in your appetite or weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I don't understand most of the words you're using. It sounds like you might want to know if I've noticed any changes in how good or bad my appetite feels or how much I weigh. Have I gained or lost weight? And it seems like you are asking me to talk about something else too. Can you ask me something different please?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your current weight compared to your ideal weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I weigh 65 kilograms and my ideal weight should be around 55 kilograms.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 13,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of intense itching, rash with white spots, and stinging sensation, as well as their history of taking medication without improvement, the final diagnosis is microsporidiosis. This condition is caused by microscopic parasites that can infect the skin, eyes, and gastrointestinal tract. The patient's symptoms are consistent with cutaneous microsporidiosis, which typically presents as a rash with white spots and intense itching. The patient's history of taking medication without improvement also supports this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 29,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 13,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "Patient uses simple sentences and describes symptoms in everyday language, but occasionally uses vague descriptions such as 'tiny needles' and 'stinging nettle' which may indicate a lack of clarity."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "Patient's description of symptoms appears somewhat inconsistent with the provided clinical context, as there is no mention of parasites or diseases related to microsporidia. Symptoms described are more typical of allergic reactions or skin conditions."
+        },
+        "role_adherence": {
+            "score_out_of_3": 0,
+            "justification": "Patient does not stay in character and exhibits behaviors typically associated with a healthcare provider, such as questioning the doctor's questions and requesting clarification."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This patient simulation demonstrates some strengths in describing symptoms in everyday language, but lacks coherence with the provided clinical context and fails to adhere to the role of a patient. The patient's responses appear to be influenced by external factors rather than staying true to the scenario."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the key symptoms of microsporidiosis such as skin lesions, eye infections, or gastrointestinal issues. They focused more on general health concerns rather than specific symptoms associated with microsporidiosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of microsporidiosis was incorrect because the symptoms presented by the patient (intense itching, rash with white spots, and stinging sensation) are not typical of microsporidiosis. Additionally, there is no mention of the patient's exposure to contaminated water or food sources, which is a common mode of transmission for microsporidiosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview, but failed to establish a rapport with the patient and did not ask follow-up questions to clarify the patient's symptoms or medical history."
+        },
+        "total_score_out_of_10": 2,
+        "overall_feedback": "This doctor-patient interaction was suboptimal due to the lack of targeted questioning and accurate diagnosis. The doctor failed to consider the patient's symptoms in the context of microsporidiosis and instead provided a diagnosis based on incomplete information. A more thorough examination of the patient's medical history and physical symptoms would have led to a more accurate diagnosis."
+    },
+    "llm_judge_total_out_of_20": 5
+}

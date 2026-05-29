@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi there! Lately, when I go pee, sometimes my body isn't ready when night comes around—that happens quite often despite trying to make sure everything stays clean overnight. Also, even if we manage things well throughout most daytimes, popping up accidentally here and there does slip past too. And yes, these little accidents have been happening every now and again even after all this time feeling mostly okay without them. Would love some help figuring this stuff out so whatever steps need taking could get me back where I once felt right before leaks started creeping their way through the routine part of life especially those late evening moments. Thank you kindly! 🙂",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bladder control during different times or activities?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I appreciate being asked this question by Doctor Jones; it helps me understand my situation better. Yes, there have been moments when I seem to lose some control over whether pee comes out even though I didn’t feel like needing to go yet while playing lawn bowls last Saturday morning – quite embarrassing really! But after those few drops were accidently released onto green grass under fresh sunlight rays... well let us just say they weren’t supposed leaks occurring around here right now but rather small bursts happening randomly throughout day & night without clear reason until recently discussing possible reasons why happened frequently enough causing stress among friends close circle who love picnics together every summer break because nobody wants talk dirty business",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any recent changes in your urinary habits or symptoms that might suggest an underlying medical issue?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven't noticed anything unusual when going to the bathroom recently; things seem normal there. But sometimes I feel quite embarrassed because accidents happen even after all these years since my childhood potty mishaps. Could this have something to do with getting older? My mother mentioned she had similar issues once upon her passing but didn’t talk much about why they happened back then. She told me over tea last Sunday afternoon we must consider whether our daily routines need adjustment – maybe if someone could help figure out if certain foods affect us differently now than before – just saying... Is stress perhaps making matters worse? Oh! And speaking of health concerns, does anyone remember how often one needs their feet checked by the pod",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 126,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any changes in your bladder control or urinary habits that coincide with increased levels of stress?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As I reflect back on my health over recent months, Dr., something has been troubling me when dealing with allergies this spring season. My nose runs constantly even though allergy pills haven’t helped much recently. Every sneeze feels so awful without relief coming quickly enough after each burst. Night time seems no better; just last Monday while reading before sleep found myself wide awake choking down water because nothing else would come easily anymore despite drinking less these past weeks now trying new strategies instead of counting glasses filling up faster than expected every day once again worryingly sometimes feeling weak afterwards needing rest but still struggling quite uncomfortable many mornings finding difficulty getting through them especially tired often leading right here",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Nocturnal Polyuria (Enuresis). The patient reports frequent involuntary voiding at night which is not associated with waking from deep sleep stages nor excessive fluid intake prior to bedtime. This condition can be exac0ld by factors such as aging, medication side effects, or other systemic conditions including diabetes insipidus or hypercalcemia. Further evaluation for potential contributing causes should include assessment of blood glucose regulation, calcium metabolism tests, review of current medications, and possibly referral to urology for further investigation into neurogenic versus non-neurogenic enuresis etiology. Stress may contribute indirectly due to its impact on overall health status and quality of life, potentially influencing frequency of episodes.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 107,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 126,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 107,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into informal expressions ('creeping their way', 'randomly throughout day & night') and colloquialisms ('let us just say')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient's descriptions of symptoms are somewhat inconsistent with the clinical context. They mention accidents during daytime and nighttime, but also reference specific situations (playing lawn bowls, eating certain foods)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 0,
+            "justification": "The patient exhibits behaviors characteristic of a healthcare provider, such as asking questions and offering hypotheses ('maybe if someone could help figure out if certain foods affect us differently now than before')."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language, but struggles with symptom coherence and role adherence. The patient's descriptions of symptoms are inconsistent and lack clarity, and they exhibit behaviors typical of a healthcare provider rather than a patient seeking care."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but lacked specificity and relevance to the DSM-5 diagnostic criteria for enuresis. Questions did not cover essential aspects such as frequency, duration, and impact on daily functioning."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of Nocturnal Polyuria (Enuresis) was partially accurate but incomplete. The patient's symptoms do not align perfectly with nocturnal polyuria, as they reported frequent involuntary voiding at night without association with waking from deep sleep stages or excessive fluid intake. However, the diagnosis missed the crucial aspect of considering primary vs secondary enuresis and failed to account for other possible causes such as urinary tract infections or constipation."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated some understanding of the key symptoms and diagnostic criteria for enuresis, their questioning strategy was limited, and the final diagnosis was only partially accurate. To improve, the doctor should focus on asking more targeted and comprehensive questions that address the DSM-5 diagnostic criteria and consider alternative explanations for the patient's symptoms."
+    },
+    "llm_judge_total_out_of_20": 9
+}

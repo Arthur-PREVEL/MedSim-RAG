@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, lately, I keep having accidents, mostly at night.  I wake up soaked through my pajamas sometimes.   It's embarrassing, really, and I worry about getting a cold from sleeping damp.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you feel the urge to urinate before these accidents happen?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Sometimes I feel a little bit like I need to go right before it happens, but not always.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 18,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When you do feel the urge, is it accompanied by pain?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, not exactly pain. More like just a strong feeling that I need to go right away.  It comes on sudden sometimes, kind of catches me off guard.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any discomfort or cramping along with this urge?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes my tummy feels kind of tight before I have an accident.  Not really painful though, just uncomfortable like when I eat too much.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 25,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Nocturnal Enuresis (Bedwetting)\n\n**Clinical Justification:** The patient presents with recurrent episodes of involuntary urination during sleep, specifically waking up soaked in their pajamas. This, coupled with occasional but not consistent premonitory urgency, aligns with the classic presentation of nocturnal enuresis. \n\n\nLet me know if you'd like to explore potential causes or treatment options for nocturnal enuresis!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 18,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 25,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions ('a strong feeling', 'uncomfortable like when I eat too much')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but lacked specificity and detail. They mentioned nocturnal enuresis, but didn't discuss other aspects like frequency, distress, or impact on daily life."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but showed some awareness of their condition by mentioning embarrassment and concern about health consequences. However, they didn't fully embody the emotional distress and frustration typically associated with enuresis."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language and staying in character, but struggled with providing specific details about their symptoms and adhering to the role's emotional tone. With further refinement, the patient could better convey the complexities and challenges of living with enuresis."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted towards the symptoms of enuresis, but lacked exploration of key aspects such as frequency, duration, and impact on daily life. Questions did not adequately cover differential diagnoses like urinary tract infections or constipation."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of Nocturnal Enuresis was partially accurate, considering the patient's reported nocturnal urination. However, the justification was incomplete, as it didn't account for the lack of consideration for secondary causes, such as underlying medical conditions or sleep disorders."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding unprofessional language or tone."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining professionalism and asking relevant questions. However, there was room for improvement in exploring key aspects of the patient's symptoms and considering alternative explanations for the presenting issue. Further development of critical thinking skills and attention to detail would enhance diagnostic accuracy and overall patient care."
+    },
+    "llm_judge_total_out_of_20": 14
+}

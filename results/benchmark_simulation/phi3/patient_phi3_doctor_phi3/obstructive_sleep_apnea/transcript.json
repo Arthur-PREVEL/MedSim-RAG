@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon! As an elderly individual who has come here feeling wiped out throughout my usual days despite getting some rest at night. Could there possibly be something wrong that isn't just me needing better habits when lying down? This discomfort continues whether or not someone else might have noticed any issues happening while I was away catching Zs. Also, they seem concerned about how big around this part feels compared to others – probably because measurements show higher numbers due to less exercise lately since retiring last year. And regarding our talk earlier on paper forms asked before coming into see us - well… It sounds complicated but let’s make sure we understand everything clearly so both parties benefit equally—thanks again for helping sort",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 125,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced shortness of breath during your daily activities?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As I reflect on my health lately... There have been these moments where just doing everyday things leaves me feeling out of breath, kinda worn down though not really sick when I wake up. It feels different compared to regular tiredness – maybe because those days don’t seem restful at all even though they pass quickly. And there was this once that Bob noticed how still I got last night until he nudged me awake - mentioned something about pauses but didn’t explain too much. He looked worried then. Also… well, back in the office we talk sometimes about changes their team made—something new called ‘STOP-BANG,’ which looks complex but seems relevant here since discussions came up",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any chest pain or discomfort during your episodes of shortness of breath?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have not felt pains around my heart when I find myself struggling for air at night that wakes me up abruptly. It feels different—like an overall heaviness rather than sharp stabs near where bones should meet each other underneath skin folds on sides below breastbone area. When attempting deep relaxations before bedtime routine which helps ease into slumber safely every evening routinely done since retirement days begin falling apart sometimes resulting lack consistent quality rest despite best efforts taken including medications recommended previously prescribed regimen involving specific supplement intake meant exclusively target reducing possible negative impact potential side effects otherwise could experience long term health consequences due harmful chemical exposures encountered regularly throughout entire life course existence thus far purs",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have there been any recent changes in your stress levels or emotional well-being?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well now ain’t this something—my days have sure turned into quite the slog lately. From getting up at dawn time till dusk rolls around again, I reckon my energy just keeps draining faster each passing week. Even when I wake refreshed that mornin’ thought about napping seems all too tempting come mid-afternoon. And get me tell ya, even Jenny who lives two houses down tells me she hears strange stops ‘n starts outta myself underneounds these four walls sometimes... Strange how things change but folks don't always see 'em coming until they stare straight ahead long enough know full good they need look back some wayward ways behind themselves first!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: The patient is likely suffering from Obstructive Sleep Apnea (OSA). Clinical Justification: Given the reported experiences with unrefreshing sleep leading to daytime fatigue, observed apneic events by another person suggesting interruptions in respiration during sleep, as well as nocturnal snoring potentially causing concern among family members, OSA emerges as a probable diagnosis. These signs align closely with common manifestations associated with obstructive sleep apnea syndrome, warranting further investigation through polysomnography for confirmation and appropriate management strategies such as CPAP therapy if confirmed.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 125,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally employs colloquial expressions and informal tone, which detract from the overall naturalness of the dialogue."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistently with the clinical context provided, but fails to explicitly mention key symptoms such as loud snoring, gasping, or choking, which are characteristic of OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some knowledge of medical concepts, specifically the STOP-BANG questionnaire, suggesting a departure from the role of a typical patient seeking medical attention."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and describing general symptoms, but falls short in adhering to the role and providing coherent, clinically relevant information. The patient's responses reveal a mix of insightful comments and colloquialisms, which detract from the overall authenticity of the interaction."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of Obstructive Sleep Apnea, such as excessive daytime sleepiness, loud snoring, or witnessed episodes of breathing cessation during sleep. Instead, they focused on general symptoms like shortness of breath and chest pain, which are not specific to OSA."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor considered some relevant factors such as unrefreshing sleep, observed apneic events, and nocturnal snoring, the diagnosis was based on limited information and lacked objective measures like the Epworth Sleepiness Scale (ESS) or the STOP-BANG questionnaire. Further investigation through polysomnography would be necessary to confirm the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview but failed to establish a clear rapport with the patient, instead focusing on asking direct questions about symptoms rather than exploring the patient's concerns or experiences."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "The doctor demonstrated some understanding of the key symptoms and diagnostic criteria for Obstructive Sleep Apnea but failed to ask targeted questions and relied heavily on indirect indicators. Further training on evidence-based questioning techniques and symptom-specific assessments would improve their diagnostic accuracy and patient-centered care."
+    },
+    "llm_judge_total_out_of_20": 11
+}

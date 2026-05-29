@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning, thank you for coming to see me today. I'm having some pain in my stomach. It feels hard and tight, especially when I take a deep breath. Sometimes I feel like my sides might explode.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "mac"
+                ],
+                "word_count": 37,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced anything similar before or is this your first time with these symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Sure, I've had similar symptoms before. There was a specific period where I would get severe stomach cramps and diarrhea every day. It lasted for about two weeks. But then I tried different medications, went to different doctors, and eventually, it went away.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "mac"
+                ],
+                "word_count": 43,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any weight loss or blood in your stool during those episodes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER AS JEAN: No, I haven't noticed any weight loss or blood in my stool during the episodes.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 18,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any abdominal pain or discomfort that radiates to your back?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "QUESTION FROM PATIENT: Doctor, I do feel some abdominal pain when I eat my food. Sometimes it goes away on its own, but other times it lasts for a few weeks. Can I get some help?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient has Microsporidiosis.\n\nClinical Justification: The patient's recurrent episodes of abdominal pain, particularly after eating, along with previous episodes of severe stomach cramps and diarrhea, suggest an intestinal infection. Microsporidiosis, caused by the parasite Microspora, can cause gastrointestinal symptoms such as abdominal pain, diarrhea, and weight loss, which aligns with the patient's reported symptoms.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "mac"
+                ],
+                "word_count": 37,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "mac"
+                ],
+                "word_count": 43,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 18,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses simple language to describe their symptoms, but occasionally slips into vague descriptions such as 'my sides might explode'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes recurring stomach pain and cramping, but lacks specificity regarding duration, intensity, and triggers. They also mention unrelated symptoms like weight loss and blood in stool, which may indicate underlying conditions not directly linked to their current complaint."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient frequently refers to themselves as 'I' and addresses the examiner as 'doctor', indicating a deviation from the role of a patient seeking medical advice."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in describing general symptoms, but struggles with coherence and adherence to the patient role. Their narrative is often unclear and includes irrelevant information, hindering effective communication with a healthcare provider."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Questions were somewhat targeted towards the patient's symptoms, but did not directly address the possibility of a parasitic infection or specific details about the patient's condition."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Microsporidiosis is incorrect because the provided information does not support the conclusion that the patient has Microsporidiosis. The description mentions abdominal pain, diarrhea, and weight loss, but these symptoms could be attributed to various conditions, including bacterial or viral infections, rather than a parasitic infection like Microsporidiosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview, but failed to establish a clear understanding of the patient's condition and did not ask follow-up questions to clarify the patient's symptoms."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "The doctor's performance was subpar due to inadequate questioning and a misdiagnosis. While the doctor remained professional, they failed to gather sufficient information to make an accurate diagnosis. A more thorough investigation of the patient's symptoms and possible causes would have led to a more informed decision-making process."
+    },
+    "llm_judge_total_out_of_20": 9
+}

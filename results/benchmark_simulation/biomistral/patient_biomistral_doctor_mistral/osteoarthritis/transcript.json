@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER: Well Doctor, lately, I've been feeling really uncomfortable when walking and doing basic tasks. My joints seem to lock up and hurt a lot. I have a hard time even getting out of the kitchen or bathroom. It's getting harder for me to lift things around the house too.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 50,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any warmth, redness, or swelling in the affected joints, or do they feel stiff but not warm?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am Jean, a 70-year-old patient. When I move around or try to do certain tasks, I feel a lot of pain in my joints and muscles. It's hard for me to get around and it's getting worse over time. Sometimes my legs feel weak and unstable, like they might give out on me. My hands are also affected; the knuckles on some of my fingers are getting bigger and my joints hurt. I keep trying to rest, but it doesn't seem to help much.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 85,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Jean, have you noticed any morning stiffness in your joints that lasts more than an hour?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Answer from me: \"Well yes, I suppose I would say so. I find that my fingers feel particularly stiff when I first get out of bed in the morning. It takes me about 20 minutes to get everything moving again. And my knees too, they're always a bit sore for the first little while after I wake up.\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any swelling or redness in your joints, and do they make any cracking or popping sounds when you move them?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM YOU (Jean): Well, I do have some swelling in my hands sometimes. And, it seems like my fingers don't bend the same way as they used to. It feels like there's something wrong with their joints.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided medical history, the final diagnosis is Osteoarthritis. The clinical justification is that the patient, Jean, aged 70, experiences persistent joint pain, stiffness, and reduced mobility in multiple joints (knees, hands), which worsens over time and is accompanied by morning stiffness lasting more than an hour and occasional swelling. Additionally, the patient reports changes in joint function, such as decreased range of motion and altered joint shape (enlarged knuckles). These symptoms align with the characteristics of osteoarthritis, a degenerative joint disease primarily affecting older adults.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 88,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 50,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 85,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 88,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "Patient used everyday language, but occasionally slipped into formal tone in Turn 2 and Turn 4."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Patient's symptoms were generally consistent with osteoarthritis, but lacked specificity in describing classic signs such as Heberden's nodes or Bouchard's nodes."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "Patient stayed in character, but occasionally exhibited knowledge typical of a healthcare professional in Turns 2 and 4."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good symptom coherence and role adherence, but could benefit from more specific descriptions of classic osteoarthritis signs and less reliance on medical terminology. Language was mostly natural, but occasional slips into formal tone detracted from realism."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 3,
+            "justification": "Questions were mostly targeted and clinically relevant, but could have been more specific about the duration of symptoms and potential triggers."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis was generally accurate, but the doctor did not explicitly rule out other possible causes of joint pain and stiffness, such as rheumatoid arthritis or gout."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, but occasionally used phrases that slightly resembled patient-like language ('Jean, have you noticed...')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good question-asking skills and diagnostic accuracy, but could improve by being more thorough in their questioning and maintaining a strictly professional tone. With some refinement, this doctor has the potential to excel in real-world clinical settings."
+    },
+    "llm_judge_total_out_of_20": 14
+}

@@ -1,0 +1,223 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, thank you for seeing me today. I've been having some trouble lately and I'd appreciate your help. I find myself feeling very tired throughout the day, even after a full night's sleep. Sometimes I even fall asleep unintentionally, like when watching TV or sitting at a meeting. This has been going on for quite some time now.\n\nI also have an issue with snoring. My spouse tells me that my snoring is quite loud, louder than talking or even loud enough to hear through closed doors. Sometimes, they say I pause my breath during sleep, which concerns me.\n\nIn the mornings, I often wake up with headaches. I've also noticed that",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 113,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you ever been diagnosed with or suspected of having sleep apnea?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I've been thinking about this for a while, and I believe there might be something going on with my sleep. I've been feeling unusually tired throughout the day even after getting a full night's rest. This fatigue is unlike anything I've felt before. I also snore quite loudly, sometimes so much that people can hear me through closed doors.\n\nI've noticed that I wake up with a headache in the morning, and sometimes I even gasp or choke while sleeping. My wife has mentioned that she's seen me stop breathing during the night, but I didn't realize it was serious. I do have high blood pressure, and I know that being overweight can contribute",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you ever experienced any episodes of pauses in your breathing during the day, or do you notice periods of excessive daytime sleepiness?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 23,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I've been noticing that sometimes during the day, I tend to feel unusually tired or sleepy even though I had enough rest at night. I don't mean the ordinary kind of tiredness that comes after long hours of work, but a sort of overwhelming drowsiness that makes me want to fall asleep even when I shouldn't, like when I'm watching TV or sitting at my favorite café. As far as I remember, I haven't ever felt as though I stopped breathing specifically during the day, but it might be hard to tell since those moments are usually brief and come unnoticed. It's possible that this could be related to my sleep patterns at night, which I'll discuss",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "rdi",
+                    "rem"
+                ],
+                "word_count": 118,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your weight, appetite, or mood lately, or have there been any significant stressors in your life recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As a patient, I have indeed noticed some changes in my weight, appetite, and mood recently. I find that I've been gaining weight, and I've been eating more than usual. My mood has been a bit down as well, and I've been feeling stressed about various things in my life.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 50,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Obstructive Sleep Apnea (OSA)\n\nClinical Justification: The patient exhibits symptoms consistent with OSA, including excessive daytime sleepiness, loud snoring, pauses in breathing during sleep reported by their spouse, waking up with headaches, and being overweight. Additionally, the patient's self-reported increased appetite, weight gain, and mood changes may indicate underlying conditions such as depression or anxiety, which can exacerbate sleep apnea symptoms. The patient's high blood pressure further supports the possibility of OSA, as it is a common comorbidity.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 113,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "rdi",
+                    "rem"
+                ],
+                "word_count": 118,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 50,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 23,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone, e.g., 'I'd appreciate your help.'"
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistently with the clinical context, but fails to explicitly mention some expected symptoms like nocturnal reflux, insomnia, or nocturia."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally exhibits behaviors not typical of a patient, such as providing unsolicited information about their weight gain and stress levels."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good symptom coherence and role adherence, but could benefit from more natural language usage and inclusion of all relevant symptoms. The patient's responses show a clear understanding of their condition and its impact on daily life, but sometimes stray from a typical patient's narrative style."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as snoring, witnessed breathing cessations, and morning headaches, which are crucial for diagnosing OSA."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the symptoms presented, but the doctor failed to consider the patient's age and sex, which could have influenced the likelihood of OSA. Furthermore, the justification provided did not clearly explain how the patient's appetite and mood changes contributed to the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally maintained a professional demeanor throughout the interview, but occasionally slipped into a somewhat conversational tone when discussing the patient's personal experiences."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated good diagnostic skills, but lacked thoroughness in questioning and clarity in justifying the diagnosis. With more comprehensive questioning and precise reasoning, the doctor could improve the accuracy and confidence of their diagnoses."
+    },
+    "llm_judge_total_out_of_20": 14
+}

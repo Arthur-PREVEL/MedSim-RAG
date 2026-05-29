@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good day, Doctor. I've been feeling unwell recently and it seems my throat area is causing me some trouble. I've had a persistent sore throat and cough that started around two weeks ago. Along with this, I've been having neck discomfort, especially when I swallow. The pain isn't constant but it's quite noticeable at times. Additionally, I've noticed some changes in my weight - I seem to be gaining weight despite not changing my diet or exercise routine much. My skin feels dry too. Lastly, I've felt more tired than usual lately, even after resting well. I hope you can help figure out what might be going on. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any fever, night sweats, or swollen lymph nodes in your neck recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I have noticed some discomfort in my neck area, and I've been experiencing occasional fevers and night sweats. However, I haven't observed any noticeable swelling in my lymph nodes.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have there been any recent changes or symptoms related to your weight, appetite, or fatigue levels?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've noticed some changes lately, Doctor. I've felt more tired than usual, and I seem to be gaining weight despite not changing my eating habits or exercise routine. My appetite hasn't changed significantly though.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you recently developed any issues with sleep patterns or quality, such as difficulty falling asleep, staying asleep, or waking up feeling unrefreshed?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 23,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been experiencing some trouble sleeping lately. I find it challenging to fall asleep and often wake up multiple times during the night. Moreover, even after getting enough hours of rest, I don't feel fully rested when I wake up in the morning. Is this something that might be related to my thyroid condition?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Subacute Thyroiditis\nClinical Justification: The patient presents with a persistent sore throat, cough, neck discomfort upon swallowing, weight gain without significant change in diet or exercise, dry skin, increased fatigue, occasional fevers, night sweats, and sleep disturbances. These symptoms are consistent with subacute thyroiditis, which is an inflammation of the thyroid gland usually caused by a viral infection. The thyroid dysfunction associated with this condition can lead to weight gain, fatigue, and changes in sleep patterns.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 23,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terms and jargon."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's symptoms were generally consistent with the clinical context provided, particularly mentioning neck discomfort, weight gain, and fatigue, which could indicate thyroid issues. However, the mention of occasional fevers and night sweats in Turn 2 was less coherent with the initial presentation of subacute thyroiditis symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient stayed in character and avoided acting like a doctor, asking relevant questions and seeking help for their symptoms. However, they did not exhibit significant emotional distress or anxiety typical of a real patient in this situation."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation demonstrated strong adherence to everyday language, symptom coherence, and role-playing. While there were minor inconsistencies in symptom reporting, the overall narrative remained believable and engaging. With slight adjustments to address the coherency of symptom progression, this simulation would be highly effective in evaluating a healthcare provider's communication skills."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions about systemic symptoms (fever, night sweats, swollen lymph nodes) and general health changes (weight, appetite, fatigue), but missed opportunities to explore specific symptoms related to thyroiditis, such as neck pain, difficulty swallowing, or hoarseness of the voice."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of Subacute Thyroiditis was partially accurate, but it was based on incomplete information. The doctor did not consider alternative diagnoses such as Acute Infectious Thyroiditis, Radiation-induced Thyroiditis, or Riedel Thyroiditis, which were not ruled out despite the presence of symptoms like neck discomfort upon swallowing and dry skin."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor simulation showed potential, but fell short in terms of comprehensive questioning and diagnostic accuracy. While the doctor demonstrated professionalism, they failed to fully explore the patient's symptoms and consider all possible diagnoses. With further training and practice, this doctor could improve their skills in gathering thorough histories and making more accurate diagnoses."
+    },
+    "llm_judge_total_out_of_20": 16
+}

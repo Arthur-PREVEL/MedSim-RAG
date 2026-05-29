@@ -1,0 +1,223 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon, Doctor. I have been having some stomach problems lately. It feels like there is a burning sensation in my stomach, especially when I eat food. It also seems like I'm losing weight, although I don't know if that's related to the burning feeling. Sometimes I get nauseous and feel like throwing up. I also experience bloating and diarrhea sometimes. My appetite has been decreasing lately too.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 68,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your bowel movements?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As a 70-year-old patient with achlorhydria, I have been experiencing some uncomfortable symptoms that affect my daily life. Firstly, I often feel a burning sensation in my stomach, especially after meals. Additionally, I struggle to maintain a healthy weight due to decreased appetite. Sometimes, I also experience heartburn and nausea. What makes things even more difficult is the bloating I experience, which causes me to feel tired and drained all day long. I also suffer from diarrhea and abdominal pain that makes it hard for me to sleep at night. Moreover, I am unable to eat large meals without feeling acid reflux. This condition has made me very frustrated and dist",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "achlorhydria",
+                    "oa"
+                ],
+                "word_count": 111,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of smoking or excessive alcohol consumption?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am Jean, a 70-year-old woman. I feel very uncomfortable in my abdomen area. Sometimes it feels like something is burning there. It happens when I eat or drink anything, especially spicy food. I also feel nauseous sometimes, but I don't actually vomit. I have lost some weight recently too. Do you think it could be because of what I'm eating? My doctor told me to take some medication for this, but it didn't seem to work.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your bowel movements?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, yes I have. My stools have been a bit looser than usual lately. Sometimes they're watery and sometimes they just seem to run out like water from a faucet. It's not very comfortable and it's starting to get really annoying.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 41,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided history, the final diagnosis is Gastroesophageal Reflux Disease (GERD). The patient's symptoms of burning sensation in the stomach, loss of appetite, nausea, bloating, diarrhea, and acid reflux are consistent with GERD. The patient's history of achlorhydria may increase their risk of developing GERD.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 47,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 68,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "achlorhydria",
+                    "oa"
+                ],
+                "word_count": 111,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 41,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 47,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language in turns 1 and 3, but used slightly formal tone in turn 2 and somewhat awkward phrasing in turn 4."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient described several symptoms consistently with achlorhydria, including epigastric pain (burning sensation), weight loss, nausea, bloating, diarrhea, and abdominal pain. However, the mention of 'acid reflux' in turn 2 might not be directly related to achlorhydria."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character as a patient, but occasionally showed awareness of being in a medical setting (e.g., mentioning taking medication in turn 3)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation was mostly coherent and natural, but could benefit from more consistency in symptom description and less awareness of the medical context. The patient's language was generally clear, but sometimes felt a bit forced or formal."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The doctor asked two relevant questions about bowel movements, but failed to explore other key symptoms such as epigastric pain, weight loss, heartburn, and nausea, which are more prevalent in achlorhydria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of GERD was incorrect; the patient's symptoms were not consistent with GERD, especially considering the presence of achlorhydria, which suggests a different underlying issue."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional during the interview, but failed to maintain a neutral tone and instead made assumptions about the patient's condition based on limited information."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor showed some potential in asking relevant questions, but ultimately failed to accurately diagnose the condition due to incomplete symptom exploration and a lack of consideration for the underlying condition of achlorhydria. With further training, they could improve their diagnostic accuracy and professionalism."
+    },
+    "llm_judge_total_out_of_20": 10
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Skin Cancer",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, I've noticed a spot on my arm that seems a bit different lately. It's not itchy or painful, but it feels kind of rough and scaly.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Has this spot changed in size or color recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, Doc, it seems a little bigger than it did last month, maybe...and it doesn't look quite as pink anymore, kinda brownish around the edges.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 25,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Where is this located?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 4,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "It's on my left shoulder, just above where my arm joins.  It’s kind of been bothering me lately, feels a little itchy and sore sometimes.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 25,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any rash or change in skin color there?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't really noticed anything... much. Maybe some spots that seem a bit darker than usual. Could just be my age though.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Basal Cell Carcinoma\n\n**Clinical Justification:** The patient describes a changing, non-healing lesion with irregular borders, evolving color (brownish), and new symptoms of itchiness and soreness. These findings are highly suggestive of basal cell carcinoma, the most common type of skin cancer. \n\n\nLet me know if you have any other medical histories you'd like me to review!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 16.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 25,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 25,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 4,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions ('kinda rough and scaly', 'kinda been bothering me')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient initially mentioned a non-itchy, non-painful spot, then later mentioned itchiness and soreness, which could indicate inconsistent symptom reporting."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient occasionally adopted a somewhat formal tone ('Doc'), but generally stayed within their role as a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed potential, but had some inconsistencies in symptom reporting and occasional slips into formal language. With refinement, they could better adhere to their role and provide more coherent symptom descriptions."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked two relevant questions about the lesion's appearance and location, but missed asking about itching, bleeding, pain, and irritation, which are also crucial symptoms to explore."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was incorrect; the description provided by the patient suggests a melanoma rather than basal cell carcinoma due to the mention of 'irregular borders', 'evolving color', and 'new symptoms of itchiness and soreness'."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor simulation showed potential in terms of professionalism, but fell short in terms of questioning and diagnostic accuracy. The doctor failed to consider all relevant symptoms and arrived at an incorrect diagnosis. Further training on comprehensive skin examinations and symptom exploration is recommended."
+    },
+    "llm_judge_total_out_of_20": 13
+}

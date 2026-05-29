@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "\"Doctor, recently, my menstrual cycles have stopped altogether—it’s quite worrying; always feeling chilly when others don't seems odd too... My body feels sluggish most days nowadays.\" The conversation unfolds from there between me and Dr. Smith at Springfield Clinic on March 5th this year. As Mrs. Thompson visited him after her husband passed away, she confided in revealing that these problems worsened ever since their loss last December. She had no prior history of significant health concerns until then but expressed deep distress over recent extreme weight loss due to an intense fear of gaining any pounds — it started roughly six months ago following his death when they were living",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Given your symptoms and life changes, could you tell us more about how your eating habits or exercise routines may have changed during this period?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 25,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Absolutely! Lately I haven't been feeling hungry much—it feels less intense than before. It’s not just that I skip meals; even when I want something healthy from my restricted list, it seems insufficient at times. As far as exercising goes, initially walking became tiresome after every little bit of restlessness in bed would leave me pushing myself too hard on jogs until exhaustion took over - almost regardless if there was actual hunger involved. When seeking out various forms physical activity including swimming sessions scheduled throughout weekdays which only amplified energy loss further due lackluster urges coupled sedative patterns causing sleep disruption leading onto reduced stamina across all tasks",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes or triggers for your appetite fluctuations and exercise fatigue?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have been feeling really out of sorts lately. Whenever it gets chilly outside, my hands get so numb; they just don’t feel warm at all. And when I try eating more than usual during holid0days – let's call them feast days - that makes me want to cleanse again afterward because things tend to stick in between times if we eat too much on certain occasions. Plus, there is this overwhelming urge to workout nonstop even beyond gym hours until my body feels drained completely but oddly still craves those extra sessions despite exhaustion creeping up each day ever since retirement life started getting busier. It seems these patterns aren't helping",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Do your symptoms improve with warmer temperatures or remain consistent regardless?\" \n\nThis single-question approach focuses directly on one aspect (the temperature sensitivity) which could be indicative of Raynaud's phenomenon while also indirectly addressing their concerns about excessive food intake and exercise habits by understanding whether environmental factors play a role in exacerbation. The response will guide further investigation into possible systemic conditions like autoimmune disorders such as scleroderma or other connective tissue diseases where cold extremities might occur alongside un",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As per our conversation last week before my appointment here today at Dr. Williams’ office... well remember when I mentioned how much colder it feels outside these days? And that little walk from the parking lot to your clinic has always seemed more exhausting than usual – even though we stopped right there instead of going all over town during lunch times because walking was getting too hard to handle without needing frequent breaks nowadays. My fingers get so numb after sitting down working on spreadsheets back home; maybe you asked if anything changes with those feelings once spring comes around again since sunny weather usually helps me feel better overall, but honestly Doc, does standing next to people still make them look pale whenever someone passes through looking health",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 130,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Based on the patient's reported experiences post bereavement, along with specific mention of altered thermoregulation, persistent lethargy, abnormal dietary restrictions paired with compulsive behaviors towards 'cleansing', and increased difficulty performing daily activities irrespective of season change, the final diagnosis can be concluded as **Anorexia Nervosa**. These manifestations align closely with psychological stress responses often seen in individuals dealing with grief who develop malada0169utritional deficiencies affecting both mental and somatic functions. A two-sentence clinical rationale includes recognizing the interplay between emotional trauma potentially triggering restrictive eating behavior combined with obsessive thoughts regarding purity linked to perceived self-control mechanisms against unwanted bodily processes. Furthermore, the persistence of these issues suggests underlying pathology rather than transient adjustment difficulties commonly associated with acute illness recovery periods.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 124,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 130,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 25,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 80,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 124,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal tone, e.g., 'it's quite worrying', 'deep distress'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally coherent with the clinical context, but some descriptions lacked clarity (e.g., 'things tend to stick in between times')."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient deviated from the role by occasionally adopting a somewhat detached narrative voice, e.g., describing past conversations with other doctors."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrated good symptom coherence and some adherence to the role, but could benefit from more natural language usage and staying within the character's perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were somewhat targeted but failed to cover all key symptoms of Anorexia Nervosa. Questions focused primarily on behavioral aspects without adequately exploring physical symptoms like amenorrhea, cold intolerance, and extremity edema."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect; Anorexia Nervosa does not typically present with altered thermoregulation or bereavement as primary symptoms. The provided rationale incorrectly links grief to maladaptive nutritional behaviors and misinterprets the patient's symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally maintained a professional demeanor but occasionally slipped into a more conversational tone when discussing the patient's experiences, blurring the line between doctor-patient relationship."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "While the doctor demonstrated some understanding of the patient's symptoms, the assessment fell short due to inadequate questioning and a flawed diagnostic reasoning process. Further training is necessary to ensure comprehensive symptom exploration and accurate diagnoses."
+    },
+    "llm_judge_total_out_of_20": 9
+}

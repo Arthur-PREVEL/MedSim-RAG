@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "I'm sorry, I am not able to answer that question. Can you please rephrase it differently so that I can understand what you need me to do?",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your name?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 4,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "S: My name is Jean. Thank you for asking.",
+            "score": {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your primary concern or reason for visiting me today?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Thank you for asking me what my primary concern is. I have been feeling very tired lately and it seems like it is getting worse. I also noticed that my clothes feel loose around my neck lately, which makes me think there might be something wrong with my thyroid. Has this happened to anyone else or could this be because of something specific?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of autoimmune diseases?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM ME AS JEAN: No ma'am, I don't have a history of autoimmune diseases.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of fatigue and weight loss, as well as their recent observation of loose clothing around their neck, the final diagnosis is Hashimoto's thyroiditis. This is supported by the absence of a history of autoimmune disease in the patient. Hashimoto's thyroiditis is an autoimmune disorder where the immune system attacks and damages the thyroid gland, leading to hypothyroidism and its associated symptoms.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 66,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            },
+            {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 4,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 66,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally asked for clarification (Turn 1) and provided a clear explanation of their concerns (Turn 3)."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, mentioning fatigue and a possible issue with their thyroid, but did not explicitly mention other relevant symptoms such as fever, neck pain, or recent radiation exposure."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character and avoided acting like a doctor, but showed some awareness of potential causes of their symptoms by asking if others had experienced similar issues (Turn 3)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "Jean presented her concerns clearly and concisely, showing some understanding of potential causes of her symptoms. However, she failed to mention several key symptoms associated with thyroiditis and seemed unaware of other relevant factors such as recent radiation exposure or medication history."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The doctor asked only three questions that were not directly related to the patient's symptoms or potential causes of thyroiditis. Questions about the patient's name and primary concern were irrelevant to the diagnosis process."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect. The patient's symptoms of fatigue and weight loss do not necessarily point towards Hashimoto's thyroiditis, especially considering the lack of information about the patient's autoimmune status. Furthermore, there was no mention of the patient's recent observation of loose clothing around their neck, which could indicate subacute thyroiditis. Additionally, the doctor did not consider other possible causes such as postpartum thyroiditis or drug-induced thyroiditis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally maintained a professional demeanor during the interview, but failed to establish a rapport with the patient and did not ask follow-up questions to clarify the patient's symptoms or medical history."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This doctor simulation demonstrated significant gaps in diagnostic reasoning and questioning skills. The doctor failed to gather essential information about the patient's symptoms, medical history, and potential causes of thyroiditis, leading to an inaccurate diagnosis. To improve, the doctor should focus on asking targeted and clinically relevant questions, considering multiple differential diagnoses, and maintaining a professional yet empathetic approach throughout the consultation."
+    },
+    "llm_judge_total_out_of_20": 10
+}

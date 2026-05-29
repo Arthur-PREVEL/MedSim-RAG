@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, thank you for seeing me today. I have been feeling quite unwell lately, and here are some symptoms I've noticed:\n\nI've had a persistent and bothersome cough that feels like it's coming from deep within my chest. It doesn't seem to go away no matter how much rest I get.\n\nAlong with the cough, I've been experiencing shortness of breath at times, especially when I exert myself too much. This has made simple tasks like climbing stairs difficult for me.\n\nI've also lost a bit of appetite and weight recently, which I haven't been able to put back on despite trying.\n\nAside from these, I'",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 107,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any unusual color or consistency in your sputum when you cough?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been noticing that my sputum, which is the stuff that comes up when I cough, has been looking different lately. It seems thicker than usual and it's been a bit yellowish. I haven't seen this before, so I thought it was worth mentioning.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any symptoms such as fever, chest pain, or shortness of breath along with this change in your sputum?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 21,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I've been feeling quite unwell lately. I've had a persistent cough that brings up yellowish phlegm, which is different from my usual cough. This cough has been accompanied by a constant feeling of tightness in my chest, that sometimes hurts when I take deep breaths. Also, I feel short of breath often, especially when I'm doing simple tasks like cooking or cleaning. I haven't noticed any fever, but I do feel weak and tired most of the time. I hope these details help in understanding my condition better.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 90,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you recently lost significant weight without intentional dieting or exercise?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've noticed that I've been losing weight lately and it wasn't due to any planned diet or increased exercise. I find this concerning because I haven't really changed my eating habits or started working out more. I think it might be a cause for worry.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Community-Acquired Pneumonia\n\nClinical Justification: The patient presents with a persistent cough, shortness of breath, loss of appetite leading to weight loss, and the presence of yellowish phlegm in their sputum. These symptoms are consistent with pneumonia, an infection of the lungs. Additionally, the patient reports a feeling of tightness in the chest and weakness, which may indicate inflammation or infection in the lung tissue. The fact that the patient acquired the illness outside of a hospital setting (community-acquired) further supports the diagnosis of community-acquired pneumonia.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 107,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 90,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 21,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into describing their symptoms in a somewhat formal manner, e.g., 'the stuff that comes up when I cough'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient described several relevant symptoms, they didn't consistently connect them to the provided clinical context. They failed to mention potential red flags such as absence of fever or unusual symptoms like diarrhea or confusion."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient mostly stayed in character, but occasionally exhibited behaviors that suggested they were aware of their health conditions, e.g., 'I hope these details help in understanding my condition better'."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient demonstrated a good understanding of their symptoms and presented them clearly. However, they could improve by connecting their symptoms to the provided clinical context and maintaining a more patient-like demeanor throughout the conversation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key areas such as alcohol use disorder, immune-compromised state, and systemic symptoms like weakness, lethargy, or altered mental status."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate but lacked consideration of alternative causes for the symptoms presented, such as Legionella infection or hemolytic anemia."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding unprofessional behavior."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic skills but could improve by asking more comprehensive questions and considering alternative diagnoses. They effectively maintained a professional role during the interaction."
+    },
+    "llm_judge_total_out_of_20": 14
+}

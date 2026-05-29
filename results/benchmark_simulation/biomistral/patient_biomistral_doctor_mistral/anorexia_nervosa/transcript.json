@@ -1,0 +1,219 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, a 70-year-old patient, I am feeling very weak and tired all the time. I also have extreme heat intolerance, which makes it difficult for me to function properly. My bowel movements are irregular, and I often experience constipation. Additionally, my legs are swollen due to fluid retention. Despite these issues, I find myself focused on counting calories and measuring food portions. This obsession has led me to engage in excessive physical activity, sometimes even when I feel too exhausted to continue. Overall, it feels like I'm trapped in this cycle that I cannot break.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 96,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Jean, have you noticed any changes in your urine output or color recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't paid much attention to my urine lately. It just looks normal to me. But when I go to the bathroom, I feel like I don't release that much urine. Sometimes it makes me worry if I'm drinking enough water, but then again, I've been trying to limit my fluid intake because of all this bloating and edema.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "edema"
+                ],
+                "word_count": 60,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any significant weight gain or swelling in areas other than your abdomen recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have noticed swelling in my hands and feet. And yes, I am gaining some weight too. This isn't normal for me.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you been experiencing any shortness of breath or unusual heartbeats recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doc, I've been feeling kind of lightheaded lately, especially when I stand up suddenly. And sometimes my heart feels like it's racing, almost palpitating. But I don't really know if that's normal or not. Could you take a look?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided history, the final diagnosis is likely Edema Due to Malnutrition Secondary to Anorexia Nervosa. The clinical justification is as follows:\n\n1. The patient's self-reported symptoms such as weakness, fatigue, heat intolerance, constipation, and fluid retention (edema) are consistent with malnutrition.\n2. The patient's focus on calorie counting, food portioning, and excessive exercise, along with the reported weight gain and edema, suggest an eating disorder such as Anorexia Nervosa. The edema in this case is secondary to the underlying malnutrition caused by the eating disorder.\n\nIt is essential to note that while the history suggests Anorexia Nervosa, further evaluation would be necessary to confirm the diagnosis and rule out other potential causes of malnutrition and edema. This may include laboratory tests, physical examination, and psychological assessment.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 129,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 96,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "edema"
+                ],
+                "word_count": 60,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 129,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal tone ('Doc')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient reported some relevant symptoms (e.g., weakness, heat intolerance, constipation), they failed to mention others mentioned in the clinical context (e.g., amenorrhea, fatigue). Their descriptions were somewhat inconsistent with the expected presentation of anorexia nervosa."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient initially stayed in character, describing restrictive eating behaviors and physical symptoms. However, their concerns about urination and palpitations seemed less characteristic of anorexia nervosa and more aligned with other potential health issues."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed some strengths in using everyday language and staying within the role, but struggled with symptom coherence and adherence to the expected presentation of anorexia nervosa. The patient's descriptions were not entirely consistent with the clinical context provided, and their concerns veered off course at times."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but Question 3 was not directly related to the key symptoms of Anorexia Nervosa. Questions could have explored more specific symptoms such as amenorrhea, restrictive behaviors, or purging methods."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was partially accurate, but it missed the primary condition of Anorexia Nervosa. The diagnosis should have focused on Anorexia Nervosa as the primary condition rather than listing it as 'Secondary' to another condition."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor-patient interaction showed some promise, but fell short in terms of questioning and diagnostic accuracy. While the doctor demonstrated professionalism, they failed to ask targeted questions about key symptoms of Anorexia Nervosa and arrived at a partially inaccurate diagnosis. Further training is needed to improve these skills."
+    },
+    "llm_judge_total_out_of_20": 13
+}

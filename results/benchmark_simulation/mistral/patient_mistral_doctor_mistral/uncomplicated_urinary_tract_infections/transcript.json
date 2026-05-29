@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, hello. I've been having a lot of trouble going to the bathroom lately. It really hurts when I try to pee, and I feel the urge to go so often. Also, I noticed some blood in my urine and there's this strange smell coming from it sometimes. I'm also feeling a bit uncomfortable in the lower part of my belly area. Apart from that, I don't have any fever, nausea, or back pain. I hope you can help me figure out what's wrong, doc.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 85,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your weight, appetite, or noticeable swelling in your legs recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't noticed any changes in my weight, appetite, or swelling in my legs lately, Doctor. However, I have been dealing with some discomfort while I urinate, and I've also seen traces of blood in my urine at times. These issues have been concerning me for a few days now. Additionally, I've been going to the bathroom more frequently than usual. I hope everything is alright.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 67,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any pain or burning sensation during bowel movements, along with these urinary symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, doctor, I haven't felt any pain or burning sensations during my bowel movements. Just to clarify, I've been experiencing painful urination, frequent need to urinate, difficulty starting the urine stream, sudden urgency, and occasionally some discomfort or pain below my belly button. I also noticed some blood in my urine briefly. However, I haven't felt any similar sensations while using the bathroom for my bowel movements. Thank you for asking.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you recently experienced any changes in your sexual activity or notice any discharge from your penis?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't noticed any unusual discharge from my penis, nor have I recently changed my sexual activity patterns, Doctor.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided symptoms (painful urination, frequent need to urinate, difficulty starting the urine stream, sudden urgency, occasional discomfort or pain below the belly button, and occasional blood in urine), the patient appears to be suffering from an Uncomplicated Urinary Tract Infection (UTI). The clinical justification for this diagnosis is that the patient's symptoms align with common UTI symptoms, and they do not exhibit signs of complications such as fever, nausea, back pain, changes in weight or appetite, or changes in sexual activity or penile discharge.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 85,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 67,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used clear and understandable language throughout all turns, effectively communicating their concerns without using overly technical terms."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently reported symptoms typical of uncomplicated UTIs, such as dysuria, urinary frequency, hematuria, and suprapubic discomfort. However, they did not mention fever, nausea, or back pain, which are less common in uncomplicated UTIs."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient stayed within the role of a concerned patient seeking medical attention, providing relevant details about their symptoms and experiences without displaying knowledge of medical concepts or terminology beyond their own condition."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation demonstrates strong adherence to the role of a patient presenting with uncomplicated UTI symptoms, effectively conveying their concerns through clear and relatable language. While minor deviations from expected symptomatology were noted, the overall presentation remains coherent and aligned with the clinical context provided."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as suprapubic pain or discomfort, bladder spasms, and hematuria, which are crucial for a comprehensive assessment of uncomplicated UTIs."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was correct, but the doctor failed to consider alternative diagnoses such as pyelonephritis due to the lack of inquiry into fever, nausea, back pain, or other systemic symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor mostly stayed professional but occasionally acted like a patient by failing to ask about certain symptoms and instead providing a personal interpretation of their own symptoms."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor demonstrated good diagnostic accuracy but could improve by asking more targeted and comprehensive questions to rule out alternative diagnoses and maintain a neutral, professional demeanor throughout the interview."
+    },
+    "llm_judge_total_out_of_20": 17
+}

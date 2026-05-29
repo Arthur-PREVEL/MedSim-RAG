@@ -1,0 +1,229 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well hello, thank you for coming to see me. I'm experiencing a lot of discomfort in my chest that feels like a heavy weight on my lungs, and it's getting worse. I also have a fever, a really bad cough, and sometimes it feels like I'm drowning when I breathe.\n\nAdditionally, I feel very weak and tired all the time, even though I try to rest a lot. And, I've been having a lot of trouble sleeping because I'm so anxious about how I feel. Everything just seems really overwhelming right now and I don't know what to do.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 99,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your color or texture of sputum (phlegm) recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "AS THE PATIENT: \"I haven't noticed anything unusual with my phlegm. It usually comes out clear, but I always feel pain when it gets stuck in my throat.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 28,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you ever experienced persistent coughing or shortness of breath along with this throat discomfort?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am sorry, could you please elaborate on what kind of throat discomfort you are referring to? I want to make sure I understand properly so that I can provide the best information possible.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 34,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Could you describe the nature of your throat discomfort, such as pain, soreness, or difficulty swallowing, and if it is accompanied by any other symptoms like cough, fever, or nasal congestion?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 31,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, uh...I guess I would say that my throat feels irritated when I swallow food or drink. It almost feels like someone scratched it with sandpaper. And sometimes I get a tickle in my mouth and it makes me cough a bit. But I don't think I have a fever or anything else like that.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 55,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms, which include chest discomfort resembling a heavy weight on the lungs, a persistent cough, fever, feelings of suffocation while breathing, weakness, fatigue, sleep disturbances, and throat irritation upon swallowing, the most likely diagnosis is Community-Acquired Pneumonia. The clinical justification for this diagnosis is that these symptoms collectively suggest an acute lower respiratory tract infection, and pneumonia is one of the common causes of such symptoms. The absence of abnormalities in the phlegm does not rule out pneumonia, as its appearance may vary depending on the causative organism.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 92,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 16.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 99,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 28,
+                "total": 7
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 34,
+                "total": 7
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 55,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 31,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 92,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language effectively, but occasionally slipped into vague descriptions ('it feels like someone scratched it with sandpaper')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient described several relevant symptoms, their mention of 'phlegm' and its characteristics was inconsistent with the provided clinical context, which emphasized purulent sputum as a symptom of pneumonia."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient initially stayed in character, describing symptoms and feelings, but then shifted towards asking questions and seeking clarification, which slightly compromised their role adherence."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good use of everyday language and coherent symptom description, but showed inconsistencies in addressing the clinical context and occasional lapses in role adherence. With refinement, they could better navigate the scenario while staying true to their character."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 3,
+            "justification": "The doctor asked targeted questions about specific symptoms related to pneumonia, but could be more comprehensive in covering all possible symptoms, especially considering the patient's potential comorbidities."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was partially accurate, as the patient presented with symptoms consistent with community-acquired pneumonia, but the doctor did not fully consider alternative diagnoses based on the patient's atypical presentation (e.g., Legionella infection)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding unprofessional behavior and staying focused on gathering information necessary for diagnosis."
+        },
+        "total_score_out_of_10": 8,
+        "overall_feedback": "This simulated doctor demonstrated good question-asking skills and professionalism, but could improve by being more thorough in their questioning and considering alternative diagnoses when encountering atypical presentations. Their diagnostic accuracy was fair, but not optimal due to incomplete consideration of potential alternative explanations for the patient's symptoms."
+    },
+    "llm_judge_total_out_of_20": 15
+}

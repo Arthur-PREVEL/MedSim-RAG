@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "A: Well, it all started when I got a cold a few weeks ago. Then my throat started to hurt, and I started feeling really tired. My neck started to feel uncomfortable, kind of like someone was pulling on it from the inside out. It's been hurting for a while now, and it's not getting better.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any difficulty swallowing or swelling in your lymph nodes, especially in the area around your neck?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am sorry, I don't understand what you are asking me. Can you please rephrase your question?",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 17,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Could you describe any unusual symptoms or persistent pain you have been experiencing recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am sorry, I need more information about the symptoms that you are experiencing to better understand your situation. Could you please give me a brief overview of what you have been feeling lately?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 0,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 6
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your weight, appetite, or bowel movements recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: \"Um, well I don’t know if it’s related to my thyroid issue but I’ve been feeling really constipated lately. It’s starting to get pretty uncomfortable. And I’ve gained some weight too.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms, including a recent cold, throat discomfort, fatigue, neck discomfort, constipation, and weight gain, the most likely diagnosis is Subacute Thyroiditis (also known as De Quervain's thyroiditis). This condition typically presents with these symptoms, which can mimic those of a viral infection initially, followed by thyrotoxicosis (hyperthyroidism) due to the release of stored thyroid hormones. The clinical justification for this diagnosis is the combination of symptoms suggestive of thyroid inflammation (neck discomfort, thyroid tenderness, and sometimes fever), along with the subsequent hyperthyroid phase characterized by increased metabolism, weight loss, and anxiety, which the patient did not report. However, further diagnostic tests such as thyroid function tests would be necessary to confirm the diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 117,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.25,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 17,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 0,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 6
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 117,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language in turns 1 and 4, but struggled with understanding the questions in turn 2 and asked for clarification. Turn 3 shows improvement in seeking additional information."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "In turn 1, the patient described symptoms that could be related to thyroid issues (throat pain, discomfort in the neck). However, in turn 4, they mentioned constipation and weight gain without connecting them to their previous symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient deviated from their role by asking for clarification in turn 2 and providing unrelated information in turn 4."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient showed potential in describing relevant symptoms, but struggled with understanding the questioning process and stayed in character only partially. They demonstrated some initiative in seeking additional information, but failed to connect their symptoms coherently."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 3,
+            "justification": "The questions were targeted towards the key symptoms of thyroiditis, but they didn't cover all aspects of the condition. Questions 1 and 2 were relevant, but Question 3 was somewhat general and didn't directly address potential symptoms of thyroiditis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of Subacute Thyroiditis was partially accurate, considering the symptoms presented. However, it lacked consideration of other possible causes of similar symptoms, such as postpartum thyroiditis or drug-induced thyroiditis. Additionally, the mention of thyrotoxicosis without reported symptoms of hyperthyroidism seems inconsistent."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, asking clear and concise questions."
+        },
+        "total_score_out_of_10": 8,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills and professionalism, but fell short in terms of comprehensive symptom assessment and diagnostic accuracy. Further training on thyroiditis and its various presentations would be beneficial to improve their diagnostic abilities."
+    },
+    "llm_judge_total_out_of_20": 13
+}

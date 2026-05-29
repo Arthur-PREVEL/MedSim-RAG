@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Skin Cancer",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello, Doctor. I've noticed a few odd spots on my skin recently. Some of them seem different compared to others, like they don't quite fit in or maybe stand out a bit too much. They feel rough and some of them have changed color or shape over time. Additionally, there's this one spot on my nose that has been itchy and bleeding occasionally. I thought it was just a sunburn at first, but it hasn't healed properly even after weeks. I believe these problems could be serious, so I wanted to get them checked out as soon as possible. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 101,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have any of these spots appeared in areas exposed primarily to sunlight, and do they resemble moles or develop a darker pigmentation with irregular borders?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I have noticed a few spots on my skin, particularly those on my face, nose, and ears – areas that receive the most sun exposure throughout my life. Some of these spots seem reminiscent of moles but appear less round and symmetrical, with edges becoming less defined over time. Additionally, some of these spots have become slightly darker compared to my natural skin tone. These changes are concerning me and I believe they warrant a closer inspection. Could we perhaps arrange for a thorough skin examination at your earliest convenience?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 92,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have any of these spots ever bled, itched, or caused discomfort?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I've noticed some spots on my skin that have been causing me a bit of trouble. Some of them have bleed occasionally, especially after scrubbing or picking at them out of curiosity. They also tend to itch, particularly when I spend too much time in the sun or after a hot shower. As for discomfort, I would say they have given me a mild, persistent annoyance, especially if they become larger or more prominent. Could these symptoms indicate anything concerning?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 82,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have these spots appeared anywhere else on your body, such as your scalp or mucous membranes?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, Doctor, I haven't noticed any similar spots on my scalp or mucous membranes. All the spots I mentioned seem to be only on my regular skin areas.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's description of multiple, irregularly shaped and colored spots on sun-exposed areas of their skin that have bled, itched, and shown no signs of healing, the FINAL DIAGNOSIS is SKIN CANCER (specifically, MALIGNANT MELANOMA). The clinical justification for this diagnosis is the presence of asymmetry, irregular borders, varying colors, and diameter greater than 6mm in the described spots, which are characteristics of melanoma. The additional symptoms of bleeding, itching, and failure to heal further support this diagnosis. A dermatologist should perform a full skin examination and possibly biopsy the suspicious lesions for confirmation.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 96,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 101,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 92,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 82,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 96,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language effectively, avoiding complex medical terminology and focusing on descriptive experiences."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently described symptoms related to skin lesions, including changes in appearance, itching, bleeding, and discomfort, aligning with the clinical context provided."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient stayed within their role by expressing concern about potential health issues and seeking professional advice, rather than displaying knowledge typical of a healthcare provider."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient demonstrated excellent communication skills, describing symptoms clearly and concisely while adhering to their role as a concerned individual seeking medical attention. Their descriptions of skin lesions and associated symptoms were coherent with the clinical context provided, showcasing a good understanding of the importance of early detection and proper examination. The patient's concerns and questions were presented in a manner that is relatable and easy to understand, making it easier for a clinician to assess and address their needs appropriately."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 3,
+            "justification": "The doctor asked targeted questions about the location, appearance, and behavior of the skin lesions, but could have explored more specific details about the lesions' texture, size, and recent changes."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was close, but the doctor did not explicitly mention the importance of dermoscopy or further diagnostic workup, which might have led to a more accurate diagnosis. Additionally, the doctor mentioned 'malignant melanoma' without specifying the type of melanoma."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 8,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills and a clear understanding of the clinical presentation of skin cancer. However, there were some gaps in the diagnostic process, particularly regarding the importance of dermoscopy and further diagnostic workup. With minor adjustments, this doctor has the potential to provide high-quality care for patients with skin cancer."
+    },
+    "llm_judge_total_out_of_20": 18
+}

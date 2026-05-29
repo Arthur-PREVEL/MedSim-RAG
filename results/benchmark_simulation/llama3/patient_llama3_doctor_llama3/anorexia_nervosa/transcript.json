@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I'm so glad you asked. I've been feeling just terrible lately. My period stopped coming about three months ago, and I've noticed that my hands and feet have been swelling up something awful. I get tired easily, too - just doing the simplest tasks leaves me exhausted. And sometimes, especially after eating, I feel this...this icy coldness in my fingers and toes. It's quite uncomfortable.\n\nI've also had some digestive issues - it takes an eternity to go to the bathroom, and when I do, I don't even know if everything is coming out right. If you know what I mean.\n\nAnd my mood, dear doctor...well, let's just say I'm not as sweet as I used to be.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight loss since your menstrual cycle stopped?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dear, I'm not sure if it's just my imagination, but I feel like I've lost some weight lately. My clothes seem looser on me, and I've had to let out my waistband on my pants twice this year already! It's probably just because I haven't been eating as much as I used to. You know, I've always been careful about my diet, but lately... well, I've just felt so tired and sluggish. I thought maybe I was just getting older and that's why I wasn't feeling like myself. But now that you mention it, I do think I have lost some weight. Not that I'm trying to lose weight or anything, mind you! Just feeling a bit off, is all",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I've been feeling quite...off lately. I just don't have much interest in eating, if you know what I mean. Sometimes I'll eat something, but it's like I'm not really hungry, just doing it because I feel like I should be eating. And then there are days when I just can't stomach anything, you know? The thought of food makes me queasy. It's hard to explain. Does that make sense?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your weight or noticed any other physical symptoms, such as fatigue or sleep disturbances, since these feelings started?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 24,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dearie, I've lost so much weight lately, it's just frightening me. My clothes are hanging off me, and my skin is getting all dry and papery. I feel like a skeleton walking around. And don't even get me started on fatigue – I'm tired all the time, even after just a short walk. Sometimes I have to stop mid-sentence because I just can't catch my breath. And my joints ache something fierce, especially in the mornings. It's like my whole body feels like lead.\n\nAs for sleep, well... I used to be able to sleep through anything, but now I lie awake at night, feeling restless and irritable. I toss and turn, thinking about all sorts of things that are bothering",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from Anorexia Nervosa, a serious eating disorder characterized by a distorted perception of one's weight and body shape, leading to restrictive eating habits and significant weight loss.\n\nClinical justification: The patient's self-reported weight loss, amenorrhea (absence of menstruation), and physical symptoms such as bradycardia (icy coldness in fingers and toes) and joint pain suggest malnutrition and starvation, which are hallmarks of Anorexia Nervosa. Additionally, her lack of interest in eating, fear of gaining weight, and excessive exercise behaviors further support this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 88,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 24,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 88,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions (e.g., 'feeling quite...off') and somewhat ambiguous statements (e.g., 'it's like I'm not really hungry')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient describes several symptoms consistent with anorexia nervosa, they also exhibit some inconsistencies (e.g., Turn 2 implies weight loss due to reduced appetite, whereas Turns 3 and 4 suggest avoidance of food)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient exhibits some role-adherent behavior by describing feelings of guilt ('not that I'm trying to lose weight or anything') and anxiety ('frightening' weight loss), but also displays some insight into their condition ('I've always been careful about my diet')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and exhibiting role-adherent behavior. However, symptom coherence could be improved by maintaining consistency throughout the conversation. Additionally, more attention to detail in describing symptoms would enhance the overall realism of the simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions [1] and [3] were targeted and clinically relevant, but question [2] was somewhat vague and could have been more specific about changes in hunger or satiety cues. Question [1] directly addressed amenorrhea, a key symptom of Anorexia Nervosa, while question [3] touched on physical symptoms. However, question [2] did not directly address the core symptoms of Anorexia Nervosa."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis of Anorexia Nervosa was accurate, considering the patient's reported weight loss, amenorrhea, and physical symptoms. However, the clinical justification provided some additional information that wasn't explicitly mentioned during the interview, suggesting that the doctor might have made some assumptions based on general knowledge rather than strictly adhering to the information gathered during the consultation."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional throughout the interaction, but there was a slight deviation when providing the final diagnosis, where they seemed to elaborate beyond what was discussed during the interview, potentially blurring the line between the role of a doctor and a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills, particularly in targeting key symptoms of Anorexia Nervosa. Their diagnostic accuracy was strong, but they could improve by sticking to the information gathered during the consultation and avoiding assumptions. Role-playing adherence was mostly maintained, although there was a minor lapse in professionalism during the final diagnosis explanation."
+    },
+    "llm_judge_total_out_of_20": 14
+}

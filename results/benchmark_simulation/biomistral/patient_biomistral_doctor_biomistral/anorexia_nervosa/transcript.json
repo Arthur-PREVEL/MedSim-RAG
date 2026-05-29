@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "A: Thank you for coming to see me today, Doctor. Honestly, I have been feeling quite weak and tired lately. When I wake up in the morning, I just feel so drained and it's hard to get going. I also haven't been eating very much, but I don't know why. Sometimes my stomach feels kind of bloated, but then again, sometimes it doesn't. And I've lost a lot of weight, which is probably not a good thing.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 77,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or eating habits?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER AS JEAN: Well, yes, I've been eating less and less, it seems like. And sometimes I get that feeling like there's a knot in my stomach. I just don't feel hungry, even when I know I should be. It's weird because before this all started, I loved food.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or eating habits?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have definitely experienced some changes in my appetite and eating habits. It started when I was younger, but it seems to have gotten worse over time. Now, I find myself feeling extremely full after only consuming small amounts of food. Sometimes, I even feel guilty for indulging in something sweet or rich because I know it's not good for me.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any other symptoms such as weight loss, nausea, or vomiting?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I can't actually lose weight because I don't eat enough. But sometimes I feel sick in my stomach.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Anorexia Nervosa\nClinical Justification: The patient has reported significant weight loss due to decreased food intake, despite feeling hungry. They also report a fear of gaining weight and feeling guilty about eating certain foods. These symptoms are consistent with anorexia nervosa.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 43,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 77,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 43,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions (e.g., 'it's hard to get going', 'feeling kind of bloated')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but lacked specificity and detail. For instance, they mentioned weight loss, but didn't explicitly link it to their eating habits or other symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but occasionally exhibited behaviors more typical of a healthcare provider (e.g., describing their condition in a detached manner)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated some strengths in conveying everyday language and staying within the role, but could benefit from more specific symptom descriptions and a stronger adherence to the patient's perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The doctor asked two identical questions that were not targeted towards all key symptoms (amenorrhea, cold intolerance, constipation, extremity edema, fatigue, irritability, restrictive behaviors, purging methods, and excessive exercise)."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was partially correct but lacked consideration of some key symptoms such as amenorrhea, cold intolerance, constipation, extremity edema, and irritability. However, it did acknowledge significant weight loss and fear of gaining weight, which are common in anorexia nervosa."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, asking questions and providing a clear justification for their diagnosis."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in maintaining professionalism, but struggled to ask comprehensive questions and consider all relevant symptoms when making a diagnosis. With further training, they could improve their questioning skills and diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 13
+}

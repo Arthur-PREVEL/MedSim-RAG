@@ -1,0 +1,225 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "\"Doctor, for several days now, my body has been feeling really off. Every time I try getting up from bed too quickly, it feels like there's this sharp stab right below where my ribcage stops around here—and then comes another kind that creeps into every part of me.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 48,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Could these symptoms be related to orthostatic hypotension or could they indicate something else?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I recently started feeling unwell after my trip across Asia last month. Since returning home, there’s been this persistent cough that won’t let up – it feels different though because all night long, no matter how many pillows I stack under me, the cough just doesn’t stop racking my lungs until morning comes again. Surely enough days now without any energy left for anything but rest on my bed—the room gets colder every time when trying to stand, which used to feel normal ages ago before getting sick… And yes dear friend here might tell you better about stuff going wrong inside where food goes down from mouth into stomach area sometimes causing odd tummy upsets along too while perhaps forgetting",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 121,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced shortness of breath or chest pain during these episodes?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I feel very out of sorts lately. It’s almost every day now when I take steps outside my home that it feels heavy on me, making each stride harder than before. There isn't just tiredness but this sharp sensation too – particularly when I lean over for water or lie down after eating dinner together at night. And sometimes, there's a bit more pressure around here where... *patient gestures towards rib area*. Oh, not quite back yet—that hurts a little more up high toward the center of my belly button. Doctor, could all this be related? Are they signs pointing something serious going wrong inside? This doesn't help much either because last week saw no improvement",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel movements recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hi doc, I appreciate how important it is for us to understand each part that isn’t quite right when we talk about my health problems lately. Lately, well... Things haven’t been too great since eating hasn’t felt good at all – feels more like running away from food than enjoying meals anymore. Could this be because I don't feel so strong? And yes, there could very likely be something not sitting nicely inside causing these stomach troubles along with feeling out of sorts overall due to everything else going wrong upstairs after taking deep breaths often leaves me winded without much effort either way - but perhaps why exactly does one get sick again if they already got better once before? If indeed",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 123,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: The patient most likely suffers from community-acquired pneumonia (CAP). Clinical Justification: Given the recent travel history coupled with systemic symptoms such as fatigue, localized tenderness near the costochondral junction suggesting pleuritic chest pain, dyspnea upon exertion indicating possible lung involvement, gastrointestinal disturbances postprandial discomfort hinting at potential aspiration secondary to respiratory compromise, combined with an acute presentation rather than chronicity aligns closely with typical presentations seen in patients diagnosed with CAP who may have contracted pathogens endemic to their region visited prior to illness manifestation.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 48,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 121,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 123,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into unclear sentences and vague descriptions, indicating a lack of precision in their communication."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient describes various symptoms, including chest pain, fatigue, and gastrointestinal issues, but fails to connect them coherently to a specific condition like pneumonia. Their narrative jumps between unrelated ideas and lacks a clear thread of logic."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays within the role of a concerned individual seeking medical attention, but occasionally displays a hint of medical knowledge by mentioning 'upstairs' and 'inside,' suggesting a slight departure from the expected naivety of a non-medical person."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some potential in conveying their concerns and experiences, but struggles with coherence and clarity in describing their symptoms. They exhibit a mix of understandable and confusing statements, which makes it challenging to pinpoint a specific issue. While they mostly adhere to the role of a layperson, occasional hints of medical terminology undermine their authenticity."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 2 and 3 were targeted and clinically relevant, but Question 1 was not directly related to the provided key symptoms of pneumonia. Questions did not fully cover all necessary areas for differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of community-acquired pneumonia was partially correct, but the justification lacked clear connections between symptoms and the specific type of pneumonia. The mention of 'pathogens endemic to their region visited prior to illness manifestation' was not supported by the provided information."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in maintaining professionalism and asking relevant questions, but fell short in providing a comprehensive differential diagnosis and justifying the final diagnosis accurately. Further improvement is needed to ensure thorough consideration of all possible causes and connections to the presented symptoms."
+    },
+    "llm_judge_total_out_of_20": 11
+}

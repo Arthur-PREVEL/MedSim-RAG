@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I am Jean. Thank you for coming to visit me today. Lately, I have been feeling very weak and tired all the time. It seems like there is always a heavy weight on my chest, making it hard for me to breathe. Sometimes, I feel like I am suffocating. Additionally, I have been having a lot of headaches that seem to never go away. They last all day and make everything blurry around me.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 76,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any episodes where your symptoms worsen or improve with changes in position?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I must admit that I haven't really thought about it much, but now that you mention it, yes, I think my symptoms do change depending on how I am positioned. Like if I lay down flat when I'm feeling bad, it almost feels like the air is stuck in my lungs, but if I sit up while still feeling bad, it feels like the air moves around more freely.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Does this positional variation make your breathing easier or harder?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I find it easier when I sit up straight and take deep breaths. But when I lay down, it feels more uncomfortable and hard to breathe.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 26,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any symptoms like this before, or is this something that started recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have had these symptoms before, but it feels worse now. I’ve been coughing for about two weeks now. It started off as just a little bit of phlegm, but now it feels like I have fluid building up inside me. It gets really hard to breathe sometimes when I lie down, so I try to sit up most of the time.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nCommunity-Acquired Pneumonia (CAP)\n\nClinical Justification: The patient's presentation of persistent weakness, fatigue, difficulty breathing, and positional worsening of symptoms, particularly the improvement of respiratory distress when sitting upright, strongly suggests an infectious process affecting the lower respiratory tract, such as pneumonia. The chronic nature of her symptoms, including a productive cough and recent onset of fluid buildup, further supports this diagnosis, which is consistent with CAP.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 68,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 76,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 26,
+                "total": 7
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 68,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terms and explaining their symptoms in simple, relatable ways."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's symptoms were generally consistent with the clinical context provided, including fatigue, difficulty breathing, and coughing. However, they did not explicitly mention fever, which could be a key symptom of pneumonia, especially considering their age and potential comorbidities."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient stayed in character and avoided acting like a doctor, instead presenting themselves as a concerned patient seeking help for their symptoms."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This was a strong patient simulation, with the patient effectively conveying their symptoms and experiences in a clear and relatable manner. While there were some minor inconsistencies regarding specific symptoms, overall the patient remained within character and demonstrated a good understanding of their condition."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The questions were somewhat targeted but missed opportunities to explore key symptoms such as fever, chills, and cough productive of purulent sputum, which are crucial for diagnosing community-acquired pneumonia. Questions 1 and 2 were relevant to assessing respiratory distress but did not directly address the patient's overall condition. Question 3 was vague and could be applied to various conditions."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of community-acquired pneumonia was correct, but the justification relied heavily on the assumption of 'persistent weakness, fatigue, difficulty breathing,' which wasn't explicitly stated by the patient. The mention of 'fluid buildup' also isn't supported by the provided questions or the clinical truth. However, the conclusion aligns with the expected symptoms of CAP."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy but fell short in asking comprehensive questions related to the patient's symptoms. They correctly identified the condition but could benefit from more thorough questioning to support their diagnosis. Maintaining professionalism was commendable."
+    },
+    "llm_judge_total_out_of_20": 17
+}

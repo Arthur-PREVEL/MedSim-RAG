@@ -1,0 +1,229 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, I'm so glad I finally got an appointment. You see, I've been having this problem with... well, you know... wetting my bed at night. I don't mean just once in a while, it's been happening every single night for the past few weeks now. And it's not just the bed, sometimes it happens when I'm sitting in my favorite armchair too. It's really embarrassing, if you want to know the truth.\n\nIt's not like I'm a little kid anymore! I'm 70 years old, and I thought I'd long since grown out of these kinds of problems. But I guess my body has other plans. I've tried changing my diet, drinking more water, but nothing seems",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 116,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any urinary urgency or frequency during the day?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! I've been having the most awful time getting to the bathroom on time. I feel like I'm running to the loo every hour, and even when I do make it there, sometimes it feels like my bladder is still full. It's so frustrating. My granddaughter told me she's had this problem too when she was younger, but I just thought it was something normal after menopause. But now that I think about it, I have woken up multiple times during the night feeling like I need to use the restroom too. I'm not sure if it's because I drink a lot of fluids before bedtime or what. Oh dear, I hope I'm not having some kind of health issue again... *laughs",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 124,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any other symptoms such as burning while urinating or pelvic pain?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! For the past few weeks now, I've been feeling this...this burning sensation when I use the bathroom. It's not too bad, but it's definitely there. And sometimes, if I don't get to the bathroom right away, I feel a little bit of pressure down there. Not excruciatingly painful, mind you, just a gentle nagging discomfort. And I've been having these urges to go, you know, to use the bathroom, even when my bladder isn't really full. My husband says it's probably just old age, but I'm not so sure. (chuckles) What do you think, Doctor?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 98,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any blood in your urine or difficulty starting to urinate?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I don't think so. Although, I do get up quite often at night to use the bathroom. My wife, Edna, has been telling me that she thinks I'm getting up too much. She says I'm getting up every hour or so. But I just tell her I need to go. I mean, what choice do I have, right? I've always gotten up a lot at night, even when we were first married. My husband, God rest his soul, used to say I had too many trips to the bathroom. But I suppose that's normal for someone my age, isn't it?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 102,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from Nocturnal Enuresis, also known as Bedwetting, likely due to an underlying Urinary Incontinence condition, possibly related to an Overactive Bladder syndrome, which is causing the patient's frequent urination and nocturia (nighttime awakenings).\n\nClinical Justification: The patient's symptoms of nocturnal enuresis, urinary urgency, frequency, and nocturia, combined with the presence of dysuria (painful urination), suggest an underlying lower urinary tract disorder. The patient's age and medical history, along with the absence of other red flags, point towards an overactive bladder as the primary cause of her symptoms. Further investigation may be necessary to rule out other potential causes, such as neurological disorders or medication side effects.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 112,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 116,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 124,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 98,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 102,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 112,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into colloquial expressions ('goodness gracious', 'oh dear') and somewhat formal tone, which may indicate a lack of authenticity."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient's reported symptoms are inconsistent with the clinical context. Enuresis typically affects children, not adults, especially those over 70 years old. Additionally, the patient's description of frequent urination during the day and nocturnal awakenings does not align with typical presentations of enuresis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 0,
+            "justification": "The patient exhibits behaviors characteristic of a healthcare provider, such as asking for the doctor's opinion and providing information about their own experiences, rather than staying in character as a patient seeking help for a medical issue."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language, but falls short in terms of symptom coherence and role adherence. The patient's age and presentation are inconsistent with the clinical context of enuresis, and they exhibit behaviors more characteristic of a healthcare provider than a patient seeking help."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed crucial ones like toilet training, nutrition, and sleep histories, which are essential for differential diagnosis. Questions were not directly related to the DSM-5 criteria for enuresis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was partially correct but lacked specificity. The doctor correctly identified nocturnal enuresis but failed to consider other possible causes and did not rule out other conditions like urinary tract infections or sleep apnea. The connection between nocturnal enuresis and overactive bladder was not clearly justified."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "The doctor demonstrated some understanding of the key symptoms and diagnostic criteria for enuresis but fell short in asking comprehensive questions and providing a clear, evidence-based diagnosis. Further education on the DSM-5 criteria and differential diagnoses would be beneficial."
+    },
+    "llm_judge_total_out_of_20": 9
+}

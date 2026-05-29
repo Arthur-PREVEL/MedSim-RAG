@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, hello there. Good to meet you. I'm Jean. The truth is, I haven't been feeling entirely well lately. I've been experiencing a lot of pain in my stomach area. It feels like it's burning from the inside out, and it's not going away no matter how much I eat or drink. Sometimes, I also get nauseous and feel very lightheaded. But that's not all. I've noticed that I'm losing weight quickly, even though I'm eating the same things as usual. And on top of everything else, I've developed heartburn so bad that sometimes it wakes me up at night. Honestly, I feel like something is wrong",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 107,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any blood in your stool or black tarry stools?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have had some blood in my stools. It was dark red or maroon-colored at first. Then it became more brownish over time. It happens sometimes after meals. I am worried because I don't know how much is too much. I went to see a doctor, but he said that it could be normal due to constipation or ulcers. He gave me some medicine for heartburn, but it didn't help much.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any abdominal pain or discomfort when you have these episodes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"I've noticed that during my achlorhydria episodes, I tend to feel some discomfort in my stomach area. It feels like a dull pain that sometimes spreads from my lower chest down to my belly button.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "achlorhydria"
+                ],
+                "word_count": 35,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced this type of discomfort or pain at any other time, unrelated to your achlorhydria episodes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, lately I have been experiencing this kind of pain that seems to be localized in my stomach area. It feels very uncomfortable and sometimes it hurts so much that it becomes difficult for me to function properly.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\n**Achlorhydria (Gastric Atrophy)**\n\nClinical Justification: Based on the patient's persistent epigastric pain, nausea, lightheadedness, significant weight loss, and recurrent bloody stools, along with the presence of heartburn and nocturnal symptoms, I suspect gastric atrophy, specifically achlorhydria, which is characterized by reduced or absent gastric acid secretion leading to impaired digestion and absorption of nutrients. The patient's symptoms, including abdominal pain and discomfort, are consistent with this diagnosis, and further investigation may reveal decreased parietal cell mass and mucosal atrophy in the stomach lining.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 107,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "achlorhydria"
+                ],
+                "word_count": 35,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal expressions (e.g., 'I haven't been feeling entirely well lately')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient described several symptoms related to achlorhydria, they did not consistently link them to the condition. Some symptoms were mentioned without clear connection to achlorhydria (e.g., 'lightheadedness' in Turn 1)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character, but occasionally demonstrated knowledge beyond what would be expected from a layperson (e.g., mentioning 'ulcers' in Turn 2)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "Jean's simulation showed potential, but she struggled to maintain a consistent narrative voice and demonstrate a deep understanding of her symptoms. While she effectively conveyed her experiences, her responses lacked cohesion and sometimes revealed an underlying knowledge of medical concepts."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked targeted questions about gastrointestinal bleeding and abdominal pain, but failed to ask about other key symptoms such as weight loss, heartburn, nausea, bloating, diarrhea, early satiety, vomiting, postprandial fullness, constipation, dysphagia, glossitis, or decreased position and vibration sense, which are commonly associated with achlorhydria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of achlorhydria (gastric atrophy) was generally accurate, considering the patient's symptoms of epigastric pain, nausea, and bloody stools. However, the justification provided did not fully account for all the symptoms presented, particularly the absence of discussion regarding the potential causes of achlorhydria, such as autoimmune disorders, infections, or medications."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy and professionalism, but could improve by asking more comprehensive questions that cover a broader range of symptoms associated with achlorhydria, ensuring a more thorough understanding of the patient's condition before making a diagnosis."
+    },
+    "llm_judge_total_out_of_20": 14
+}

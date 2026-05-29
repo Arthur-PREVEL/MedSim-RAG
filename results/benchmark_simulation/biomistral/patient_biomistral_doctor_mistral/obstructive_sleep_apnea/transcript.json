@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello doctor. Well, I feel really exhausted and tired all the time, even when I try to rest. I have to force myself to stay awake during the day because I'm so sleepy. Sometimes, it feels like my brain is not working properly and I find it hard to focus. I would also say I've been having some trouble sleeping at night. I get up multiple times and can't fall back asleep. It's affecting my work and overall quality of life.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any unintentional weight loss or changes in your appetite recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Answer from patient: \"I have been losing weight slowly over the past month. I don't know if it's due to stress or just aging.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your appetite, bowel movements, or energy levels during this period?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: \"I haven't really noticed anything out of the ordinary in terms of my appetite or bowel movements. But I have definitely felt much more tired throughout the day, even when I get enough sleep at night.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you been experiencing any unusual headaches, dizziness, or shortness of breath recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM YOU: \"No, I haven't had any unusual headaches, dizziness, or shortness of breath recently.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 16,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided symptoms such as excessive daytime sleepiness, difficulty staying awake, difficulty focusing, insomnia, and recent unintentional weight loss, the most likely diagnosis is Obstructive Sleep Apnea (OSA). The clinical justification for this diagnosis is that OSA often leads to chronic fatigue, daytime sleepiness, and cognitive impairment due to recurrent nocturnal hypoxia and sleep fragmentation. Additionally, weight loss can be a common consequence of untreated OSA, as obesity is a significant risk factor for the condition. However, it is important to note that further diagnostic tests, such as polysomnography, may be necessary to confirm the diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 98,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 16,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 98,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone ('I feel really exhausted and tired all the time')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes excessive daytime sleepiness, difficulty focusing, and trouble sleeping, which are consistent with the clinical context. However, they do not explicitly mention snoring, gasping, or witnessed breathing cessation during sleep, despite these being key symptoms of OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but their response in Turn 2 seems slightly off-topic ('losing weight slowly over the past month'), and their response in Turn 3 touches on potential underlying causes of their symptoms rather than directly addressing them."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good use of everyday language and coherence with the clinical context, but could benefit from more direct and relevant responses to the questions asked. They tend to stray from the topic or discuss underlying causes rather than symptoms, which detracts from the realism of the simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of obstructive sleep apnea, such as excessive daytime sleepiness, loud snoring, or witnessed episodes of breathing cessation during sleep. Instead, they focused on general symptoms like weight loss, appetite changes, and headaches, which are not directly related to the diagnosis of OSA."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor considered some relevant symptoms such as excessive daytime sleepiness and insomnia, the connection to obstructive sleep apnea was not clearly established. The mention of weight loss as a consequence of untreated OSA was accurate, but the overall reasoning was incomplete and lacked specific details about the clinical presentation of OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interview and avoided acting like a patient, demonstrating good role adherence."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "The doctor's performance was satisfactory, but there was room for improvement in terms of asking targeted and clinically relevant questions. While the final diagnosis of obstructive sleep apnea was partially justified, it could have been more accurately supported with a clearer understanding of the key symptoms and clinical presentation of the condition."
+    },
+    "llm_judge_total_out_of_20": 13
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good day to you, doctor. I'm glad I came to see you. To be honest, I've been feeling quite tired lately. It's not just a normal tiredness, either - it's an exhaustion that hits me mid-afternoon, no matter how much rest I get at night. Sometimes I'll doze off on the couch while watching TV, but when I wake up, I still feel like I've had a good chunk taken out of my day. And it's not just the tiredness... I've also been having these awful dreams that leave me waking up in a sweat. My heart racing, you know? It's unsettling.\n\nAnd then there's this strange thing where I sometimes stop breathing in my sleep. My wife",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any episodes of loss of consciousness or near-loss of consciousness during the day, such as fainting or feeling like you're about to pass out?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 28,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I don't know...I've been feeling so tired lately that I've had moments where I'm driving or cooking dinner and suddenly my head feels like it's spinning, and I have to sit down quickly before I fall over. But it wasn't exactly passing out, more like just feeling like I was going to collapse. It's happened a few times, but not often. And my granddaughter tells me she's seen me dozing off on the couch when we're watching TV together. But I just think it's because I'm getting old and need more rest!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any numbness, tingling, or weakness in your arms or legs?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I don't know that I've had any numbness or tingling in my arms or legs. Now, I do get these awful cramps in my legs sometimes when I'm lying in bed. It's like my legs just give out on me, and I have to sit up and stretch. But I wouldn't say it's numbness exactly... it's more like a sharp pain. And it doesn't happen every night, mind you. Just occasionally. Oh, and I do get some stiffness in my knees, especially in the mornings. That's probably just old-age stuff, isn't it?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any weakness or difficulty walking?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I get a little winded just walking up the stairs now, which wasn't always the case before. I have to catch my breath halfway up, and sometimes I worry about tripping because my legs feel a bit shaky. But it's not like I'm bedridden or anything - I still manage to get around the house okay. It's just...tiring. Like, really tiring. Even just doing daily things takes a lot out of me these days.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 74,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from Obstructive Sleep Apnea (OSA).\n\nClinical Justification: The patient's symptoms of excessive daytime fatigue, recurrent episodes of drowsiness, and nocturnal awakenings due to shortness of breath, along with reports of snoring and witnessed apneic events by his family member, strongly suggest OSA. Additionally, the patient's complaints of morning headaches, dry mouth, and nocturia further support this diagnosis. Furthermore, the presence of intermittent claudication-like symptoms, such as leg cramps and stiffness, may indicate hypoxia-related muscle damage, which is a common complication of untreated OSA.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 74,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 28,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone ('good day to you', 'goodness gracious')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes excessive daytime sleepiness, but also mentions nightmares, which could be related to sleep disorders, however, they don't explicitly mention other symptoms like snoring, gasping, or witnessed breathing cessation during sleep."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but occasionally displays knowledge of medical concepts ('heart racing', 'numbness or tingling in my arms or legs') that might suggest they're trying to present themselves as a patient rather than simply describing their experiences."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and staying within character, but falls short in coherently linking symptoms to the clinical context and maintaining a completely non-medical tone."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the key symptoms of Obstructive Sleep Apnea, such as excessive daytime sleepiness, loud snoring, gasping, or witnessed episodes of breathing cessation during sleep. Instead, they focused on unrelated symptoms like loss of consciousness, numbness, and weakness."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor correctly identified some symptoms related to Obstructive Sleep Apnea, such as excessive daytime fatigue, recurrent episodes of drowsiness, and nocturnal awakenings due to shortness of breath, the justification was incomplete and did not fully consider all relevant factors. The presence of intermittent claudication-like symptoms, such as leg cramps and stiffness, may indeed suggest hypoxia-related muscle damage, but this is not a definitive indicator of OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "The doctor demonstrated some understanding of Obstructive Sleep Apnea symptoms but failed to ask targeted questions and provided an incomplete justification for the diagnosis. Further education on the key symptoms and diagnostic criteria for OSA would be beneficial."
+    },
+    "llm_judge_total_out_of_20": 12
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "\"Doctor, my hands hurt when doing things around the house, especially if it takes much effort.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 16,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Could this pain be related to repetitive motions or prolonged periods of strain during household tasks?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Sure doc! I have been experiencing discomfort for some time now but it has gotten worse lately due to my house chores. It feels pretty bad when doing stuff around the house. My hands really hurt after using them too much - they feel kinda stuck or \"dead\" sometimes... That sounds familiar because once you mention about these specific points on fingers getting big, well, I don't remember feeling anything else except soreness from cooking dinner last week which felt unusual. Maybe something we could think about changing up how things get done indoors might help ease out my troubles here without having me miss important family moments while still keeping everything running smoothly. Let us discuss other ways besides just giving extra breaks every",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 125,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have there been any changes in your daily activities that may be contributing to this increased hand pain?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, it has really gotten tough lately because I used to play piano for hours every day but now my hands just don't want to cooperate much anymore during practice sessions due to the discomfort increasing each time. Also, gardening which was so therapeutic before doesn't feel enjoyable; opening jars is another task becoming quite difficult these days with how sore my fingers get afterward. It seems everything requires effort from me without letting off some relief! Could you tell me if doing less might help prevent further damage? Would exercising them still make sense given their current state? And one other thing – sometimes they look odd when stretched out flat on paper... maybe you could",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have your symptoms been accompanied by any swelling or changes in coloration of your joints?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well now, Doc, I suppose my hands have changed quite a bit over time too. It used to just hurt when doing something strenuous but these days it aches even if I walk around for some hours. My knuckles here look puffy sometimes; doesn't seem normal after eating dinner either. And all this fussin', well... you know how folks say they run on their elbows? Makes me feel old before my time!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Primary osteoarthritis (OA) affecting multiple finger joints likely secondary to chronic stressful use/overuse combined with age-related degenerative processes. The patient presents classic signs such as morning stiffness, exacerbated pain upon activity, visible enlargement at affected joint sites (\"knuckle pads\"), and functional impairment impacting routine domestic duties like playing an instrument and performing manual labor including gardening. These findings suggest localized inflammation within synovial structures leading to cartilage breakdown—hallmarks consistent with primary osteoarthritis pathology rather than systemic rheumatologic conditions. Given the progressive nature observed through worsening function despite rest, modifying high-impact activities remains crucial alongside potential pharmacological interventions aimed at reducing intra-articular pressure and managing associated comorbidities commonly seen in elder populations prone to wear-and-tear arthropathies.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 117,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 16,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 125,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 117,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone and uses phrases like 'Doc' and 'fussin''"
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistently with osteoarthritis, including joint pain, stiffness, and locomotor restriction, but mentions some unrelated issues like playing piano and gardening, which slightly detract from coherence"
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character as a patient, but occasionally displays knowledge of medical terminology ('Heberden’s nodes', 'Bouchard’s nodes') and asks questions that sound like those of a healthcare provider"
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good symptom coherence and natural language usage, but shows some lapses in role adherence due to occasional display of medical knowledge and overly conversational tone. With refinement, the patient could better maintain their character and provide more focused descriptions of their symptoms."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but Question 3 was not directly related to the key symptoms of osteoarthritis. Questions could have explored other symptoms such as joint deformity, instability, or bony swelling."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis of primary osteoarthritis was accurate, considering the symptoms presented, especially morning stiffness, exacerbated pain upon activity, and functional impairment. However, the mention of 'localized inflammation' might be misleading since OA is generally non-inflammatory."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor mostly stayed professional, but the tone became somewhat informal towards the end, particularly when mentioning 'modifying high-impact activities.' A more formal approach would be more suitable for a clinical setting."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy and some understanding of osteoarthritis symptoms. However, the questioning process could be improved by covering a broader range of symptoms, and the doctor's communication style should remain professional throughout the interaction."
+    },
+    "llm_judge_total_out_of_20": 14
+}

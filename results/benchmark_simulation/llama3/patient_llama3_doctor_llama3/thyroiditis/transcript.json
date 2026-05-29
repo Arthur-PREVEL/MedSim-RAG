@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dear, I'm not feeling too well lately. My neck's been bothering me, it's been sore and swollen. And sometimes when I swallow food, I feel like there's something stuck. Like my throat's getting tighter, if that makes sense. It's quite uncomfortable. Also, I've noticed I've been feeling rather tired all the time, even after I finish my morning tea and bread. And my joints ache more than usual, especially in the mornings. Sometimes my heart beats a bit faster than normal, but that might just be from being anxious about this... all of this, I suppose.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 97,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent weight loss or changes in your appetite?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I've been eating less lately, I suppose it's just that my stomach hasn't been feeling right. You know, sometimes it feels like there's a knot in my throat when I eat certain things. And I've lost some weight, but I don't think it's much to worry about. I'm not feeling weak or anything like that. But I do feel a bit more tired than usual. That's about it, really.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any difficulty swallowing or regurgitation of food?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! Lately, I've been having trouble getting food down my throat. It's like it gets stuck halfway down, and sometimes I feel like I'm gagging. And after meals, I often feel like I need to burp, but it doesn't really help. My daughter has noticed that I've been coughing more than usual too. I just thought it was because I've been eating a bit too much cheese lately, but maybe there's something more going on?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any weight loss or difficulty swallowing liquids as well as solids?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I've been feeling rather off lately. My food doesn't seem to be staying down like it used to. Sometimes I feel like there's something stuck in my throat when I'm eating, especially if I try to swallow anything too quickly. And yes, I have lost some weight recently, I'd say about five pounds over the past month. To be honest, I was hoping it was just old age catching up with me, but now that you mention it, I don't think it's just normal aging. I do get a bit tired easily, too.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from Subacute Granulomatous Thyroiditis (de Quervain's thyroiditis), likely triggered by a viral infection.\n\nClinical Justification: The patient's symptoms of neck pain and swelling, difficulty swallowing, fatigue, joint aches, and weight loss are consistent with subacute granulomatous thyroiditis. The presence of dysphagia, regurgitation of food, and coughing also support this diagnosis, which is further supported by the patient's recent history of viral illness, suggesting an inflammatory process affecting the thyroid gland.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 76,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 97,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 76,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal expressions like 'goodness gracious' which detract from their overall natural tone."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient describes several symptoms, they don't always connect them coherently to the clinical context. For example, they mention joint aches without linking it to possible thyroid issues."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient occasionally exhibits behaviors more characteristic of a healthcare provider, such as asking for reassurance ('maybe there's something more going on?') or providing self-diagnoses ('it's just old age catching up with me')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation shows potential, but requires refinement to better adhere to the role and exhibit more coherent symptom descriptions. The patient's language is generally relatable, but could benefit from more conversational tone and less formal expressions. With further practice, this patient could become a more convincing and effective simulator."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted towards general symptoms, but missed specific key symptoms such as fever, neck pain, and history of recent radiation or radioactive iodine treatment that could indicate different types of thyroiditis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was incorrect; the patient's symptoms do not match subacute granulomatous thyroiditis, particularly the lack of mention of fever, neck pain, and recent viral illness. The symptoms described align more closely with chronic thyroiditis or Riedel thyroiditis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "The doctor demonstrated some understanding of thyroiditis symptoms but failed to ask critical questions that would lead to a correct diagnosis. A more thorough questioning approach and consideration of all possible causes of thyroiditis would improve diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 13
+}

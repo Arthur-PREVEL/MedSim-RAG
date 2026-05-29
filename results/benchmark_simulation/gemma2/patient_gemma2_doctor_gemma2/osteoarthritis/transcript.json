@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, my hands have been acting up lately. They ache, especially after I've been doing things around the house.  My fingers get stiff, too, and it's hard for me to grip things sometimes. And my knees...they click and crack when I walk, and they hurt if I stand up too long.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 52,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any swelling in your hands or knees?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "My hands have been feeling stiff lately, especially in the mornings.  And sometimes they just ache, especially after I've been doing things around the house. My knees feel a bit swollen, too, like when I stand up I have to really work to get going.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do your fingers ever feel like they're getting stuck or locking up?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Sometimes, yeah.  It feels like I gotta wiggle them around a lot before they move freely.  And it especially happens when I've been doing something for a while with my hands.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Does this stiffness also occur in your shoulders or other parts of your body?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, my hands are the worst. They stiffen up especially when it's been cold out.  In the morning, sometimes I feel like I've got arthritis everywhere, but mostly it's just my hands.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Osteoarthritis\n\n**Clinical Justification:** The patient presents with pain, stiffness, and limited range of motion in their hands and knees, particularly after activity and in the morning. These symptoms, along with crepitus (clicking and cracking) in the knees, are classic signs of osteoarthritis, a degenerative joint disease. \n\n\nLet me know if you'd like to explore other potential diagnoses or discuss treatment options!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 63,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 52,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 63,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions ('it feels like I gotta wiggle them around a lot')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with osteoarthritis, but some statements seemed inconsistent (e.g., 'I feel like I've got arthritis everywhere' in Turn 4)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character as someone experiencing osteoarthritis symptoms, but occasionally used phrases that sounded more like a doctor ('crepitus', implied by 'click and crack')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed good effort in describing osteoarthritis symptoms, but could benefit from more consistency in symptom reporting and adherence to a non-medical role. Some phrases still sounded overly formal or medical, detracting from the overall realism."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to inquire about symptom duration, severity, and impact on daily life, which could have helped narrow down the differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was mostly accurate, considering the provided symptoms, but it would have been helpful to consider other possible causes of joint pain and stiffness before arriving at osteoarthritis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed relatively professional throughout the interaction but occasionally used colloquial language ('getting stuck or locking up') and failed to maintain a neutral tone when discussing the condition."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in identifying key symptoms and making a diagnosis, but could benefit from refining their questioning technique to gather more comprehensive information and maintaining a more formal tone during the consultation."
+    },
+    "llm_judge_total_out_of_20": 14
+}

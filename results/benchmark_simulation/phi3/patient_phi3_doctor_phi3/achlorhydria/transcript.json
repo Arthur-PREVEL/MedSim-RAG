@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "\"Hey Doc, thanks for seeing me. For quite some time now my stomach has been troubling me after eating—it kind of feels heavy inside there—like swelling that won’t go away easily.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Could you describe any specific food items or types of meals when this sensation occurs?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Sure thing! I often feel better after having my morning oatmeal with some honey added for extra sweetness; it seems to calm things down considerably once breakfast is over. When lunch comes around though, if there’s anything especially rich or fatty, that might not sit well at all – quite uncomfortable then. In evenings, just plain chicken soup does wonders before dinner - keeps both bellyache and burping under control without much trouble afterwards. If something doesn’t agree with me midway through eating whatever isn’t too heavy fare usually helps stave off more discomfort later tonight. Would love insight into why these times relate so closely related back home each day based",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 112,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Could your symptoms be linked to any specific food intolerances?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I think those pains after eating might suggest some trouble with certain kinds of foods causing discomfort inside. It happens more often when meals have stuff that feels heavy for my stomach; it gets upset quickly sometimes leading to nausea or even throwing up if not careful about what goes into it. Sometimes this also makes one feel very tired too soon afterwards. What kind of tests would you recommend checking out these issues further? Why don’t we start by looking at how particular items react within, huh? That could lead us down a path where identifying problematic ingredients becomes clearer over time. Can something here explain why there is such varied list from diarrhea right through lack of",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any specific types of food (like dairy, gluten-containing products, spicy dishes) triggering your symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I often notice that after eating certain things, my stomach doesn’t feel right. Spicy meals seem to make it worse sometimes, but now even just regular bread makes me uncomfortable for hours afterwards. It feels heavy and gives this burning sensation up there near my chest too. Can we talk about how diet might be affecting these issues?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Gastroparesis secondary to achlorhydria due to chronic Helicobacter pylori infection likely exacerbated by poor gastric emptying mechanisms. The patient's reported relief upon consuming bland carbohydrates like oatmeal suggests delayed gastric emptying as they require longer digestion periods which may alleviate their bloating postprandially. Their reaction to common irritants including fats and potential histamine reactions indicates an underlying hypersensitivity possibly associated with reduced acid production characteristic of achlorhydria. Further testing should include upper endoscopy with biopsy for H. pylori confirmation and motility studies to assess gastric emptying function. Avoidance of known triggers along with possible use of proton pump inhibitors can help manage symptoms until definitive treatment strategies against identified etiologies are established.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 114,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 112,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 114,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal tone, e.g., 'it gets upset quickly sometimes'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally consistent with achlorhydria, but some descriptions (e.g., 'heavy' feeling) could be interpreted as non-specific. The mention of 'burning sensation up there near my chest' may indicate gastroesophageal reflux disease (GERD), which is unrelated to achlorhydria."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient mostly stayed in character, but occasionally exhibited behaviors typical of a healthcare provider, e.g., asking for explanations ('Can something here explain...')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good use of everyday language and relatively coherent symptom descriptions. However, some inconsistencies and deviations from the role hindered the overall experience. Further refinement is needed to ensure the patient stays in character and provides more accurate, relevant symptoms."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions about food triggers and intolerance, but failed to explore other key symptoms such as epigastric pain, weight loss, heartburn, nausea, and abdominal pain that could have helped narrow down the differential diagnosis more effectively."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor's reasoning was somewhat plausible, the final diagnosis of gastroparesis secondary to achlorhydria due to chronic Helicobacter pylori infection seems overly complex and not entirely supported by the provided information. A simpler diagnosis of achlorhydria itself would have been more accurate based on the described symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally maintained a professional tone throughout the interview, avoiding unprofessional behavior."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in asking targeted questions and maintaining professionalism, but fell short in exploring all relevant symptoms and providing a clear, evidence-based diagnosis. With further refinement, the doctor could improve their critical thinking and diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 14
+}

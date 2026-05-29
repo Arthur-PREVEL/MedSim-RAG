@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, thank you for seeing me today. I've been feeling this persistent pain in my stomach area, especially after eating. It's not sharp or sudden but more of a constant discomfort that lingers. I've also noticed I'm losing weight recently without trying, and sometimes, a few hours after eating, I feel a bloated sensation. Additionally, there are times when I burp up a sour taste. I hope these details help clarify things for our discussion today. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 79,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any changes in your bowel habits, such as diarrhea, constipation, or noticeable blood in your stool?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I've been noticing some changes in my bowel movements recently. I've had instances where I go to the bathroom more frequently than usual, which I believe is diarrhea. But there have also been times when it's hard for me to pass stools, almost like I'm constipated. I haven't seen any blood in my stool though. It's all quite uncomfortable and worrying, so I thought it would be best to bring this up with you. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any unintentional weight loss or significant changes in appetite alongside these bowel changes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doctor, I have noticed that I've been losing weight unexpectedly. I used to enjoy my meals but now I find myself feeling full much sooner than before, often even before finishing a normal-sized meal. This early satiety has made me eat less than I normally would, which may contribute to the weight loss. Additionally, I haven't felt the usual vibrant hunger pangs I used to experience when it was time for a meal. It's all quite confusing, really.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 79,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you recently started any new medications or changed your current ones?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't started any new medications nor have I made any changes to my current ones, Doctor. Recently, I've been experiencing a persistent pain in my stomach area that feels like a dull ache. It's not severe but it's definitely uncomfortable. Additionally, I've noticed I've been losing weight without trying, and I frequently feel nauseous after eating. I also often have heartburn and a sensation of bloating. These symptoms have made me lose my appetite, and I feel full quickly. I hope this helps you understand my condition better, Doctor.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 91,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided symptoms, including persistent abdominal pain, unexplained weight loss, early satiety, frequent diarrhea and occasional constipation, sour burps, and possible achlorhydria (absence of gastric acid), the most likely final diagnosis is Gastroesophageal Reflux Disease (GERD) or Peptic Ulcer Disease (PUD).\n\nClinical justification: The patient's symptoms of abdominal pain, weight loss, early satiety, and sour burps suggest gastrointestinal issues. The frequent diarrhea and occasional constipation could indicate irritable bowel syndrome (IBS), but the presence of abdominal pain, weight loss, and sour burps points more towards GERD or PUD. The absence of gastric acid (achlorhydria) further supports the possibility of PUD, as it can lead to an increased risk of ulcers. However, additional tests would be necessary to confirm the exact diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 123,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 79,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 79,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 91,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 123,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, effectively avoiding medical terms such as 'achlorhydria', 'epigastric pain', and 'glossitis'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's symptoms were generally consistent with the clinical context provided, although they did not explicitly mention 'heartburn' until Turn 4, despite it being mentioned in the initial list of symptoms. However, the other symptoms presented were coherent with the context."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient stayed within the role of a patient, there were moments where they seemed to take on a slightly passive tone, particularly in Turn 3, where they stated 'It's all quite confusing, really.' A more active engagement with their concerns would improve role adherence."
+        },
+        "total_score_out_of_10": 9,
+        "overall_feedback": "This patient simulation demonstrated strong use of everyday language, good symptom coherence, and adequate role adherence. The only areas for improvement lie in ensuring consistency in presenting symptoms and adopting a more proactive approach to discussing their health concerns."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 3,
+            "justification": "The doctor asked targeted questions about bowel habits, weight loss, and medication changes, which are relevant to the potential causes of achlorhydria. However, they did not directly ask about epigastric pain, nausea, bloating, heartburn, or decreased position and vibration sense, which are also common symptoms of achlorhydria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of GERD or PUD was incorrect because achlorhydria is not typically associated with these conditions. Achlorhydria is often related to other conditions such as autoimmune gastritis or chronic atrophic gastritis, which were not considered in the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional during the interview, but there was no clear indication that they were playing the role of a doctor, e.g., taking a thorough medical history, performing a physical examination, or ordering diagnostic tests."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor showed some promise by asking relevant questions, but ultimately failed to arrive at the correct diagnosis due to incomplete consideration of the patient's symptoms. They should have explored the patient's gastrointestinal symptoms more thoroughly and considered alternative diagnoses before arriving at a conclusion."
+    },
+    "llm_judge_total_out_of_20": 14
+}

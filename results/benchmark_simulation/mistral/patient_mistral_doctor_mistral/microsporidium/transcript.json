@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I've been feeling quite unusual lately. It feels like tiny spots or blotches covering my skin, similar to small pepper specks. They are darker than my usual complexion, and I find them particularly noticeable. Additionally, I've had a persistent fatigue that just won't seem to go away. I've also noticed a slight difficulty moving around, as if my muscles aren't working as well as they should. On top of all that, I sometimes feel a little lightheaded, especially after standing up quickly. Could these symptoms be related to something I ate or contracted from the environment?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you recently experienced any unexplained weight loss, fever, or joint pain?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been feeling quite weak lately, and I've noticed an unusual drop in my weight. Additionally, I have been experiencing frequent fever episodes, and my joints have been quite achy and painful. These symptoms appeared suddenly and I haven't found a reason for them yet.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you recently traveled or had contact with someone who has recently traveled, or have you noticed any unusual rash or bite marks on your body?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 26,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I haven't been anywhere far lately, no international travel or road trips. As for contacts, I've been trying to keep my distance from others due to the current situation. Regarding the rash or bites, I haven't seen anything unusual on my skin that I can recall. If something does appear, I will definitely let you know. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have there been any changes in your appetite, energy levels, or bowel habits recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I've noticed some strange changes in my body lately. Firstly, I find myself feeling less hungry compared to before, and sometimes food doesn't taste quite as good as it usually does. It's been difficult to maintain my regular appetite.\n\nSecondly, I have felt a bit more tired than usual. Some days, I feel exhausted even after resting for long hours. I believe my energy levels have dropped a bit.\n\nLastly, there has been a change in my bowel movements too. They aren't regular as they used to be, and I've had instances where I experience diarrhea and constipation alternately. All these symptoms worry me, and I would",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Microsporidiosis\n\nCLINICAL JUSTIFICATION: The patient presents with multiple symptoms suggestive of microsporidiosis, including cutaneous lesions (skin rash), persistent fatigue, muscle weakness, weight loss, fever, joint pain, changes in appetite, energy levels, and bowel habits (diarrhea and constipation). These symptoms are consistent with the known manifestations of this infection. Furthermore, the patient's lack of recent travel or exposure to potential sources of infection, combined with the absence of known alternative causes for their symptoms, supports the diagnosis of microsporidiosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 26,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally mentions 'fever episodes' which could imply some medical knowledge. However, overall, the language remains accessible and understandable."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Some symptoms reported by the patient, such as fatigue, weakness, and joint pain, are somewhat inconsistent with the initial description of dark spots or blotches on the skin. The patient's symptoms seem to shift between different issues throughout the conversation."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient stays within the role of a concerned individual seeking medical help, there are moments where they exhibit behaviors more typical of a healthcare professional, such as asking about possible causes ('Could these symptoms be related to something I ate or contracted from the environment?')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and staying within the role, but struggles with symptom coherence and adherence to the patient role. The narrative jumps between different symptoms and occasionally exhibits behaviors more typical of a healthcare provider. With refinement, the patient could better align their symptoms and maintain a more authentic patient persona."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 3 were somewhat targeted towards general symptoms, but question 2 seemed unrelated to the actual condition. Questions could have been more specific about the patient's history of exposure to contaminated water or food, or recent contact with animals that may carry the parasite."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of microsporidiosis seems plausible based on the symptoms presented, but the justification provided does not accurately match the clinical truth. There is no mention of the parasite's unique features such as the polar tube, glycocalyx, or the distinctive morphology of the spores, which are crucial for accurate diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated good role adherence, the questioning strategy was suboptimal and the diagnostic accuracy was compromised due to a lack of understanding of the underlying pathology. A better approach would involve asking more targeted questions about the patient's environmental exposures and the unique features of the parasite, followed by a more comprehensive review of the clinical truth to inform the diagnosis."
+    },
+    "llm_judge_total_out_of_20": 13
+}

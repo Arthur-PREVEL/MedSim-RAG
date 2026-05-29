@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I've been feeling very tired lately, even after a full night's sleep.  I also snore really loud at night, sometimes so loud my wife complains about it. And sometimes, I wake up feeling like I can't get my breath.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you ever feel excessively sleepy during the day, even after sleeping for a long time?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, actually. I find myself nodding off even during my favorite TV shows sometimes.  It gets frustrating because I just don't have the energy I used to.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you also experience excessive daytime sleepiness even after getting a full night's rest?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, I find myself yawning a lot during the day, even if I think I slept well at night.  Sometimes I just get this overwhelming urge to nap, no matter what I'm doing.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your concentration or memory lately?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes I have trouble remembering things... little things. Like where I put my keys or what I was just thinking about.  It happens more often now than it used to.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Obstructive Sleep Apnea (OSA)\n\n**Clinical Justification:** The patient presents with classic symptoms of OSA including loud snoring, gasping for air during sleep, excessive daytime sleepiness despite adequate sleep duration, and cognitive impairment (memory lapses, difficulty concentrating). These symptoms strongly suggest repeated episodes of upper airway obstruction during sleep, characteristic of OSA.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 53,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 53,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into informal expressions ('doc', 'well')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes some relevant symptoms (excessive daytime sleepiness, loud snoring, difficulty breathing), but not all symptoms mentioned in the clinical context (morning headaches, nocturnal reflux, insomnia, nocturia)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays mostly in character, but occasionally uses phrases that could be interpreted as seeking reassurance or justification ('frustrating because I just don't have the energy I used to')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good symptom coherence and role adherence, but could benefit from more comprehensive symptom reporting and less colloquialisms. The patient effectively conveys their experiences with excessive daytime sleepiness, loud snoring, and difficulty breathing, but fails to mention other relevant symptoms. Additionally, some informal expressions detract from the overall realism of the simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked targeted questions about excessive daytime sleepiness, but failed to explore other key symptoms such as snoring, gasping, or witnessed breathing cessations during sleep, which are crucial for a comprehensive differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of Obstructive Sleep Apnea was reasonable based on the symptoms presented, but the doctor did not use any specific diagnostic tools or objective measures such as the Epworth Sleepiness Scale (ESS) or the STOP-BANG questionnaire to support the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "The doctor demonstrated good understanding of the key symptoms of Obstructive Sleep Apnea and provided a reasonable diagnosis. However, the lack of exploration of other critical symptoms and failure to utilize objective diagnostic tools limits the thoroughness of the diagnosis. With further questioning and utilization of standardized assessments, the doctor could have arrived at a more comprehensive diagnosis."
+    },
+    "llm_judge_total_out_of_20": 14
+}

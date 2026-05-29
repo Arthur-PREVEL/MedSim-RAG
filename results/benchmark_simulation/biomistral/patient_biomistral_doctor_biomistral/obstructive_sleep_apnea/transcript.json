@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "HELLO! I am Jean, a 70-year-old woman who needs help managing my sleep problems.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your typical bedtime routine like?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I usually go to bed around 9 pm, but sometimes I struggle to fall asleep. Once I'm asleep, I have trouble staying asleep and wake up frequently. I've noticed that I tend to feel really tired throughout the day, even if I get plenty of rest. The only time I ever feel truly rested is after a good night's sleep.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any difficulty concentrating during the day?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER: Good afternoon. Yes, I have been experiencing difficulty staying awake during the day for some time now. Even though I get enough sleep, it doesn't seem to help me feel refreshed when I wake up. Sometimes, I fall asleep while watching TV or reading a book in the afternoon.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 50,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any other symptoms such as memory loss, mood changes, or difficulty concentrating?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I sometimes forget things that happened earlier, like what I had for breakfast this morning. I also get angry really easily and I feel like I have trouble focusing on tasks. Sometimes I struggle remembering names of people I know well.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "rem"
+                ],
+                "word_count": 43,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Obstructive Sleep Apnea\nClinical Justification: Based on the patient's reported symptoms of difficulty falling and staying asleep, excessive daytime sleepiness, and memory loss, along with her age and BMI, she is at high risk for obstructive sleep apnea (OSA). OSA is characterized by repeated episodes of partial or complete obstruction of the airway during sleep, leading to disrupted breathing and reduced oxygen levels in the blood. This can cause fatigue, irritability, depression, anxiety, and memory impairment during the day. The patient's report of snoring loudly and waking up gasping for air further supports the diagnosis of OSA. A sleep study should be performed to confirm the diagnosis and determine the appropriate treatment plan.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 115,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 50,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "rem"
+                ],
+                "word_count": 43,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 115,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into formal tone ('Hello!' instead of 'Hi' or 'Hello')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes difficulty sleeping, daytime fatigue, and cognitive impairments, which are somewhat coherent with the clinical context. However, they do not explicitly mention any symptoms related to snoring, apneas, or other physical characteristics associated with OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally exhibits behaviors inconsistent with their role, such as using formal greetings and responding to questions as if they were a doctor ('Good afternoon', 'Hi Doctor')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "Jean presents as a relatable patient with concerns about her sleep and daily functioning. While she effectively conveys her experiences, her narrative could benefit from more explicit connections to the clinical context, particularly regarding symptoms directly related to OSA. Additionally, maintaining a consistent patient persona would enhance the simulation's realism."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of Obstructive Sleep Apnea. Questions about bedtime routine, difficulty concentrating, and other symptoms like memory loss, mood changes, or difficulty concentrating do not directly relate to the primary symptoms of OSA."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate but lacked specific details about the patient's symptoms. While the patient's age, BMI, and reported symptoms of difficulty sleeping and excessive daytime sleepiness support the diagnosis, the mention of memory loss as a symptom is less typical for OSA. A sleep study would still be necessary to confirm the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor showed some understanding of the condition, the questioning strategy could have been improved to target the key symptoms of Obstructive Sleep Apnea. The final diagnosis was mostly accurate but required assumptions about the patient's symptoms. A more thorough investigation, including a sleep study, is recommended to confirm the diagnosis and develop an effective treatment plan."
+    },
+    "llm_judge_total_out_of_20": 13
+}

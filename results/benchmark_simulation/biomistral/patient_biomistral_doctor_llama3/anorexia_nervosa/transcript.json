@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM YOU AS THE PATIENT: Hi there, Doc. Well, it's been quite a while since my periods started. And I always feel so chilly, even in warm weather. My stools are hard and dry too. Plus, my hands and feet seem to swell up sometimes. I'm also very tired all the time, and get really irritable.\n\nI've been trying to keep track of everything I eat, making sure I don't take in too many calories. And when I do indulge, I usually end up purging later on. It feels like the only way to get rid of this disgusting sensation.\n\nAnd then there's exercise. I",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 106,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your weight over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doctor, I used to be about 95 pounds but now I only weigh around 65 pounds. It's really hard for me because I feel weak all the time. And when I try to put on weight, it just feels like it goes straight through my body.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your appetite or difficulty swallowing?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am experiencing extreme weight loss and difficulty eating. The thought of food makes me feel nauseous, but at the same time, I feel weak and hungry all the time. It's like my body is against me.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your bowel movements or abdominal pain that could be contributing to these symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I experience chronic constipation. I feel full all the time, and sometimes it feels like there's food stuck in my throat. It's really uncomfortable.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 24,
+                "total": 7
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** The patient has Anorexia Nervosa, a serious eating disorder characterized by a distorted perception of one's weight and body image, leading to restrictive eating habits, significant weight loss, and associated physical complications.\n\n**Clinical Justification:** This diagnosis is supported by the patient's reported restrictive eating patterns, significant weight loss (from 95 to 65 pounds), amenorrhea (absence of menstrual periods), and multiple physical symptoms such as fatigue, irritability, cold intolerance, hand and foot swelling, and chronic constipation, which are all secondary effects of malnutrition and starvation.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 86,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 106,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 24,
+                "total": 7
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 19,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 86,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone (e.g., 'Doc', 'feels like')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient describes some relevant symptoms, they fail to consistently connect them to the underlying condition (anorexia nervosa). For instance, they mention weight loss, but not its relation to their restrictive eating habits and purging behaviors."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient exhibits some characteristics typical of someone with anorexia nervosa, such as restrictive eating and purging behaviors. However, they also display a somewhat detached tone, which might indicate a lack of role adherence."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in describing common symptoms associated with anorexia nervosa. However, the narrative could benefit from more coherence between symptoms and the underlying condition, as well as a more immersive and authentic portrayal of the patient's experiences and emotions."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to explore other key symptoms such as purging behaviors, excessive exercise, and emotional distress. Questions were not always directly related to the potential diagnosis of Anorexia Nervosa."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was mostly accurate, considering the provided symptoms and clinical truth. However, it lacked specificity regarding the diagnostic criteria for Anorexia Nervosa, such as the presence of amenorrhea, restrictive eating patterns, and significant weight loss."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally maintained a professional demeanor but occasionally used phrases that slightly resembled those a patient might use, e.g., 'significant weight loss' instead of more objective language."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy but could improve question quality and role adherence by asking more targeted and clinically relevant questions and maintaining a more neutral tone throughout the interview."
+    },
+    "llm_judge_total_out_of_20": 14
+}

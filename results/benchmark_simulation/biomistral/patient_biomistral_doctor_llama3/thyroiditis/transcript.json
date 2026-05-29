@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: Hi Doctor, sorry to bother you. Recently I feel uncomfortable when eating food. Sometimes my throat hurts, and it feels like a lump in my throat is growing bigger every day. It seems like I'm having trouble swallowing normal foods. Also, I have been feeling tired and weak lately, almost like I don't have enough energy to get through the day. It's not just one or two things; it's like there's always something off about how I'm feeling. Could there be something wrong with my thyroid?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 89,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight changes over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I'm sorry, I don't remember what happened before our last conversation. Could you please remind me?",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 16,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any difficulty remembering things that occurred more than 24 hours ago?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER AS JEAN: No, I don't have trouble recalling events beyond that time frame.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any memory problems or difficulties with learning new information before this incident?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "QUESTION FROM DOCTOR: What was your life like before being diagnosed with acute or subacute thyroiditis? Did you notice any changes in your mood, energy levels, or appetite?",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "subacute"
+                ],
+                "word_count": 28,
+                "total": 7
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient has Subacute (de Quervain) Thyroiditis.\n\nClinical Justification: The patient presents with symptoms of dysphagia (difficulty swallowing), sore throat, and a perceived growth in the neck, which are classic presentations of thyroiditis. Additionally, her recent onset of fatigue, weakness, and possible weight changes suggest an inflammatory process affecting the thyroid gland, consistent with subacute thyroiditis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 89,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 16,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "subacute"
+                ],
+                "word_count": 28,
+                "total": 7
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally mentioned 'thyroid' which might not be necessary for a non-medical person to say."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, mentioning discomfort while eating, throat pain, and difficulty swallowing, but lacked specific details about fever or neck pain."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but showed some inconsistencies by asking to recall previous conversations and then providing a response as if they were Jean, indicating confusion about their identity."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient demonstrated some understanding of their symptoms and concerns, but struggled with coherence and role adherence. They required reminders and clarification, and their responses contained minor inaccuracies. Further improvement in symptom description and staying in character would enhance the realism of the simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Questions were not targeted towards the key symptoms of thyroiditis such as fever, neck pain, or recent radiation exposure. Questions focused more on general symptoms like weight change and memory issues."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was partially correct, as the patient did exhibit some symptoms of thyroiditis. However, the specific type of thyroiditis (subacute vs. acute or chronic) was not accurately diagnosed based on the provided clinical truth."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated good role-playing skills, their questioning strategy was not well-targeted towards the key symptoms of thyroiditis, leading to a less accurate diagnosis. With further training, they could improve their ability to ask relevant questions and arrive at a more precise diagnosis."
+    },
+    "llm_judge_total_out_of_20": 13
+}

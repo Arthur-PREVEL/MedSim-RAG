@@ -1,0 +1,227 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I have been having trouble with bedwetting, especially during nighttime. This has been going on for several weeks now, and it's causing me some distress because I awake to find my bed wet, which in turn disturbs my sleep. I don't feel any particular urge to go to the bathroom before this happens. I haven't noticed any issues during the day, though. I thought it might be a good idea to get checked out, since I haven't had this problem for many years. I hope you can help. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting",
+                    "ra"
+                ],
+                "word_count": 92,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have there been any changes in your fluid intake or medication recently that could potentially contribute to this issue?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I've noticed that I've been drinking more water than usual lately, especially since the weather has been hotter. I'm also taking some new medications for my heart condition, but I don't believe they have anything to do with this problem. However, I thought it would be worth mentioning in case they might be affecting me in ways I'm not aware of. Would you like me to keep track of my fluid intake and bring it up at our next appointment?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 81,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any increase in urination frequency or volume along with your increased water intake?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been noticing that I've been urinating more frequently than usual lately, especially during the night. Additionally, I feel like the amount I am urinating has also increased. This seems to correlate with my recent increase in water consumption. I thought this might be normal given my age, but it's become quite noticeable recently.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any signs of burning sensation or discomfort while urinating, or blood in your urine?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I haven't really paid much attention to any specific sensations while urinating lately. However, there have been instances where I felt a bit of discomfort, but nothing too severe or persistent to worry about. As for seeing blood in my urine, I don’t recall ever experiencing that. But since we're discussing these things, I think it might be a good idea to mention them to you just in case. Is this something you'd like me to keep track of?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 80,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Nocturnal Enuresis (Primary or Secondary)\n\nCLINICAL JUSTIFICATION: The patient presents with a prolonged history of nocturnal enuresis, which is defined as involuntary urination during sleep in individuals over the age of five. The patient reports an increase in urination frequency and volume, particularly during the night, which coincides with an increase in their daily water intake. While the patient mentions occasional discomfort during urination, there is no report of a persistent burning sensation or blood in the urine, which would suggest a urinary tract infection or other underlying kidney or bladder conditions. Given the correlation between increased water intake, increased urination frequency, and the absence of other concerning symptoms, the diagnosis of nocturnal enuresis is most likely. Further investigation may be necessary to rule out secondary causes such as neurological disorders, diabetes, or constipation.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 136,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting",
+                    "ra"
+                ],
+                "word_count": 92,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 81,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 80,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 136,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terminology and explaining their symptoms in simple terms."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's descriptions of their symptoms were generally consistent with the clinical context provided, including nocturnal enuresis, lack of daytime symptoms, and possible correlation with increased fluid intake. However, the patient's mention of increased frequency and volume of urination in Turn 3 may indicate a potential underlying issue, but it could also be related to their increased water consumption."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient stayed within their role and avoided acting like a healthcare professional, instead presenting themselves as a concerned individual seeking medical attention."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation demonstrates strong adherence to natural language, symptom coherence, and role-playing. The patient effectively communicated their concerns and symptoms, providing relevant information without overstepping their role as a patient. Their responses show a clear understanding of their situation and willingness to cooperate with further investigation. Overall, this simulation presents a realistic portrayal of a patient seeking medical attention for nocturnal enuresis."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore key aspects of enuresis, such as toileting habits, sleep patterns, and family history of similar issues."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis of nocturnal enuresis was generally accurate, but the reasoning lacked specificity regarding primary vs. secondary enuresis and failed to consider alternative explanations for the patient's symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding unprofessional language or behaviors."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining a professional tone and exploring potential contributing factors to the patient's symptoms. However, the questioning could have been more comprehensive in addressing key diagnostic criteria for enuresis, and the final diagnosis could have benefited from a clearer consideration of differential diagnoses. With further refinement, this doctor's approach could lead to more accurate and thorough assessments."
+    },
+    "llm_judge_total_out_of_20": 17
+}

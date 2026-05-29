@@ -1,0 +1,223 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "HEY! THANKS FOR ASKING ME! I'm Jean, a 70-year-old patient who has been having bedwetting issues lately. I've had this problem since I was younger, but I thought I had outgrown it, so it was really embarrassing when it started happening again. Sometimes I wet my pants during the day too, but not always. It's really uncomfortable and makes me feel like a kid again. I don't know if there's anything I can do about it, so I just try my best to keep dry and hope it goes away soon.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting",
+                    "ra"
+                ],
+                "word_count": 91,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of bladder surgery or injury?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I would answer the question by saying that I do not have any history of bladder surgery or injury.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any difficulty with urination?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT (JEAN): Yes, I have had difficulty with urination for a long time now. Sometimes, I feel like I need to go to the bathroom but I cannot hold my urine until I get there, and then it comes out all over my clothes. It happens both day and night, and it's very embarrassing.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 56,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any pain or discomfort in your lower abdomen?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I know this question is important because the doctor said so, but I have to say that I feel uncomfortable talking about my body. Can we talk about something else? Maybe my hobbies or my family?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's history of enuresis and difficulty with urination, the final diagnosis is likely an overactive bladder syndrome (OAB). OAB is characterized by frequent, urgent, and involuntary urges to urinate, often leading to urinary incontinence. The patient's history of difficulty with urination and the fact that they sometimes feel like they need to go to the bathroom but cannot hold their urine until they get there are consistent with OAB. Additionally, the patient's age and the fact that they have had this issue since they were younger further support the diagnosis of OAB.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 95,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting",
+                    "ra"
+                ],
+                "word_count": 91,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 56,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 95,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "Patient used everyday language, but occasionally slipped into informal tone ('hey', 'thanks'). Avoided most medical terms, except for occasional slips like 'bladder surgery' and 'urination'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Patient described some symptoms consistently with the clinical context, but others were inconsistent or unclear. For example, they mentioned bedwetting starting again after being younger, but didn't clarify if it was nocturnal or diurnal only."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "Patient deviated from their role several times, including asking to change the subject and expressing discomfort discussing their body. This suggests they may be trying to act like a doctor rather than a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "Jean's responses showed some potential as a simulated patient, but struggled with staying in character and providing clear, coherent information about their symptoms. They demonstrated some understanding of the importance of the diagnostic process, but often prioritized comfort over honesty. With further practice, Jean could improve their ability to provide realistic and helpful responses."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 3 are somewhat relevant to enuresis, but question 2 does not directly address the key symptoms of enuresis. Question 2 could be improved to ask about frequency, nocturnal vs. diurnal, or distress related to urination issues."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of overactive bladder syndrome (OAB) is incorrect because it does not align with the clinical truth of enuresis. The patient's history of enuresis and difficulty with urination should lead to a diagnosis of enuresis, not OAB."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor-patient interaction showed some potential in questioning, but ultimately failed to accurately diagnose the condition based on the provided clinical truth. The doctor's questions did not adequately cover the necessary aspects of enuresis, and the final diagnosis was incorrect. Improvement is needed in both questioning and diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 11
+}

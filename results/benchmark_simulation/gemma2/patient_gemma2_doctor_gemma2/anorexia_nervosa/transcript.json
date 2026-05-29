@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, lately I haven't been feeling myself at all. I've got this constant tiredness, like I can barely get through the day.  My hands and feet are always swollen, and I seem to be getting colder than usual, even in a warm room. My tummy doesn't work right, I go too long between bowel movements...\n\nAnd my mood? Oh dear, it's just up and down. One minute I feel okay, the next I'm just irritable and snapping at everyone.   It makes it hard to enjoy things like I used to.  \n\n\nI've also been trying real hard to watch how much I eat. Maybe too hard... I guess I worry about putting on weight.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your menstrual cycle?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doctor, my periods haven't come around in months now.  It's been quite a while. I just figured it was part of getting older, but...",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 25,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any other changes besides missed periods?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I just feel colder than I used to, even in my house when it's warm. And  my stomach doesn't work right... I get backed up all the time. I also tire out really easily, and sometimes I just snap at people.   It's making things real hard.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any unintentional weight loss?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't been feeling hungry lately. And when I do eat, I just don't seem to enjoy it as much anymore.  I guess I've been losing some weight, but I didn't really think anything about it until my daughter started saying something.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Anorexia Nervosa\n\n**Clinical Justification:** The patient exhibits classic signs of anorexia nervosa, including significant weight loss despite not feeling hungry, intense fear of gaining weight, distorted body image, amenorrhea (missed periods), fatigue, constipation, and irritability. These symptoms collectively point towards a serious eating disorder requiring immediate intervention.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 49,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 25,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 49,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into informal tone ('doc', 'oh dear')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Some symptoms (amenorrhea) were mentioned late in the conversation, and not immediately. Some details (e.g., cold intolerance) were repeated across turns without clear progression."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient exhibits some knowledge of their condition, using phrases like 'I guess I've been losing some weight.' This suggests they might be aware of their situation, which is not ideal for role adherence."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation shows potential, but could benefit from more consistent symptom reporting and less awareness of their condition. The language is generally conversational, but there are moments where the patient slips into informal tone or displays insight that undermines their role."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were somewhat targeted but failed to cover key aspects of anorexia nervosa, such as restrictive behaviors, purging methods, and physical symptoms like extremity edema and cold intolerance."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the reported symptoms, but lacked comprehensive consideration of the entire symptom spectrum, which might have led to a more precise diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, adhering to their role without deviating into patient-like behavior."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated some understanding of anorexia nervosa but could improve by asking more comprehensive questions that address all key symptoms and behaviors associated with the condition. Their diagnostic accuracy was good, but not perfect, due to incomplete symptom coverage. Role adherence was excellent."
+    },
+    "llm_judge_total_out_of_20": 13
+}

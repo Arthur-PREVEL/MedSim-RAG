@@ -1,0 +1,227 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "It's so nice to finally see someone about how I've been feeling lately. To be honest, doc, I haven't been sleeping very well at all. I keep waking up gasping for air, like my chest is on fire. And when I do get out of bed, I feel really short of breath. It's hard to catch my breath, even just walking from the living room to the kitchen. I'm also feeling this awful nagging cough that won't quit. Sometimes it brings up yucky stuff, but most times it just feels like something's stuck in my chest.\n\nMy throat hurts too, especially when I swallow. And I've lost a bit of weight, I think, because my clothes seem looser than they used",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 121,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any episodes of wheezing or sudden severe tightness in your chest?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I don't know about wheezing, but my chest feels so tight sometimes. It's hard to catch my breath, especially when I'm walking up the stairs or doing anything that gets me a little out of breath. Sometimes it feels like someone is sitting on my chest, making it hard for me to breathe. And it hurts, not just in my lungs, but my whole ribcage seems to ache. I've been feeling like this for a few days now, and it's getting worse. I've also had this awful cough that won't quit, and I feel like I'm bringing up something nasty in my throat. I've tried to shake it off, thinking maybe it was just from being cold one day",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 121,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any episodes of sudden severe shortness of breath that wake you up at night?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes... I've had a few nights where it's been hard for me to catch my breath. It feels like there's a big weight on my chest, making it hard to breathe. Sometimes I wake up feeling like I'm suffocating, but it passes after a while.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any episodes of palpitations or irregular heartbeats during these episodes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I don't think so. Although, to be honest, my heart's been racing something fierce when I get out of breath. You see, it feels like my chest is getting tighter and tighter, and I feel like I'm not getting enough air. Sometimes, after one of these attacks, I'll be sitting there, trying to catch my breath, and my heart will just...it'll pound. Like it's doing its best to keep up with me, but it's struggling to keep pace.\n\nNow, about this coughing business - it's gotten worse over the past few days. It's deep in my lungs, and it brings up yucky stuff. And sometimes, after I've coughed up that nasty mucus,",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 113,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient has Community-Acquired Pneumonia (CAP), likely caused by a bacterial infection, given the acute onset of symptoms such as fever, cough, difficulty breathing, and production of purulent sputum. The patient's presentation of worsening dyspnea, pleuritic chest pain, and fatigue, along with the presence of a productive cough, strongly suggests an infectious process involving the lower respiratory tract.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 121,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 121,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 113,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions of their symptoms, e.g., 'chest feels like it's on fire', which could be more specific."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient describes several symptoms consistent with pneumonia, they also mention some inconsistent details, such as a racing heart without any clear connection to their respiratory issues."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally displays knowledge of medical concepts, e.g., describing their symptoms as 'wheezing' and mentioning 'mucus'."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good effort in conveying their symptoms, but could benefit from more specificity and consistency in their descriptions. They tend to stay in character, but occasionally reveal knowledge beyond what would be expected from a layperson. With further refinement, this simulation could become more convincing and engaging."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but Question 3 was not directly related to the key symptoms of pneumonia. Questions did not cover alcohol use disorder, immunocompromised state, or other potential complications."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was mostly accurate, considering the symptoms presented. However, the likelihood of a bacterial cause was not fully justified based on the provided information alone."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional, but there was a slight deviation from professionalism when making assumptions about the cause of the condition without sufficient evidence."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good question-asking skills, particularly in targeting common symptoms of pneumonia. However, they could improve by asking more comprehensive questions covering potential complications and staying strictly within their role. Their diagnostic accuracy was strong, but could be improved by providing more nuanced reasoning for their conclusions."
+    },
+    "llm_judge_total_out_of_20": 14
+}

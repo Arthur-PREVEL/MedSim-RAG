@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello! I'm sorry, but I don't remember much about my health, so I can't answer your question. Please ask my caregivers if they can provide you with any information. Thank you!",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Could you please tell me if this patient has any history of neurological symptoms or conditions?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Sure, I have asked the patient if they have had any issues with their brain, nerves, bones or muscles in the past. They mentioned that they had developed difficulty walking when they were around 60 years old, but they got better after physiotherapy. They also said that they didn't feel anything strange happening to their body before they fell.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have there been any changes in your memory, cognitive abilities, or balance since the onset of your walking difficulties?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am sorry, I have misinterpreted the question. Please provide me with a context of the situation or a simple question so I can give my response accordingly.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you recently experienced any unusual weight loss, fatigue, or changes in appetite?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: \"No, I have not noticed any unusual weight loss, fatigue, or changes in appetite.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 17,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided history, the final diagnosis is likely Secondary Enuresis (bedwetting in adults). The clinical justification for this diagnosis is that the patient exhibited a previous neurological symptom (difficulty walking), which may indicate an underlying condition affecting the nervous system, and bedwetting can be a secondary symptom of various neurological disorders. However, it's essential to note that further investigation would be required to confirm this diagnosis, as other factors such as psychological stress, medication side effects, or certain medical conditions could also contribute to enuresis in adults.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 17,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language in turns 1 and 4, but struggled with understanding the context in turn 3, indicating some confusion."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 0,
+            "justification": "The patient's responses did not address the topic of enuresis, instead focusing on unrelated topics such as difficulty walking and general health status."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient initially stayed in character by asking for caregiver input, but later became confused and sought clarification, deviating from the role."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed potential, but lacked focus on the topic of enuresis. The patient's initial attempts to seek help from caregivers were promising, but subsequent turns revealed confusion and a lack of engagement with the scenario. With further refinement, the patient could benefit from additional guidance on how to navigate the conversation and stay within the role."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 3 were targeted and clinically relevant, but Question 2 seemed unrelated to the primary complaint of enuresis. Questions did not cover key aspects such as frequency, duration, and impact on daily life, nor did they address potential differential diagnoses like urinary tract infections or constipation."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of Secondary Enuresis was partially accurate, but it lacked clear evidence linking the patient's bedwetting directly to a neurological condition. Further investigation was recommended, which is a good practice, but the connection between the patient's walking difficulty and bedwetting was not explicitly made."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated some understanding of the case, their questioning strategy could have been more comprehensive, and the diagnostic reasoning could benefit from clearer connections between symptoms and potential causes. Further investigation is warranted to solidify the diagnosis of Secondary Enuresis."
+    },
+    "llm_judge_total_out_of_20": 11
+}

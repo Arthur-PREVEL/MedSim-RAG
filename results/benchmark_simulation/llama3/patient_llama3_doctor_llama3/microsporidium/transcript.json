@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dear doc, I'm so glad you're here. To be honest, I've been feeling just miserable lately. My back has been acting up something awful - constant ache, stiffness, and it's hard to move around without wincing in pain. Sometimes I feel a sharp stabbing sensation that takes my breath away. It's been going on for weeks now, and I'm getting frustrated.\n\nI also get these annoying little twinges in my knees, especially when I walk down stairs or stand up from sitting. And my joints feel all creaky, like they're running out of oil or something.\n\nAnd don't even get me started on my fatigue! I'm tired all the time, even after sleeping well at night. Simple tasks",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight loss or changes in your appetite over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "(sighing) Oh dear doc, I don't know if I'd call it significant, but I've lost a bit of weight lately. I just haven't been feeling my usual self, if you know what I mean. My stomach's been acting up something awful - cramps, bloating... it's like I've got a rock in there most days. And as for appetite, well, sometimes I'm hungry one minute, then the next, I couldn't eat a thing. It's quite puzzling, really. But I reckon it's just old age catching up with me, eh? (wincing slightly) What's more concerning is this nagging fatigue I've had since winter started setting in. Just getting out of",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "mac"
+                ],
+                "word_count": 108,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your bowel movements or blood in your stool?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I've been having such terrible trouble with my bowels lately. I mean, I'm getting older, so I suppose it's to be expected, but it's still quite uncomfortable. Sometimes I feel like I need to go right away, and then other times nothing happens at all. It's like my body's just not working properly anymore.\n\nAnd yes, there has been blood in my stool. Just little bits here and there, but enough to worry me, you know? It's a bit alarming. I don't want anything serious going on inside me. My wife always tells me to eat more fiber and drink plenty of water, but sometimes I think it's just too much to handle.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight loss or abdominal pain along with these bowel symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, doc... I don't know if I've lost much weight, but my clothes seem looser lately. As for the belly, well, let me tell you, it's been acting up something awful. It's always been a bit sensitive, you know, but lately, it's been hurting more often than not. Sometimes it feels like a dull ache, other times it's more of a sharp pinch. And the worst part is, it seems to get worse after I eat. Not just anything, mind you, but especially after I have beans or cabbage.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 90,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from Microsporidiosis, likely caused by an infection with Enterocytozoon bieneusi, a microsporidian parasite that affects the gastrointestinal system and can cause malabsorption, diarrhea, abdominal pain, and weight loss.\n\nClinical justification: The patient's chronic gastrointestinal symptoms, including persistent diarrhea, abdominal pain, weight loss, and bloody stools, combined with her recent history of fatigue and joint pains, suggest a systemic infection. The specific mention of worsening symptoms after consuming certain foods, particularly beans and cabbage, which contain complex sugars that can exacerbate the condition, supports the diagnosis of microsporidiosis. Additionally, the patient's overall presentation aligns with the known manifestations of Enterocytozoon bieneusi infection, making this the most likely diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 113,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "mac"
+                ],
+                "word_count": 108,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 90,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 113,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into colloquial expressions ('miserable', 'awful', 'rock in there')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes multiple symptoms, including back pain, joint issues, fatigue, gastrointestinal problems, and weight loss. However, the connections between these symptoms are not clearly established, making it difficult to identify a coherent underlying condition."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays within the role of a concerned individual seeking medical attention, but occasionally displays knowledge about their condition, which may indicate a lack of adherence to the role."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in conveying everyday language and expressing concern about their symptoms. However, the coherence of their symptom descriptions and adherence to the role could be improved. The patient's occasional display of knowledge about their condition suggests a possible disconnect from the simulated scenario."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 3 were targeted and clinically relevant, but question 2 was somewhat irrelevant to the symptoms presented."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis of Microsporidiosis is partially accurate, but the specific causative agent, Enterocytozoon bieneusi, was not mentioned in the provided clinical truth. However, the symptoms described match those associated with microsporidian infections."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "The doctor demonstrated good questioning skills and diagnostic reasoning, but could improve by asking more targeted questions about the patient's symptoms and considering alternative diagnoses. The diagnosis of Microsporidiosis was partially accurate, but the lack of specificity regarding the causative agent reduced the score."
+    },
+    "llm_judge_total_out_of_20": 14
+}
