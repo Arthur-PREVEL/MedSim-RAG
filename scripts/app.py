@@ -13,7 +13,7 @@ from faster_whisper import WhisperModel
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 # ==========================================
-# FILE PATHS SETUP
+# FILE PATHS & MODEL REGISTRY SETUP
 # ==========================================
 # Assuming app.py is in /script/ and images are in /images/
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -24,13 +24,22 @@ LOGO_PATH = os.path.join(IMG_DIR, "medsim_logo.png")
 PATIENT_ICON = os.path.join(IMG_DIR, "patient.png")
 DOCTOR_ICON = os.path.join(IMG_DIR, "doctor.png")
 
+# Centralized Model Registry
+MODEL_REGISTRY = {
+    "BioMistral (7B)": "BioMistral/BioMistral-7B-DARE",
+    "Meta Llama-3 (8B)": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "Mistral v0.3 (7B)": "mistralai/Mistral-7B-Instruct-v0.3",
+    "Google Gemma-2 (9B)": "google/gemma-2-9b-it",
+    "Microsoft Phi-3 (3.8B)": "microsoft/Phi-3-mini-4k-instruct"
+}
+
 # ==========================================
 # STREAMLIT PAGE CONFIGURATION
 # ==========================================
 # Load the .ico file safely using PIL (fallback to emoji if missing during dev)
 page_icon = Image.open(ICON_PATH) if os.path.exists(ICON_PATH) else "🩺"
 
-st.set_page_config(page_title="MedSim UI - Llama3 Test", page_icon=page_icon, layout="wide")
+st.set_page_config(page_title="MedSim UI", page_icon=page_icon, layout="wide")
 
 # Display Logo and Title side-by-side
 col_logo, col_title = st.columns([1, 11])
@@ -143,9 +152,27 @@ if "input_key" not in st.session_state:
 # ==========================================
 with st.sidebar:
     st.header("⚙️ Configuration")
+    
+    # Clinical Case Selection
     patho_list = [item['title'] for item in kb] if kb else ["Default"]
     selected_patho = st.selectbox("Select a clinical case (Patient is hidden):", patho_list)
     
+    st.divider()
+    
+    # Dynamic LLM Selection
+    st.subheader("🧠 Multi-Agent Engine")
+    
+    # Defaults based on previous hardcoded values
+    default_patient_idx = list(MODEL_REGISTRY.keys()).index("Meta Llama-3 (8B)")
+    default_judge_idx = list(MODEL_REGISTRY.keys()).index("Google Gemma-2 (9B)")
+    
+    selected_patient_name = st.selectbox("🤖 Patient Model:", list(MODEL_REGISTRY.keys()), index=default_patient_idx)
+    selected_judge_name = st.selectbox("⚖️ Judge Model:", list(MODEL_REGISTRY.keys()), index=default_judge_idx)
+    
+    patient_model_hf = MODEL_REGISTRY[selected_patient_name]
+    judge_model_hf = MODEL_REGISTRY[selected_judge_name]
+
+    # Reset behavior if pathology changes
     if selected_patho != st.session_state.pathology:
         st.session_state.pathology = selected_patho
         st.session_state.messages = []
@@ -154,6 +181,8 @@ with st.sidebar:
         clear_vram()
         st.rerun()
 
+    st.divider()
+
     if st.button("🔄 Restart Interview"):
         st.session_state.messages = []
         st.session_state.interview_over = False
@@ -161,20 +190,18 @@ with st.sidebar:
         clear_vram()
         st.rerun()
         
-    st.divider()
+    st.info(f"""🧪 **Current Hardware Allocation**
     
-    st.info("""**Llama-3 Judge Evaluation Active**
-    
-* **Patient Mode:** BioMistral-7B-DARE (VRAM)
-* **Judge Mode:** Meta-Llama-3-8B-Instruct (VRAM)
+* **Patient Mode:** {selected_patient_name} (VRAM)
+* **Judge Mode:** {selected_judge_name} (VRAM)
 * **Hearing (STT):** Whisper Tiny (CPU)
 * **Voice (TTS):** Edge-TTS (Network)""")
 
 # ==========================================
-# 4. CHAT INTERFACE (Patient Mode: BioMistral)
+# 4. CHAT INTERFACE (Patient Mode)
 # ==========================================
 
-# Define custom avatars using the new image paths (with fallbacks just in case)
+# Define custom avatars
 avatar_map = {
     "user": DOCTOR_ICON if os.path.exists(DOCTOR_ICON) else "🔵", 
     "assistant": PATIENT_ICON if os.path.exists(PATIENT_ICON) else "🟢"
@@ -182,7 +209,7 @@ avatar_map = {
 
 # Show an onboarding prompt if the interview just started
 if len(st.session_state.messages) == 0 and not st.session_state.interview_over:
-    st.info(" **The patient has just entered the room; start the conversation with a simple phrase such as:** *“Hello, sir, what brings you here today?”*")
+    st.info("🚪 **The patient has just entered the room; start the conversation with a simple phrase such as:** *“Hello, sir, what brings you here today?”*")
 
 # Display history
 for message in st.session_state.messages:
@@ -215,32 +242,51 @@ if not st.session_state.interview_over:
     if prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
 
-        # Apply the doctor avatar to the immediate user message
+        # Apply the doctor avatar
         with st.chat_message("user", avatar=avatar_map["user"]):
             st.markdown(prompt)
 
-        # Apply the patient avatar to the immediate assistant message
+        # Apply the patient avatar
         with st.chat_message("assistant", avatar=avatar_map["assistant"]):
-            with st.spinner("Patient is thinking and speaking..."):
-                p_model, p_tokenizer = load_model_dynamic("BioMistral/BioMistral-7B-DARE")
+            with st.spinner(f"{selected_patient_name} is thinking and speaking..."):
+                p_model, p_tokenizer = load_model_dynamic(patient_model_hf)
 
                 fiche = next((item for item in kb if item['title'] == st.session_state.pathology), None)
                 rag_context = fiche['sections'].get('History and Physical', '') if fiche else ""
                 
                 chat_history = "\n".join([f"{'Doctor' if m['role']=='user' else 'Patient'}: {m['content']}" for m in st.session_state.messages])
                 
-                patient_prompt = f"""[INST] You are a 70-year-old patient. You are NOT a doctor.
-                Describe your symptoms naturally based on this medical data: {rag_context}. 
-                NEVER give the exact name of your disease.
-                HISTORY:
-                {chat_history}
-                [/INST]"""
+                # Combine System Instruction + Context into a single User message for template compatibility across models
+                patient_instruction = f"""You are a 70-year-old patient. You are NOT a doctor.
+Describe your symptoms naturally based on this medical data: {rag_context}. 
+NEVER give the exact name of your disease.
 
-                inputs = p_tokenizer(patient_prompt, return_tensors="pt").to("cuda")
-                with torch.inference_mode():
-                    outputs = p_model.generate(**inputs, max_new_tokens=150, temperature=0.7, do_sample=True, pad_token_id=p_tokenizer.eos_token_id)
+HISTORY:
+{chat_history}"""
+
+                p_messages = [{"role": "user", "content": patient_instruction}]
                 
-                response = p_tokenizer.decode(outputs[0], skip_special_tokens=True).split("[/INST]")[-1].strip()
+                p_prompt_text = p_tokenizer.apply_chat_template(
+                    p_messages, 
+                    add_generation_prompt=True, 
+                    tokenize=False
+                )
+
+                inputs = p_tokenizer(p_prompt_text, return_tensors="pt").to("cuda")
+                with torch.inference_mode():
+                    outputs = p_model.generate(
+                        **inputs, 
+                        max_new_tokens=150, 
+                        temperature=0.7, 
+                        do_sample=True, 
+                        pad_token_id=p_tokenizer.eos_token_id
+                    )
+                
+                # Accurately slice only the newly generated tokens
+                input_length = inputs["input_ids"].shape[1]
+                generated_tokens = outputs[0][input_length:]
+                response = p_tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
+                
                 audio_bytes = generate_tts(response, voice="en-US-GuyNeural")
                 
         st.session_state.messages.append({
@@ -254,7 +300,7 @@ if not st.session_state.interview_over:
         st.rerun()
 
 # ==========================================
-# 5. TRANSITION AND EVALUATION (Judge Mode: Llama-3)
+# 5. TRANSITION AND EVALUATION (Judge Mode)
 # ==========================================
 if len(st.session_state.messages) > 0 and not st.session_state.interview_over:
     if st.button("🏁 End interview and submit diagnosis"):
@@ -264,14 +310,14 @@ if len(st.session_state.messages) > 0 and not st.session_state.interview_over:
 
 if st.session_state.interview_over:
     st.divider()
-    st.subheader("🎓 Virtual Professor Evaluation")
+    st.subheader(f"🎓 Virtual Professor Evaluation ({selected_judge_name})")
     
     final_diagnosis = st.text_input("What is your final diagnosis?")
     
     if st.button("Evaluate my diagnosis") and final_diagnosis:
-        with st.spinner("Purging Patient from VRAM & Initializing Llama-3 Professor..."):
+        with st.spinner(f"Purging Patient from VRAM & Initializing {selected_judge_name}..."):
             
-            j_model, j_tokenizer = load_model_dynamic("meta-llama/Meta-Llama-3-8B-Instruct")
+            j_model, j_tokenizer = load_model_dynamic(judge_model_hf)
             
             fiche = next((item for item in kb if item['title'] == st.session_state.pathology), None)
             ground_truth = json.dumps(fiche['sections']) if fiche else ""
@@ -312,10 +358,9 @@ Use exactly this JSON format:
 
 Please provide your evaluation now."""
 
-            messages = [
-                {"role": "system", "content": system_instruction},
-                {"role": "user", "content": user_content}
-            ]
+            # Combined content to ensure template compatibility across all models (like BioMistral)
+            combined_content = f"{system_instruction}\n\n{user_content}"
+            messages = [{"role": "user", "content": combined_content}]
             
             prompt_text = j_tokenizer.apply_chat_template(
                 messages, 
@@ -327,8 +372,8 @@ Please provide your evaluation now."""
             with torch.inference_mode():
                 outputs = j_model.generate(
                     **inputs, 
-                    max_new_tokens=500, 
-                    temperature=0.2, 
+                    max_new_tokens=600, 
+                    temperature=0.1, 
                     do_sample=True,
                     repetition_penalty=1.1,
                     pad_token_id=j_tokenizer.eos_token_id
@@ -364,5 +409,5 @@ Please provide your evaluation now."""
                 with st.expander("🔍 View Clinical Truth (RAG Reference)"):
                     st.write(fiche['sections'])
             else:
-                st.error("JSON parsing failed. Llama-3 deviated from the formatting template. Raw text output:")
+                st.error("JSON parsing failed. The selected model deviated from the formatting template. Raw text output:")
                 st.code(raw_eval)
