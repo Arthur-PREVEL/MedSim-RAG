@@ -1,7 +1,10 @@
+import os
+# Must be set before importing torch to prevent VRAM fragmentation
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+
 import streamlit as st
 import torch
 import json
-import os
 import re
 import gc
 import asyncio
@@ -69,8 +72,14 @@ def clear_vram():
         del st.session_state.model
     if "tokenizer" in st.session_state:
         del st.session_state.tokenizer
+    
+    # Force Python to destroy unreferenced objects
     gc.collect()
-    torch.cuda.empty_cache()
+    
+    # Empty PyTorch's cache and release it back to the OS
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.ipc_collect()
 
 # Threading hack to safely run async edge-tts inside Streamlit's sync environment
 def generate_tts(text, voice):
@@ -160,14 +169,14 @@ with st.sidebar:
     st.divider()
     
     # Dynamic LLM Selection
-    st.subheader(" Multi-Agent Engine")
+    st.subheader("🧠 Multi-Agent Engine")
     
     # Defaults based on previous hardcoded values
     default_patient_idx = list(MODEL_REGISTRY.keys()).index("Meta Llama-3 (8B)")
     default_judge_idx = list(MODEL_REGISTRY.keys()).index("Google Gemma-2 (9B)")
     
-    selected_patient_name = st.selectbox("Patient Model:", list(MODEL_REGISTRY.keys()), index=default_patient_idx)
-    selected_judge_name = st.selectbox("Judge Model:", list(MODEL_REGISTRY.keys()), index=default_judge_idx)
+    selected_patient_name = st.selectbox("🤖 Patient Model:", list(MODEL_REGISTRY.keys()), index=default_patient_idx)
+    selected_judge_name = st.selectbox("⚖️ Judge Model:", list(MODEL_REGISTRY.keys()), index=default_judge_idx)
     
     patient_model_hf = MODEL_REGISTRY[selected_patient_name]
     judge_model_hf = MODEL_REGISTRY[selected_judge_name]
@@ -190,7 +199,7 @@ with st.sidebar:
         clear_vram()
         st.rerun()
         
-    st.info(f""" **Current Hardware Allocation**
+    st.info(f"""🧪 **Current Hardware Allocation**
     
 * **Patient Mode:** {selected_patient_name} (VRAM)
 * **Judge Mode:** {selected_judge_name} (VRAM)
@@ -209,7 +218,7 @@ avatar_map = {
 
 # Show an onboarding prompt if the interview just started
 if len(st.session_state.messages) == 0 and not st.session_state.interview_over:
-    st.info("**The patient has just entered the room; start the conversation with a simple phrase such as:** *“Hello, sir, what brings you here today?”*")
+    st.info("🚪 **The patient has just entered the room; start the conversation with a simple phrase such as:** *“Hello, sir, what brings you here today?”*")
 
 # Display history
 for message in st.session_state.messages:
@@ -330,7 +339,10 @@ if st.session_state.interview_over:
             j_model, j_tokenizer = load_model_dynamic(judge_model_hf)
             
             fiche = next((item for item in kb if item['title'] == st.session_state.pathology), None)
-            ground_truth = json.dumps(fiche['sections']) if fiche else ""
+            
+            # VRAM OPTIMIZATION: Send only the essential symptoms, not the entire JSON record.
+            ground_truth = fiche['sections'].get('History and Physical', '') if fiche else ""
+            
             transcript = "\n".join([f"{'Doctor' if m['role']=='user' else 'Patient'}: {m['content']}" for m in st.session_state.messages])
             
             system_instruction = """You are a strict, highly analytical Medical Professor evaluating a clinical student.
@@ -417,7 +429,10 @@ Please provide your evaluation now."""
                     st.caption(eval_json.get('patient_safety', {}).get('justification', ''))
                     
                 with st.expander("🔍 View Clinical Truth (RAG Reference)"):
-                    st.write(fiche['sections'])
+                    if fiche:
+                        st.write(fiche['sections'])
+                    else:
+                        st.write("No RAG reference available.")
             else:
                 st.error("JSON parsing failed. The selected model deviated from the formatting template. Raw text output:")
                 st.code(raw_eval)
