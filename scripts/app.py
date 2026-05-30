@@ -8,14 +8,37 @@ import asyncio
 import threading
 import tempfile
 import edge_tts
+from PIL import Image
 from faster_whisper import WhisperModel
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 # ==========================================
+# FILE PATHS SETUP
+# ==========================================
+# Assuming app.py is in /script/ and images are in /images/
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IMG_DIR = os.path.join(BASE_DIR, "../images")
+
+ICON_PATH = os.path.join(IMG_DIR, "medsim_logo.ico")
+LOGO_PATH = os.path.join(IMG_DIR, "medsim_logo.png")
+PATIENT_ICON = os.path.join(IMG_DIR, "patient.png")
+DOCTOR_ICON = os.path.join(IMG_DIR, "doctor.png")
+
+# ==========================================
 # STREAMLIT PAGE CONFIGURATION
 # ==========================================
-st.set_page_config(page_title="MedSim UI - Llama3 Test", page_icon="🩺", layout="wide")
-st.title("🩺 MedSim: High-Fidelity Clinical Simulator")
+# Load the .ico file safely using PIL (fallback to emoji if missing during dev)
+page_icon = Image.open(ICON_PATH) if os.path.exists(ICON_PATH) else "🩺"
+
+st.set_page_config(page_title="MedSim UI - Llama3 Test", page_icon=page_icon, layout="wide")
+
+# Display Logo and Title side-by-side
+col_logo, col_title = st.columns([1, 11])
+with col_logo:
+    if os.path.exists(LOGO_PATH):
+        st.image(LOGO_PATH, use_container_width=True)
+with col_title:
+    st.title("MedSim: High-Fidelity Clinical Simulator")
 
 # ==========================================
 # 0. MLOPS & AUDIO TOOLS 
@@ -95,7 +118,7 @@ def load_model_dynamic(model_id):
 
 @st.cache_data
 def load_knowledge_base():
-    path = '../data/knowledge_base_extract.json'
+    path = os.path.join(BASE_DIR, '../data/knowledge_base_extract.json')
     if os.path.exists(path):
         with open(path, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -140,7 +163,7 @@ with st.sidebar:
         
     st.divider()
     
-    st.info("""🧪 **Llama-3 Judge Evaluation Active**
+    st.info("""**Llama-3 Judge Evaluation Active**
     
 * **Patient Mode:** BioMistral-7B-DARE (VRAM)
 * **Judge Mode:** Meta-Llama-3-8B-Instruct (VRAM)
@@ -151,12 +174,15 @@ with st.sidebar:
 # 4. CHAT INTERFACE (Patient Mode: BioMistral)
 # ==========================================
 
-# Define custom avatars for the UI
-avatar_map = {"user": "🔵", "assistant": "🟢"}
+# Define custom avatars using the new image paths (with fallbacks just in case)
+avatar_map = {
+    "user": DOCTOR_ICON if os.path.exists(DOCTOR_ICON) else "🔵", 
+    "assistant": PATIENT_ICON if os.path.exists(PATIENT_ICON) else "🟢"
+}
 
 # Show an onboarding prompt if the interview just started
 if len(st.session_state.messages) == 0 and not st.session_state.interview_over:
-    st.info("🚪 **The patient has just entered the room; start the conversation with a simple phrase such as:** *“Hello, sir, what brings you here today?”*")
+    st.info(" **The patient has just entered the room; start the conversation with a simple phrase such as:** *“Hello, sir, what brings you here today?”*")
 
 # Display history
 for message in st.session_state.messages:
@@ -189,12 +215,12 @@ if not st.session_state.interview_over:
     if prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
 
-        # Apply the blue avatar to the immediate user message
-        with st.chat_message("user", avatar="🔵"):
+        # Apply the doctor avatar to the immediate user message
+        with st.chat_message("user", avatar=avatar_map["user"]):
             st.markdown(prompt)
 
-        # Apply the green avatar to the immediate assistant message
-        with st.chat_message("assistant", avatar="🟢"):
+        # Apply the patient avatar to the immediate assistant message
+        with st.chat_message("assistant", avatar=avatar_map["assistant"]):
             with st.spinner("Patient is thinking and speaking..."):
                 p_model, p_tokenizer = load_model_dynamic("BioMistral/BioMistral-7B-DARE")
 
