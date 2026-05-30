@@ -160,14 +160,14 @@ with st.sidebar:
     st.divider()
     
     # Dynamic LLM Selection
-    st.subheader("🧠 Multi-Agent Engine")
+    st.subheader(" Multi-Agent Engine")
     
     # Defaults based on previous hardcoded values
     default_patient_idx = list(MODEL_REGISTRY.keys()).index("Meta Llama-3 (8B)")
     default_judge_idx = list(MODEL_REGISTRY.keys()).index("Google Gemma-2 (9B)")
     
-    selected_patient_name = st.selectbox("🤖 Patient Model:", list(MODEL_REGISTRY.keys()), index=default_patient_idx)
-    selected_judge_name = st.selectbox("⚖️ Judge Model:", list(MODEL_REGISTRY.keys()), index=default_judge_idx)
+    selected_patient_name = st.selectbox("Patient Model:", list(MODEL_REGISTRY.keys()), index=default_patient_idx)
+    selected_judge_name = st.selectbox("Judge Model:", list(MODEL_REGISTRY.keys()), index=default_judge_idx)
     
     patient_model_hf = MODEL_REGISTRY[selected_patient_name]
     judge_model_hf = MODEL_REGISTRY[selected_judge_name]
@@ -190,7 +190,7 @@ with st.sidebar:
         clear_vram()
         st.rerun()
         
-    st.info(f"""🧪 **Current Hardware Allocation**
+    st.info(f""" **Current Hardware Allocation**
     
 * **Patient Mode:** {selected_patient_name} (VRAM)
 * **Judge Mode:** {selected_judge_name} (VRAM)
@@ -209,7 +209,7 @@ avatar_map = {
 
 # Show an onboarding prompt if the interview just started
 if len(st.session_state.messages) == 0 and not st.session_state.interview_over:
-    st.info("🚪 **The patient has just entered the room; start the conversation with a simple phrase such as:** *“Hello, sir, what brings you here today?”*")
+    st.info("**The patient has just entered the room; start the conversation with a simple phrase such as:** *“Hello, sir, what brings you here today?”*")
 
 # Display history
 for message in st.session_state.messages:
@@ -276,9 +276,10 @@ HISTORY:
                 with torch.inference_mode():
                     outputs = p_model.generate(
                         **inputs, 
-                        max_new_tokens=150, 
+                        max_new_tokens=250, # Increased to allow the patient to finish their thought
                         temperature=0.7, 
                         do_sample=True, 
+                        repetition_penalty=1.1, # Added to prevent repetitive symptom looping
                         pad_token_id=p_tokenizer.eos_token_id
                     )
                 
@@ -287,6 +288,15 @@ HISTORY:
                 generated_tokens = outputs[0][input_length:]
                 response = p_tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
                 
+                # 🛡️ SECURITY NET: Cleanly truncate the last sentence if cut off by the token limit
+                if not response.endswith(('.', '!', '?', '"')):
+                    # Find the last strong punctuation
+                    match = re.search(r'(.*[.!?])', response, re.DOTALL)
+                    if match:
+                        response = match.group(1).strip()
+                    else:
+                        response += "..." # Fallback if no punctuation is found
+
                 audio_bytes = generate_tts(response, voice="en-US-GuyNeural")
                 
         st.session_state.messages.append({
