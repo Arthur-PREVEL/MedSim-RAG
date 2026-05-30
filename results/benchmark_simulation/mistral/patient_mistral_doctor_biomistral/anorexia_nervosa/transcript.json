@@ -1,0 +1,229 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi there, Doctor. I've been feeling quite tired lately, even after sleeping well. My body is getting colder than usual, especially my hands and feet, and I've noticed that I'm not as warm as before. Sometimes I feel really exhausted when I try to do normal activities like walking or cooking a meal.\n\nI've also gained some weight around my ankles, which makes it hard for me to move comfortably in my shoes. Additionally, going to the bathroom has become more difficult due to constipation. I've tried changing my diet a bit but nothing seems to help much.\n\nOn top of that, I've been having mood swings – feeling irritable or sad",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 112,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of thyroid problems?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I don't believe I've ever had any issues with my thyroid gland, Doctor. I used to be quite active and energetic, but lately, I've been feeling tired most of the time, even when I've rested well. Also, I've noticed that I get cold very easily now, even indoors, which wasn't the case before. I hope it's nothing serious.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 59,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any weight gain or loss recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doctor, I've noticed that my clothes seem to fit tighter these days, especially around the waist. I haven't intentionally tried to lose weight, but it seems like I might be gaining some. I guess I should probably pay more attention to my eating habits and make sure I'm balanced, huh? I don't want to feel this way anymore.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 59,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your blood sugar levels or have you been diagnosed with diabetes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As a patient, I haven't paid much attention to my blood sugar levels on a regular basis. However, I have felt consistently exhausted, more so than usual, even after taking rest. Sometimes, I feel a bit shaky, especially when I'm hungry. Some days, I might find myself sweating profusely without any particular reason. I also tend to get very thirsty. These could be signs of something wrong, but I can't say for certain if it's diabetes. I believe it would be best to consult a healthcare professional about this issue.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 90,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Anorexia Nervosa\nClinical Justification: The patient presents with a combination of physical and psychological symptoms, including fatigue, cold intolerance, weight gain, constipation, mood swings, and excessive sweating. These symptoms are consistent with anorexia nervosa, a psychiatric disorder characterized by a distorted body image, restriction of food intake, and fear of weight gain. The patient's history of being active and energetic prior to developing these symptoms, along with their concern about weight gain, further supports the diagnosis of anorexia nervosa.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 81,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 112,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 59,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 59,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 90,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 81,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions (e.g., 'feeling quite tired' instead of specifying the impact of their condition)."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient describes several symptoms, they sometimes fail to connect them to the underlying condition (e.g., mentioning weight gain without linking it to potential eating disorders)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient exhibits some knowledge of medical concepts (e.g., thyroid gland) and displays awareness of potential health risks, which slightly compromises their adherence to the role."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of their symptoms and concerns, but occasionally reveals insight into medical concepts, compromising their adherence to the role. The narrative could benefit from more explicit connections between symptoms and the underlying condition, as well as greater effort to maintain a non-medical tone."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of anorexia nervosa. Questions about thyroid problems, recent weight change, and blood sugar levels do not directly relate to the primary symptoms of anorexia nervosa."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the final diagnosis was correct, it lacked specific details from the interview. The doctor failed to ask about restrictive eating habits, purging behaviors, or other characteristic symptoms of anorexia nervosa."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a neutral tone throughout the interaction but could have avoided making assumptions about the patient's past behavior ('history of being active and energetic')."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "The simulated doctor demonstrated some understanding of anorexia nervosa but fell short in asking targeted questions during the interview and providing a detailed justification for the diagnosis. With more focused questioning and attention to clinical details, the diagnosis could be more accurate and comprehensive."
+    },
+    "llm_judge_total_out_of_20": 13
+}

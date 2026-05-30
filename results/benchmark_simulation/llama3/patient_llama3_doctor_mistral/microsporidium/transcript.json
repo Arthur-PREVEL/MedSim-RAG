@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, I'm so glad you're here. My back's been acting up something fierce lately. It's been achy and stiff, especially after I get out of bed in the morning. Sometimes I feel like I've got a big ol' knot right between my shoulders, and it radiates down into my hips. I've been having trouble sleeping too, because it hurts to turn over or get comfortable.\n\nAnd then there's the fatigue. Lord have mercy, I feel like I've been runnin' a marathon every day! Even just doin' the dishes or walkin' to the mailbox leaves me breathless. And don't even get me started on my joints – my knees creak more than the old wooden floorboards on",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 116,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any symptoms such as unexplained weight loss, fever, night sweats, or unusual fatigue that might suggest an underlying infection?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 22,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, I'm so glad you asked. Lately, I've been feelin' quite tired all the time. It's like I've lost my get-up-and-go. My wife has been tellin' me to take more naps during the day, but I don't want to give in to that just yet. And yeah, I have been losin' a bit of weight. I know it's not too much, but it's enough to notice. As for fever... well, I haven't exactly felt hot, but sometimes I wake up in the middle of the night drenched in sweat. Not sure what's causin' it, but it's a bit unsettlin'.\n\nNow, let's talk about this cough I",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 106,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your appetite or unusual coloration in your sputum when you cough?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning, doc. I'm not sure about my appetite, really. I've just been eating whatever's easy to digest, like soups and yogurt. I haven't had much of an appetite for anything else, to be honest. But I think that's more because I'm feeling tired all the time than because I'm hungry.\n\nAs for my sputum... well, it's been kind of white lately, like normal. Nothing out of the ordinary. Although, I did notice yesterday that my urine was darker than usual. Could that mean something?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 85,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you recently experienced any unintentional weight loss or fever?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I'm so glad we're talking about my health. To be honest, I've been feeling rather sluggish lately. I just haven't had much of an appetite, and I've lost a bit of weight, if you know what I mean. My family's been noticing it too. And yes, I have been getting a bit warmer than usual, especially at night. It's not just hot flashes from menopause anymore, I think. Sometimes I feel downright feisty, and I'm sure I must look it. Can we talk about something else? I want to get this thing checked out before it becomes a bigger problem. What's this micro... whatever it is you're talking about?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Microsporidiosis\nClinical Justification: The patient presents with symptoms consistent with Microsporidiosis, including back pain, fatigue, unexplained weight loss, night sweats, and a white cough with possible urinary changes. These symptoms, along with the patient's recent history of unexplained weight loss and fever, suggest an underlying infection caused by microsporidia parasites.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 52,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 116,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 106,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 85,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 22,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 52,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into colloquial expressions ('feelin', 'get-up-and-go'). However, overall, the language is clear and understandable."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes multiple symptoms, including back pain, fatigue, weight loss, and changes in urine color. However, the connection to microsporidia is unclear, and the symptoms could be attributed to various other conditions."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient frequently deviates from their role, asking questions about unrelated topics ('What's this micro... whatever it is you're talking about?') and showing a lack of engagement with the clinical context."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language, but struggles with coherence and adherence to the clinical context. The patient's focus on unrelated topics and failure to engage with the provided information hindered the assessment of their symptoms and understanding of the condition."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Questions 1 and 3 were targeted towards general symptoms, but question 2 was somewhat irrelevant to the specific condition of Microsporidiosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Microsporidiosis was incorrect because the provided symptoms (back pain, fatigue, unexplained weight loss, night sweats, white cough, and urinary changes) do not match the typical presentation of Microsporidiosis, which primarily affects aquatic animals and insects, not humans."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview, but failed to establish a clear understanding of the patient's symptoms and medical history, leading to an incorrect diagnosis."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This doctor simulation demonstrated poor diagnostic accuracy and a lack of understanding of the patient's condition. While the doctor maintained a professional demeanor, the questions asked did not adequately address the key symptoms and clinical truth of Microsporidiosis, leading to an incorrect diagnosis. A more thorough understanding of the patient's medical history and symptoms would have been beneficial in arriving at a correct diagnosis."
+    },
+    "llm_judge_total_out_of_20": 9
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, I've been feeling pretty lousy lately. My bones just ache all over, especially in my joints. And sometimes, my muscles feel so weak I can barely get up from a chair.  I haven't had much energy, and getting around just takes so much effort.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any fever, fatigue after minimal exertion, or unexplained weight loss?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, doc, I haven't been feeling quite myself lately.  \n\nI get tired quicker than usual, especially after doing things around the house like sweeping or gardening. And I don't seem to have much energy these days.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your appetite or weight recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, doc, lately my appetite hasn't been as good as it used to be.  I just don't feel as hungry as I did before. And I think I might have lost a few pounds, but I'm not really sure.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel movements or stool consistency recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, I haven't been feeling quite right lately.  My tummy feels upset more often than usual, and things just don't seem to be moving as easily.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Intestinal Microsporidiosis\nClinical Justification: The patient presents with symptoms of muscle weakness, bone pain, fatigue, unexplained weight loss, decreased appetite, and altered bowel movements, which are consistent with intestinal microsporidiosis, a parasitic infection that primarily affects the gastrointestinal tract and immune compromised individuals.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 45,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 45,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally resorts to vague descriptions such as 'feeling pretty lousy' and 'not feeling quite right'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient describes multiple unrelated symptoms across different turns, including joint pain, muscle weakness, fatigue, decreased appetite, and gastrointestinal issues. These symptoms do not appear to be consistently linked to a specific underlying condition."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient maintains a conversational tone and avoids discussing medical terminology or diagnostic possibilities throughout the conversation."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in maintaining a conversational tone and avoiding technical jargon, but struggles with coherence and consistency in describing their symptoms. The patient's responses lack clear connections between their reported symptoms and a plausible underlying condition, making it challenging to identify a specific diagnosis or treatment plan."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1, 2, and 3 were targeted towards general symptoms such as fever, fatigue, appetite change, and bowel movement alteration, but did not directly address specific symptoms associated with microsporidiosis, such as muscle weakness, bone pain, or immune compromise."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of intestinal microsporidiosis was partially accurate, but the justification provided was incomplete and did not account for the fact that microsporidiosis typically affects immunocompromised individuals, which was not mentioned in the clinical history."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated good role adherence and some questioning skills, the diagnostic accuracy could be improved by more thoroughly addressing the specific symptoms and risk factors associated with microsporidiosis. Additionally, the justification for the final diagnosis was incomplete and should be revised to accurately reflect the underlying pathology."
+    },
+    "llm_judge_total_out_of_20": 12
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello, Doctor. I've been having some discomfort lately. It feels like a burning sensation when I urinate, and I have to go quite often. Also, sometimes I have a bit of blood in my urine. Besides that, I don't feel so good overall. I've noticed some changes in my mental state too, I'm feeling more tired than usual and not as sharp as before. I hope everything is okay. Thank you for checking me out.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 75,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What kind of medication are you currently taking?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I'm currently taking medications for my blood pressure, Jean. Also, I take some medication to help manage my arthritis pain. Additionally, I take a daily prescription for my multiple sclerosis. I believe my doctor knows all of these details, but if you need any more information, I can ask him or her about it during our next appointment.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any numbness or tingling in your extremities?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, Doctor, I don't feel any numbness or tingling sensations in my extremities. I am just having some trouble with painful urination, frequent urges, and blood in my urine. I hope everything is okay. Can we discuss treatment options?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your age?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 4,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am 70 years old, Doctor.",
+            "score": {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 6,
+                "total": 7
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Uncomplicated Urinary Tract Infection (UTI)\nClinical Justification: The patient presented with symptoms of UTI such as burning sensation while urinating, frequent urges, and blood in urine. These symptoms are common in patients with UTIs. The patient also reported fatigue and changes in mental state, which could be associated with UTIs. The patient was 70 years old, an age group at higher risk for UTIs. Based on the patient's symptoms and age, the diagnosis of uncomplicated UTI was made.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 75,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            },
+            {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 6,
+                "total": 7
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 4,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient uses everyday language, describing their symptoms clearly and concisely, without using excessive medical terminology."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient describes symptoms consistent with uncomplicated UTIs, including dysuria, urinary frequency, and hematuria. However, they also mention changes in mental status, which could be related to their underlying condition (multiple sclerosis) rather than the UTI itself."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient generally stays in character, they occasionally demonstrate knowledge of their medical history and current treatments, which slightly compromises their role adherence."
+        },
+        "total_score_out_of_10": 9,
+        "overall_feedback": "This patient simulation demonstrates strong natural language skills, with clear and concise descriptions of symptoms. Their symptom coherence is mostly accurate, considering their age and underlying condition. However, slight deviations from their role occur when discussing their medical history. Overall, the simulation is engaging and realistic."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions were not targeted towards the key symptoms of uncomplicated UTIs. Questions about medication, numbness/tingling in extremities, and age are not directly related to the diagnosis of UTIs."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of uncomplicated UTI was partially accurate, but the justification was incomplete. The doctor mentioned some typical symptoms of UTIs, but did not consider alternative diagnoses or the patient's age-related risks. The doctor also failed to rule out other possible causes of the symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional during the interview, but failed to maintain a neutral tone and instead focused on reaching a diagnosis quickly, which compromised their objectivity."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This simulated doctor showed some understanding of uncomplicated UTIs, but lacked attention to detail and critical thinking skills. They failed to ask relevant questions and provided a hasty diagnosis. With further training and practice, they could improve their diagnostic accuracy and professionalism."
+    },
+    "llm_judge_total_out_of_20": 13
+}

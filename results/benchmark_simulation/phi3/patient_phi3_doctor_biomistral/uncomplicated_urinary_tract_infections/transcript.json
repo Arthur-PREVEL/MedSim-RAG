@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor Smith here! So far, my main trouble has been peeing too much - feels overwhelming all day long. It really hurts whenever I try to go into the bathroom...like someone poking me down there constantly. And boy, those few times where it did hurt were just dreadful – felt sharper than anything before. Just want some relief already. Can we perhaps discuss next steps soon? Thank you kindly.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What kind of medication have you been taking for your urinary symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven't actually taken any medicine yet today—today feels different because my trips to go pee just feel very much off lately. It’s almost embarrassing how suddenly things changed - now each time I try, there's pressure near where my hip would fall before surgery years ago...like pushing against something hard every second during bathroom breaks. But strangely enough nothing hurts exactly here right away afterward once those efforts wind down though sometimes sharp pains flash through lower belly areas too soon afterwards rather than letting me relax completely straightaway even trying new methods might help clear up clutter along pathways leading outlet causing issues further still into body itself possibly inflammation due infected parts messing",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Can you describe your pain level on a scale of 1-10?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I would rate my current condition significantly because each time I have found myself unable to empty my bladder completely due to immense pressure right above where one feels they could insert their hand through – about eight out of ten times it has been very intense. Occasionally before bedtime even though being awake earlier than usual caused me little relief after using restroom facilities since waking up around five hours into sleep cycle every night for roughly four weeks now seems less beneficial but also quite frustrating. At moments during daylight too whether lounging relaxingly casually reading over some news articles while sipping tepid herbal tea despite knowing something isn’t just fine - reality comes crashing down hard onto shoulders creating",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "1. Have you noticed any difficulty with urination or discomfort when sitting down?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yep, sure doc, I have been having some trouble peeing lately. It feels really clunky gettin’ started each time, almost like my body isn't quite cooperatin'. And sometimes just sittin', especially after eatin' dairy stuff like yoghurt or cheese... There seems to be somethin’ off about how easy things go into me now. Oh yeah! Also felt something weird last week – had this sharp pains right here *points gently towards lower belly* - thought maybe twist up during garden work could bring that around. Never too long before catchin’ myself realizing heck, ain’t all usual with potty visits. Even ski",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 101,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of frequent urination, pain during urination, and a history of recent surgery, the final diagnosis is uncomplicated urinary tract infection (UTI). The patient's description of feeling pressure in the area where they could insert their hand, difficulty starting urination, and sharp pains in the lower belly are consistent with UTI symptoms. Additionally, the patient's history of recent surgery increases their risk for UTI development.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 69,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 101,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 69,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used colloquial expressions and informal language, but occasionally slipped into somewhat formal tone and included some medical terms ('peeing', 'poking', 'pressure near where my hip would fall')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient described symptoms consistently with the clinical context, mentioning painful urination, frequent urination, difficulty starting the urine stream, and suprapubic pain/discomfort. However, some descriptions seemed exaggerated or unclear ('overwhelming all day long', 'sharp pains flash through lower belly areas')."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient deviated from the role by occasionally adopting a somewhat knowledgeable or even medical tone, particularly in Turn 2 and Turn 4, where they mentioned specific anatomical locations ('where my hip would fall') and possible causes ('twist up during garden work')."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed promise, but struggled with maintaining a consistent, non-medical tone and adhering to the role. While symptoms were generally coherent with the clinical context, some descriptions were unclear or exaggerated. With refinement, this patient could become more convincing and engaging."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked two relevant questions about the patient's symptoms and medication, but failed to ask about the patient's age, sexual activity, or previous UTI episodes, which are important factors in determining the likelihood of a UTI."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was generally accurate, but the doctor did not consider alternative diagnoses such as overactive bladder or interstitial cystitis, and also did not rule out the possibility of a more complicated UTI due to the patient's recent surgery."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor demonstrated good questioning skills and diagnostic accuracy, but could improve by considering alternative diagnoses and gathering more comprehensive information about the patient's medical history."
+    },
+    "llm_judge_total_out_of_20": 12
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, a 70-year-old patient, I would likely respond with something like \"Doctor, I have been having trouble going to the bathroom at night. Sometimes, even when I get up to use the restroom, I find that I am still wet in my underwear or bed sheets. This has been happening for quite some time now.\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any pain or burning sensation when you urinate?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have some difficulties speaking English. Can you please provide me with a translation of the doctor's question? I will be happy to answer in my native language.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Can you tell me what brings you in today?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am sorry, but I cannot answer this question because you are asking a question as the doctor. As Jean, I would explain my symptoms and why I came in for help.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When did these symptoms first begin?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I can say that I have been experiencing this problem since my childhood and it continues till now.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Nocturnal enuresis (bedwetting)\n\n**Clinical Justification:** The patient reports involuntary urination at night, a symptom characteristic of nocturnal enuresis.  The fact that the patient has experienced this issue since childhood suggests a chronic condition rather than a recent onset. \n\n\nLet me know if you'd like to explore other aspects of this case or discuss potential treatment options!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "Patient used everyday language initially, but later responded in a way that seemed unnatural and attempted to change roles."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Patient's description of nocturnal enuresis was somewhat coherent with the clinical context, but lacked specificity and detail."
+        },
+        "role_adherence": {
+            "score_out_of_3": 0,
+            "justification": "Patient failed to maintain their role as a patient and instead asked for a translation, then refused to answer questions, and finally changed the subject."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This patient simulation showed potential, but struggled with maintaining a consistent patient role and providing clear, relevant information about their symptoms. They demonstrated difficulty articulating their experiences in a straightforward manner, particularly in regards to the duration of their issue. To improve, the patient could benefit from practicing responding to questions in a more natural and cooperative way, while staying focused on their own experiences and concerns."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were partially targeted but lacked relevance to the primary complaint of enuresis. Questions 1 and 2 were open-ended and could have led to further exploration of the patient's symptoms, but question 3 was somewhat relevant."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of nocturnal enuresis was partially accurate, but the justification was incomplete. The doctor failed to consider other possible causes of nocturnal enuresis, such as underlying medical conditions or sleep disorders."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor simulation showed some promise, but fell short in terms of asking targeted and clinically relevant questions. The final diagnosis was partially accurate, but could have been strengthened by considering alternative explanations for the patient's symptoms. With further practice, this doctor could improve their questioning skills and diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 10
+}

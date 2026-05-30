@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, lately I've been feeling awfully weak.  My energy just isn't there. And I have these aches all over, especially in my joints. It feels like I've got the flu or something, but it just won't go away.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any recent changes in your sleep patterns?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, I seem to be waking up more often during the night lately. It hasn't been happening every night, but enough that it's starting to wear me down.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have these awakenings coincided with any changes in your sleep environment or stress levels?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, doc, things have been kinda rough lately. I couldn't say if those dreams woke me up more than usual, or if it's just harder for me to fall back asleep. And yeah, my granddaughter moved out recently and...well, that leaves the house feeling a bit empty, you know?\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have your sleep disturbances started since any significant life changes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Hmm, you know... I just feel so restless at night lately.  Seems like my mind just won't quiet down. And those naps during the day aren't helping much either.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 29,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Chronic fatigue syndrome secondary to microsporidial encephalitis (Microsporidia). The patient presents persistent generalized muscle pain, frequent nocturnal awakenings due to discomfort possibly related to an underlying infectious process such as MERS caused by Microsporidia which can affect immunocompromised individuals leading to chronic systemic illness manifesting as severe tiredness not alleviated by restful sleep. Given their age and reported feelings of emptiness after moving into smaller quarters post family change, this could indicate psychosocial factors exacerbating physical health issues; however, considering the specific constellation of neurological complaints alongside poor sleep quality suggests a possible central nervous system involvement from opportunistic pathogens common among elderly patients who may also experience social isolation contributing to mental exhaustion compounding overall malaise.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 119,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 29,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 119,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions ('feels like I've got the flu' and 'things have been kinda rough')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient describes fatigue, joint pain, and sleep disturbances, but does not explicitly mention any connection to the provided clinical context about microsporidia."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character and avoids acting like a doctor, but occasionally reveals insight into their thoughts and feelings ('you know', 'I couldn't say'), which slightly detracts from the role."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation shows promise, but could benefit from more explicit connections between their symptoms and the provided clinical context. They effectively convey their experiences and emotions, but sometimes struggle to articulate their concerns clearly. With further refinement, this patient could provide a more cohesive and engaging experience."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "None of the questions asked during the interview were targeted towards identifying symptoms or conditions related to Microsporidium. Questions focused on general sleep patterns and environmental factors rather than specific symptoms associated with the condition."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of 'Chronic fatigue syndrome secondary to microsporidial encephalitis (Microsporidia)' is incorrect because there is no evidence presented in the provided information that links Microsporidium directly to human infections or encephalitis. Additionally, the symptoms described do not align with the typical presentation of Microsporidium, which primarily affects invertebrates and fish."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding unprofessional behavior or acting like a patient."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated poor question quality and diagnostic accuracy. The doctor failed to ask relevant questions about symptoms associated with Microsporidium and made an incorrect diagnosis based on unrelated information. However, the doctor's professionalism remained intact throughout the conversation."
+    },
+    "llm_judge_total_out_of_20": 8
+}

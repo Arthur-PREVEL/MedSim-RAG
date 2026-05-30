@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doctor, lately I just feel so tired all the time.  My hands and feet swell up a lot too, especially after sitting down for a while. And my tummy hurts sometimes, like it's backed up.  I don't get my period anymore either. Plus, I'm always cold, even when other people aren't chilly. \n\n\nIt seems like no matter how much I eat, I still feel hungry. Sometimes I worry about gaining weight, and I try to be careful about how much I put on my plate.   I also find myself working out more than usual, almost compulsively, even when my body aches.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 102,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of thyroid problems?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, I get awfully chilled sometimes, even in this office. My hands and feet are always freezing, no matter how many sweaters I wear.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of Raynaud's disease?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "My fingers and toes sometimes get very cold and tingly, especially when I'm stressed.  They feel almost numb sometimes.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any other symptoms such as weakness in your arms or legs, difficulty walking, or vision problems?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, my legs feel pretty heavy sometimes, especially after I walk a bit. And my hands get shaky if I stand up too quickly .  I don't think it's anything serious though.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of chronic fatigue, swelling in the extremities, abdominal pain, amenorrhea, cold intolerance, and excessive exercise despite being underweight, the final diagnosis is Anorexia Nervosa. The patient's symptoms are consistent with those of anorexia nervosa, which is characterized by restriction of food intake leading to significant weight loss, fear of gaining weight, and distorted body image. The patient's history of cold intolerance and Raynaud's disease may be related to her anorexia nervosa, as malnutrition can lead to decreased metabolic rate and impaired circulation. It is important to note that anorexia nervosa is a serious mental disorder that requires prompt treatment, including nutritional rehabilitation and psychological support.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 110,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 102,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 110,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions (e.g., 'my tummy hurts')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Some symptoms were consistently reported across turns (cold intolerance, extremity edema), but others were not clearly linked to the underlying condition (constipation, shakiness)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but showed some awareness of their symptoms being unusual ('I don't think it's anything serious though')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good use of everyday language and consistency in reporting some symptoms. However, there was room for improvement in linking symptoms to the underlying condition and maintaining a convincing patient role."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions were not targeted towards the key symptoms of anorexia nervosa (amenorrhea, cold intolerance, constipation, extremity edema, fatigue, and irritability) and did not explore restrictive eating behaviors or purging methods."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate but lacked consideration of the patient's restrictive eating behavior and purging methods, which are crucial components of anorexia nervosa. However, the mention of malnutrition-related complications (cold intolerance and Raynaud's disease) was a good connection to make."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor showed some understanding of anorexia nervosa but failed to ask relevant questions about the patient's eating habits and behaviors, which are critical components of diagnosing the condition. With more targeted questioning, they could have arrived at a more comprehensive diagnosis. Despite this, their professionalism remained intact."
+    },
+    "llm_judge_total_out_of_20": 12
+}

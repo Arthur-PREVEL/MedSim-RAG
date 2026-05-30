@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning! Lately, my stomach has been troubling me quite a bit. The main issue is this constant dull ache right here around my belly button but sometimes it becomes sharper if I bend over too much at work. It’s not uncommon for that area to be sore after eating heavy meals either. And recently, there have been times when food just doesn’t seem appealing until about an hour later, feeling kind of stuffed even though I haven't had enough to eat. Oh, also – getting up from sitting down feels odd; things don't feel solid underneath anymore. Would love some help figuring out what might be going on with these unw",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel movements or weight loss lately?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I have been having less frequent bathroom trips recently. Whenever it does happen, my stools seem softer than usual; they don’t make me feel good at all. And to be frank with you, despite eating regularly, there seems to be some unexpected decrease in my appetite leading to not gaining much from my meals either. This has gotten me quite worried about these new feelings emerging inside my belly. It feels unusual for someone who used to enjoy hearty dinners without trouble before this change started occurring around six months ago after that trip overseas when food tasted different but nothing serious back then. But now every time we sit down together here today",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your weight or unintentional weight loss since the onset of these symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I began feeling some discomfort around my upper belly area quite often lately. It started with just being tired after eating sometimes but now it seems to be getting worse; even going out for dinner makes me feel bloated—unlike before when food didn't bother me at all. Oh yes, also there’s been this persistent nausea that comes about randomly too. No matter how small my portions have become over time because things don’t sit well anymore. I haven't really checked if anything else has changed either – should I start keeping an eye on those? Maybe something is not right... Can we talk more about why this may be happening during our exam today? And oh! About walking longer distances",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 120,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel movements or stool consistency recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh, doc, these past few weeks have been tough for me with my belly hurting most days after I eat anything decent - it feels just awful, almost like there is something wrong inside causing all this discomfort. And yes, definitely! My trips to the bathroom haven’t felt right either; everything seems different from before – sometimes things move through quicker than usual while other times they make taking care of myself so much more difficult at nighttime. It makes one think about getting older isn’t easy... oh well, let’s see how we can sort this out together today. Thank you kindly.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 102,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms, including persistent abdominal pain, changes in appetite, unintentional weight loss, altered bowel habits (less frequent and softer stools), and nausea, the final diagnosis is likely Gastritis with possible Achlorhydria.\n\nClinical Justification: The patient's symptoms suggest gastric irritation or inflammation, which could be due to various causes such as Helicobacter pylori infection, excessive alcohol consumption, stress, or medication use. The decreased appetite, weight loss, and altered bowel habits point towards malabsorption, which could be a result of reduced stomach acid production (achlorhydria). The persistent abdominal pain and nausea further support this diagnosis. However, additional tests would be necessary to confirm the presence of H. pylori or other potential causes of gastritis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 115,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 120,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 102,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 115,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into informal expressions ('oh', 'kindly')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes multiple symptoms, but some are inconsistent or unrelated (e.g., decreased position and vibration sense)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some knowledge of medical concepts (e.g., 'achlorhydria') and asks questions typically reserved for healthcare professionals."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in describing everyday experiences, but struggles with coherence and staying within the role. They exhibit some knowledge of medical concepts, which detracts from their adherence to the patient role. With refinement, this could be a compelling portrayal of a patient experiencing gastrointestinal issues."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions about the patient's gastrointestinal symptoms, but failed to explore all key symptoms mentioned in the clinical truth, such as epigastric pain, heartburn, bloating, diarrhea, etc."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "Although the doctor suspected achlorhydria, the final diagnosis was incorrect because it was not directly supported by the provided information; the patient's symptoms were more indicative of gastritis rather than achlorhydria."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in maintaining professionalism during the interview, but fell short in asking comprehensive questions and accurately diagnosing the condition based on the provided symptoms. Additional training may be beneficial to improve question-asking skills and diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 12
+}

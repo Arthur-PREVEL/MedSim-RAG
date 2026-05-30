@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I've been feeling quite unwell lately. I've got this persistent cough that won't go away and it's been bringing up some yellowish phlegm. I've also noticed that I'm having trouble breathing, especially when I lie down. It feels like there's a heavy weight on my chest. Additionally, I've lost a bit of appetite and have been losing weight. I've never felt this weak before, and I seem to tire easily even with small tasks. I hope you can help me figure out what's wrong.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you had any fever?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't had a fever lately, doctor. But I do feel quite warm and a bit uncomfortable, if that helps. I've also been experiencing persistent coughing lately, and it brings up yellowish phlegm. Additionally, I've noticed that I've been feeling more tired than usual, and sometimes I even feel weak. I hope this information is useful in figuring out what might be going on. Thank you for your help.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any shortness of breath?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been feeling slightly out of breath lately, especially when I'm doing simple tasks like cooking or walking up stairs. It's not severe but it's noticeable enough for me to mention it.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any chest pain accompanying this shortness of breath?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been experiencing a sharp pain in my chest whenever I take deep breaths or walk around. It feels quite uncomfortable, almost like a knife stabbing me.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Community-Acquired Pneumonia\n\n**Clinical Justification:** The patient presents with classic symptoms of pneumonia including a productive cough with yellow sputum, dyspnea (shortness of breath), chest pain exacerbated by deep breaths, and fatigue.  The absence of fever could indicate an atypical presentation of pneumonia. \n\n\nLet me know if you'd like to explore other potential diagnoses or discuss treatment options!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 59,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 59,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terms and explaining their symptoms in a clear manner."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently reported symptoms related to respiratory issues, such as cough, difficulty breathing, and chest discomfort, which aligns with the clinical context of pneumonia. However, they did not explicitly mention any systemic symptoms associated with immunocompromised patients, such as weakness or altered mental status."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient generally stayed in character and avoided acting like a doctor, asking questions and seeking help instead of providing diagnoses or treatments."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation was well-executed, with the patient effectively communicating their symptoms and concerns in a relatable manner. While they could have explored more symptoms associated with immunocompromised patients, their overall performance was strong."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked targeted questions about common symptoms of pneumonia but missed opportunities to inquire about other important symptoms such as cough type, duration, and associated gastrointestinal symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor's final diagnosis was correct, it was based on incomplete information. They failed to consider alternative explanations for the patient's symptoms, particularly the absence of fever which might suggest an atypical presentation."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good knowledge of community-acquired pneumonia symptoms but fell short in exploring the full range of possible symptoms and considering alternative diagnoses. With more comprehensive questioning and critical thinking, they could improve their diagnostic accuracy and provide better care for patients."
+    },
+    "llm_judge_total_out_of_20": 17
+}

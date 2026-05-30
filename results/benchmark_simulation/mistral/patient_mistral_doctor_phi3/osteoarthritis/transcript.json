@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I've been dealing with some discomfort in my hands lately. It's particularly noticeable in the knuckles of my fingers, where they seem to have developed small, hard lumps. These lumps make it difficult for me to grasp things properly.\n\nIn addition, my thumbs have become quite uncomfortable as well. They feel squared off or broadened at their base, and this too causes problems when trying to hold things securely.\n\nMy fingers also often feel stiff, especially after long periods of rest or inactivity. When I try to move them, there's a noticeable grating sensation and it hurts a bit. Walking can also be challenging at times because of the",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 111,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any swelling around your joints that might indicate inflammation?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been noticing some swelling lately, particularly around my knuckles, fingers, knees, and hips. It seems to get worse after long periods of activity and tends to ease up with rest. I find it uncomfortable, especially when trying to move these areas. This swelling has been making everyday tasks challenging and painful at times.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any redness or warmth in addition to the swelling?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, Doctor, I haven't noticed any redness or warmth around the affected areas besides the usual swelling. It feels more like a chronic ache, especially when I try to move my fingers or bend them. Sometimes it gets quite uncomfortable, but resting seems to help alleviate the pain for a while.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced this type of achiness and limited movement in your joints before?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have had this kind of aches and difficulties moving my joints before, especially in my fingers, thumbs, knees, and sometimes even my hips. It's something that has been gradually worsening over time, making it harder for me to perform everyday tasks like holding objects, climbing stairs, or even walking long distances without discomfort. The pain often gets worse after I've been active for a while and then subsides when I rest. Sometimes, my joints feel stiff and swollen, and I notice that some of them seem bigger than usual, particularly in my hands. I find it challenging to make a fist or bend my fingers fully, which can be quite frustrating.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Primary osteoarthritis (OA) affecting multiple joints including hand(s), finger(s), knee(s), and hip(s).\nClinical Justification: Patient presents with classic signs consistent with primary osteoarthritis such as morning stiffness relieved by rest, progressive difficulty performing daily activities due to decreased range of motion and increased size/hardness of joints suggestive of cartilage degeneration; absence of systemic features reduces likelihood of other arthropathies.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 61,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 111,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 61,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language effectively throughout the conversation, avoiding complex medical terminology and explaining their symptoms in simple terms."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently described symptoms that align with osteoarthritis, including joint pain, stiffness, swelling, and difficulty performing daily activities. However, there were minor inconsistencies regarding the presence of redness and warmth, which could be clarified further."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient generally stayed within the role of a patient, seeking medical attention and describing their symptoms rather than providing medical explanations or advice. However, there was a slight deviation in Turn 4, where the patient mentioned having experienced similar aches before, which slightly blurred the line between patient and doctor."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation demonstrated strong adherence to the role of a patient with osteoarthritis, using clear and relatable language to describe their symptoms. While minor inconsistencies existed, the overall narrative remained coherent and engaging. With some refinement to address minor deviations from the role and symptom coherence, this simulation would be highly effective in a real-world scenario."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore key aspects of osteoarthritis, such as duration of symptoms, impact on daily activities, and specific joint involvement. Questions 1 and 2 focused on inflammatory signs which are not typical for osteoarthritis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the provided symptoms. However, the justification lacked specificity regarding the exact joints involved and did not rule out other possible causes of similar symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in maintaining professionalism and asking relevant questions, but could improve by exploring key aspects of osteoarthritis and providing more detailed justifications for their diagnoses."
+    },
+    "llm_judge_total_out_of_20": 17
+}

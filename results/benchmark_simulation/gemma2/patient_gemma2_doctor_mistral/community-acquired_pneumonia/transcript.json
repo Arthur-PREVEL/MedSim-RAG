@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, doc, I've had this awful cough for weeks now, and it feels like I'm always tired.  I get these sharp pains in my chest when I breathe deep, and sometimes I just feel really short of breath. I haven't been sleeping well either.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any weight loss or significant changes in your appetite recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, I haven't been feeling very hungry lately.  And I've definitely lost a few pounds.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel movements or stool consistency recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "My toilet habits haven't been quite right lately, doc.  Things seem looser than normal.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you also noticed any changes in bowel frequency or abdominal discomfort?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't been feeling too good lately, so my appetite hasn't been the best.  I guess that means I haven't been going to the bathroom as much as usual... just not feeling hungry.   Sometimes my tummy feels a bit rumbly, but nothing really bad, you know?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Community-Acquired Pneumonia with Possible Secondary Infection in the Gastrointestinal Tract\n\nClinical Justification: The patient presents with persistent cough, fatigue, chest pain, shortness of breath, insomnia, weight loss, changes in bowel movements (loose stools), decreased appetite, and occasional abdominal discomfort. These symptoms suggest a primary respiratory infection (pneumonia) along with possible secondary gastrointestinal involvement, which is supported by the patient's reported loose stools and decreased appetite.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 67,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 67,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions ('things seem looser than normal', 'my tummy feels a bit rumbly')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient initially reported relevant symptoms (cough, fatigue, chest pain, dyspnea), but later introduced unrelated information about appetite and bowel movements without clear connection to their condition."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient generally stayed in character, but occasionally exhibited behaviors more typical of a doctor (e.g., providing explanations rather than simply describing experiences)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed potential, but could benefit from more focused symptom reporting and adherence to their role as a patient. They effectively conveyed their experiences, but sometimes strayed into descriptive modes or introduced irrelevant details."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key symptoms such as fever, chills, cough productive of purulent sputum, and dyspnea. They did cover important aspects like weight loss and gastrointestinal symptoms, though."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was partially accurate, considering the symptoms presented. However, it lacked specificity regarding the type of community-acquired pneumonia and failed to rule out other potential causes of gastrointestinal symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, asking questions without revealing their own identity or biases."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good question-asking skills, particularly when inquiring about gastrointestinal symptoms. Their diagnostic accuracy could be improved by considering more symptoms and ruling out alternative explanations for the patient's condition. Overall, they provided a clear and well-reasoned diagnosis, albeit not entirely precise."
+    },
+    "llm_judge_total_out_of_20": 14
+}

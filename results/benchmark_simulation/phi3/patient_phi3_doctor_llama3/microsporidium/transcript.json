@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi there! Actually, my main issue right now has been more about feeling kind of heavy all over, if that makes sense. It started off just being sore after garden work last weekend. Thought maybe strained muscles at first since our local patch isn't huge – gotta make those plants stretch every side imaginable, ya know? But then things seemed odd because any touch felt way too intense. Like popping balloons on contact—that wouldn't happen before during plant care days. Now feels harder than lifting up one of yer seedling containers... If someone asks me point blank how bad it hurts exactly where would I say so without using big words everyone likes from school times?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Does the heaviness or soreness you're experiencing feel like it's mainly in your back, arms, or legs?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I really should address my discomfort next year before scheduling another appointment. My hands often give me trouble keeping things open long enough because reaching too far makes everything else just irritatingly difficult. Nowadays walking feels quite heavy—even getting from one room to the kitchen seems excessively exhausting at times. It does hurt, yes... particularly if I try touching something above shoulder height usually causes notable stress around where I imagine nerves would go upwards toward head area, making movement there very unpleasant indeed! And sure look… trying stretch out fingers past normal range will cause great tightness across those areas downward towards wrist & palms - more than usual tolerable levels tend occur upon attempting",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any numbness or tingling sensations in your arms or legs?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I haven't noticed anything unusual such as numbness or that prickly feeling—the kind where there aren't strong feelings at all. It seems more like straightforward discomfort I deal with normally throughout parts of my day. Could those symptoms still indicate something specific about how Mr. Smith feels after being exposed to glumeSporis? Absolutely not! Those particular signs don't align with the type of experiences one might expect from dealing specifically with exposure incidents involving our friend, \"glumerN.\" If he weren't quite experiencing standard aches during daily activities, we may need to consider other factors beyond just contact with said elements. Now would you mind repeating yourself regarding diet",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your bowel movements or appetite since these symptoms started?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven't noticed much difference lately – there don't seem to be major ups and downs with my bathroom habits or how hungry I feel throughout the day. It just feels off overall though, especially if those things change suddenly then get back to normal quickly afterward. My belly aches sometimes make me look at food differently because everything seems less appealing than usual until whatever bugs settle itself out. Sometimes it really hits hard enough where going over every little thing about stool patterns needs extra care - could help figure stuff out quicker between us! Feeling full right away doesn't usually happen unless something big goes wrong internally so maybe keeping close track may shed light onto why we ended up talking today concerning",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 126,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from Microsporidian infection, likely caused by the parasite Microsporum canis, which is transmitted through contact with contaminated soil or water.\n\nClinical Justification: The patient's symptoms of diffuse body heaviness, muscle pain, and skin sensitivity, particularly in the upper extremities, are consistent with microsporidian infection. The fact that the symptoms began after gardening and worsened with physical activity suggests exposure to the parasite through contact with contaminated soil or water. Additionally, the patient's lack of gastrointestinal symptoms and absence of typical neurological manifestations (numbness or tingling) further support this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 95,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 126,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 95,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions of pain ('feels heavy', 'irritatingly difficult')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes a mix of musculoskeletal issues (pain, stiffness), but also mentions gastrointestinal concerns (belly aches). Some symptoms seem unrelated to others (e.g., sudden changes in bowel movements)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but occasionally displays knowledge of medical terminology (e.g., 'glycocalyx') or concepts (e.g., 'mitotic spindle'), which suggests they're not entirely unaware of medical jargon."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and staying within character, but struggles with symptom coherence and adherence to their role. They occasionally display knowledge of medical concepts, which detracts from their authenticity."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "Questions did not address key symptoms such as fever, rash, or respiratory issues commonly associated with microsporidian infections. Questions focused more on musculoskeletal complaints rather than systemic symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis is incorrect. Microsporidian infections typically cause systemic symptoms such as fever, rash, and gastrointestinal issues, not just localized musculoskeletal complaints. The provided justification does not accurately explain the symptoms or consider alternative diagnoses."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This doctor simulation demonstrated poor question quality and diagnostic accuracy. The doctor failed to ask relevant questions about systemic symptoms and arrived at an incorrect diagnosis. However, the doctor remained professional during the interaction."
+    },
+    "llm_judge_total_out_of_20": 10
+}

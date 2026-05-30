@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon, Doctor. I've been feeling quite unwell for a few days now. I have this persistent cough that brings up yellowish phlegm, and it feels like I've got a heavy weight on my chest whenever I breathe in deeply. I also feel shortness of breath sometimes when I exert myself too much. Lately, I've been losing weight, despite not changing my eating habits, and I've noticed I've grown weaker and more tired than usual. I don't have any fever, but I do get occasional chills. I hope these details help you better understand how I've been feeling. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 100,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Based on your symptoms, have you experienced any recent trauma or injury?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't had any recent trauma or injury, doctor. I've been feeling quite weak lately, and it seems my chest is hurting more than usual when I breathe deeply. These days, I've also been experiencing a persistent and uncomfortable cough that brings up yellowish phlegm. In addition, I've lost weight without trying and I've felt quite tired all the time. As for my head and stomach, I've noticed some mild discomfort but nothing severe, just enough to make me feel unsettled. I hope this information helps in determining what might be happening with me, doctor. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any swelling or lumps in your neck?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, Doctor, I haven't noticed any swellings or lumps in my neck. It feels smooth when I touch it. I hope this is nothing to worry about.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you had any difficulty swallowing recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't been experiencing trouble swallowing lately, Doctor. Just as it usually is. However, I have noticed a persistent cough that brings up yellowish phlegm, and I've also lost a bit more weight than usual. I hope that doesn't mean something serious, but I thought it was worth mentioning. I've also felt a little more tired than normal. Thank you for asking.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Community-Acquired Pneumonia\n\nClinical Justification: The patient presented with symptoms such as persistent cough, yellowish phlegm, shortness of breath, chest pain, weight loss, fatigue, and occasional chills. These symptoms are consistent with community-acquired pneumonia (CAP). CAP is an infection of the lungs caused by bacteria, viruses, or fungi that is acquired outside of a hospital setting. The patient did not report any recent trauma or injury, and there were no signs of swelling or lumps in the neck. Additionally, the patient did not report any difficulty swallowing. Based on these findings, the most likely diagnosis is CAP.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 98,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 100,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 98,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terms and explaining their symptoms clearly."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently reported symptoms related to pneumonia, including cough, difficulty breathing, weight loss, and fatigue, which aligns with the clinical context provided. However, they did not mention fever, which could be expected in typical pneumonia cases."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient generally stayed in character, there were instances where they seemed to momentarily adopt a more formal tone by addressing the doctor as 'doctor' multiple times, which slightly detracts from their role adherence."
+        },
+        "total_score_out_of_10": 9,
+        "overall_feedback": "This patient simulation demonstrated strong natural language skills, good symptom coherence, and mostly adhered to the patient role. While minor lapses in role adherence occurred, overall, the performance was convincing and engaging."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions asked were not targeted towards the key symptoms of pneumonia, such as fever, cough, dyspnea, etc. Questions about trauma, swelling, and difficulty swallowing are not directly relevant to the diagnosis of community-acquired pneumonia."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the final diagnosis was correct, it was based on a limited understanding of the patient's symptoms. The doctor failed to consider alternative diagnoses that could explain the patient's symptoms, such as Legionella infection or Mycoplasma infection, which require specific questioning to identify."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated a good understanding of the final diagnosis but fell short in asking targeted and clinically relevant questions during the interview. With more focused questioning, they could have arrived at a more accurate diagnosis and considered alternative causes of the patient's symptoms."
+    },
+    "llm_judge_total_out_of_20": 15
+}

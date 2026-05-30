@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I've been having a lot of trouble going to the bathroom. It really hurts when I try, and I have to go much more often than usual.  Sometimes my tummy feels a bit sore too.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any blood in your urine?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes it looks a little bit pink, especially right after I go to the bathroom.  Not all the time, though.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever noticed any burning or discomfort when you urinate?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes it feels like I have to go really badly, and it stings a little bit when I do.  Not all the time, mind you, just...sometimes.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any blood in your urine during these episodes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes my pee looks kinda pink or reddish. It's mostly when I really have to go.  It just doesn't seem quite right.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is diagnosed with an uncomplicated urinary tract infection (UTI).\n\nClinical Justification: The patient presents with classic symptoms of a UTI, including dysuria (painful urination), frequency, urgency, and hematuria (blood in the urine). These symptoms are consistent with a lower urinary tract infection, likely cystitis, which is typically uncomplicated given the absence of fever, flank pain, or other systemic symptoms that might suggest upper urinary tract involvement.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 70,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 70,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally used phrases like 'not all the time, mind you,' which slightly detract from their naturalness."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient described some symptoms consistent with uncomplicated UTIs, such as painful urination, urinary frequency, and suprapubic pain/discomfort. However, they also mentioned hematuria, which is less typical for uncomplicated UTIs and more suggestive of pyelonephritis or another condition."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but occasionally exhibited behaviors more characteristic of a healthcare provider, such as providing explanations and clarifications ('mind you')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language and describing symptoms consistent with uncomplicated UTIs. However, inconsistencies in symptom reporting and occasional lapses into healthcare provider-like behavior detracted from the overall realism of the simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects of the condition, such as urinary frequency, hesitancy, and suprapubic pain or discomfort. Questions also did not explore the patient's history of previous UTIs or prior antibiotic use."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was mostly accurate, considering the symptoms presented. However, the doctor could have been more precise in specifying the type of UTI (cystitis) and its implications for treatment."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional but occasionally used language that implied a level of certainty ('classic symptoms') that wasn't fully justified by the information provided."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor demonstrated good diagnostic skills but could improve by asking more comprehensive questions and providing clearer explanations for their diagnoses. They showed a good understanding of the condition but could benefit from further refinement in their questioning and communication techniques."
+    },
+    "llm_judge_total_out_of_20": 14
+}

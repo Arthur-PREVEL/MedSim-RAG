@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "It's so nice to finally see someone about how I've been feeling lately. To be honest, I just don't feel right. My stomach has been acting up something awful. It feels like there's this gnawing ache inside me, you know, deep down near my belly button. Sometimes it gets worse after I eat, especially if I've had something rich or spicy. And sometimes it feels better when I'm lying down, but not always.\n\nI've also lost some weight, I'd say about five pounds over the past month. I'm not surprised, really, since I haven't been having much appetite. Food doesn't taste as good as it used to either. Sometimes I get these bitter tastes in my mouth, and my",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel habits such as constipation or diarrhea?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I've been having trouble with my stomach lately. To be honest, I feel like I'm not going to the bathroom enough. It's like I'm holding onto things too long. Sometimes it feels like everything is just sitting there, you know? And when I do go, it's not very easy. But at the same time, sometimes I get this...this urgency, like I have to run to the bathroom right away. It's all so unpredictable.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel movement frequency or consistency before these symptoms started?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dearie, I've been going to the bathroom more often than usual, if that's what you're asking. It's almost like my tummy is constantly trying to get rid of something. But when it does come out, it's not really solid, if you know what I mean. More like...well, let me think how to put this nicely... mushy, I suppose. It's not the most pleasant thing, if you catch my drift. And sometimes it feels like there's a burning sensation, but not too bad. Just a little uncomfortable. What's wrong with me, doc? Am I getting old and cranky or what?!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 99,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel habits recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Actually, doc, I've been going to the bathroom more often than usual. It's like my stomach is always empty, even after I eat. Sometimes it feels like there's nothing left inside me. And, oh dear, the cramps! They're quite uncomfortable. It feels like my stomach is churning with water or something.\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Chronic Idiopathic Gastritis leading to achlorhydria (low acid production). The patient presents chronic abdominal discomfort exacerbated by eating fatty/spicy foods, accompanied by altered bowel movements characterized by both constipation and diarrheal episodes suggestive of malabsorption syndrome secondary to reduced gastric secretion capacity due to prolonged inflammation without an identifiable cause. This diagnosis aligns with their reported loss of appetite, change in taste perception, fluctuations between loose and hardened feces, occasional bitterness experienced during digestion, which could indicate decreased hydrochloric acid output affecting overall gut motility and function.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 99,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into colloquial expressions ('dearie', 'doc') and somewhat vague descriptions ('like I'm not going to the bathroom enough')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes various gastrointestinal symptoms, including epigastric pain, weight loss, nausea, bloating, diarrhea, abdominal pain, acid regurgitation, early satiety, vomiting, postprandial fullness, constipation, dysphagia, glossitis, and decreased position and vibration sense. However, the sequence and details of the symptoms are not entirely consistent with the clinical context provided."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally exhibits behaviors inconsistent with a typical patient, such as providing overly detailed descriptions of bodily functions ('mushy,' 'burning sensation') and making assumptions about the doctor's perspective ('Am I getting old and cranky or what?!')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and describing symptoms, but falls short in maintaining consistency with the clinical context and adhering to the patient role. The simulation could benefit from further refinement to ensure coherence and authenticity."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions related to bowel habits but missed other crucial symptoms like epigastric pain, heartburn, nausea, bloating, and dysphagia that are commonly associated with achlorhydria. Questions were not comprehensive enough to cover all possible causes of achlorhydria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was incorrect because it mentioned chronic idiopathic gastritis as the underlying cause, whereas achlorhydria is more likely caused by various factors including autoimmune disorders, infections, or medication side effects rather than idiopathic gastritis. Additionally, the description of symptoms did not fully match the provided key symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor showed potential in asking some relevant questions but failed to consider a broader range of symptoms and potential causes of achlorhydria. A more thorough approach would have led to a more accurate diagnosis. With further training, this doctor may improve their diagnostic skills."
+    },
+    "llm_judge_total_out_of_20": 13
+}

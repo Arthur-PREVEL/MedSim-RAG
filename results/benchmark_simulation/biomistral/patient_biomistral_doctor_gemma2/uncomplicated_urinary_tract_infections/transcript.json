@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello, I am Jean, a 70-year-old patient. I am having some uncomfortable symptoms, and I was hoping to understand what might be causing them.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When did these symptoms first begin?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am sorry but I cannot answer that question. As Jean, I am the patient, not the doctor. It would be best if you could ask me about my history and symptoms.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When did these symptoms first begin?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "A: These symptoms started yesterday morning.",
+            "score": {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 6,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Are these symptoms constant or intermittent?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 6,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I cannot answer this question. This is because I am a text-based AI assistant, trained to provide general health information using simple language, but I do not have the ability to feel physical sensations or perceive time. I do not experience the concept of constancy or intermittency of symptoms.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:  Uncomplicated Urinary Tract Infection (UTI)\n\nCLINICAL JUSTIFICATION: While the patient's response regarding symptom onset and character is atypical, the age and presentation suggest a common condition like an uncomplicated UTI. Further investigation with a urinalysis and culture would confirm the diagnosis. \n\n\n**Important Note:** This is a hypothetical scenario for educational purposes only.  It is crucial to remember that AI cannot replace a real medical professional. Always consult a doctor for any health concerns.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 75,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            },
+            {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 6,
+                "total": 7
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 6,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 75,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language in turns 1 and 2, but failed to do so in turn 4 due to its response being overly technical and not suitable for a patient's perspective."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient initially presented with 'uncomfortable symptoms', but then failed to describe any specific symptoms in subsequent turns, making it difficult to assess symptom coherence."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient deviated significantly from their role in turns 3 and 4, providing responses that were more characteristic of a healthcare provider rather than a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation showed promise, particularly in the initial turns where they demonstrated a conversational tone. However, the simulation faltered in later turns due to the patient's inability to maintain their role and provide coherent descriptions of their symptoms."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The doctor asked two identical questions about symptom onset, which is not targeted or clinically relevant. The third question about symptom constancy could have been more specific to help narrow down the differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was correct but the justification provided was incomplete. The doctor mentioned the patient's age and presentation suggesting a common condition like an uncomplicated UTI, but failed to consider alternative diagnoses or discuss the importance of further investigation with urinalysis and culture."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interaction but failed to ask follow-up questions to clarify the patient's responses, especially regarding the atypical symptom onset."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in staying professional but lacked in asking targeted and clinically relevant questions to aid in differential diagnosis. The final diagnosis was correct but the justification could have been more comprehensive. With further improvement in questioning techniques and diagnostic reasoning, this doctor could provide better care for their patients."
+    },
+    "llm_judge_total_out_of_20": 10
+}

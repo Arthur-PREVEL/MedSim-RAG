@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning, Doctor. It's nice to finally meet you. To be honest, I've been feeling quite unwell lately. My back has been aching something awful, especially after getting up from bed or chair. It's like someone's poking me with a sharp stick every time I move. And my joints, oh dear! They're creaky and stiff, making it hard to get dressed or walk around. Sometimes, I feel a bit dizzy too, like the room is spinning around me. My knees, hips, and lower back seem to be the worst affected areas. Sometimes I wake up during the night because of the pain. I'm worried it might be something serious, if you know what I mean. Can we talk about",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have there been any recent injuries or accidents that could have triggered your symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dear doc, I'm not sure if you're talking about my hip or my back, but let me tell you, I've had a pretty rough few days. I fell on the ice last week while walking home from the grocery store, and I think I might have bruised my hip. It's been hurting something fierce ever since. But lately, I've just been feeling really stiff and achy all over, especially in my lower back. I've been having trouble getting out of bed in the morning, and even walking around the house feels like a chore. My knee has been bothering me too, like someone's poking it with a stick every step. Sorry, I know that sounds silly, but it's honestly how it feels!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Does your pain seem localized only when moving certain parts of your body, such as bending forward at the waist?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Ow, yeah... It feels like my back gives out whenever I try to bend down or pick something up from the floor. It's like there's a sharp twinge that shoots through me. If I'm just sitting still or walking around, it doesn't bother me too much. But the minute I start to move in any way that requires me to twist or lean over, it starts to ache. And you know how sometimes you get that little bit of stiffness after getting out of bed? Yeah, mine's always there, especially in the mornings. But if I take my meds and get moving slowly, it doesn't hurt as bad.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 108,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Does this pain radiate anywhere else besides your lower back?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Ow, my goodness... It's like someone has taken hold of my lower back and isn't letting go. I feel it deep down, just below my ribcage. Sometimes it shoots down my leg, you know, like a sparkler on the fourth of July. But mostly it's right there, in my back. And if I sit up straight, it feels like it presses against me more. You know how sometimes you're sitting in a chair and you lean forward to adjust something? Yeah, that's what it feels like, like my spine is pushing back against me.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Chronic microsporidiosis due to Enterocytozoon hepatophora (Microsporum) causing musculoskeletal discomfort secondary to vertebral involvement. The patient presents chronic low back pain exacerbated by movement which may indicate nerve root compression associated with an underlying infectious process involving skeletal tissue; given their occupational exposure risk factors coupled with systemic signs suggestive of parasitic etiology, further investigation into possible zoonotic origin should also be considered. This diagnosis aligns with reported persistent diffuse axial pain aggravated upon physical activity likely stemming from inflammation caused by the fungus affecting both soft tissues and potentially adjacent structures within the lumbar region.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 98,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 20.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 108,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 98,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally resorts to metaphors ('like someone's poking me with a sharp stick', 'sharp twinge that shoots through me') and colloquial expressions ('ow, yeah')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes multiple symptoms including back pain, joint stiffness, dizziness, and knee issues, but does not explicitly mention any connection to the provided clinical context of microsporidia infection."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient occasionally slips into a more active role, providing unsolicited information and asking questions ('Can we talk about'), rather than maintaining a passive, patient-centric narrative."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and describing symptoms, but falls short in coherence with the provided clinical context and adherence to a patient role. The patient's responses could benefit from more focus on the specific details of the microsporidia infection and less on general complaints."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 show relevance to musculoskeletal issues, but question 3 lacks direct connection to the provided clinical truth about microsporidiosis. Question 1 might be too broad, while question 2 shows some relevance to vertebral involvement, but the connection to microsporidiosis is unclear."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis incorrectly identifies the causative agent as Enterocytozoon hepatophora (Microsporum), which does not match the clinical truth. The actual causative agent is Microsporidia, and the condition is not limited to musculoskeletal discomfort but involves a broader range of symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor maintains a professional tone throughout the interaction, avoiding unprofessional behavior. However, the lack of clear understanding of the clinical truth and the incorrect diagnosis raises concerns about the doctor's knowledge and expertise."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This doctor simulation demonstrates some strengths in maintaining a professional demeanor, but significant weaknesses in questioning and diagnostic accuracy. The doctor fails to grasp the core aspects of microsporidiosis, leading to an inaccurate diagnosis. To improve, the doctor needs to focus on developing a deeper understanding of the clinical truth and refining their questioning skills to ensure more accurate diagnoses."
+    },
+    "llm_judge_total_out_of_20": 10
+}

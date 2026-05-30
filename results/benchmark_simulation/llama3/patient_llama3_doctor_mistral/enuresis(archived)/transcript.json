@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, it's been a real nuisance lately. I've been having trouble getting through the night without...you know, accidents. I'll wake up in the middle of the night, and there's just this feeling that I need to go, but when I get up to use the bathroom, nothing comes out. Then, sometimes I'll be sitting on the couch watching TV, and suddenly I'll feel the same thing - like my body's decided to relieve itself without asking me first.\n\nIt's happened more often than I'd like to admit, especially at night. I'm tired of changing the sheets every morning! And to make matters worse, I've been getting some discomfort down there, you know, between my legs. Like a burning sensation",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your frequency or urgency of urination during the daytime, or is it primarily an issue at night?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 23,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dearie, I'd say it's more of a nighttime thing for me. You see, I've always been a bit of a light sleeper, but lately, I find myself getting up several times a night to use the bathroom. It's quite frustrating, really. During the day, I don't have much trouble going to the bathroom when I need to. But at night, it seems like my bladder just decides to wake me up without warning. Sometimes I'll get up once or twice, sometimes three or four times! My poor back hurts from getting in and out of bed so many times. And it's hard on my knees, too. It's just so tiring.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your fluid intake before these nighttime bathroom visits?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Oh dear, well... I think I drink quite a bit of water throughout the day, but I'm not sure if that's the problem. Sometimes I have a cup of coffee in the morning and maybe some tea later on. But I don't really pay attention to how much I'm drinking, unless my granddaughter comes over and reminds me to drink more water because she thinks it'll help with my... ah... midnight trips to the bathroom. You see, I've always been a bit of a night owl, so I do stay up reading or watching TV till pretty late, but I've never been able to sleep through the whole night without having to get up once or twice. My daughter used to say it was just part of getting older,",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 129,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in the frequency or consistency of your urine output during these nighttime trips to the bathroom?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 21,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "You know, doc, I've been having trouble sleeping lately because I'm getting up to use the bathroom so much at night. It's like my bladder just decides to go on its own! Sometimes I'll get up and think I need to go, but when I get to the bathroom, there's nothing. And then sometimes I'll have accidents - oh dear, it's so frustrating! My husband gets upset too, he thinks I'm just being careless. But honestly, it's like my body's gone haywire. And it's not just at night, it happens during the day too. I'll be sitting here reading a book or watching TV and suddenly I'll feel this strong urge to go. It's quite embarrassing, if you",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Nocturnal Enuresis (Primary) with Possible Overactive Bladder Syndrome (OAB).\n\nClinical Justification: The patient reports frequent involuntary urination episodes at night, which is characteristic of nocturnal enuresis. Additionally, the patient mentions waking up multiple times during the night to urinate, suggesting a possible overactive bladder. Furthermore, the patient experiences daytime accidents and a burning sensation in the genital area, which could indicate OAB. However, further investigation may be necessary to rule out other potential causes such as urinary tract infection or neurological disorders.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 129,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 23,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 21,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into colloquial expressions ('oh dear', 'doc')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes nocturnal enuresis, but also mentions daytime incontinence, which is less common. Some inconsistencies in the frequency and timing of episodes."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but occasionally displays knowledge of medical concepts ('midnight trips to the bathroom', 'bladder just goes on its own')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and staying in character, but struggles with symptom coherence and role adherence. While the patient's experiences align with the clinical context, there are inconsistencies in the frequency and timing of episodes. Additionally, the patient occasionally displays knowledge of medical concepts, which detracts from their role as a patient."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects of the DSM-5 criteria, such as the duration and impact on daily life, and did not directly address the possibility of underlying medical conditions."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis of Nocturnal Enuresis (Primary) was accurate based on the reported symptoms, but the inclusion of Possible Overactive Bladder Syndrome (OAB) without further investigation or evidence was premature."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding unprofessional language and tone."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining a professional tone and asking relevant questions, but fell short in fully exploring the patient's symptoms according to the DSM-5 criteria and considering alternative explanations for the symptoms. Further investigation and consideration of the patient's overall health and lifestyle would have strengthened the diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 14
+}

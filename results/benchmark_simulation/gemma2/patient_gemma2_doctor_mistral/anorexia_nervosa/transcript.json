@@ -1,0 +1,225 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, lately I just haven't felt myself. I get so tired all the time, even after trying to rest.  Sometimes my hands and feet swell up, too. And I can easily feel cold, even when others aren't bothered. \n\nI'm not sure if it's all in my head, but I seem to get grumpy more often than usual.  Eating just doesn't feel right anymore. I worry about every bite, whether it's too big or has too many calories. I try to eat small portions, and sometimes... well, sometimes I just don't eat at all.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 94,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your weight recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, I've been trying to watch what I eat, mostly because I haven't felt like myself lately.  I get tired really easily, and my hands and feet swell up sometimes.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 30,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your weight, or any irregularities in your urination pattern?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, I have been feeling awfully tired lately.  I haven't really had much of an appetite either and find myself watching what I eat more than usual. And sometimes, things just seem harder to go pee out.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 37,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your weight or any swelling in your legs or abdomen recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"My legs have been feeling puffy lately, especially when I sit down for a while. And yes, I've lost some weight over the last few months. Not as much as I thought I should have, though.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Anorexia Nervosa\n\nClinical Justification: The patient exhibits signs of self-starvation (losing weight intentionally), fear of gaining weight, body image distortion (feels they should have lost more weight), and excessive concern with food intake and calorie consumption. Additionally, the patient reports fatigue, cold sensitivity, and swelling in the extremities, which could be related to malnutrition and electrolyte imbalances commonly seen in individuals with eating disorders such as Anorexia Nervosa.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 70,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 94,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 30,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 37,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 36,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 70,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language, but occasionally slipped into vague statements (e.g., 'it's all in my head')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but some descriptions lacked specificity (e.g., 'haven't felt like myself' instead of describing specific physical changes)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient deviated from their role by occasionally adopting a neutral tone and using phrases that sounded more like a doctor's assessment ('I haven't really had much of an appetite')."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed potential, but could benefit from more consistent symptom description and adherence to the patient's role. The narrative was engaging, but sometimes strayed from the expected patient perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions about weight changes but failed to explore other key symptoms such as menstrual irregularities, purging behaviors, or excessive exercise habits, making them less comprehensive than ideal."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was correct, but the justification provided by the doctor focused primarily on self-starvation and fear of gaining weight, overlooking other crucial factors such as malnutrition and electrolyte imbalances that are also characteristic of Anorexia Nervosa."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor remained mostly professional during the interview but occasionally slipped into a somewhat conversational tone when discussing the patient's symptoms, slightly compromising their role adherence."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy but fell short in asking comprehensive questions and maintaining a strictly professional demeanor throughout the interaction. With refinement in these areas, the doctor has potential to excel in real-world scenarios."
+    },
+    "llm_judge_total_out_of_20": 12
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dear, it's so nice to finally see someone about this. You see, my hands have been bothering me something awful lately. My fingers ache when I'm doing anything, even just holding onto the cane while walking. And sometimes they feel stiff in the mornings, like they're stuck together. I've had trouble getting dressed on my own because my hands hurt too much. I just want to sit down after putting my socks on! (laughs) It's not funny, really. \n\nMy back has been acting up too. Sometimes I get these sharp pains in my lower back when I stand up from sitting, and it takes me a minute to get my legs steady under me. And my knee... oh, my knee creaks and",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any swelling in your hands or joints?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, my hands do get quite swollen when I'm out gardening or doing other household chores. It's not just my hands, though - sometimes my fingers feel stiff and sore after I've been sitting for too long, like on the couch watching TV. My husband always teases me about how slow I am to move around the house now, but it's hard to help that!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 65,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do these symptoms improve with rest?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 6,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Honey, oh dear, my back and hands have been acting up something awful lately. My back feels like it's been put through a wringer after I've done any kind of heavy lifting or cleaning. And my hands... well, they ache so bad sometimes when I'm doing dishes or even just holding onto things. It gets better when I sit down and rest for a bit, but then it starts hurting again when I get up and move around. It's like my body's saying, \"Jean, slow down!\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any stiffness in your joints?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning doc. Yeah, I've been feeling a bit stiff lately. My knees get pretty sore when I wake up in the morning, especially after sitting for a long time. It takes me a while to get out of my chair without wincing. And sometimes my hands feel stiff too, especially if I've been typing on this computer for hours. I just sort of... creak along, I guess. Like my body's trying to remind me it's not getting any younger! (laughs)",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Osteoarthritis\n\n**Clinical Justification:** The patient presents with chronic pain, stiffness, and swelling in multiple weight-bearing joints (hands, back, knees), consistent with osteoarthritis.  The symptoms worsen with activity and improve with rest, further supporting this diagnosis. \n\n\nLet me know if you'd like me to elaborate on any aspect of the diagnosis or explore potential treatment options.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 65,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 6,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language and avoided complex medical terminology throughout their responses."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient consistently described symptoms related to osteoarthritis, including joint pain, stiffness, and locomotor restriction. However, some responses seemed to jump between different affected areas (hands, back, knees) without clear connections."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character as a concerned individual describing their symptoms, but occasionally slipped into somewhat conversational tone, particularly in Turn 4 where they mentioned 'creaking' and laughed."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good use of everyday language and adherence to the role, but could benefit from more cohesive symptom descriptions and less conversational tone to maintain a consistent patient persona."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects such as muscle weakness, balance issues, and specific joint locations affected by osteoarthritis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the provided symptoms, but lacked specificity regarding the stage of disease progression and the presence of classic physical exam findings like Heberden's nodes or Bouchard's nodes."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy and professionalism, but could benefit from asking more comprehensive questions to cover all possible symptoms and signs associated with osteoarthritis, leading to a more precise diagnosis."
+    },
+    "llm_judge_total_out_of_20": 14
+}

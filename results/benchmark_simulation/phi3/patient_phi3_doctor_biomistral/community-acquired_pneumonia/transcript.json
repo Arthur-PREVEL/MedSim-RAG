@@ -1,0 +1,227 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon! Uhh, doc, recently it’s been hard for me to catch my breath when walking just around the house. It feels heavy on my lungs, especially after doing anything at all—even small stuff from day-to-day living has become so tiring. And there’s this nasty goo coming up every time I try to clear my throat – scares me good because that ain't normal. Plus, one morning last week I woke up feeling really foggy and got confused over where things were which never happened before... Oh, wait - maybe forgetting names could still be part of getting older, right? But everything else felt off too. So yeah, these new troubles make sense why",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 114,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any swelling or tenderness in your legs or feet lately?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I recently feel more tired than usual, even though my appetite hasn’t changed much. Sometimes there is this slight tight feeling around my abdomen after meals that doesn't stay gone for long. It could be related but it feels different from just being full because not everyone mentions belly aches when they think about their health issues.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 57,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of thyroid problems?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I remember my wife mentioning she had issues with her energy levels being up and down for years before we figured out it was related to her thyroid condition. It wasn’t severe enough that they needed medications right away though - something about underactive hormone from there made me feel constantly tired until more careful monitoring showed us how best to manage this situation over time. That said – if ever asked again on whether one might consider taking care just because ‘thyroid conditions could affect general feeling,’ then definitely yes based off past experiences! We did go through various specialists trying different approaches initially but eventually settled into routine checkups together at endocrinology clinics which seemed adequate considering all went pretty smoothly afterward",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 125,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your current thyroid medication regimen?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I don't usually feel sick because my legs aren't working well lately—they get tired easily when walking just around the house. It started happening since last year after feeling very thirsty all the time and losing quite a bit of weight without trying. Oh yes, by prescription from Dr. Smith before this troublesome cold came about, it was for something called Levothyroxine daily at breakfast each morning. There seems there has been too much water coming out ever so regularly day and night — that’s new on top of everything else we talked about yesterday...and here you go again talking bout test results! Feels bad not catchin up today though - reckon could be workin better if throat wasn",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 119,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of shortness of breath, cough with sputum production, confusion, and fatigue, as well as the physical examination findings of decreased breath sounds and rales on auscultation, the final diagnosis is community-acquired pneumonia (CAP). The patient's history of recent weight loss, increased thirst, and leg weakness further support this diagnosis. The patient's history of hypothyroidism may contribute to his fatigue and weakness, but it does not explain his respiratory symptoms. The patient's history of a dry cough and difficulty catching his breath suggests an infectious etiology, such as CAP. The patient's recent travel history also supports the possibility of CAP.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 104,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 114,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 57,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 125,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 119,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 104,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into colloquial expressions ('scares me good', 'ain't normal')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but lacked specificity and detail. They mentioned fatigue, difficulty breathing, and confusion, but failed to mention other key symptoms like fever, chills, or pleuritic chest pain."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient frequently deviated from their role by providing irrelevant information (e.g., discussing their wife's thyroid condition), displaying knowledge of medical terminology (e.g., 'Levothyroxine'), and showing awareness of test results."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language, but struggled with coherence and adherence to their role. They often digressed into unrelated topics and displayed knowledge of medical concepts, undermining their credibility as a non-medical individual."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Questions were somewhat targeted towards respiratory symptoms, but failed to explore key symptoms such as fever, chills, and pleuritic chest pain, which are crucial for diagnosing community-acquired pneumonia."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the symptoms presented, but the connection between the patient's history of hypothyroidism and fatigue/weakness could be seen as a potential contributing factor rather than a direct cause of the respiratory symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy and professionalism, but could improve by asking more targeted and comprehensive questions that cover all possible symptoms related to community-acquired pneumonia. Further attention should be paid to exploring the patient's full medical history to ensure a more complete understanding of their condition."
+    },
+    "llm_judge_total_out_of_20": 12
+}

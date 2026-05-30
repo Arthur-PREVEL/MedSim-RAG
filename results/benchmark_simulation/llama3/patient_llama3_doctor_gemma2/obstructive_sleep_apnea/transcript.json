@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I'm so glad you're here. To be honest, I've just been feeling really exhausted all the time lately. I'll be sitting on the couch, watching TV or reading a book, and suddenly my eyes will start drooping. It's like I'm falling asleep right in front of the screen! And when I get up in the morning, I feel groggy and stiff, like I haven't slept well.\n\nI've also been having these awful headaches. They start early in the morning, and they're just throbbing all day long. I've tried taking some pain relievers, but they don't seem to make much difference.\n\nAnd sometimes... I think I might be snoring pretty loudly, if my husband is",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 115,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you ever wake up gasping for air at night?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! I'm so sorry, doc... it's just that sometimes I wake up feeling like I've been suffocating. It's hard to describe, but my chest feels all tight and I have to catch my breath. My husband tells me he's heard me gasping in my sleep, too. I don't know how many nights this happens, but it's definitely a few times a week. And when it does, I lie awake for a bit, trying to calm down before falling back asleep. It's quite unsettling, to be honest.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 88,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience these episodes with any other symptoms, such as wheezing or coughing?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! I do get these awful gasps for air sometimes when I'm asleep. It's so unsettling, really. My husband has told me about them before. He said I'll just stop breathing for a few seconds, then start again like nothing happened. It's quite alarming, I must say. And sometimes, I wake up feeling so parched, my mouth feels like the Sahara desert. I do have some trouble sleeping, too - I toss and turn, and don't seem to get a good night's rest most nights. My back and hips ache something fierce in the mornings, which doesn't help, of course.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 102,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you ever feel excessively sleepy during the day?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dearie, yes! I do get these dreadful mid-afternoon naps sometimes. I'll be sitting in my favorite armchair, reading a book or watching TV, and before I know it, I'm nodding off. It's not just a little yawn, either - I mean, proper full-on snores! My family will tell me about it afterwards, saying I was out cold for a good hour or two. It's embarrassing, really. And even when I'm awake, I feel so...tired. Like I've got weights on my eyelids or something.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 84,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Obstructive Sleep Apnea (OSA)\n\n**Clinical Justification:** The patient presents with classic symptoms of OSA including excessive daytime sleepiness, loud snoring, witnessed apneas, morning headaches, and difficulty sleeping.  The reported gasping for air and waking up feeling suffocated strongly suggest episodes of airway obstruction during sleep.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 47,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 115,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 88,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 102,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 84,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 47,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally resorts to colloquial expressions ('goodness gracious', 'oh dearie') and somewhat dramatic descriptions ('like I'm falling asleep right in front of the screen')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes several symptoms related to sleep apnea, including snoring, gasping/choking, and excessive daytime sleepiness. However, some symptoms are not directly related to sleep apnea, such as morning headaches and back/hip pain."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally exhibits behaviors that could be seen as seeking sympathy or attention ('it's embarrassing, really')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of the clinical context and relevant symptoms, but could benefit from more focused and coherent symptom reporting. Additionally, the patient's language and behavior could be more nuanced to better adhere to their role."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as nocturnal reflux, insomnia, and nocturia. Additionally, the questions did not fully cover all components of the STOP-BANG questionnaire."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the symptoms presented. However, the justification provided focused on classic symptoms but did not address the importance of objective assessments like the Epworth Sleepiness Scale (ESS) or the Fatigue Severity Scale (FSS)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated good diagnostic accuracy and professionalism. However, there were opportunities to improve question quality by covering a broader range of symptoms and incorporating objective assessment tools. With further refinement, this doctor could provide even more comprehensive care for patients with suspected obstructive sleep apnea."
+    },
+    "llm_judge_total_out_of_20": 14
+}

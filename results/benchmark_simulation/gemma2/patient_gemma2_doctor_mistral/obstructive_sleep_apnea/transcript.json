@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc,  I've been feeling really tired all the time, even after a full night's sleep. And folks tell me I snore pretty loud at night. Sometimes I wake up feeling like I can't breathe properly.  \n\n\nIt’s making hard to focus on things, and I just don't have the energy like I used to.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 54,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any consistent weight gain or changes in your body weight recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I wouldn't say *consistent*. I've been putting on a few pounds lately, but nothing drastic.  Seems like my clothes are feeling a bit tighter these days.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your appetite or physical activity levels that could explain this weight change?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't been sleeping well lately. And when I am tired, I just don't have the energy to cook healthy meals or go for my walks like I used to.  I mostly just find myself snacking more.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your weight recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I think I've put on a few pounds lately.  I haven't been as active as I used to be.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Obstructive Sleep Apnea (OSA)\nClinical Justification: The patient reports persistent daytime fatigue despite adequate sleep duration, loud snoring, and episodes of waking up feeling like they cannot breathe properly. Additionally, the patient has experienced recent weight gain due to decreased physical activity and increased snacking, which may be related to their sleep disturbances. These symptoms suggest OSA, a condition characterized by repeated pauses in breathing during sleep caused by obstruction of the upper airway.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 76,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 54,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 76,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into informal tone ('doc', 'fella')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes some relevant symptoms (excessive daytime sleepiness, loud snoring, difficulty breathing), but fails to mention others (morning headaches, nocturnal reflux, insomnia, nocturia)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits inconsistent behavior, sometimes staying in character and other times providing information that could be considered diagnostic or medical knowledge (e.g., mentioning the Mallampati score)."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and describing relevant symptoms, but struggles with symptom coherence and role adherence. While they provide some personal experiences, they also reveal medical knowledge and fail to consistently portray a patient's perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of obstructive sleep apnea such as excessive daytime sleepiness, loud snoring, gasping, or witnessed episodes of breathing cessation during sleep. Questions focused on weight gain and physical activity instead."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was partially correct but lacked crucial information about the patient's sleep patterns, such as the use of the Epworth Sleepiness Scale or the STOP-BANG questionnaire. The justification provided mentioned 'persistent daytime fatigue' which is a symptom but did not address the lack of objective measures to confirm OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, asking questions in a neutral tone and avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated some understanding of the condition, the questioning strategy was suboptimal and failed to capture essential symptoms. The diagnosis was partially accurate but lacked concrete evidence. With further training, the doctor could improve their questioning approach and incorporate more objective assessments to support their diagnoses."
+    },
+    "llm_judge_total_out_of_20": 12
+}

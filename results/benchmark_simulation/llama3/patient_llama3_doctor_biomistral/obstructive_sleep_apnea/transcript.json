@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I'm so glad I finally came in to see you. I've been feeling just terrible lately. I get so tired all the time, even after waking up early in the morning. I'll be sitting there sipping my coffee, and before I know it, my head starts nodding, and I'm fighting to stay awake. It's embarrassing, really. My grandkids tease me about dozing off on the couch during family gatherings.\n\nAnd another thing, doc - I have this awful habit of snoring something fierce. My husband, God bless him, has had to cover his ears a few times because it's gotten so loud. Sometimes I wake up in the middle of the night feeling like I've stopped breathing, but I",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 120,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any shortness of breath or difficulty breathing?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! I do get winded easily, especially when I'm walking up the stairs in my house. It's like someone has put a big weight on my chest, and it's hard to catch my breath. Sometimes I wake up in the middle of the night feeling like I've been suffocating. My husband says he's heard me gasping for air a few times when we're sleeping together, but I don't know if that's just a normal old-age thing or something more serious.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 82,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of heart disease or high blood pressure?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I've had my fair share of troubles with high blood pressure, doc. It's been something I've had to manage for years now. But my doctor has always kept me on top of it, so I'm pretty sure it's under control. Now, about these... these sleep problems I've been having... I just don't seem to get a good night's rest, even when I do get to bed at a reasonable hour. I wake up feeling like I haven't slept a wink!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 80,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or weight recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I've been feeling a bit sluggish lately, to be honest. My wife has been complaining that I'm always wanting to snack on something sweet, even though I don't usually have a big sweet tooth. And I think I have gained a few pounds since my last check-up. But to be frank, I just put it down to getting older. You know how it is - everything slows down, doesn't it?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of excessive daytime sleepiness, snoring, shortness of breath, and weight gain, as well as their history of hypertension, the final diagnosis is Obstructive Sleep Apnea (OSA). OSA is a disorder characterized by repeated episodes of partial or complete obstruction of the upper airway during sleep, leading to disrupted breathing and reduced oxygen intake. The patient's symptoms of excessive daytime sleepiness, snoring, and shortness of breath are common signs of OSA, while their history of hypertension may be related to the condition as well. Weight gain can also contribute to the development of OSA by increasing the size of the neck and tongue, which can obstruct the airway. Treatment options for OSA include lifestyle modifications such as weight loss, positional therapy, and continuous positive airway pressure (CPAP) therapy.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 132,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 120,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 82,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 80,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 132,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone ('God bless him', 'goodness gracious')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes some symptoms consistent with OSA (excessive daytime sleepiness, loud snoring, difficulty breathing), but others are less typical (getting winded easily, feeling like they've been suffocating)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but occasionally displays knowledge of medical concepts (e.g., 'high blood pressure', 'Mallampati score') that might suggest they're not entirely unaware of their condition."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and staying in character, but could benefit from further refinement in symptom coherence and role adherence to maintain a more convincing narrative."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as snoring, gasping, or witnessed episodes of breathing cessation during sleep, which are crucial for diagnosing OSA."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the patient's symptoms of excessive daytime sleepiness, snoring, and shortness of breath. However, the connection to hypertension could be seen as speculative, and weight gain was not directly linked to OSA pathophysiology."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated good diagnostic accuracy and professionalism. However, the doctor could improve by asking more targeted questions that cover all key symptoms of OSA, ensuring a more comprehensive understanding of the patient's condition."
+    },
+    "llm_judge_total_out_of_20": 14
+}

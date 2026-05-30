@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello, doctor. For quite some time now, I've been facing an issue where I unintentionally wet my bed during the night. This has been happening frequently, at least twice a week, for several months straight. I understand this could be a problem and it's causing me some distress. It's affecting my sleep and making me feel self-conscious as well. Additionally, it's been impacting my daily life, as I sometimes have accidents during the day too.\n\nI would greatly appreciate if we could discuss this further and explore potential causes and solutions together. Could we gather more information by keeping a record of my urination pattern, fluid intake, and urging sensation for a few days? I",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any other symptoms such as difficulty starting or stopping urination, painful urination, or feeling like you need to urinate urgently throughout the day?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 26,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I've been noticing some changes lately. Sometimes, I find it difficult to start or stop urinating and this has been happening quite frequently. Additionally, there are instances when urinating feels rather uncomfortable or even painful. Furthermore, I often feel like I need to go to the bathroom urgently during the day. Is this something that we might want to explore further?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any blood in your urine or noticed any changes in your stream pattern, such as a weak flow or spraying of urine?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 25,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I haven't observed any blood in my urine. As for any changes in my stream pattern, I wouldn't say it's been noticeably different. However, sometimes it does feel a bit weaker, but nothing severe enough to cause concern. I hope this helps. Thank you for asking.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any pain or discomfort while urinating?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, Doctor, I haven't felt any pain or discomfort when I urinate. Everything feels normal in that regard. However, I have been experiencing frequent accidents at night, even though I am awake before they happen. This has been happening for quite some time now, and it's causing me a bit of distress, especially since it affects my sleep. I hope we can find a solution for this together. Thank you, Doctor.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from **Nocturnal Enuresis**, also known as Bedwetting, which is characterized by involuntary urination during sleep. The patient's symptoms of frequent nighttime awakenings due to urinary urgency, difficulty initiating and terminating urination, and occasional daytime accidents suggest a possible underlying issue with bladder control.\n\nClinical Justification: The patient's history of nocturnal enuresis, accompanied by difficulties with urination initiation and termination, and occasional painful urination, points towards a possible neurogenic bladder dysfunction or an overactive bladder syndrome. Further investigation may involve urodynamic studies, imaging tests, or consultations with specialists to rule out underlying conditions such as diabetes insipidus, spinal cord injuries, or neurological disorders.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 108,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 26,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 25,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 108,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terminology and explaining their symptoms in a clear manner."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's symptoms were generally consistent with the clinical context provided, including frequency, duration, and impact on daily life. However, some minor inconsistencies, such as the mention of daytime accidents without specifying their relationship to nocturnal enuresis, detracted from overall coherence."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient stayed within the role of a concerned individual seeking help for their condition, there were moments where they exhibited behaviors more characteristic of a healthcare provider, such as suggesting specific diagnostic tools (e.g., voiding diary) and offering unsolicited advice (e.g., 'we can explore potential causes and solutions together')."
+        },
+        "total_score_out_of_10": 9,
+        "overall_feedback": "This patient simulation demonstrated strong natural language skills, with the patient articulating their symptoms clearly and concisely. Symptom coherence was good, although some minor inconsistencies marred the presentation. Role adherence was somewhat compromised by the patient's occasional assumption of a healthcare provider role. Overall, the simulation showed promise, but could benefit from refinement to maintain a consistent patient perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects of the DSM-5 criteria, such as frequency, distress, and impact on daily life. They did not cover essential topics like toilet training, nutrition, and sleep histories, nor did they specifically ask about family history of enuresis or rule out differential diagnoses like urinary tract infections or constipation."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Nocturnal Enuresis was incorrect because it failed to consider the patient's reported difficulties with urination initiation and termination, which could indicate an overactive bladder syndrome or neurogenic bladder dysfunction. Furthermore, the diagnosis did not account for the possibility of secondary enuresis, where continence was previously established before being lost."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining a professional tone, but fell short in asking comprehensive and clinically relevant questions. The final diagnosis lacked accuracy, failing to consider crucial aspects of the patient's presentation and potential underlying causes. To improve, the doctor should strive to ask more targeted and thorough questions, considering the DSM-5 criteria and ruling out differential diagnoses."
+    },
+    "llm_judge_total_out_of_20": 14
+}

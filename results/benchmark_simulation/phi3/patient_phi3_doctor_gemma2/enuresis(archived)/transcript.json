@@ -1,0 +1,225 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning! For my first round of checkups since retirement last year when they told me nothing serious just old folk stuff but ever since mom passed away things have been getting worse instead of better She had these accidents too sometimes would she pass along tell this maybe related Some say its because we drink plenty water even though might help some reason Im here now Doc tired all day long My energy doesn’t seem right nor does rest give solace Recent trip by bus left scorch marks on skin no idea where those come from But yes many trips under sun cause darker patches over face Got rashes around mouth mostly red flaky sides Not sure if tied up With new shoes making feet swell By end each day",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 131,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When did these symptoms first start worsening?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Mrs. Smith, I noticed some changes recently have been bothering me quite a bit when it comes to staying dry through the day. Every now and again, maybe twice every week if you count them up between Monday last month till this Friday afternoon today—can we say my evenings aren't always smooth sailing anymore? And truthfully speaking, there were moments here and there where things just didn’t go well because I hadn't managed my time right before heading off work each morning; gotta rush sometimes! There haven't really ever been big troubles earlier though until all this began happening around six weeks ago after our school year ended – kids need rest too don't they folks? So tell us",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Are these episodes of leakage accompanied by any pain or discomfort?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, there has been some soreness around my belly button when I sneeze or burp sometimes after drinking too much water before going to bed. This doesn't happen every time but makes me feel uncomfortable whenever it does occur. How would you suggest we address this issue further? What steps might help lessen these feelings if they continue? Would keeping track of how often this happens make sense? And could those incidents affect our chats about healthy habits while staying active through exercise without increasing trouble? Thank you kindly! -Jean",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 90,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Does the soreness radiate to your back or down your legs?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As I sit here discussing my current struggles with unexpected accidents when no one else is around—especially since retirement changed how often my partner has been home recently—it feels concerning whenever this issue occurs. There isn’t necessarily sharp pains associated with these incidents; rather, there seems to come without warning quite sometimes after mealtime or even just before deep breaths if laughing heartily over some old memories we shared. My mind doesn't race toward worry because perhaps being retired offers less stressors than might have existed previously under previous employment circumstances... though maybe those changes affect us differently based upon individual experiences unique life paths taken throughout adulthood until now reaching our golden years where leislimpact",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 116,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "## FINAL DIAGNOSIS: Urge Incontinence\n\n**Clinical Justification:** The patient presents with complaints of involuntary urinary leakage, particularly in the evening,  accompanied by abdominal discomfort during sneezing, burping, and laughter. These symptoms are consistent with urge incontinence, characterized by a sudden, strong urge to urinate followed by involuntary loss of urine.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 50,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 131,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 90,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 116,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 50,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "Patient used everyday language, but occasionally slipped into informal tone and unclear phrasing, e.g., 'old folk stuff', 'leislimpact'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "Patient's descriptions of symptoms were somewhat inconsistent with the clinical context provided. They mentioned various unrelated issues (sunburn, rashes, swollen feet) alongside potential enuresis symptoms, making it challenging to identify the primary concern."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "Patient generally stayed in character, but occasionally exhibited behaviors more typical of a healthcare provider (e.g., asking for suggestions, offering explanations)."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed promise, but struggled to maintain coherence and consistency in their symptom descriptions. While they demonstrated a conversational tone, they occasionally employed informal language and displayed behaviors more characteristic of a healthcare provider. To improve, focus on clarifying symptoms and maintaining a patient-centric perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but failed to cover essential aspects of enuresis, such as frequency, impact on daily life, and potential underlying causes like urinary tract infections or constipation."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Urge Incontinence is incorrect because it does not align with the provided clinical truth. Enuresis is a broader category that encompasses various types, including nocturnal-only, diurnal-only, and others. The description provided matches the characteristics of primary enuresis rather than a specific subtype like Urge Incontinence."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining a professional tone but fell short in asking comprehensive questions related to the diagnosis of enuresis. The final diagnosis was inaccurate, failing to consider the broader scope of enuresis and its various subtypes."
+    },
+    "llm_judge_total_out_of_20": 10
+}

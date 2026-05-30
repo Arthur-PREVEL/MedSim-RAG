@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I appreciate your help today. I've been having some troubles with my urination lately. It hurts quite a bit when I go to the bathroom, and sometimes I feel the need to go more frequently than usual. There's also some discomfort in the lower part of my tummy. I noticed a little bit of blood in my urine too. Apart from that, I don't have any fever, chills, nausea, or back pain. I hope there's nothing serious going on.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any sudden, severe episodes of pain while urinating?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been having some painful urination recently, Doctor. It's been a sharp, burning sensation, especially during the process. This hasn't happened before, so I thought I should mention it.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any blood in your urine?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have observed some blood in my urine recently. It's been causing me some concern, as it's not something I've ever experienced before. I've also felt a consistent pain while urinating, which has made using the restroom quite uncomfortable. Alongside this, I have been needing to go to the bathroom more frequently than usual. These symptoms started around three days ago.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any burning sensation or discomfort during urination that lasts after you finish voiding?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doctor, I have been experiencing quite a bit of pain while urinating recently, and it continues even after I have finished. This sensation feels rather uncomfortable and unfamiliar, almost like a stinging or pricking sensation. It concerns me, and I would appreciate discussing it further with you.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 48,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is diagnosed with an uncomplicated urinary tract infection (UTI).\n\nClinical Justification: The patient presents with classic symptoms of a UTI, including dysuria (painful urination), frequency, urgency, hematuria (blood in the urine), and post-void dribbling (persistent discomfort after urination). The absence of systemic symptoms such as fever, chills, and nausea suggests that the infection is likely uncomplicated, meaning it does not involve the upper urinary tract or kidneys.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 71,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 48,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 71,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terminology and explaining their symptoms clearly."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently reported symptoms typical of an uncomplicated UTI, including dysuria, urinary frequency, suprapubic pain/discomfort, and hematuria. However, they did not report fever, chills, or back pain, which are less common in uncomplicated UTIs."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient stayed within the role of a concerned patient seeking medical attention, providing detailed descriptions of their symptoms and asking for reassurance. They avoided assuming a medical professional tone or offering diagnoses."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation was highly effective, demonstrating a clear understanding of the clinical context and presenting symptoms characteristic of an uncomplicated UTI. Their responses were natural and easy to follow, staying true to the role of a concerned patient seeking medical attention. With minor adjustments to ensure consistency with the clinical context, this simulation could be nearly indistinguishable from real-life interactions."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects such as urinary frequency, hesitancy, and suprapubic pain or discomfort. Questions also did not explore the patient's history of previous UTIs or prior antibiotic use."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the symptoms presented. However, the doctor failed to consider alternative diagnoses such as pyelonephritis due to the lack of systemic symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "The doctor demonstrated good diagnostic skills, but could improve by asking more comprehensive questions to rule out alternative diagnoses and exploring the patient's medical history. With some refinement, they have the potential to become an excellent clinician."
+    },
+    "llm_judge_total_out_of_20": 17
+}

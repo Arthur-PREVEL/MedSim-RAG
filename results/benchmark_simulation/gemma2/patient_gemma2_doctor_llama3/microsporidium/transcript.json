@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc,  I've been feeling pretty run down lately. My bones ache somethin' fierce, especially my joints. Makes it hard to get around sometimes. And I'm always tired, no matter how much sleep I get.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any weight loss or changes in appetite over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doc, I haven't been feeling quite myself lately. My appetite isn't what it used to be, and I've noticed I've lost a bit of weight.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your bowel movements or difficulty swallowing?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't been feeling quite right lately. My tummy seems to be upset more often, and sometimes it's hard for me to get my food down.  I just don't feel like myself.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight loss or changes in your appetite over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, I haven't been feeling quite myself lately.  My food just doesn't seem as appealing as it used to. And truthfully, I've probably lost a few pounds without trying too hard.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from Microsporidiosis, likely caused by an infection with Enterocytozoon bieneusi, a microsporidian parasite that affects the gastrointestinal system.\n\nClinical Justification: The patient's chronic fatigue, joint pain, weight loss, decreased appetite, and gastrointestinal symptoms such as diarrhea and dyspepsia are consistent with the systemic effects of microsporidian infection. Additionally, the fact that the patient has not responded to typical treatments for common conditions such as arthritis or irritable bowel syndrome suggests that a parasitic cause should be considered, making microsporidiosis a plausible diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 88,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 88,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into colloquial expressions ('doc', 'somethin' fierce')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient describes multiple unrelated symptoms across different turns, making it difficult to identify a clear pattern or underlying condition."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character and avoids acting like a doctor, but shows some awareness of the conversation's purpose ('well, doc')."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language, but struggles with coherence and staying within the role. The patient's symptoms are not clearly connected, and there is some awareness of the conversation's purpose, but not consistently adhered to throughout the interaction."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the key symptoms of microsporidiosis, such as gastrointestinal issues, weight loss, or changes in appetite. They were more general and did not cover the specific clinical manifestations of the condition."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of microsporidiosis was correct, but the justification provided was incomplete. The doctor mentioned some symptoms consistent with microsporidian infection, but failed to discuss the specific characteristics of the parasite, such as its obligate intracellular nature, the presence of a nuclear envelope intracytoplasmic membrane system, and the distinctive features of its spores."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "While the doctor arrived at the correct diagnosis, the questioning process could have been improved to better target the key symptoms of microsporidiosis. Additionally, the justification for the diagnosis could have been more comprehensive, incorporating more details about the parasite's characteristics and life cycle."
+    },
+    "llm_judge_total_out_of_20": 10
+}

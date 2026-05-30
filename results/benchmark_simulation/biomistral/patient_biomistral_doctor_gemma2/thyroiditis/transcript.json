@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER AS JEAN: Hi doctor, I have been feeling very sick lately. My throat has been sore, and I've had a cough that won't seem to go away. It's been bothering me for a few weeks now, and it's only getting worse. I also feel very tired and weak all the time. Sometimes I feel like I'm short of breath too. Can you help me figure out what might be wrong?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have a fever?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I'm sorry but I don't have that symptom. Can you ask about any other symptoms?",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Are you experiencing any fatigue or weakness?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I would say that I feel tired and weak often.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 12,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: Uh, I don't think so. My appetite seems to be the same, but I have been feeling really tired lately.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Subacute thyroiditis (De Quervain's thyroiditis)\n\n**Clinical Justification:** The patient presents with a sore throat, cough, fatigue, and shortness of breath, suggestive of inflammation.  The absence of fever and stable appetite point towards an inflammatory process rather than infection, making subacute thyroiditis a likely diagnosis. \n\n\nLet me know if you'd like to explore other potential diagnoses or discuss this case further!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 12,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally deviated from it (e.g., 'Can you help me figure out what might be wrong?' sounds more like a doctor's question)."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient presented some coherent symptoms such as sore throat, cough, fatigue, and weakness, but lacked others expected in acute thyroiditis (e.g., fever, neck pain) and failed to mention relevant details like recent radiation exposure or medication history."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but sometimes exhibited behaviors not typical of a patient (e.g., asking questions like a doctor in Turn 1)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed potential, but the responses were somewhat inconsistent and lacked depth. The patient demonstrated some understanding of their symptoms, but failed to provide crucial information and sometimes acted like a doctor instead of a patient. With further refinement, this simulation could better reflect real-world interactions between doctors and patients."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked two relevant questions about fever and fatigue/weakness, which aligns with the clinical truth. However, they missed asking about neck pain, thyroid tenderness, or recent radiation exposure, which are crucial for differentiating between types of thyroiditis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of subacute thyroiditis is not entirely accurate based on the provided information. The patient's presentation with 'sore throat, cough, fatigue, and shortness of breath' does not strongly suggest subacute thyroiditis, especially considering the lack of fever and stable appetite. A more plausible diagnosis would be acute infectious thyroiditis, given the presence of respiratory symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in terms of professionalism, but fell short in terms of questioning and diagnostic accuracy. To improve, the doctor should ask more targeted and comprehensive questions that cover all aspects of thyroiditis, such as neck pain, thyroid tenderness, and recent radiation exposure. Additionally, the final diagnosis should be more accurately aligned with the patient's symptoms and clinical truth."
+    },
+    "llm_judge_total_out_of_20": 13
+}

@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, thanks for seeing me on such short notice! Lately, my hands have been feeling quite sore after I use them too much, especially when gripping things tightly during garden work. My right big toe hurts whenever it gets cold outside—it feels odd and unsteady sometimes. And every morning, getting out of bed has become tough because moving around all seems so slow; even walking up the stairs isn't easy without taking breaks these days. It suits most part but doesn't feel normal anymore. Is this something serious we should look into further? Thank you again for helping us figure this out.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 103,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any stiffness or swelling in your joints?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have been feeling some discomfort when using my hands for things like opening jars or typing on my keyboard. My knuckles seem puffy sometimes, especially after gardening work last weekend – it was really noticeable then. Also, every morning seems tough to get going; waking up feels quite slow compared to how quick everything used to feel right away. These aren't constant pains but mostly happen during certain tasks throughout the day. And honestly, reaching down into boxes has become harder lately - they just don't want to stretch out fully anymore without aching.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 95,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do your fingers ever feel stiff or lock up?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, sometimes when I wake up my hands don't want to move much right off the bat—it feels heavy trying to get them going. And if I try holding things for too long, it becomes hard because they just won't give me their full strength all day afterward; seems this happens every now again but not always. Plus have noticed lately some parts near where you press on knuckles actually look sorta puffy – must say makes gripping stuff less comfortable than before! Also odd thing - once during dinner while reaching across table felt weird almost gave away under pressure even though wasn't doing anything strenuous then suddenly snap back returned normalcy quickly afterwards hence confuses why would body react thus",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do these symptoms occur in your feet as well?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been feeling some discomfort around my big toe area occasionally when walking for too long. It feels sore after carrying things upstairs sometimes. And yes, it seems harder to move without hurting myself lately. My little finger has this small hard spot developing on its side which catches me off guard during button mashing sessions - makes typing quite challenging! When we talk about \"heel\" height reduction you mean changes towards flatfoot condition instead please clarify if correct. This might explain why getting comfortable shoes becomes tough now; they just don't fit right anymore. Everyday tasks feel increasingly strenuous – opening jars isn't fun no longer either because movements aren't smooth",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "## FINAL DIAGNOSIS: Osteoarthritis\n\n**Clinical Justification:** The patient presents with pain, stiffness, swelling, and reduced range of motion in multiple weight-bearing joints (hands, big toe, knees), consistent with osteoarthritis.  The symptoms worsen with activity and improve with rest, further supporting this diagnosis. \n\n\nLet me know if you'd like me to elaborate on specific aspects of the diagnosis or explore other potential conditions.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 103,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 95,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions ('it feels odd', 'they just don't want to stretch out fully')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes various symptoms, including joint pain, stiffness, and locomotor restriction, but the progression and severity of these symptoms are inconsistent across turns. Some symptoms appear to worsen over time, while others remain relatively stable."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character as someone experiencing osteoarthritis symptoms, but occasionally exhibits behaviors that could be seen as overly concerned or seeking reassurance ('Is this something serious we should look into further?', 'clarify if correct')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of osteoarthritis symptoms, but could benefit from more consistency in symptom progression and severity. Additionally, the patient's role adherence could be improved by staying within character and avoiding behaviors that come across as overly anxious or seeking reassurance."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to inquire about symptom duration, severity, and impact on daily life, which could have helped narrow down the differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the provided symptoms, but lacked consideration of other possible causes of joint pain and stiffness, such as rheumatoid arthritis or inflammatory conditions."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good clinical reasoning skills, but could benefit from asking more comprehensive and targeted questions to ensure a thorough understanding of the patient's condition. Additionally, they should consider alternative diagnoses when making their final assessment."
+    },
+    "llm_judge_total_out_of_20": 14
+}

@@ -1,0 +1,229 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning! Lately, my stomach doesn’t seem right; it feels full even when I haven't eaten much. My hands get really chilly all the time. And then there's this feeling of being tired no matter how long I sleep. Also... sometimes after meals, instead of throwing up—which isn't common these days so we shouldn't worry about that just yet but wanted to check in on those feelings if any come up. Oh, and swimming has become almost an obsession recently because moving around makes me feel sluggish otherwise. Doesn't help though since everyone seems hungrier by the day despite trying different brands during grocery runs nowadays – especially",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 108,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight loss over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have lost quite a bit of weight recently without even trying. My friends say it looks different when they see me now compared from before. It worries them because my clothes don’t fit anymore! Sometimes after eating too much quickly, which isn’t often though, I feel really uncomfortable in my stomach; but other times, especially if I haven't had enough today, just lying there waiting for sleep seems easier than facing another plate. The amount of clothing that fits has decreased significantly – perhaps by more than half last year alone... And yes, sometimes during lunch breaks… well, not exactly at work—more privately maybe around this house here — occasionally makes an appearance again.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 116,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your appetite or hunger levels over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have noticed that my desire to eat has varied quite significantly recently. In some weeks, it feels almost nonexistent; other times though, there is an urge which doesn’t last long once I start eating something nutritional. It can be rather confusing when these feelings alternate so much from week to week.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 53,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant changes in your weight or body shape over this period?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I feel quite weak these days...and my clothes seem tighter around my hips and thighs lately…It’s been rather unsettling how quick those changes have come about. Sometimes when eating feels too much pressure on me; it makes taking care of myself really hard—it becomes more important not just nourishing but also controlling every single bite and sometimes making sure things leave shortly afterward. This has become something that fills most of my day nowad0m – keeping track so everything aligns perfectly before moving forward, worrying if each step is being followed exactly right because one wrong move can set back all progress made thus far. There must be other people dealing with similar struggles",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 116,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Anorexia Nervosa\n\nClinical Justification:\n\nThe patient presents with a complex array of symptoms including significant weight loss, amenorrhea (implied by \"my clothes don't fit anymore\"), fear of gaining weight, restrictive eating patterns (\"sometimes after eating too much quickly, I feel really uncomfortable in my stomach\"), and excessive exercise behavior (\"swimming has become almost an obsession\"). Additionally, the patient reports fluctuations in appetite and hunger levels, indicating a distorted perception of hunger cues and a preoccupation with food intake. These symptoms are characteristic of Anorexia Nervosa, a serious eating disorder characterized by a persistent restriction of energy intake leading to significantly low body weight, intense fear of gaining weight, and a disturbance in self-perception of weight or shape.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 119,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 108,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 116,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 53,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 116,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 119,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone (e.g., 'Doctor') and uses phrases that could be considered slightly medical ('nutritional')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes several symptoms consistent with the clinical context, including amenorrhea (not explicitly mentioned, but implied through discussion of weight loss), cold intolerance, fatigue, and restrictive eating behaviors. However, the mention of 'constipation' is absent, and the description of 'extremity edema' is vague."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some role adherence, but frequently displays insight into their condition and uses phrases that suggest a level of self-awareness and understanding of their illness, which is less typical of a naive patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some strengths in describing symptoms and exhibiting a relatable personality, but falls short in maintaining a consistent, naive patient persona and avoiding medical terminology. With further refinement, the patient's responses could better align with the expected characteristics of someone experiencing anorexia nervosa."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore other key symptoms such as purging methods, extremity edema, and fatigue. Questions also did not directly address the restrictive behaviors mentioned in the clinical truth."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was correct, but the justification provided could be more comprehensive. The doctor's reasoning was mostly on track, but some symptoms were implied rather than explicitly stated."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed relatively professional throughout the interview, but there were moments where they seemed to momentarily forget their role and started describing themselves instead of asking questions."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy but struggled with questioning technique and maintaining a professional demeanor. With further practice, they can improve their ability to ask targeted and clinically relevant questions while staying in character."
+    },
+    "llm_judge_total_out_of_20": 12
+}

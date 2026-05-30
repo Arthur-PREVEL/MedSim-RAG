@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I appreciate your care. Over these past few weeks, I find myself feeling more tired than usual. It's like I have no energy, even for small tasks. Plus, I've been colder than I used to be, even when it's not particularly chilly outside.\n\nI've also noticed that my body has started swelling in my legs and feet. It's uncomfortable, and I've had to buy larger clothes for my arms too—my sleeves have become tight.\n\nAnother thing is that I rarely feel hungry anymore, even though I force myself to eat some meals each day. Sometimes afterwards, I might feel sick or bloated. And on certain days, I have",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 109,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any unintentional weight loss?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've noticed that my clothes have been feeling loose lately, and I haven't intentionally tried to lose weight. It's concerning because I feel like I'm losing more than just pounds, you know? I worry about my health, Doctor.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your appetite or eating habits?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh Doctor, I've been noticing some changes lately in my eating habits. I find myself eating less than before, and sometimes even skipping meals. It's hard to explain, but it feels like I don't need as much food as I used to. I also tend to get preoccupied with counting calories and making sure my portions are small. I know this isn't good, but I just can't help it. I've been feeling tired and cold a lot, and my body seems to be retaining more water than usual. I hope we can talk about this more so I can understand why these changes are happening.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent significant stress or life changes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been feeling quite overwhelmed lately. There has been a lot going on in my personal life, which has been causing me a great deal of distress. I guess that could be considered as \"significant stress\" or a \"life change\". It's hard to keep up sometimes. My energy levels are really low too, more so than usual.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Anorexia Nervosa\n\nThis patient presents with classic signs of anorexia nervosa, including severe weight loss despite lack of intentional dieting, distorted body image (feeling swollen), intense fear of gaining weight, preoccupation with calorie counting, and amenorrhea (implied by fatigue and coldness).  The patient's reported emotional distress and recent life changes may be contributing factors.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 56,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 109,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 56,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions (e.g., 'it feels like I don't need as much food as I used to')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Some symptoms are consistently reported across turns (fatigue, cold intolerance), while others appear sporadically (constipation, extremity edema). The connection between restrictive eating behaviors and physical symptoms is not explicitly stated until Turn 3."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays within their role, but occasionally displays insight into their condition (e.g., 'I know this isn't good') and shows awareness of potential underlying causes ('significant stress' or 'life change')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of the clinical context, but could benefit from more explicit connections between restrictive behaviors and physical symptoms. Additionally, they show some insight into their condition, which is a positive aspect of their role adherence."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but Question 3 was not directly related to the key symptoms of anorexia nervosa. A more relevant question would have been about self-esteem, body image concerns, or purging behaviors."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of Anorexia Nervosa was mostly accurate, considering the patient's weight loss, amenorrhea, and possible purging behaviors. However, the mention of 'distorted body image' seems inaccurate since the patient described feeling 'swollen', which contradicts typical anorexic perceptions."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "The simulated doctor demonstrated good questioning skills, but could improve by asking more targeted and symptom-specific questions. The diagnosis was mostly accurate, but required some minor adjustments. Overall, the doctor showed professionalism during the interaction."
+    },
+    "llm_judge_total_out_of_20": 14
+}

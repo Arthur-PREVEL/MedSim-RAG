@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good day! Lately it’s been hurting right here [points to upper abdomen], kind of sharp sometimes when eating. Also feeling tired all over for no reason lately — thought maybe just old age catching up with me... Oh, but there is this odd queasiness that hits after meals too; feels unsettled more than anything else really. It doesn't always happen at night either – had rough spots while trying some food earlier tonight where my stomach felt quite upset afterwards... Not sure if these things together mean something bad. Can we figure out why exactly they might be happening?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 99,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any blood in your vomit or stool?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven’t seen any red color when sick from throwing up or going to bathroom; just regular food parts, nothing bloody at all. It hurts quite bad sometimes right here under my chest bone. Feels more tired these days too after eating anything not small bites for me. Makes it tough wanting dinner later than usual because feeling uncomfortable soon comes back if eat much. My belly does make loud noises that don’t seem good either. And yeah, things ain’t moving through smooth anymore – takes longer time before getting done using nature call trip every now an then - kind strange thing happening there inside my body making sure everything works well always seems off lately though",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any unexplained weight loss?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been losing more pounds recently without changing my eating habits much at all. It’s quite unusual for me since everything else has remained fairly consistent except this new discomfort after digestion. My stomach doesn't feel right either; it often feels bloated with heaviness that lingers longer than normal post-meal times make others queasy because mine turns into actual nausea sometimes. During dinner last Friday night we had steak but instead found ourselves getting up out of our chair within minutes due to such pains so decided against continuing further until they lessened somewhat – if ever possible again though given current state under examination today! No apparent improvement seems evident thus far even despite being informed",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 119,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any blood in your stool or vomit?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I haven’t seen red stuff when going to potty or coming out from my mouth recently. But other things here... My belly feels sore most days after eating sometimes; it doesn't feel right. It hurts more than usual nowadays but no clear bad smells either. And yes about not feeling food go down easy even with less chewing – always leaves me wanting for something quicker before chatting away again at this table we sit around all day doing numbers. Oh! Plus those little pains up top too much time sitting still - kind strangling if you ask me without moving proper length back into home cozy spot every evening rests there alone together quite often once lunch",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Pernicious Anemia\n\nClinical Justification: The patient presents with classic symptoms of pernicious anemia, including fatigue, weight loss, abdominal pain, nausea, and altered bowel habits.  The absence of hydrochloric acid (achlorhydria) prevents the absorption of vitamin B12, leading to the characteristic hematological abnormalities and neurological symptoms associated with this condition.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 51,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 99,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 119,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 51,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into colloquial expressions (e.g., 'kind of sharp sometimes', 'feels unsettled more than anything else')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally coherent with achlorhydria, but some descriptions were vague or unclear (e.g., 'odd queasiness', 'makes it tough wanting dinner later than usual')."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character as a layperson, but occasionally exhibited behaviors inconsistent with a non-medical background (e.g., using phrases like 'my belly does make loud noises that don’t seem good either', which implies some knowledge of gastrointestinal issues)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed potential, but could benefit from more precise symptom descriptions and adherence to a non-expert perspective. The patient's language was mostly natural, but some expressions seemed forced or overly simplistic. With refinement, this simulation could better represent a real-life patient's experience."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Questions were not targeted towards the key symptoms of achlorhydria. Questions about blood in vomit or stool (Q1 & Q3) may be relevant but did not cover other common symptoms such as epigastric pain, heartburn, or early satiety. Question about unexplained weight loss (Q2) was somewhat relevant but could have been more specific to achlorhydria's impact on digestion."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of pernicious anemia does not align with the provided clinical truth of achlorhydria. While achlorhydria can lead to malabsorption issues, it does not directly cause pernicious anemia. A more accurate diagnosis would consider achlorhydria's effects on digestion and potential secondary conditions."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional during the interview, asking questions in a neutral tone. However, the doctor failed to maintain a clear distinction between themselves and the patient, occasionally slipping into a more conversational tone when discussing the case."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor demonstrated some understanding of clinical questioning but struggled to connect the dots between symptoms and diagnosis. They showed promise in maintaining professionalism but faltered in staying objective. To improve, they should focus on asking targeted questions that address the key symptoms of achlorhydria and strive for a more accurate diagnosis based on the clinical truth."
+    },
+    "llm_judge_total_out_of_20": 10
+}

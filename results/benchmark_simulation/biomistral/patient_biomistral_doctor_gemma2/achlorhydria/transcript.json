@@ -1,0 +1,225 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well hello there, I'm Jean. I am feeling some discomfort in my stomach. It feels like a dull ache that sometimes gets sharper. I also feel nauseous sometimes and it's hard for me to eat big meals. The food seems to come out of my mouth right away when I swallow it. Sometimes I have diarrhea too. I've been losing weight recently because of this problem. Also, I often feel bloated and gassy. This all started not long ago and it's really bothering me. Could you help me with this?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 90,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any blood in your vomit or stool?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have some discomfort in my stomach that seems to be related to food. It feels like something is stuck inside me and it makes me nauseous and bloated. Sometimes I feel like I'm choking on my food because it gets stuck in my throat. It's also harder for me to move and I feel weak sometimes. I don't think I've been getting enough vitamins from my food either.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 69,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When did this discomfort first begin?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, it started around three years ago. I was sitting down for lunch with my family when suddenly I felt something strange in my belly. It started off small but then gradually got worse. I could feel this uncomfortable burning sensation spreading all over my stomach area. At first, I thought maybe it was because of the spicy food I ate that day, but even after a few days, it didn't go away. So, I decided to visit the doctor.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 80,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Does this burning sensation come and go, or is it constant?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I was feeling this burning sensation in my stomach, it's been there for a while now, but sometimes it gets worse. It doesn't hurt that much, but it's annoying and uncomfortable. Sometimes it feels like I have food stuck in my throat, and it causes me to burp often, especially after eating. It got worse recently, so I went to see a doctor. They gave me some tests and found out that there was something wrong with my stomach lining, so now they want to check me again.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 88,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "## FINAL DIAGNOSIS: Pernicious Anemia\n\n**Clinical Justification:**  The patient presents with classic symptoms of pernicious anemia, including chronic indigestion, nausea, weight loss, fatigue, and difficulty absorbing nutrients (vitamin B12 deficiency). These symptoms are likely caused by achlorhydria, which prevents the absorption of vitamin B12 due to insufficient stomach acid production. \n\n\nLet me know if you'd like me to elaborate on any aspect of the diagnosis or discuss potential treatment options.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 70,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 90,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 69,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 80,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 88,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 70,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terms except in Turn 4 where 'stomach lining' was mentioned, but still understandable in context."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally consistent with achlorhydria, but some descriptions varied across turns (e.g., epigastric pain vs. burning sensation)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient mostly stayed in character as a concerned individual seeking help, but occasionally slipped into describing symptoms in a more analytical manner, such as mentioning 'something is stuck inside me'."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "Jean's simulation showed potential, but could benefit from more consistency in symptom description and staying in character. She effectively conveyed her concerns and experiences, but sometimes strayed from a typical patient's perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions [1] and [2] were targeted and clinically relevant, but question [3] was not directly related to achlorhydria symptoms. Question [1] could be seen as somewhat relevant, but its connection to achlorhydria is indirect. Question [2] is somewhat relevant, but does not help narrow down the diagnosis. Question [3] seems unrelated to achlorhydria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Pernicious Anemia is incorrect because it doesn't align with the provided clinical truth of Achlorhydria. While the symptoms mentioned may overlap with achlorhydria, the direct cause-and-effect relationship between achlorhydria and pernicious anemia is not established."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in staying professional, but fell short in asking targeted and clinically relevant questions that would lead to an accurate diagnosis. A more thorough understanding of achlorhydria's symptoms and causes is necessary to make a correct diagnosis."
+    },
+    "llm_judge_total_out_of_20": 12
+}

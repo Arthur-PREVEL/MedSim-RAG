@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I've been having some trouble with bedwetting during my sleep for quite a while now. This makes me feel quite embarrassed and distressed, as it affects my sleep and causes discomfort in my daily life. I haven't noticed this issue during daytime hours. Also, I keep track of when it happens, and it seems to occur regularly, more than twice a week for over three months. It doesn't seem to have any impact on my work or social interactions, but it does cause a lot of personal anxiety. I don't think it's related to any medical conditions I might have, as I don't experience any unusual symptoms besides this issue. Could we discuss potential causes and treatments",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting"
+                ],
+                "word_count": 119,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have there been changes in your fluid intake before going to bed?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I noticed that I've been drinking more water late in the evening recently. Sometimes I find myself thirsty and drink more than usual without realizing how much it might affect my sleep later on.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any difficulty falling asleep or staying asleep since increasing your nighttime fluid intake?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doctor, I have been having trouble sleeping lately. Ever since I started drinking more fluids before bedtime, I find myself getting up multiple times during the night to use the bathroom. It's been quite disruptive to my sleep patterns.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your urine color or experienced pain when using the restroom?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I've been paying attention to my urine recently, and yes, I've observed some changes in its color. It seems to have a darker hue than usual, and occasionally I feel a mild discomfort or burning sensation while going to the bathroom. I thought it might be worth mentioning to you since I haven't experienced these symptoms before.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Nocturnal Polyuria leading to secondary enuresis (bedwetting). The patient has increased their nocturnal fluid consumption which is causing frequent awakenings due to bladder fullness resulting in polyuria at night; combined with occasional dysuria indicated by alterations in urine color and discomfort suggests an underlying condition such as UTI contributing to his primary complaint of enuresis despite being asymptomatic otherwise. Further investigation into possible lower urinary tract issues should be considered given the new development of associated urological symptoms alongside reported increase in nocturnal voiding frequency.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting"
+                ],
+                "word_count": 119,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terminology and explaining their experiences in a clear manner."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's descriptions of their symptoms were generally coherent with the clinical context provided, including the frequency, duration, and impact of their bedwetting. However, they failed to mention the importance of ruling out underlying medical conditions, such as urinary tract infections or diabetes, until prompted by the doctor's question in Turn 4."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient stayed within the role of a person experiencing enuresis, they occasionally exhibited behaviors that could be seen as somewhat 'doctor-like,' such as tracking their urine output and observing changes in its color. Additionally, their response in Turn 4 seemed to shift towards a more analytical approach, discussing possible connections between their symptoms and potential underlying causes."
+        },
+        "total_score_out_of_10": 9,
+        "overall_feedback": "This patient simulation demonstrated strong natural language skills, with the patient expressing themselves clearly and understandably. Their symptom descriptions were mostly coherent with the clinical context, although there were some minor lapses in addressing potential underlying medical conditions. Role adherence was good, but the patient sometimes exhibited behaviors that bordered on being overly analytical or 'doctor-like.' Overall, this simulation showed promise, but could benefit from further refinement to maintain consistency in addressing all aspects of the clinical scenario."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but failed to cover essential aspects of enuresis, such as toileting history, family history of enuresis, and specific questions to rule out differential diagnoses like urinary tract infections, constipation, seizures, diabetes, or sleep apnea."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of 'Nocturnal Polyuria leading to secondary enuresis' is incorrect because it does not align with the clinical truth of enuresis. Additionally, the presence of 'occasional dysuria indicated by alterations in urine color and discomfort' suggests an underlying condition like UTI, but the conclusion jumps to a broad assumption without sufficient evidence. Furthermore, the mention of 'lower urinary tract issues' requires further investigation, indicating uncertainty in the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining professionalism but fell short in asking targeted, clinically relevant questions and producing a sound final diagnosis. The doctor failed to consider essential aspects of enuresis, leading to an inaccurate diagnosis. To improve, the doctor should focus on comprehensive questioning and thorough analysis of the patient's symptoms and potential differential diagnoses."
+    },
+    "llm_judge_total_out_of_20": 14
+}

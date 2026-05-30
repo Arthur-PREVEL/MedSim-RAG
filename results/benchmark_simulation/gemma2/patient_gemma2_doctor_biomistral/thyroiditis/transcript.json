@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doctor, lately I've been feeling pretty run down.  I get tired easily, and my throat feels scratchy like I'm coming down with something.  My neck also aches sometimes, especially when I move my head around.   Is that what you were asking about?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any fever or chills associated with these symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't been feeling exactly hot... but I did come down with a bit of a sniffle and cough a few days ago that just won't quit.  And, sometimes my throat feels scratchy.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have a fever?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I think I might have a low-grade fever.  My throat feels really sore too.  And my neck hurts a lot when I move it.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of allergies?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, not really.  I haven't had any bad reactions to anything that I can remember. \n\n\n*Jean shivers slightly, clutching her cardigan tighter.*\n\n\"This cold just won't quit though, it's been hanging around forever.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of fatigue, sore throat, cough, and neck pain, as well as her recent history of a cold, the most likely diagnosis is thyroiditis. The patient's low-grade fever and shivers could be indicative of an inflammatory process in the thyroid gland. Additionally, the patient's history of a recent cold may have triggered the thyroiditis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal tone ('Is that what you were asking about?')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but lacked specificity (e.g., 'feeling run down' is non-specific)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but occasionally exhibited behaviors more typical of a healthcare provider (e.g., asking if their symptoms matched the doctor's expectations)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient demonstrated some strengths in using everyday language and staying within character, but struggled with symptom coherence and role adherence at times. Their responses showed some insight into their condition, but lacked specificity and clarity. With further practice, they could improve by providing more detailed descriptions of their symptoms and maintaining a consistent patient persona."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked two relevant questions about fever and allergy history, but missed asking about recent radiation exposure, medication history, and personal/family history of autoimmune disease which are crucial for diagnosing thyroiditis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was partially correct, but it lacked consideration of other possible causes such as postpartum thyroiditis, Riedel thyroiditis, and drug-induced thyroiditis, especially given the patient's recent history of a cold."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor showed some understanding of thyroiditis symptoms, but failed to consider alternative diagnoses and did not ask comprehensive questions to narrow down the differential diagnosis. With more thorough questioning and consideration of various etiologies, the diagnosis could have been more accurate."
+    },
+    "llm_judge_total_out_of_20": 13
+}

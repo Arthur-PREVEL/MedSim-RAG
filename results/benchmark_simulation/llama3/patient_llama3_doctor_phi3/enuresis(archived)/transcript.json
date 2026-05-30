@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, I'm so glad you're here. To be honest, I've been having some trouble sleeping through the night. I'll wake up several times to use the bathroom, and sometimes I even have accidents in my bed. It's really frustrating because I feel like I'm back in diapers when I was little. My husband says I'm being too hard on myself, but it's just embarrassing.\n\nDuring the day, I don't usually have problems, but sometimes if I laugh too hard or cough, I might leak a little bit. I've tried to ignore it and hope it goes away, but it's still happening. My grandson teases me about it, saying I'm not as strong as his grandma used to be. That hurts",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your fluid intake before these episodes occur?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Oh dear, I don't know if it's just my imagination, but I do think I've been drinking more water than usual lately. You see, I've been trying to stay hydrated since I had that hip replacement surgery last year, and my doctor told me to drink plenty of fluids to help with mobility. But maybe it's too much? I'm not sure. Sometimes I'll have a glass of water after dinner and within an hour, I'll feel the need to go. And sometimes, if I wait too long to use the bathroom, I'll end up having an accident. I'm not proud of it, of course. It's quite embarrassing, especially when I'm sleeping over at my daughter's house. She has those lovely",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have there been any changes in your urine output or color recently along with this increased thirst and frequency of urination?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 21,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! Lately, I've had to get up multiple times at night to use the bathroom. And when I do, it's always just a little trickle - I'm talking drops, really. Not like my usual full glass. And during the day, I find myself running to the bathroom every hour or so. My poor backside is sore from sitting down so many times.\n\nAs for the color, well, I'd say it's been a normal yellow. But I have noticed it's a bit cloudy sometimes. Could that mean something? I'm not sure. I drink plenty of water throughout the day, but it seems like I'm still peeing a lot more than usual.\n\nI did talk to my granddaughter,",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any recent changes in your fluid intake or medications?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness, I think I've been drinking just as much water as always. Maybe a bit more since my arthritis has been acting up and I'm trying to keep myself hydrated. But I don't know if that's relevant to this whole business. As for meds, I've been taking my usual blood pressure pills and some supplements, but nothing new recently. Although, I did start taking a new vitamin D pill a few weeks ago. My granddaughter recommended it, said it would help with my bones. Does that have anything to do with it?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 92,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Nocturnal Polyuria (Enuresis due to nocturnal polyuria). The patient exhibits classic signs consistent with enuresis secondary to excessive production of dilute urine leading to frequent voiding, particularly noted by her complaints of numerous awakenings at night requiring micturition despite low volume per episode. This condition may also contribute to feelings of weakness upon laughing or coughing which can exacerbate bladder control issues; however, given the absence of other systemic symptoms such as fever or flank pain suggesting UTI or kidney pathology respectively, primary causes related to age should firstly be considered. Further investigation into renal function tests could rule out underlying nephropathies contributing to altered diuretic response postoperatively.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 110,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 92,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 21,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 110,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into colloquial expressions ('goodness gracious', 'oh dear') and mentions her age indirectly ('back in diapers')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes nocturnal enuresis, but also mentions diurnal incontinence, which is inconsistent with the clinical context. Additionally, she attributes her symptoms to various factors (drinking water, laughing, coughing), without providing clear evidence of their relevance."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient exhibits some characteristics of a patient seeking medical attention, but also displays behaviors more typical of a layperson discussing personal issues (e.g., mentioning her husband's opinion, her granddaughter's recommendations)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and expressing concerns about her symptoms. However, inconsistencies in symptom description and role adherence detract from the overall realism. The patient could benefit from further coaching to maintain a consistent narrative voice and adhere more closely to the clinical context."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore key aspects of enuresis, such as toileting habits, sleep patterns, and family history of similar conditions."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of Nocturnal Polyuria (Enuresis due to nocturnal polyuria) does not align with the provided clinical truth, which indicates that enuresis is characterized by repeated voiding of urine into bed or clothes, regardless of the time of day. The patient's symptoms do not suggest a clear connection between nocturnal polyuria and enuresis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated some understanding of the patient's symptoms, their questioning strategy fell short of exploring critical aspects of enuresis, and their final diagnosis deviated from the established clinical truth. With further refinement in questioning and diagnostic accuracy, this doctor has potential for improvement."
+    },
+    "llm_judge_total_out_of_20": 13
+}

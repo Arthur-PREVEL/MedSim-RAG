@@ -1,0 +1,229 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, honestly, I feel really weak all the time. It's hard to get out of bed in the morning, and even when I manage to go outside, everything just feels so heavy. My clothes seem too tight around me, and even walking is exhausting. I feel like my legs are made of lead. Oh, and one more thing. I've been having these horrible nightmares lately where it seems like I can't escape this dark place. Even though I wake up from them, they just stick with me throughout the whole day.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 91,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any recent changes or stressors that might be contributing to your feelings of fatigue?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I have been feeling very tired lately. It seems like no matter how much sleep I get, I still feel exhausted. And yes, there have definitely been some stressors recently. My granddaughter just started kindergarten, and my son has been really busy at work. But I'm trying not to let it get me down too much.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 57,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your appetite or weight that might be contributing to your fatigue?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I would answer, \"Yes, I have been feeling really tired lately. And I just can't seem to eat enough food to feel satisfied. Sometimes I feel like my stomach is too small to hold anything. It's like I'm always hungry but nothing ever satisfies me.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 47,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have there been any changes in your weight or appetite that coincide with these feelings of persistent hunger and dissatisfaction?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't weighed myself lately but my clothes seem looser than usual. And yes, I feel very hungry all the time. No matter how much I eat, it never seems to satisfy me. Sometimes I think about purging to get rid of some calories but then again, I know better than that. This constant hunger is really getting annoying.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 60,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: The patient likely suffers from an eating disorder (Anorexia Nervosa). Clinically, her complaints regarding chronic fatigue despite adequate rest, excessive preoccupation with body image leading to perceived insufficient intake for satisfaction, along with distorted perception causing loose clothing fit suggest malnutrition due to restrictive eating patterns characteristic of Anorexia Nervosa. Her mention of intense fear related to consuming certain types of food further supports this diagnosis as individuals with Anorexia often exhibit extreme dietary control behaviors driven by anxiety over gaining weight.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 91,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 57,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 47,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 60,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language in turns 1 and 2, but introduced medical jargon ('amenorrhea', 'cold intolerance') in turn 4, and somewhat formal tone in turn 3 which doesn't match the informal tone of the other turns."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally consistent with the clinical context, but the mention of nightmares (turn 1) and purging thoughts (turn 4) could be considered less typical for anorexia nervosa patients."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient did not consistently adhere to their role; in turn 3, they explicitly stated their name and seemed to be answering as a doctor rather than staying in character."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed potential but had some inconsistencies in natural language usage, symptom coherence, and role adherence. The patient's responses were mostly coherent with the clinical context, but the introduction of medical jargon and explicit self-diagnosis detracted from the overall realism."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but failed to directly address key symptoms of anorexia nervosa, such as amenorrhea, cold intolerance, and purging methods."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, but the reasoning provided lacked specificity and clarity regarding the diagnostic criteria for anorexia nervosa."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding unprofessional behavior."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in maintaining professionalism and making a generally accurate diagnosis. However, they could improve by asking more targeted and clinically relevant questions to better inform their diagnosis and providing clearer explanations for their conclusions."
+    },
+    "llm_judge_total_out_of_20": 12
+}

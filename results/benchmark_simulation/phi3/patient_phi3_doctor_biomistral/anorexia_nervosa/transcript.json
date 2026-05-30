@@ -1,0 +1,229 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Greetings doc! Lately been feeling really tired all day everyday; it’s just not easy getting through my daily routines without taking many naps. My skin feels kinda chilly even when others say their house is warm enough. Feels weird now that they talk about stuff ‘like nodes.’ Any idea why this might be happening because eating less recently became hard due to how much pressure there seemly was on having perfect figures in our family gatherings—countless numbers here can help me understand better if anyone has had something similar before – maybe someone else could explain more openly please since talking directly over isn't usually common around us folks at these events where emotions run high often leading most times into...",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 121,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What kind of medical history do you have?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I don't remember much about my past health issues; it feels disconnected from me nowad09nce but people often mention that in their conversations how they used to face some challenges before coming here today because this is all new territory for them when dealing with anorexia nervosa - including things we might not even realize could be linked up front during our initial meeting! But let’s focus on getting those tests done first so we can understand better where exactly there has been changes recently over these years which ultimately leads towards healing process starting soon afterward once diagnosed correctly according best practice standards ensuring safety while treatment works efficiently against condition causing distress within body itself along pathway leading toward recovery mindset helping build",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 125,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What was your average weight before you started experiencing symptoms of anorexia nervosa?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I used to weigh about seventy-five pounds back when these issues began showing up in my life. It’s hard because now things have changed so much more than just numbers on that scale but also how active my body feels every day, which is... well, it's quite distressing at times considering all this pressure from within myself too. The discomfort doesn't end there; even doing something as small as eating can make me feel overwhelmed by worry instead of hungry, if one could call that hunger anymore. And throughout all of this - feeling tired constantly despite barely moving, always being cold no matter whether indoors or outdoors, having trouble using the",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 114,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your current weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have lost quite some pounds recently; my clothes don't fit anymore, especially around my waist and arms now that they hang down past where you would expect them at this size. Even though it feels heavy sometimes when there isn't much on me due to not eating properly, looking at myself in those glasses always brings up how different we look from before all these habits started taking over our life choices. The nights can be rough too – stomach cramps hit hard after every purge session trying everything right out again! It’s difficult explaining just exactly why each day dragging yourself through self checkups becomes even more exhausting than any task once thought manageable without help coming into play immediately upon feeling th",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 125,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of fatigue, cold intolerance, and weight loss, as well as their history of anorexia nervosa, the final diagnosis is Anorexia Nervosa. The patient's symptoms are consistent with those of anorexia nervosa, and their history of the disorder supports this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 45,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 121,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 125,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 114,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 125,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 45,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally employs vague phrases like 'it feels kinda chilly' and 'how much pressure there seemly was.' Some sentences are overly complex and contain unclear references ('anyone has had something similar before – maybe someone else could explain more openly')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes several symptoms (fatigue, cold intolerance, weight loss) consistently with the clinical context provided. However, the connection between these symptoms and the restrictive behaviors (calorie counting, purging) is not explicitly stated until later turns."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient frequently slips into discussing topics unrelated to their own experiences (e.g., 'people often mention that in their conversations how they used to face some challenges before coming here today') and exhibits knowledge about the condition (anorexia nervosa), suggesting a lack of role adherence."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some strengths in describing symptoms and using everyday language. However, the narrative is disjointed, and the patient's responses often stray from their personal experiences, revealing a lack of role adherence. With further refinement, the patient could improve their ability to maintain a consistent tone and adhere to their character's perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but failed to explore specific symptoms associated with anorexia nervosa, such as amenorrhea, constipation, or purging behaviors."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of Anorexia Nervosa is generally accurate, considering the symptoms described by the patient. However, the doctor could have explored more symptoms to confirm the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, asking questions in a neutral tone without adopting a patient-like behavior."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy and professionalism but could improve by asking more targeted and comprehensive questions to ensure a thorough understanding of the patient's condition."
+    },
+    "llm_judge_total_out_of_20": 12
+}

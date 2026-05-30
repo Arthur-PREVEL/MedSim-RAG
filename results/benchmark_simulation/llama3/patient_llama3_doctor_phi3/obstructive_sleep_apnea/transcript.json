@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good day doc. To be honest, I've been feeling pretty exhausted lately. Even after getting a full night's rest, I still wake up feeling drained. It's not just that I'm a little tired, I mean I'm really sleeping well into the afternoon sometimes. My grandkids say I snore so loudly they can hear me from downstairs. And sometimes I'll wake up in the middle of the night feeling like I'm having trouble breathing. It's quite frightening, to be frank. I'm also experiencing these dreadful headaches in the mornings, which makes me wonder if there's something wrong with my circulation. And don't even get me started on how many times I have to get up at night to use the bathroom!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes or discomfort when lying flat for extended periods?\" \n\nThis single question could provide insight into whether obstructive sleep apnea is contributing to your symptoms by causing airway obstruction and poor oxygen saturation during sleep, leading to exhaustion upon awakening despite adequate duration of sleep. The nocturnal respiratory distress might suggest episodes where your upper airway collapses (obstructive events), while frequent urination may indicate other issues such as prostate enlargement common in older men but",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 79,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Oh dear doc, yes. I've definitely had some problems sleeping on my back lately. It's so uncomfortable, and I wake up feeling like I'm suffocating. I've been waking up several times a night, gasping for breath. And it seems like every time I do, I have to get up and use the bathroom right away too. I don't know if that's related or not, but it's definitely happening.\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any episodes of chest pain during these awakenings?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! I've had my share of those awful night sweats and waking up feeling just miserable. It's like someone's sitting on my chest, making it hard to breathe. And sometimes, I wake up with this sharp pain in my chest that lasts for a few minutes before it subsides. I'm not sure if it's related to my snoring or what, but it's definitely not something I enjoy.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 69,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any episodes where your breathlessness occurs during daytime activities as well?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I get winded easily when I'm walking around the house. Like, yesterday I was just dusting the living room and I had to sit down on the couch because I felt like I couldn't catch my breath. It's not that I've been exercising or anything, I'm just doing normal stuff. And sometimes, even when I'm sitting still, I'll suddenly feel this...this tightness in my chest, like someone's squeezing me. My grandkids will be playing with their toys nearby, and I'll think to myself, \"Wait a minute, I need some air.\" It's a bit embarrassing, but it's happened a few times lately.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 101,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Obstructive Sleep Apnea Syndrome (OSAS)\nClinical Justification: Patient exhibits classic signs consistent with OSAS including excessive daytime fatigue due to fragmented sleep caused by repeated arousals associated with apneic events; reported experiences of dyspnea both nocturnally and diurnally align with typical manifestations of reduced ventilation secondary to recurrent airway collapse. Additionally, reports of morning headache and cardiac sensations coincide with known complications stemming from chronically low blood oxygen levels characteristic of severe undiagnosed/untreated OSAS.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 76,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 69,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 101,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 79,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 76,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally uses phrases like 'good day doc' and 'goodness gracious,' which slightly detract from the natural tone."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient describes various symptoms, some of them seem unrelated to sleep apnea, such as night sweats and chest pain. Others, like difficulty breathing, are somewhat inconsistent across turns."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but occasionally slips into a more formal tone, particularly in Turn 3 where they mention 'sharp pain in my chest.' They also exhibit some knowledge about medical conditions, which might indicate a slight deviation from the role."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of everyday language and symptom description. However, inconsistencies in symptom coherence and occasional deviations from the role make the performance less convincing. With refinement, the patient could better adhere to the role and provide more coherent symptoms related to sleep apnea."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions related to potential obstructive sleep apnea symptoms, but they did not cover all key symptoms mentioned in the clinical truth. Questions 1 and 3 were somewhat relevant, but Question 2 was unrelated to OSA. They missed asking about snoring, witnessed breathing cessations, morning headaches, nocturnal reflux, insomnia, nocturia, and obesity."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of Obstructive Sleep Apnea Syndrome (OSAS) was partially accurate, considering the patient's excessive daytime fatigue and dyspnea. However, the justification provided was incomplete and didn't fully address the clinical truth. The doctor failed to consider alternative explanations for the patient's symptoms and didn't rule out other possible causes."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally stayed professional throughout the interview, avoiding acting like a patient. However, their questions seemed somewhat disconnected from the clinical scenario, which detracted from their professionalism."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "The doctor demonstrated some understanding of obstructive sleep apnea symptoms but fell short in covering all key aspects and providing a comprehensive diagnosis. While their questions showed some relevance, they lacked depth and thoroughness. To improve, the doctor should strive to ask more targeted and complete questions that address all possible symptoms and consider alternative explanations for the patient's presentation."
+    },
+    "llm_judge_total_out_of_20": 14
+}

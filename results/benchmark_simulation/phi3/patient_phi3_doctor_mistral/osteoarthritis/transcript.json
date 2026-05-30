@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "\"Good afternoon! Since last week, my hands have been feeling really sore when I use them for things around the house, especially after doing chores all day long. Whenever it gets cold inside our home too, they start aching again—it feels pretty much the same every time.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any swelling, redness, or warmth in your hands, or is the pain more of a constant ache without these symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "It feels awful when I wake up; my fingers really hurt after sitting for long periods. When I get out of bed each morning it takes a good while before wearily feeling limber enough to start moving around properly. There hasn't been much change since last time, just generally achy all day except maybe some extra soreness right here over this knuckle on my middle finger—it kinda looks puffed up now if I stretch too far backward into sleep position...on top where people usually put weight onto their digits during normal use things become tough trying say nothing about how they buckle under sudden pressure which makes holding cutlery difficult sometimes even writing notes seems impossible! Oh yes please check me quickly looking",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any numbness or tingling sensations in your fingers apart from the pain and stiffness?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I wake up every morning feeling my hands aching when they reach for my coffee cup. By afternoon it gets worse; lifting anything heavy feels almost impossible without some sharp pains shooting through them. Sometimes after sitting on my porch swing during lunchtime, which usually isn't hard anymore thanks to how much things have changed over time, getting back down off now hurts immensely. My wife has always worried about me not using our garden tools because she sees just how tender these finger knots feel even though we don't call them by their fancy names — one thing being particularly sore right where my ring would go if I had decided against retirement. We both chuckled together once recalling an am",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any swelling, redness, or warmth in your affected hand areas?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doc, I have seen some puffiness around my fingers when they get cold outside after shoveling snow for hours. It doesn't hurt much on its own but gets sore if it rubs against something harshly during meals because everything seems tighter than before. My grandma had this problem too; she called them little lumps under her skin near each finger knuckle sometimes—makes holding onto things kinda tricky without dropping stuff often now. With chores getting harder every day, walking feels less smooth these days especially upstairs where all hands help out! And yep about achin', most bad until midday then start easing off once evening hits – good time relaxation",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's description of persistent joint pain, stiffness, and puffiness in the hands, particularly around the knuckles, worsening with cold weather, prolonged use, and certain activities, as well as the absence of redness, warmth, or swelling, the FINAL DIAGNOSIS is OSTEOARTHRITIS (OA) of the hands.\n\nClinical Justification: The patient's symptoms align with those commonly associated with osteoarthritis, including morning stiffness, pain exacerbated by activity and cold temperatures, and bony enlargement of the affected joints. Additionally, the presence of Heberden's nodes (puffiness at the distal interphalangeal joints) and Bouchard's nodes (enlargement at the proximal interphalangeal joints) further supports the diagnosis of osteoarthritis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 103,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 103,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language, but occasionally slipped into informal expressions ('we both chuckled together once recalling an am') and colloquialisms ('tough trying say')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with osteoarthritis, but the descriptions lacked specificity and consistency throughout the conversation. They mentioned various triggers (cold, activity, etc.) and locations (hands, fingers, etc.), but the details were not thoroughly explored."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient deviated from their role as a patient by providing information about their wife and grandmother, which was not relevant to the consultation. Additionally, they showed a lack of concern and urgency typical of someone experiencing significant health issues."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language, but struggled with coherence and staying within the role. The conversation lacked focus and depth, and the patient failed to convey a sense of concern or urgency regarding their condition. To improve, the patient should strive to provide more specific and consistent symptom descriptions, adhere to their role, and demonstrate a greater sense of engagement with the consultation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were mostly targeted but missed opportunities to explore other key symptoms such as muscle weakness, balance issues, and classic physical exam findings like 'squaring' at the base of the thumb"
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The diagnosis was generally accurate, considering the provided symptoms, but could have been more precise if the doctor had explored additional signs like Heberden's and Bouchard's nodes earlier in the interview"
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interaction but occasionally slipped into a somewhat conversational tone when discussing the patient's experiences, which slightly compromised their role adherence"
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic skills, but could benefit from refining their questioning strategy to cover a broader range of potential symptoms and maintaining a consistent professional demeanor throughout the consultation."
+    },
+    "llm_judge_total_out_of_20": 12
+}

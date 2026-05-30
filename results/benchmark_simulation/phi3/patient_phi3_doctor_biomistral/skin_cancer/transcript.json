@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Skin Cancer",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon! Thank you for seeing me about my concerns—what seems to trouble our system here lately? Has there been discomfort around certain areas where we might feel something unusual underneath the surface? Have these spots changed recently; maybe they started out small but grew bigger unexpectedly, altered their appearance, turned darker, become larger in diameter beyond usual moles, developed jagged edges, felt anything abnormal beneath them at all? Because each individual shows unique predisposition based upon exposure throughout life, particularly those not shielded well against sunlight near prominent regions affected by tanning hikes up front - yes, especially the kind leading uptakes towards peaks high above us through daily routines outside",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Can you describe any changes in your appetite or weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've noticed some unusual growths cropping up here and there lately – they kind of look odd but haven't bothered me much until now. And come to think about it, my clothes don't fit quite right anymore; seems I might’ve lost a bit around the middle these past months. Also, this spot underneath my arm has been sore ever since summer started winding down last year. It doesn't hurt all too badly, just feels off...like something isn’t sitting well inside. Oh, by the way, those little bumps next to where my old ear piercings used to sit seem tingly at times, almost numb compared to before. Just curious though",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your medical history?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am feeling very attentive today because my niece brought me here; she thought this would help make sure everything looks good before we go outdoors again after lockdown. It’s been some time since you last saw all these spots—oh no, how did they get worse looking now? My grandson said there might be something called sunspots... but he wasn't clear about them turning into anything serious. Could those tiny red dots really mean trouble lurking beneath? And isn’t it peculiar how just last week things were much firmer around where our hat brim sits against the wind each day? This morning was rather odd too – feels almost tender whenever someone touches near where I used",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of skin cancer in your family?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I don't remember my grandparents ever talking about anything serious happening to their arms outside garden parties; they always had some story though but never quite mentioned skin problems by name. Sometimes there were these little red spots here and there—just tiny things really — we kinda just brushed them off at home without worry too much unless people got excited telling tales around dinner time. Anyway... no need to stress right now because let me show something peculiar that caught both our eyes today – this lump appears where sunbath would happen typically, feels nothing unusual yet its sudden appearance warrants attention compared to usual variations commonplace amongst us all regardless age group differences within families living same community vicinities sharing similar weather patterns experienced historically",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's history of unusual growths, changes in clothing size, and soreness under the arm, as well as the presence of tingling bumps near old ear piercings, the final diagnosis is likely melanoma. The patient's description of the appearance of the spots and their location on the body, along with the fact that they have appeared recently, are consistent with melanoma. Additionally, the patient's family history of skin cancer and the presence of a lump in an area where sun exposure is common further support this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 20.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses somewhat natural language, but occasionally employs vague descriptions and colloquial expressions, e.g., 'trouble our system,' 'tending upwards,' and 'vicinities.'"
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient describes various symptoms, including unusual growths, discomfort, soreness, tingling, and tenderness, but fails to consistently relate them to specific locations on the body or provide coherent narratives about their progression or impact on daily activities."
+        },
+        "role_adherence": {
+            "score_out_of_3": 0,
+            "justification": "The patient frequently exhibits behaviors characteristic of a healthcare provider, such as asking questions about diagnoses ('sunspots'), providing unsolicited information about others ('my niece brought me here'), and displaying knowledge about dermatological conditions ('sunbath would happen typically')."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This patient simulation demonstrates some potential in conveying everyday language and describing general concerns, but struggles with coherence and role adherence. The narrative is disjointed, and the patient often displays characteristics of a healthcare professional, undermining the authenticity of the simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the specific symptoms of skin cancer, nor did they explore the characteristics of the lesions, making them clinically irrelevant."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect; the described symptoms do not align with melanoma, but rather suggest basal cell carcinoma or squamous cell carcinoma due to the lack of mention of asymmetry, irregular borders, color variegation, and diameters greater than 6 mm."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed relatively professional throughout the interview, but failed to maintain a neutral tone and instead made assumptions about the patient's condition based on limited information."
+        },
+        "total_score_out_of_10": 2,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated significant gaps in questioning and diagnostic accuracy. The doctor failed to ask relevant questions about the skin lesions, leading to an incorrect diagnosis. It is crucial for doctors to remain objective and gather comprehensive information before forming a diagnosis."
+    },
+    "llm_judge_total_out_of_20": 5
+}

@@ -1,0 +1,231 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: Hi doctor. Well, I have been feeling really tired lately despite getting plenty of sleep. Sometimes, I even fall asleep during the day, which is very unusual for me. My husband has also noticed that I snore loudly at night, but I don't remember doing it myself. I have some difficulty breathing while falling asleep and sometimes wake up gasping for air. I also suffer from morning headaches and frequent heartburn.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "rem",
+                    "snore"
+                ],
+                "word_count": 74,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience periods where you feel like you can't catch your breath or are choking?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER: I don't remember ever feeling that way during my sleep.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "rem"
+                ],
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience these feelings while awake?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I would answer that I did not experience any of these symptoms while wake. Even though I was diagnosed with obstructive sleep apnea, the symptoms were mostly limited to during my sleep.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "apnea"
+                ],
+                "word_count": 34,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you snore loudly or gasp for air during your sleep?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I do snore loudly, and sometimes gasp for air during my sleep. It happens every night.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snore"
+                ],
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Obstructive Sleep Apnea (OSA)\n\n**Clinical Justification:** The patient presents with classic symptoms of OSA including excessive daytime sleepiness, loud snoring, witnessed gasping during sleep, morning headaches, and heartburn.  These symptoms strongly suggest airway obstruction during sleep, characteristic of OSA. \n\n\nLet me know if you'd like to explore other potential diagnoses or discuss this case further!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 7.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 16.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "rem",
+                    "snore"
+                ],
+                "word_count": 74,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "rem"
+                ],
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "apnea"
+                ],
+                "word_count": 34,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snore"
+                ],
+                "word_count": 17,
+                "total": 7
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions ('I don't remember doing it myself')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient initially describes symptoms consistent with OSA, but later contradicts themselves in Turn 2 and 3, stating they didn't experience symptoms, including snoring and gasping for air."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient fails to maintain their role consistently throughout the conversation, particularly in Turns 2 and 3, where they contradict previous statements about experiencing symptoms."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language, but struggles with symptom coherence and maintaining their role. They initially describe symptoms consistent with OSA, but later contradict themselves, undermining the credibility of their responses."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions related to obstructive sleep apnea, but missed opportunities to inquire about other key symptoms such as nocturia, insomnia, and obesity. Questions were not always clear or specific enough to guide the differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was partially accurate, as the patient presented with some classic symptoms of OSA. However, the justification provided did not fully account for the possibility of alternative explanations for the symptoms, and the doctor did not consider other potential diagnoses that could have been suggested by the patient's presentation."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally maintained a professional demeanor throughout the interview, but occasionally used colloquial language ('catch your breath' instead of 'experience difficulty breathing')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor demonstrated some understanding of obstructive sleep apnea and its symptoms, but could benefit from more comprehensive questioning and consideration of alternative diagnoses. With further training and practice, they may become a skilled clinician in diagnosing and managing sleep disorders."
+    },
+    "llm_judge_total_out_of_20": 13
+}

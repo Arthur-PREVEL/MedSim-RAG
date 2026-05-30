@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, good day. I've been experiencing quite a bit of discomfort lately. It feels like a constant, gnawing pain in my stomach area, especially after eating. This pain isn't sharp, but more like an unpleasant ache that lingers for hours. Sometimes food comes back up shortly after I eat, leaving me feeling sick to my stomach. Additionally, I've noticed that I don't feel satisfied even after eating a regular meal, making me want to eat again soon after. I hope this helps you understand what I'm going through. Thank you for your time and efforts.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any blood in your vomit or stool?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, Doctor, I don't see any blood in my vomit or stool. However, I have been experiencing some persistent discomfort in my stomach area that feels like a constant ache. It's been happening for quite some time now, and it seems to worsen after eating. I've also noticed I feel full quickly during meals, but I haven't been able to put on weight as usual. Additionally, I've had episodes of nausea and acid reflux that bother me often. But rest assured, there hasn't been any blood in either my vomit or stool.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 92,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any unexplained weight loss?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I have been losing weight unexpectedly. It started gradually and I didn't notice it at first, but now my clothes are becoming loose. I haven't made any changes to my diet or exercise routine that would explain this weight loss. I find it concerning.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any other changes in your body, such as increased thirst or urination?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I have been feeling quite thirsty lately, and I also find myself needing to use the restroom more frequently than before. This has been going on for a while now. I hope this information helps with understanding my condition better. Thank you.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Pernicious Anemia\n\n**Clinical Justification:** The patient presents with classic symptoms of pernicious anemia, including chronic gastritis (gnawing stomach pain),  weight loss, fatigue, and neurological symptoms (not explicitly mentioned but implied by the \"constant ache\" and frequent urination). These symptoms are consistent with achlorhydria, which is the inability to produce stomach acid, leading to vitamin B12 deficiency.\n\n\nLet me know if you'd like to explore other potential diagnoses or delve deeper into the pathophysiology of pernicious anemia!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 92,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, effectively avoiding medical terms such as 'achlorhydria', 'epigastric pain', and 'glossitis'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently reported symptoms related to gastrointestinal issues, including epigastric pain, heartburn, nausea, bloating, diarrhea, abdominal pain, acid regurgitation, early satiety, vomiting, postprandial fullness, constipation, dysphagia, and decreased sensation (implied by thirst and frequent urination). However, the symptom of thirst was not explicitly linked to the other gastrointestinal symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient generally stayed in character and avoided acting like a doctor, asking relevant questions and providing personal experiences rather than seeking medical explanations."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation demonstrated strong adherence to natural language, symptom coherence, and role-playing. The patient effectively communicated their symptoms and concerns without resorting to medical jargon, staying within the bounds of their character and avoiding diagnostic inquiry. However, minor improvement could be made in linking all symptoms together to create a cohesive narrative."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Questions [1] and [2] were targeted and clinically relevant, but question [3] was not directly related to achlorhydria symptoms. Question [1] could be seen as somewhat irrelevant since it's more characteristic of upper GI bleeding rather than achlorhydria itself."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Pernicious Anemia is incorrect because it does not align with the provided clinical truth of Achlorhydria. While some symptoms may overlap, the justification provided does not accurately connect the symptoms to achlorhydria."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This simulated doctor showed some promise in asking relevant questions, but ultimately failed to diagnose the condition correctly due to a lack of connection between symptoms and the actual diagnosis. With further training, they could improve their diagnostic accuracy and provide better patient care."
+    },
+    "llm_judge_total_out_of_20": 14
+}

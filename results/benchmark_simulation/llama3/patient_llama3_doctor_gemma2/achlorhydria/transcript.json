@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Dear doctor, I'm so glad you're here. To be honest with you, I've been feeling pretty crummy lately. My stomach's been acting up something fierce. It feels like there's this constant gnawing in my chest, just below my ribcage. Sometimes it's sharp, other times it's dull, but it never seems to go away completely. And when I eat, it gets worse. I feel like food is just sitting there, not moving through me like it should.\n\nI've also lost some weight since Christmas, which worries me because I love my cookies and cakes. But now they just seem to stay in my stomach instead of giving me any comfort. \n\nOccasionally, I get this sour taste in my",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience heartburn?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 4,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! It's been bothering me for a while now. You see, after I eat something... well, it feels like my stomach is burning, like someone poured acid inside me. It's quite uncomfortable. Sometimes it's so bad that I have to sit up straight in bed at night just to get some relief. And don't even get me started on eating spicy food - that just makes it worse.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience nausea or vomiting along with the burning sensation?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dearie, I've been feeling so poorly lately. My stomach's been acting up something awful. Ever since I had that little episode with my gallbladder, things haven't been right. Sometimes after eating, I get this...this gnawing feeling, like someone's poking me from the inside. It's hard to explain, but it's almost like hunger pangs, but not quite. And then there's the pressure, you know? Like my stomach is trying to tell me it's full, even when it isn't.\n\nOccasionally, if I eat too much or too richly, I do feel queasy. Nothing too severe, just a bit wobbly in the knees and a sour taste in the back of my",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do these symptoms occur after every meal, or only certain types of food?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dearie, it's been this way for months now. Ever since my husband passed away, I've noticed that eating doesn't sit well with me. Sometimes I get this gnawing feeling in my stomach, like there's a big hole burning inside. It's hard to explain, but it's like my insides are trying to tell me something is wrong. And you know what the worst part is? It's not just when I eat rich foods like fried chicken or roast beef. Even something as simple as toast or eggs will do it.\n\nAs for heartburn, oh dear... it's like a fire in my chest. It makes me cough and feel like I'm going to choke. And sometimes I feel sick to my stomach before",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 121,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Peptic Ulcer Disease\n\nClinical Justification: The patient presents with chronic epigastric pain, worsened by meals, associated with heartburn, nausea, and weight loss. These symptoms are highly suggestive of peptic ulcer disease, likely exacerbated by achlorhydria (absence of stomach acid) which can allow bacteria to thrive and erode the stomach lining.  \n\n\nLet me know if you'd like to explore other potential diagnoses or delve deeper into the management of peptic ulcer disease.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 73,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 121,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 4,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 73,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal tone ('dearie', 'goodness gracious')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally consistent with achlorhydria, but some descriptions (e.g., 'gnawing feeling' in Turn 3) could be interpreted differently. The mention of gallbladder issues in Turn 3 was unrelated to achlorhydria."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient mostly stayed in character, but occasionally exhibited behaviors more typical of a doctor (e.g., asking questions indirectly)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, but required refinement to better adhere to the role and maintain consistency in symptom descriptions. Some turns felt overly dramatic or included irrelevant information. With adjustments, this patient could provide a more believable and coherent experience."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked two relevant questions about heartburn and nausea/vomiting, but missed opportunities to inquire about other key symptoms such as abdominal pain, bloating, diarrhea, and dysphagia that could have helped narrow down the differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Peptic Ulcer Disease was incorrect because it did not account for the underlying condition of achlorhydria, which is a critical aspect of the patient's presentation. While peptic ulcers may be a complication of achlorhydria, they do not directly explain the absence of stomach acid."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor showed some promise in asking relevant questions, but ultimately failed to consider the broader clinical context and arrived at an inaccurate diagnosis. With further training, they may benefit from exploring alternative explanations for the patient's symptoms and considering the interplay between different conditions."
+    },
+    "llm_judge_total_out_of_20": 12
+}

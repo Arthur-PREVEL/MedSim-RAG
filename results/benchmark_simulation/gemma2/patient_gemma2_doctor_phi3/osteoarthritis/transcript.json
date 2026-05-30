@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, my hands have been bothering me for quite some time now. They ache, especially when I try to grip things or make a fist.  My fingers sometimes feel stiff in the morning, but they get better after I move them around for a bit. And lately, I've noticed my knuckles seem swollen. \n\n\nIt's gotten harder to do everyday things like button my shirt or write in my journal. It just feels like my fingers aren't as strong as they used to be.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any recent injuries that might affect your hand function?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Not really. My hands just haven't been feeling right lately. They ache a lot, especially when I try to grip things or use them for a long time.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Could you describe any specific activities that worsen your hand pain?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well,  anything that involves gripping things really bothers it. Like opening jars or turning doorknobs. And my fingers get stiff especially in the morning, makes it hard to button my clothes.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any swelling or changes in color around your joints where this pain occurs?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"My hands have been feeling kinda puffy lately, especially my thumbs. And some days they look a little redder than usual.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Primary osteoarthritis of the hands (M19.06XS)\nClinical Justification: The patient presents with classic signs of primary osteoarthritis including localized aches during gripping actions, finger stiffness particularly noted upon awakening which improves slightly over time, visible swelling at the affected joints such as the knuckles, and occasional erythema suggesting inflammation; these findings align well with typical presentations seen in degenerative arthropathies without an apparent injury trigger.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 67,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 67,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally uses vague descriptions such as 'my hands have been bothering me' which could imply a lack of specificity. However, overall, their language is clear and easy to understand."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistent with osteoarthritis, including joint pain, stiffness, and swelling. However, they don't mention any systemic symptoms such as fatigue or weight loss, which are common in advanced cases. Additionally, the progression of symptoms seems somewhat abrupt, whereas osteoarthritis typically develops gradually over years."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, describing symptoms from the perspective of someone experiencing osteoarthritis. However, in Turn 2, they respond very briefly without elaborating on their symptoms, which slightly disrupts the role-playing."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of osteoarthritis symptoms, but could benefit from more nuanced and detailed descriptions of symptom progression and impact on daily life. Additionally, maintaining a consistent tone and level of detail throughout the conversation would enhance the realism of the simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects of osteoarthritis, such as locomotor restriction, muscle weakness, and balance issues. Questions focused primarily on hand-specific symptoms rather than overall presentation."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was partially accurate but lacked consideration of other possible causes of hand pain and the patient's overall clinical picture. The presence of 'occasional erythema' suggests some level of inflammation, which could indicate a non-degenerative cause."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor showed potential in questioning and professionalism, but fell short in accurately capturing the breadth of osteoarthritis symptoms and considering alternative diagnoses. Further training is needed to ensure comprehensive assessment and diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 13
+}

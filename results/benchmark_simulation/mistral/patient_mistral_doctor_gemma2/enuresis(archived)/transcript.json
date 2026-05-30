@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I've been having issues with bedwetting lately. It hasn't been just once or twice, but multiple times a week over the past few months. This problem has been causing me some distress because it's affecting my sleep and making me feel embarrassed. Additionally, I believe it's impacting my daily activities as well since I feel constantly worried about it happening again. I've been keeping track of when it happens, how much I urinate, and how much I drink before going to bed in a special diary, as instructed by my healthcare provider. Would you like me to bring that with me next time we meet? Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting"
+                ],
+                "word_count": 108,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any other changes in your urination habits, such as increased frequency or urgency during the day?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doctor, I have noticed a change in my urination habits lately. During the day, I find myself needing to use the restroom more often than before, and sometimes I get this sudden need to go right away. It's a bit uncomfortable and inconvenient, especially when I'm busy. I hope this information helps.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 53,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you also experience pain or burning during urination?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I haven't been experiencing any pain or burning sensations while I urinate. It's just that I find myself wetting my bed at night without realizing it. I think this has been happening for more than three months now. It's causing me some distress because it affects my sleep and I worry about staining my sheets. I hope we can figure out why this is happening and find a solution together.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any daytime urinary incontinence as well?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doctor, I have been experiencing daytime urinary incontinence as well. This has been causing me some distress and affecting my daily activities. I hope we can find a solution together. Thank you.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Overactive Bladder (OAB) with Nocturnal Enuresis\n\n**Clinical Justification:** The patient presents with both daytime urinary frequency, urgency, and incontinence, along with nighttime bedwetting (nocturnal enuresis). These symptoms are characteristic of OAB, which can manifest with varying degrees of severity and impact on quality of life.  \n\n\nLet me know if you'd like to explore potential treatment options for OAB!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting"
+                ],
+                "word_count": 108,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 53,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal tone, e.g., 'as instructed by my healthcare provider'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient described nocturnal enuresis in Turns 1 and 3, but mentioned diurnal incontinence in Turn 4. However, Turn 2 introduced a new symptom (increased frequency during the day) without clear connection to the primary complaint."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed within their role, but showed some awareness of the diagnostic process (e.g., keeping a diary). They did not exhibit overtly medical knowledge or behaviors."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good adherence to the role and coherent symptom descriptions, but could benefit from further refinement in maintaining a consistent narrative voice and ensuring symptom coherence across turns."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects of enuresis, such as nocturnal-only or diurnal-only subtypes, and did not adequately address the elimination disorder criteria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Overactive Bladder (OAB) with Nocturnal Enuresis was incorrect because the patient's primary complaint was enuresis, not OAB symptoms. Additionally, there was no consideration of the elimination disorder criteria or the need to rule out other conditions like urinary tract infections or sleep disorders."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining a professional tone, but fell short in asking targeted and clinically relevant questions to inform a diagnosis of enuresis. The final diagnosis was inaccurate and failed to consider essential diagnostic criteria and potential differential diagnoses."
+    },
+    "llm_judge_total_out_of_20": 12
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Skin Cancer",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon! My name’s Susan Williams; my son brought me here because he thinks something might not feel quite right about this spot. It looks kinda redder where there used to just be some dryness beforehand. And now... well, actually, touching it makes it sting a little bit too—didn’t think much of scratching at first. But then after cleaning up yesterday looking weirded out by how fast things changed around it. Oh yeah, also feels tender near that sore - been worrying since we noticed those dark lines creeping along its edge last weekend while sunbathing together – seemed almost jagged instead of smooth anymore. Don't know exactly why these appeared all",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Has this area ever blistered or oozed?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I appreciate you checking my health today! Thankfully, there isn't been much bother except some areas feeling hotter at times recently. When sunny days happened last year before we chatted here about seeing our doc, those spots were just odd but didn’t hurt really. Now they seem kinda redder too – got me thinking why ain't all clear nowadays cause everything else looks fine. They said something ‘bout regular peep looking important though; guess could use that next time outdoorsy fun under big sky, huh? Wouldn't mind getting advice earlier rather than later because peace feels best knowing things stay good down below without worry signs appearing... Plus keeping busy instead stress always bogs",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Are these areas itchy or painful at all?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I mentioned today about feeling something unusual under my mole - has there been much change lately concerning discomfort around those spots? The ones by my shoulder seem redder now compared to before; they even feel quite sensitive sometimes without touching them directly. Is this matter serious enough we needed to discuss sooner rather than later? Please advise me accordingly based on our findings you described earlier regarding their appearance. Remember though, no need to rush into panicking – let’s carefully understand how best to proceed here ensuring I get accurate help. How long would waiting until addressing anything right away make sense considering potential risks involved alongside benefits gained taking early action versus delay? Also don't forget mentioning importance again using easy compar",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in the size or shape of these moles?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I feel this mole has gotten bigger lately—it seems larger now compared to how big it was last year at Christmas time. Also, there’s been some change; where once it felt flat against my cheekbone, something about its edges has started to look uneven around the border. Last February seemed fine enough because nobody really paid much attention unless they said anything directly related to their own moles but noticing extra details matters too. Nowadays though every small detail catches eye due diligence after attending healthy habits sessions held by our local community group recently emphasising careful monitoring even without visible signs beforehand! When did notice first thing became worried again... probably just today actually speaking up here",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "## FINAL DIAGNOSIS:  Basal Cell Carcinoma \n\n**Clinical Justification:** The patient describes a changing mole with increasing redness, tenderness, stinging, and the development of irregular, dark lines along its border. These are classic signs of skin cancer, particularly basal cell carcinoma.\n\n\nLet me know if you'd like me to elaborate on any specific aspect of the diagnosis or the patient's history.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into informal expressions ('ain't', 'peep') and colloquialisms ('down below')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes several symptoms, including redness, stinging, tenderness, and sensitivity, but does not consistently relate them to the clinical context of skin examination."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some knowledge of skin conditions and terminology, suggesting she may be trying to play the role of a knowledgeable patient, but her descriptions lack specificity and consistency."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "Susan's responses demonstrate a mix of coherent and incoherent statements, reflecting both her genuine concerns and attempts to mimic a knowledgeable patient. While she provides some relevant details, her descriptions are often vague and lack specific medical terminology, making it challenging to accurately assess her condition. Further training could help her better adhere to the role and provide more detailed, symptom-specific information."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions about the symptoms, but they were not comprehensive enough to cover all aspects of skin cancer. Questions about itching, bleeding, pain, and irritation were not asked, despite their relevance to the condition."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect. The description provided by the patient does not match the characteristics of basal cell carcinoma, which typically appears as pink, pearly papules with telangiectasia. The described 'irregular, dark lines along its border' could be indicative of melanoma rather than basal cell carcinoma."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction and did not exhibit behaviors typical of a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining professionalism, but fell short in terms of asking comprehensive and clinically relevant questions, leading to an inaccurate diagnosis. Further training on skin cancer symptoms and characteristics would be beneficial to improve diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 10
+}

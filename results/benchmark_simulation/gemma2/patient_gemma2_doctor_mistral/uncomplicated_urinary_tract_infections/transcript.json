@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, lately, when I go to the bathroom, it feels kind of burning and painful.  And I find myself needing to go much more often than usual. It's really bothersome.   Sometimes my tummy feels a little sore too, right around where my belly button is.  I just don't feel quite myself.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any blood or mucus in your urine or stools recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes my pee looks a little cloudy. Not all the time though.  And I've got a bit of a  bad ache down below... sort of near my belly button. Can feel it coming and going. It makes me uncomfortable when I try to go potty.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your frequency or urgency of urination, or any burning sensation while urinating?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Yes, lately I've been needing to go to the bathroom much more often, and sometimes it feels really urgent. And when I pee, it kind of stings.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any blood in your urine or changes in its color or smell?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"My urine hasn't looked different, but sometimes it smells stronger than usual lately.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 13,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms, including frequent and urgent urination, a burning sensation during urination, lower abdominal pain, and potentially cloudy urine with an unusual smell, the most likely diagnosis is an uncomplicated Urinary Tract Infection (UTI). The clinical justification for this diagnosis is that these symptoms are common indicators of UTIs, particularly in women, and can be confirmed through a urine culture. However, it's important to note that other conditions may present similarly, so further testing may be necessary to rule out other possibilities.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 13,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally uses colloquial expressions like 'really bothersome'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes some typical symptoms of UTI, such as dysuria, urinary frequency, and suprapubic pain, but also mentions cloudy urine, which could be related to various factors, not exclusively UTI."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays within the role, describing personal experiences, but occasionally slips into a somewhat objective tone when discussing their urine's appearance and smell."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good adherence to the role and coherent symptom description, but could benefit from further refinement in using everyday language and maintaining a consistent narrative voice throughout the conversation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions related to urinary symptoms but missed opportunities to inquire about other relevant symptoms such as suprapubic pain or discomfort, bladder spasms, and hematuria. Questions were also somewhat open-ended, allowing the patient to guide the conversation rather than actively exploring all possible symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was generally accurate, considering the symptoms presented. However, the doctor did not fully consider alternative diagnoses such as pyelonephritis or other serious infections, which could have been ruled out with further questioning and possibly additional diagnostic tests."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient and instead taking an active role in gathering information and forming a diagnosis."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor demonstrated good clinical reasoning skills, but could benefit from asking more comprehensive and targeted questions to ensure a complete understanding of the patient's symptoms and history. Further consideration of alternative diagnoses and potential complications would strengthen their diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 14
+}

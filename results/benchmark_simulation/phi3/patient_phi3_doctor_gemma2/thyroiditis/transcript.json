@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi there! Lately, my neck feels really hot when touching it; even mild squeezes make me wince quite sharply—it hurts more than just feeling stiff around here. The discomfort came outta nowhere recently after having some sort of cold virus upstairs above this part. Can’t shake off how weird that sudden soreness comes every time something nudges against where my food pipes pass through too. Sounds strange if anyone else noticed anything unusual about their throat lining down towards the bones... Oh wait, they did say nothing felt particularly huge during self checks last evening – no new coughs either. Feel kinda odd though since starting those heart",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 108,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When swallowing, do you experience any pain or difficulty?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Dr., I feel less well lately – my throat’s been sore for quite some time now. Yesterday was particularly bad; it felt almost like there was something stuck in my throat every single bite when I tried munching down dinner. There wasn't really much trouble at first just biting into applesauce last weekend though, which kind of threw me off since nothing hurts that normally does unless I'm being careless while chopping veggies too close to where they live around here on top. Plus this isn't new either - remember how those cheeseburgers would hit different if we changed cook times slightly sometimes even then before all started getting weird again right after",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any difficulty swallowing liquids?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I haven't been having trouble when drinking water lately, thank goodness! But there was that one time recently where it felt really tight around my throat after meals for quite some days. Like trying to push down food through a very small straw; gotta say though, no sharp pains then—just an annoying pressure kind of feeling. Does this matter much here?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Did this tightness also occur when swallowing liquids?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I feel that there was some discomfort while drinking water recently too; it made me pause for a moment before my throat cleared up again. The rest of my head feels fine now though – just those small issues afterward until everything settles down. There isn’t much else bothering me right at this very minute unless you think otherwise about something specific not discussed yet here today during our talk so far! Excuse another question if needed later maybe… But let us focus primarily upon addressing how best we might approach resolving whatever brought forth such concerns regarding potential difficulties associated specifically relating directly towards affecting processes involving moving through various stages linked closely inherently connected intrinsically deeply ingrained within ourselves physically internally",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "## FINAL DIAGNOSIS: Subacute Thyroiditis\n\n**Clinical Justification:**  The patient presents with acute onset of neck pain, tenderness, and dysphagia (difficulty swallowing) following a recent upper respiratory infection. These symptoms, along with the characteristic \"tight\" sensation during swallowing, strongly suggest inflammation of the thyroid gland, consistent with subacute thyroiditis.\n\n\nLet me know if you have any other medical histories you'd like me to review!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 63,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 108,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 63,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language, but occasionally employed metaphors (e.g., 'food pipes') and colloquial expressions (e.g., 'being careless')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but lacked specificity and consistency throughout the conversation. They mentioned neck pain, sore throat, and difficulty swallowing, but also used ambiguous phrases like 'feeling hot' and 'pressure kind of feeling'."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient deviated from their role by asking questions and providing unsolicited information, demonstrating a lack of adherence to the patient role."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed promise, but struggled with coherence and role adherence. While they used everyday language, their symptoms were not consistently described, and they often strayed from their role by asking questions and providing additional information. With further refinement, this patient could become more convincing and engaging."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The questions were somewhat targeted towards the symptoms of thyroiditis, but they did not cover all possible presentations of the condition. Questions about medication history, personal/family history of autoimmune disease, and symptoms of hypothyroidism would have been more comprehensive."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was incorrect; the patient's presentation does not strongly suggest subacute thyroiditis. The presence of 'tight' sensation during swallowing, which was not even questioned, might point towards Riedel thyroiditis or another condition causing compressive symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor-patient interaction showed some potential in identifying key symptoms of thyroiditis, but it fell short in exploring the full range of possible presentations and arrived at an incorrect diagnosis. Further questioning and consideration of alternative diagnoses are necessary to improve diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 11
+}

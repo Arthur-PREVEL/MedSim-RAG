@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning doc. It's nice to finally have some answers. I've been having these... accidents, I suppose you'd call them. Every night, without fail. My bladder just seems to leak while I'm sleeping. I'll wake up and there's a puddle on my sheets. It's so frustrating. I've tried everything to stop it - drinking less water before bedtime, getting up to pee right before I go to sleep, even trying those special pads, but nothing seems to work. And it's not just the nighttime ones, sometimes during the day too. Like yesterday, I was at the park, walking around with my grandkids, and suddenly I felt this urgency, and before I could find a restroom, I had an",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you ever feel a strong urge to urinate right before these accidents happen?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! I do feel a strong urge to go, but by the time I get to the bathroom, it's too late. It's like my body just can't hold it anymore. Sometimes I'll even run to the bathroom, but I'm already leaking before I make it there. It's so frustrating! And it happens every night, usually around the same time, when I'm lying in bed getting ready to drift off to sleep.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience this urgency and leakage with other types of liquids, such as water or juice?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dearie, I don't think so. It seems to happen mostly when I drink coffee or tea, especially if I've had too much of it. But water and juice, no, I don't have any problems with those. Although, now that I think about it, sometimes after I eat a big meal, I do feel like I need to go pretty badly, but I manage to make it to the bathroom okay. It's just that thing with the coffee... *laughs* I guess I'm just too old for my body to handle it properly!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 91,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience pain or discomfort when you urinate?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! I'm so sorry to say it, but I've been having some issues with my bladder lately. It's this burning sensation when I go to the bathroom, especially after I've been drinking something acidic like coffee or orange juice. And sometimes, it feels like there's a sharp pinch, like a little knife cutting me inside. Not pleasant at all. My poor old bladder just isn't happy, it seems.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Urge incontinence likely secondary to overactive bladder (OAB).\n\nCLINICAL JUSTIFICATION: The patient presents with frequent episodes of involuntary urination accompanied by a strong urge to urinate, particularly at night and after consuming caffeine or large meals.  The presence of dysuria (painful urination) further suggests an underlying bladder condition like OAB.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 52,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 91,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 52,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into colloquial expressions ('good morning doc', 'dearie', 'goodness gracious')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's descriptions of nocturnal and diurnal incontinence were generally coherent with the clinical context, but lacked specificity regarding frequency, duration, and impact on daily life."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character, but occasionally exhibited behaviors inconsistent with a patient seeking help for enuresis, such as laughing about their condition and downplaying its severity."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good use of everyday language, but struggled with symptom coherence and role adherence. While the patient's descriptions of incontinence were generally accurate, they lacked detail and consistency. Additionally, the patient's tone and language sometimes undermined their credibility as a person seeking help for a legitimate health issue."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted towards understanding the nature of the patient's symptoms, but question 3 may not directly relate to the primary symptom of enuresis. Questions could have been more comprehensive to cover all aspects of the DSM-5 criteria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of 'Urge incontinence likely secondary to overactive bladder (OAB)' does not align with the clinical truth of enuresis. While the patient presented with symptoms of urgency, there was no mention of nocturnal-only or diurnal-only enuresis, nor was the possibility of other conditions like urinary tract infections or sleep disorders considered."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated some understanding of the patient's symptoms, the diagnostic accuracy was compromised by a lack of consideration for the full range of possible causes of enuresis. Further questioning and exploration of the DSM-5 criteria would have led to a more accurate diagnosis."
+    },
+    "llm_judge_total_out_of_20": 13
+}

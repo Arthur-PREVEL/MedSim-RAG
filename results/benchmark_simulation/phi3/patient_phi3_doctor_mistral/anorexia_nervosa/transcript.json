@@ -1,0 +1,231 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon! For some weeks now, it’s been hard to get up in the mornings because my body feels so tired; even small chores feel tiring quickly. My hands often stay uncomfortable after having something warm during meals—feels like they can hardly handle heat well anymore. And sometimes when there isn't much on the plate at dinner, that makes eating quite difficult too...it leaves me feeling very low afterwards but also a bit guilty about not finishing everything. Is this normal? Yes, rest assured these feelings aren't just from aging - let's talk further about how we might improve things together.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 101,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any unintentional weight loss or changes in your appetite beyond what you mentioned?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been losing some weight even though seemingly not on purpose. It’s hard because it feels heavy when my clothes don’t fit anymore… Just doing these things can be really tough sometimes; eating less than usual just became part of how we live every day nowadays at home. My throat gets sore often after meals although I try everything there is supposedly right about pureness while indulging myself quite frequently – always fearful something could go wrong if one isn’t careful around those temptations lurking nearby oneself during rest times away from busy streets crowded by hustlers rushing past their own lives trying desperately against forces unknown yet ever present within... But regardless whether",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 116,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel movements or stool consistency recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven't paid much attention; my digestion hasn't seemed right lately – things move slower than they used to. It’s also pretty uncomfortable when it does happen on its own schedule. Could this be linked to why I feel so tired all the time? And should we talk about ways to improve that here today?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 55,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel movements, such as frequency, consistency, or blood in stools?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been feeling quite tired lately, even when resting. It seems my body is just not recovering well after exercising either - it takes much longer than before. No big issues other than that otherwise... maybe? The meals sometimes make me feel uncomfortable though; they aren’t always easy on digestion. Oh yes, about those checkups—sometimes there could be dark spots around where nails used to grow back – but hardest part might be dealing with being too cool during winter months nowadays while others don't seem bothered by temperatures at all! But let's focus more today because we need answers so things can start getting better soon.. Just one thing",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 112,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided patient history, the final diagnosis is Anorexia Nervosa. This condition is characterized by an intense fear of gaining weight, distorted body image, and self-starvation, which can lead to weight loss, fatigue, and disrupted digestion. The patient's reported weight loss, changes in appetite, feelings of guilt about not finishing meals, slow digestion, and tiredness are indicative of this disorder. Additionally, the mention of feeling cold during winter months may suggest a decrease in body fat, another symptom associated with Anorexia Nervosa.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 101,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 116,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 55,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 112,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone and vague phrases like 'supposedly right' and 'forces unknown yet ever present within'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes various symptoms (fatigue, cold intolerance, digestive issues) but doesn't explicitly mention amenorrhea, constipation, or extremity edema. Some connections between symptoms and behaviors (e.g., purging, excessive exercise) are unclear."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some characteristics typical of an individual with anorexia nervosa (restrictive eating, fear of gaining weight), but also displays inconsistent behavior (eating 'quite frequently', mentioning 'temptations' and 'hustlers')."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some promising aspects, such as describing relatable emotions and experiences. However, inconsistencies in symptom reporting, unclear connections between symptoms and behaviors, and occasional lapses into formal language detract from overall realism. Further refinement is needed to create a more cohesive and authentic portrayal of an individual with anorexia nervosa."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to explore other key symptoms such as purging methods, excessive exercise, and emotional disturbances like irritability. Questions 1 and 2 were relevant, but Question 3 was redundant and didn't add new information."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of Anorexia Nervosa was mostly accurate, considering the reported weight loss, changes in appetite, and digestive issues. However, the doctor failed to consider other potential diagnoses that could explain these symptoms, such as hypothyroidism or celiac disease."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good question-asking skills and professionalism, but could improve by asking more comprehensive questions and considering alternative diagnoses. Their diagnostic accuracy was fair, but they could benefit from further training on recognizing the complexities of eating disorders."
+    },
+    "llm_judge_total_out_of_20": 12
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "A: Good morning doctor. I feel a dull pain in my lower back. It is always there, but sometimes it gets worse, especially when I move around too much or sit for long periods. It feels like someone is stabbing me with a needle right there in my back. Sometimes, I get numbness and tingling sensation or even burning in that area too. The pain started a few months ago, and it hasn't gone away yet.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 76,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any weakness or difficulty standing from a seated position?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: \"Well, I don't know...I've been having trouble walking for a few years now, and sometimes I feel weak when I try to stand up.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What specific symptoms do you experience during these episodes of difficulty standing?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am Jean, a 70-year-old patient. During these times of trouble standing up, I feel like I am losing my balance and feel weak as if I might fall down. It feels like someone is pulling me backwards or taking away my strength from underneath me. Sometimes it feels like I need to sit on the chair nearby just so I don't feel like I am going to collapse.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Jean, have you experienced any recent changes in your vision that could be contributing to this sensation?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT:\n\"Well, Doctor, I haven't noticed anything different about my eyesight. I can see all the things clearly, no blurry lines or double vision.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Chronic Lumbosacral Radiculopathy due to degenerative disc disease exacerbated by microsporidial infection (Microsporidia).\nClinical Justification: Patient presents chronic lumbosacral radicular pain associated with neurological deficits such as muscle weakness and paresthesia without significant visual disturbances; however, given their age and immune status, they may harbor an opportunistic pathogen such as Microsporidia which often affects individuals who are elderly or immunocompromised leading to nonspecific systemic manifestations including neuromuscular complaints. Further diagnostic workup should include lumbar spine MRI imaging and possible cerebrospinal fluid analysis after collection via lumbar puncture to assess for presence of oocysts indicative of Microsporidia species involvement.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 100,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 76,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 27,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 100,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions of symptoms ('like someone is stabbing me with a needle' or 'feels like someone is pulling me backwards')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes multiple unrelated symptoms (lower back pain, numbness, tingling, weakness, difficulty walking), making it challenging to identify a clear pattern or underlying cause."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient occasionally exhibits behaviors more typical of a healthcare provider (e.g., asking 'well, doctor' or providing information about themselves)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and describing general symptoms. However, the lack of coherence between symptoms and occasional role-adherent behavior detract from the overall realism. The patient could benefit from further development to create a more cohesive narrative and maintain a consistent patient persona throughout the interaction."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Questions were not targeted towards the key symptoms of microsporidial infection, such as gastrointestinal issues, skin rashes, or respiratory problems. Questions focused more on musculoskeletal and neurological symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Chronic Lumbosacral Radiculopathy due to degenerative disc disease exacerbated by microsporidial infection (Microsporidia) is incorrect because there is no evidence provided in the clinical truth section that links microsporidial infection to musculoskeletal or neurological symptoms. Additionally, the justification provided does not accurately explain how microsporidial infection would lead to the diagnosed condition."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview, but failed to maintain a neutral tone and showed a lack of understanding of the patient's symptoms and underlying conditions."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This doctor simulation demonstrated poor question quality, inaccurate diagnosis, and inadequate role adherence. The doctor failed to ask relevant questions about the patient's symptoms and made an incorrect diagnosis based on unrelated information. Furthermore, the doctor's tone and approach came across as unprofessional and uninformed."
+    },
+    "llm_judge_total_out_of_20": 10
+}

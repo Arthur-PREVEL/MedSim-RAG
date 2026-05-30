@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I've been feeling quite unwell lately. I've had a persistent cough and a sore throat for a few days now, and it feels like there's a lump in my neck that hurts when I touch it. The pain spreads up to my ears sometimes, and I've noticed I've been running a fever too. I've also had trouble swallowing food recently, and it seems harder to breathe than usual. Additionally, I've lost some weight unexpectedly, even though I haven't changed my diet or exercise routine. Is this something serious?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 90,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any difficulty moving your tongue or speaking normally since these symptoms started?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, Doctor, I haven't had any trouble moving my tongue or speaking normally since this all began. My throat hasn't felt sore or swollen either, thankfully. However, I've been experiencing quite a bit of discomfort in my neck area, especially when I swallow. It feels like there's something pressing down on the front part of my neck. Additionally, I've noticed a slight hoarseness in my voice recently. I hope it's nothing serious, Doctor.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent trauma or injury to your head, neck, or jaw?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't experienced any recent trauma, injury, or discomfort in my head, neck, or jaw area. The only issue I've been facing lately is a persistent feeling of uneasiness, some weight gain, and a certain level of tiredness that hasn't gone away for quite some time now. These symptoms seem unusual for me, and I thought it was just age catching up, but I guess it might be something more serious. I hope we can figure it out soon. Thank you for your guidance, Doctor.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or sleep patterns over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I've been experiencing some changes in my appetite and sleep patterns lately. I find myself feeling unusually hungry more often than usual and having trouble sleeping through the night. These changes are somewhat new for me and I haven't noticed them before. I'm not sure if it could be something serious, but I thought it would be best to mention it to you. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "sle"
+                ],
+                "word_count": 67,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient has Hashimoto's thyroiditis, an autoimmune inflammatory condition characterized by hypothyroidism, which explains her symptoms of weight loss, fatigue, difficulty swallowing, and hoarseness.\n\nClinical Justification: The patient's combination of weight loss despite increased hunger, difficulty swallowing, hoarseness, and a palpable mass in the neck, along with her recent changes in appetite and sleep patterns, strongly suggest an underlying thyroid disorder. The absence of significant thyroid gland tenderness or swelling, however, points towards an autoimmune cause such as Hashimoto's thyroiditis rather than acute thyroiditis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 86,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 90,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "sle"
+                ],
+                "word_count": 67,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 86,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally mentioned symptoms without directly relating them to their overall condition, e.g., 'it feels like there's something pressing down on the front part of my neck'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally coherent with the clinical context, but they didn't explicitly mention a history of recent radiation or medication that could indicate specific types of thyroiditis (e.g., radiation-induced thyroiditis)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient mostly stayed in character, but occasionally exhibited behaviors typical of a doctor, such as asking about the severity of their condition ('Is this something serious?')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient demonstrated a good understanding of their symptoms and concerns, but could benefit from providing more information about their medical history and potential triggers for their condition. They showed some awareness of their symptoms' implications but occasionally acted like a doctor, seeking reassurance rather than actively participating in the diagnostic process."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but question 3 was not directly related to the key symptoms of thyroiditis. Question 3 seemed more focused on general health rather than specific thyroid-related issues."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of Hashimoto's thyroiditis was incorrect given the symptoms presented (weight loss, difficulty swallowing, hoarseness) which are more indicative of Riedel thyroiditis or another form of thyroiditis that causes compressive symptoms. The presence of a palpable mass in the neck further supports this conclusion."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in maintaining professionalism, but fell short in asking clinically relevant questions and providing an accurate diagnosis. The doctor failed to consider the compressive symptoms and the presence of a palpable mass in the neck, leading to an incorrect diagnosis. Further training on thyroiditis and its various presentations would be beneficial."
+    },
+    "llm_judge_total_out_of_20": 13
+}

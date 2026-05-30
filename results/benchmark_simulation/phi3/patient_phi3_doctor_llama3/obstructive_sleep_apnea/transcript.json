@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon! Lately, my days have been filled with an intense need to rest because I just don’t seem to get any energy even though I keep waking up feeling unrefreshed every mornin'. People around me say sometimes they hear strange sounds when I snooze at night – kind of choppy noise that seems outta ordinary. My grandson pointed this out last weekend but didn't know much else about it. Also, come dinnin', I tend to grubble on foods way too fast ‘cause sitting down isn't comfy soonest—my belly feels all puffed alright whenever we pass family gatherings full of good eatin'. No matter",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "rdi"
+                ],
+                "word_count": 104,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight changes or difficulty swallowing recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have not had trouble when eating lately that would seem unusual but my partner mentioned sometimes waking up because they could hear me struggling at night — wondering about those moments now makes sense why we might look into these things further.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any difficulty swallowing or regurgitation of food during those nighttime episodes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven’t thought about that before today when seeing my friend at clinic who mentioned similar issues he faced last month too. He said his wife had once told him she noticed some strange sounds coming out right around their home late into evening - especially on weekdays following workday stress but much less on Sundays rest days. That got her concerned enough they decided both went together this time not long ago due to worry growing because these incidents kept occurring ever so frequently disrupting our daily routines including lackluster energy each new dawn despite hitting bed early many times which just didn’t seem worthwhile anymore now having gone back multiple occasions even undergoing minor tests done mostly near end though results showed nothing obvious there yet we have been",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 131,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any unusual noises or sensations yourself that might be related to your current symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I know this sounds strange but lately my friend has been complaining about these odd bouts where he seems out of sync when he wakes up at night - sometimes just catching his arm midway doing nothing before suddenly shaking him awake again. It doesn't seem too serious though because we laugh them off each time they happen. But there’s something else bothering me... During our evening walks together which help us unwind, I must admit I have noticed how restless Dylan gets, almost falling asleep on several occasions even amidst activities, all leading towards an embarrassingly heavy feeling upon standing first thing next day—quite unlike himself who usually runs marathons effortlessly! Let",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from Obstructive Sleep Apnea (OSA), likely caused by partial upper airway obstruction during sleep, resulting in recurrent awakenings, daytime fatigue, and other associated symptoms.\n\nClinical Justification: The patient's complaints of excessive daytime somnolence, unrefreshing mornings, and reports of snoring/choppy noises during sleep, along with the patient's own observations of their partner's concerns about nighttime struggles and the patient's own experiences of morning discomfort after meals, strongly suggest OSA. Additionally, the patient's mention of their friend's similar experiences and the fact that the patient's grandson noted unusual noises during their sleep further support this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 100,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "rdi"
+                ],
+                "word_count": 104,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 131,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 100,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses colloquial expressions and informal language, such as 'good afternoon,' 'dinnin',' 'grubble,' 'seemest,' and 'alright.' However, the language is generally easy to understand, and the patient avoids complex medical terminology."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms related to excessive daytime sleepiness, such as needing to rest and feeling unrefreshed, which aligns with the clinical context. However, the descriptions of snoring and breathing difficulties are indirect and not explicitly stated until later turns."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient occasionally slips into a more knowledgeable tone, particularly in Turn 3, where they mention a friend's experience with similar issues and the results of minor tests. This deviates from the expected patient role."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of the clinical context, but the narrative is somewhat disjointed and lacks directness in describing key symptoms. The patient's language is generally conversational, but there are occasional lapses into a more informed tone, indicating a slight deviation from the expected patient role."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Only two out of three questions were targeted towards the key symptoms of obstructive sleep apnea. Questions 1 and 2 touched on potential causes and consequences of OSA, but Question 3 was too vague and did not directly address the key symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the diagnosis of obstructive sleep apnea was made, the reasoning behind it was somewhat superficial. The doctor relied heavily on the patient's subjective experiences and anecdotal evidence rather than objective measures such as the Epworth Sleepiness Scale or the STOP-BANG questionnaire."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "The doctor demonstrated some understanding of the key symptoms and diagnostic criteria for obstructive sleep apnea, but could benefit from a more thorough and systematic approach to questioning and diagnosis. Further education on the use of standardized screening tools such as the Epworth Sleepiness Scale and the STOP-BANG questionnaire would be beneficial."
+    },
+    "llm_judge_total_out_of_20": 11
+}

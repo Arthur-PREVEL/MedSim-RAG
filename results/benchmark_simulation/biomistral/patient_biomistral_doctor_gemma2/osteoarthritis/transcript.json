@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Dr., thank you for asking me about my symptoms. There have been some changes recently. My hands are feeling pretty swollen, and it's getting harder to button up my shirt. It's also really difficult to grab things around the house without having to rest between each movement. And when I'm walking, sometimes my knees feel unsteady and I almost fell down yesterday.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any joint pain or stiffness?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Joint pain and stiffness are things I have been experiencing for quite some time now. The pain seems to worsen when I am walking or doing any kind of physical activity. At times, it feels like someone is jabbing me in my joints with a needle. The stiffness makes it difficult for me to bend down and pick up things off the floor. Even getting dressed and undressed has become challenging.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Are these symptoms present in your hands and wrists as well?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor. I am experiencing some pain and stiffness in my hands and wrists too. I feel like it’s getting harder for me to hold things and even write. It seems like everything is getting worse over time.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Is this pain better or worse with rest?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I would say that my pain is definitely better with rest. When I'm not moving around, it feels like it goes away entirely sometimes. But once I start doing normal things again, like walking or even just getting out of bed, the pain comes back pretty quickly. It's really hard for me to describe exactly how bad it is, but it just feels uncomfortable, almost like my bones aren't working right.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Osteoarthritis\n\n**Clinical Justification:**  The patient presents with chronic joint pain and stiffness, particularly in the hands, wrists, and knees, exacerbated by activity and relieved by rest. These symptoms, along with difficulty performing daily tasks, are highly suggestive of osteoarthritis, a degenerative joint disease characterized by cartilage breakdown. \n\n\nLet me know if you'd like to explore other potential diagnoses or discuss treatment options!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 64,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 73,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 64,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, avoiding complex medical terms, but occasionally used metaphors ('like someone is jabbing me in my joints with a needle')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally consistent with osteoarthritis, but Turn 2 introduced 'someone is jabbing me in my joints with a needle,' which is not typical of osteoarthritis. Turns 3 and 4 returned to more accurate descriptions."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient stayed in character throughout the conversation, describing their experiences and feelings rather than providing medical information."
+        },
+        "total_score_out_of_10": 8,
+        "overall_feedback": "This patient simulation was strong overall, with clear descriptions of symptoms and experiences. However, minor lapses into non-standard descriptions detracted from the realism. With refinement, this could be a compelling portrayal of osteoarthritis."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to inquire about specific joint locations, duration of symptoms, and impact on daily life. Questions did not fully cover all key symptoms of osteoarthritis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the provided information. However, it would have been helpful to consider alternative diagnoses such as rheumatoid arthritis or other musculoskeletal conditions before arriving at osteoarthritis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding unprofessional behavior."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic skills, but could benefit from asking more comprehensive questions to ensure a thorough understanding of the patient's condition. Additionally, considering alternative diagnoses and providing a clear explanation of the thought process behind the diagnosis would enhance the overall quality of care."
+    },
+    "llm_judge_total_out_of_20": 15
+}

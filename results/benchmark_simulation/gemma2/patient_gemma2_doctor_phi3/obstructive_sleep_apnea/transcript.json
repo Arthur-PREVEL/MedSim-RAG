@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doc, I've been feeling really tired lately, even after a full night's sleep.  I just can't seem to shake this grogginess. And my wife tells me I snore something awful. Sometimes I think I might stop breathing for a little bit when I sleep because she's woken up worried about me.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 52,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any episodes of chest pain or discomfort during your daytime hours?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Not really chest pain, but sometimes I wake up feeling out of breath. Like I can't get a good deep breath.  It goes away after a bit though.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Do these episodes occur more frequently when lying down or during physical activity?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "They happen mostly when I'm lying down asleep, Doctor.   I can sometimes wake up feeling like I can't breathe.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Do these episodes occur only during sleep or also while awake?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Mostly just when I'm asleep.  Sometimes I wake up feeling like I can't breathe.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: The patient is likely suffering from Obstructive Sleep Apnea (OSA). This diagnosis is supported by his complaints of excessive daytime fatigue despite adequate nocturnal rest, loud snoring with observed apneas reported by his spouse, experiences of dyspnea upon arousal at night which suggests airway obstruction occurring primarily in supine position due to gravity effect on pharyngeal structures, all consistent with OSA pathophysiology where repetitive upper airway collapse leads to intermittent hypoxia causing fragmented sleep patterns contributing to chronic somnolence. Further diagnostic evaluation including polysomnography would be warranted to confirm severity and guide treatment options such as CPAP therapy if indicated based on AHI score obtained through overnight monitoring.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 110,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 52,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 110,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally uses colloquial expressions like 'Doc' which could be seen as informal."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes some symptoms that are consistent with OSA, such as excessive daytime sleepiness and snoring, but others like waking up feeling out of breath are not clearly linked to sleep apnea."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally slips into describing symptoms that could be interpreted as medical knowledge, such as explaining the sensation of waking up feeling out of breath."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of the clinical context and uses everyday language effectively. However, there are some inconsistencies in symptom coherence and role adherence, particularly in Turns 2 and 3 where the patient displays some medical knowledge. With refinement, this simulation has potential to better align with real-world patient interactions."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the key symptoms of obstructive sleep apnea (OSA), such as excessive daytime sleepiness, loud snoring, or witnessed breathing cessations during sleep. Instead, they focused on unrelated symptoms like chest pain or discomfort during daytime hours."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was partially accurate, as the patient's symptoms of excessive daytime fatigue and loud snoring with observed apneas suggested OSA. However, the explanation provided was overly complex and included unsubstantiated assumptions about the patient's sleep patterns and the effects of gravity on pharyngeal structures."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional but occasionally slipped into a somewhat paternalistic tone when explaining the diagnosis, stating that further evaluation 'would be warranted' and implying that the patient needed guidance on treatment options."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in terms of identifying potential symptoms of obstructive sleep apnea. However, the questioning strategy could have been improved by targeting more directly related symptoms, and the explanation of the diagnosis was overly complicated and assumed knowledge beyond what was presented in the clinical truth section. Additionally, the doctor's tone sometimes veered into a more instructive mode rather than maintaining a neutral, empathetic stance."
+    },
+    "llm_judge_total_out_of_20": 11
+}

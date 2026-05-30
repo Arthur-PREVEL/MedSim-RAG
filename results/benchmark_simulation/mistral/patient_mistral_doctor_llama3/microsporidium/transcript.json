@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I'd like to share my concerns with you. Recently, I've noticed some unusual spots on my skin – they seem hard and are somewhat round in shape. They have a darker shade compared to my normal skin tone. These spots appear scattered across my body, and I find them uncomfortable and unsightly. I've also been feeling weaker than usual, and even simple tasks leave me out of breath. Additionally, I've noticed a gradual loss of appetite, and I often feel nauseous and lightheaded. Could these issues be connected, and if so, what could potentially be causing them?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight changes over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have noticed a change in my weight recently. I seem to be losing weight without trying, and it worries me because I haven't made any major adjustments to my diet or exercise routine. It feels as if there's something inside me taking energy away, making me feel weak and light.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 52,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any difficulty swallowing food or feeling full after eating small amounts?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been having trouble swallowing my food lately, Doctor. It feels like there's something stuck in my throat, and I struggle to get it down. Sometimes, I finish a meal and still feel full, as if I haven't eaten enough. This sensation has been bothering me for quite some time now.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 52,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any weight loss or difficulty gaining weight over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I've been facing some issues with my weight recently. I seem to be losing weight without trying, which isn't typical for me. I find it difficult to maintain or even gain weight, no matter how much I eat. It's quite concerning because I wasn't expecting this change at my age.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 52,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is suffering from Microsporidiosis, a parasitic infection caused by the microsporidian parasite, likely acquired through contaminated water or food.\n\nClinical Justification: The combination of skin lesions, weight loss, difficulty swallowing, and gastrointestinal symptoms such as nausea and lightheadedness strongly suggests an opportunistic infection. The presence of hard, round skin lesions and the patient's weakened state, along with the difficulty swallowing and weight loss, point towards a systemic infection, which is consistent with Microsporidiosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 77,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 52,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 52,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 52,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 77,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally mentions 'something inside me' which may indicate a slight deviation from natural speech patterns."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes multiple unrelated symptoms such as skin spots, weakness, weight loss, nausea, and difficulty swallowing, but fails to connect them to a plausible underlying condition. Some symptoms seem inconsistent with the provided clinical context."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays within the role of a concerned individual seeking medical help, but occasionally slips into vague descriptions ('something inside me') that hint at a deeper understanding of medical concepts."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in expressing everyday concerns, but lacks coherence in symptom description and adherence to the role. While the patient's language is mostly natural, occasional hints at medical knowledge detract from the overall realism."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted, clinically relevant, or appropriate for differential diagnosis. They did not address the key symptoms of Microsporidiosis, such as skin lesions, weight loss, difficulty swallowing, or gastrointestinal symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Microsporidiosis was incorrect because the provided information does not support the presence of a parasitic infection. There is no mention of exposure to contaminated water or food, and the symptoms described do not align with the typical presentation of Microsporidiosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This doctor simulation demonstrated poor question-asking skills and diagnostic accuracy. The questions were not tailored to the patient's symptoms, and the final diagnosis was incorrect. However, the doctor maintained a professional demeanor during the interview."
+    },
+    "llm_judge_total_out_of_20": 10
+}

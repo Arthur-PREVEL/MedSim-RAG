@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, my hands have been aching quite a bit lately, especially when I grip things or use them for long periods.  My fingers seem stiff sometimes, too, and it takes me a while to get them moving good in the morning. My knee has been bothering me too, mostly when I walk up or down stairs.  It makes a popping sound sometimes and just feels stiff and sore.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any numbness or tingling sensations in your hands or knees?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Mmm, not really numbness, but sometimes my fingers get kinda stiff, especially in the morning. And it feels a bit \"funny\" if I bend them too much. My knees don't bother me so much with tingling, but they ache a good bit when I walk too long.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of diabetes or high blood sugar?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I don't think so. My biggest problem lately has been my hands and my knees. They just ache, especially when I try to do things around the house like cooking or gardening.  Rest helps some but it doesn't go away completely.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any difficulty with your vision?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, my eyesight is fine. It's these hands and knees that are giving me trouble lately.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 16,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Osteoarthritis\nClinical Justification: Based on the patient's description of joint pain and stiffness, particularly in the hands and knees, as well as the popping sound heard during knee movement, the most likely diagnosis is osteoarthritis. The patient's age (50 years old) also puts her at an increased risk for this condition. Additionally, the patient reports no history of diabetes or high blood sugar, which can be a risk factor for rheumatoid arthritis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 74,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 16,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 74,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions ('feels funny', 'aches')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient consistently reported pain and stiffness in multiple joints, which aligns with osteoarthritis. However, the mention of a 'popping sound' in Turn 1 might suggest other conditions like tendonitis or ligament sprains."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but showed some awareness of their condition by mentioning specific symptoms and how they impact daily life. There were moments where they seemed to be describing their own experiences rather than staying within the role."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated a good understanding of osteoarthritis symptoms, but could benefit from more nuanced descriptions and less self-awareness. The patient's responses were generally coherent and stayed within the role, but lacked depth and specificity at times."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but Question 3 was not directly related to the key symptoms of osteoarthritis. Questions could have been more comprehensive to cover all aspects of the condition."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of osteoarthritis was correct, but the justification relied heavily on the patient's age and the absence of diabetes, which are not definitive indicators of osteoarthritis. A more thorough consideration of other possible causes and the specific symptoms presented would strengthen the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good question-asking skills and diagnostic accuracy, but could improve by asking more comprehensive questions and providing a more robust justification for their diagnosis. With some refinement, they have the potential to become an effective clinician."
+    },
+    "llm_judge_total_out_of_20": 14
+}

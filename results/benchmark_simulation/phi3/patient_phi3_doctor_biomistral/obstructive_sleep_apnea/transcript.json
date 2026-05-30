@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon! Lately, my energy levels have been really low throughout the whole day at work—even when I wake up feeling okay before starting my shift. It feels hard to keep focus on tasks sometimes because there’s this nagging sense that my mind isn’t fully alert even though rest has passed. My colleagues say they noticed how deep I seem to breathe out suddenly once we get started doing our usual activities here at lunch break. Plus, those mornings where I face pains behind my eyes upon waking always make me rub them awkwardly till things settle down somewhat before heading home. Oh, speaking about health matters recently, last month was special since both family members pointed fingers towards us discuss",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any other symptoms like dizziness or lightheadedness?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Not at all, Doctor. I am feeling quite alert now when awake. But recently there has been this throbbing sensation behind my eyes whenever I wake up too early before dawn breaks - feels almost relentless sometimes. And yep, that's not uncommon here on our island either – we deal with heat waves which seem to make things worse somehow. Besides those eye pains though, nothing else really stands out right away besides maybe having trouble staying cool due to these climate conditions affecting me every summer season past couple years now.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 92,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven’t been paying close attention to my eating habits lately but now that you mention it... Yes, actually! It seems like those days when my energy levels were really down would lead me to just grab something quick instead of sitting down for a proper meal. And since we last met, these past few months have felt quite tough on my waistline too—my clothes seem looser around the middle despite trying different diets here and there. No specific foods come immediately to mind right off the bat though – they all sort of blend together at this point because everything affects how much stamina I possess throughout the afternoon hours unless an alarmingly strong yawn takes hold. With each passing year getting",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have actually been feeling very sluggish throughout my waking hours recently which seems strange since I don’t recall changing anything about my eating habits lately either. Also, at times when people share stories around me, there were moments where they seemed concerned that I might not hear them clearly because sometimes their voices would become faint before coming back—like they just paused briefly right then next thing knew everyone was continuously speaking again except those brief interruusted instances made sense now why folks look so puzzled every time this happens... So yes boss here too feels kinda outta sorts cause whenever certain words catch up near our mouths we sortabout pause even though usually wouldn't mind losing track o who spoke last",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of excessive sleepiness during the day, difficulty concentrating, and snoring while sleeping, the final diagnosis is obstructive sleep apnea (OSA). The patient's description of feeling tired and lethargic throughout the day, difficulty focusing, and snoring while sleeping are common symptoms of OSA. Additionally, the patient's family members have also noticed these symptoms in him. The patient's history of weight gain and difficulty losing weight may be related to OSA as well.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 76,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 92,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 76,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into informal expressions ('sortabout', 'catch up') and vague descriptions ('those days', 'this point')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes some symptoms consistently with the clinical context (excessive daytime sleepiness, morning headaches), but others are less clear or unrelated (trouble hearing conversations, feeling sluggish)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient occasionally acts like a doctor, asking questions indirectly ('what you mention it') and providing information about themselves rather than responding directly to the clinical context."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation shows potential, but could benefit from more consistent symptom reporting and adherence to the role. While they use everyday language, some responses are unclear or unrelated to the clinical context. They also occasionally act like a doctor, which detracts from the simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as morning headaches, nocturnal reflux, insomnia, and nocturia. Questions were not always clinically relevant, e.g., asking about dizziness or lightheadedness which is not directly related to OSA."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was partially correct, as the patient presented with excessive sleepiness and snoring, which are common symptoms of OSA. However, the doctor failed to consider other potential causes of these symptoms and did not use specific diagnostic tools like the STOP-BANG questionnaire or the Epworth Sleepiness Scale to support the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally stayed professional and avoided acting like a patient, but there was a minor lapse when they repeated the same question twice (about changes in appetite or weight)."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor simulation showed promise, but could benefit from more targeted questioning and consideration of multiple potential diagnoses. They demonstrated a good understanding of the patient's symptoms, but their diagnostic approach was somewhat superficial. With further training, this doctor has the potential to become proficient in diagnosing obstructive sleep apnea."
+    },
+    "llm_judge_total_out_of_20": 11
+}

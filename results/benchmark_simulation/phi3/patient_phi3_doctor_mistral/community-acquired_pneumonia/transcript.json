@@ -1,0 +1,227 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well hello there! Doctor Smith here met me this morning for my checkup because something doesn't feel quite right, doc. It seems like lately things just got tougher on getting enough air each time I breathe deeply - feels harder than usual when taking big breaths while lying down at night sometimes wakes up even better sleep from restless mindful dreams—not happy about it all these days without much relief coming along quick either way... But let’s talk more if needed later after we chat firstly off our main concerns before diving deeper into any specific details regarding health matters which might otherwise distract us away too quickly due attention being paid only towards surface level issues rather important ones mentioned earlier within conversation itself prior",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ards",
+                    "ra"
+                ],
+                "word_count": 126,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any persistent chest pain or discomfort associated with your breathing difficulties?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I sometimes feel pressure on my chest when I take deep breaths, almost like there's something heavy sitting there. It doesn't hurt all the time, but it does bother me occasionally, especially at night while trying to sleep.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any irregularities in your heartbeat or pulse rate associated with this chest pressure?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, Doctor, I haven't really felt much about my heart beating differently when there’s that pressing feeling on my chest. It seems more constant than anything else - it just doesn't let up no matter how I move around. And speaking frankly, sometimes after eating something heavy, especially if food stays down for too long before coming back up again, things don't feel quite right either. Can we talk about why exactly these feelings might not align perfectly? Should they concern me at all given my situation here today? Your expertise would help clear the air for peaceful rest tonight.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 100,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any episodes of excessive sweating, dizziness, or fainting along with this persistent chest pressure and discomfort, especially after eating heavy meals?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 24,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, there has been occasional shaking due to feeling too hot when it seems nothing is causing heat inside my body. Sometimes I feel faint nowadays if we sit for long while talking about health stuff over lunches which seem very tiring afterwards. And yes, sometimes everything goes blurry when sitting down on our old sofa at home during evenings since last weekend night felt unusually weird because I had trouble breathing easily even though nobody said anything bad around us that time.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ards"
+                ],
+                "word_count": 83,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Community-Acquired Pneumonia\n\nClinical Justification: The patient presents with symptoms such as persistent chest pressure, difficulty breathing (dyspnea), and occasional shaking/feeling hot without an identifiable cause, which are indicative of respiratory distress. Additionally, the patient mentions experiencing occasional dizziness and blurred vision, suggesting potential hypoxia (low oxygen levels) due to the respiratory issue. These findings, combined with the absence of significant cardiac symptoms, support a diagnosis of community-acquired pneumonia. Further diagnostic tests may be necessary to confirm the diagnosis and determine the causative organism.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ards",
+                    "ra"
+                ],
+                "word_count": 126,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 39,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 100,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ards"
+                ],
+                "word_count": 83,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 24,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language, but often digressed and failed to directly address the questions asked. They also used phrases like 'doc' and 'peaceful rest tonight,' which detract from their natural speech."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's descriptions of their symptoms were somewhat coherent, but they jumped between different topics and didn't always connect them to the clinical context. They mentioned feeling pressure on their chest, difficulty breathing, and occasional shaking, but didn't clearly link these to potential causes like pneumonia."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient frequently strayed from their role by asking questions that seemed more relevant to a doctor's perspective ('Can we talk about why exactly these feelings might not align perfectly?' and 'Should they concern me at all given my situation here today?')."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed promise, but struggled to maintain a consistent narrative voice and stayed too focused on the doctor's perspective. With refinement, they could improve their ability to describe symptoms coherently and adhere to their role as a patient."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were partially targeted but missed key symptoms such as fever, chills, cough productive of purulent sputum, and weight loss. Questions also did not explore the patient's history of alcohol use disorder or immune-compromised state."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the symptoms presented by the patient. However, it lacked consideration of alternative causes such as Legionella infection or Mycoplasma infection, which could have been suggested by specific symptoms like diarrhea, headache, and confusion."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic skills, but could improve by asking more comprehensive questions that cover all possible symptoms and exploring the patient's medical history. A more thorough consideration of alternative diagnoses would also enhance their diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 12
+}

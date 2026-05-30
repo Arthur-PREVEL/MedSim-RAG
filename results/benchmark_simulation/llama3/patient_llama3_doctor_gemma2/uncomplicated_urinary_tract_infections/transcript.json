@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning doc. Thank you for seeing me. To be honest, I've been having some trouble lately. Whenever I go to the bathroom, it hurts to pee. It's like there's a sharp sting down there. And even after I finish going, I feel like I have to keep getting up throughout the day because I really have to go again right away. Sometimes my lower stomach feels kind of tender too. I'm not sure what's causing it, but I hope we can figure it out so I don't have to live like this.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 93,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any blood in your urine?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I don't think so. To be honest, I'm not really sure. My vision isn't what it used to be, and my grandson helps me get ready for bathroom trips now. But I've been getting up quite frequently at night to go pee. It's really disrupting my sleep. And sometimes, when I do go, it feels like someone's stabbing me down there. It hurts!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 64,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When you feel that stabbing pain, is it worse when you urinate or afterwards?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "It's just this sharp pain, like someone is poking me right down there. It gets really bad when I try to pee, but even after I'm done, it lingers for a bit. Sometimes it feels like my whole lower stomach is sore, too. You know, it's hard to explain, but it's like a burning sensation that never seems to go away.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 61,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any blood in your urine?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! I've been noticing some pinkish stuff coming out when I go to the bathroom lately. It's not just a little bit either, it's pretty noticeable. I'm getting a bit worried about it, to be honest. And let me tell you, it hurts to pee. Hurts like my old lady bladder doesn't want to cooperate anymore! I've also been getting up a lot during the night to use the bathroom, and it feels like I have to rush to get to the bathroom before it's too late. My goodness, I hope it's nothing serious!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 96,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Complicated Urinary Tract Infection (UTI)\n\n**CLINICAL JUSTIFICATION:** The patient presents with classic UTI symptoms such as dysuria, frequency, urgency, and suprapubic pain.  The presence of hematuria (blood in the urine) indicates a more complicated infection requiring further investigation and potentially different treatment than uncomplicated UTIs. \n\n\nLet me know if you'd like to explore potential next steps in management!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 93,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 64,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 61,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 96,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally uses colloquial expressions ('sharp sting', 'stabbing me down there')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistently with the clinical context, but Turn 4 introduces hematuria, which is not explicitly mentioned in the initial description of uncomplicated UTIs."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but exhibits some awareness of their condition, particularly in Turns 2 and 4, where they mention specific symptoms and concerns."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good symptom coherence and role adherence, but could benefit from more subtle expression of symptoms and less explicit knowledge of medical concepts. The introduction of hematuria in Turn 4 requires further clarification to ensure consistency with the clinical context."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The doctor asked two relevant questions about hematuria, but failed to ask about other key symptoms such as urinary frequency, urgency, and suprapubic pain. Questions were also repetitive and did not cover all possible complications."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect. The patient's presentation was consistent with uncomplicated UTI, not complicated UTI. Hematuria could be a symptom of uncomplicated UTI, and the doctor should have considered this possibility before jumping to a more complex diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional during the interview, but showed some enthusiasm and informality towards the end of the conversation, suggesting a lack of professionalism."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This doctor simulation demonstrated some strengths in staying professional, but fell short in asking comprehensive and targeted questions, leading to an inaccurate diagnosis. The doctor should strive to consider all possible diagnoses and complications before arriving at a conclusion."
+    },
+    "llm_judge_total_out_of_20": 10
+}

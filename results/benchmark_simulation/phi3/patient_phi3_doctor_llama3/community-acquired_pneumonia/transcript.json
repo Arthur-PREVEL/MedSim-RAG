@@ -1,0 +1,225 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, it feels like there’s this constant pressure on my side when I breathe deeply. It gets worse if I try moving around too much. Lately, every time I get up from bed, even just for tea, catches me out because standing makes walking tiring very quickly. Got any idea why that could be happening based on these things going wrong lately? And yeah, overnight last weekend was real rough – felt quite warm then had shivers all night after waking at dawn. Couldn't make heads nor tales about where to lay down without feeling achey, almost no appetite either... seems strange how eating doesn't settle well anymore—gotta take deep breaths",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 112,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight loss or changes in your bowel movements recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, Doc, I haven't lost much weight lately but my stools seem sort of different. They aren't quite normal for me—harder than before and causing me more trouble when using the bathroom these days. Thanks for asking though. It helps that you listen carefully!",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any abdominal pain or discomfort while having these harder stools?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I feel queasy when it comes time for meal times lately, even though there isn't much left that appeals after dealing with this issue every day now. It kind of makes my tummy turn unpleasantly sometimes too. Makes sense how eating might affect things since we talked about possible connections between food issues and respiratory problems earlier on today. But let’s focus more on getting better from whatever is making breathing difficult at night—feeling so worn out just sitting up seems strange considering all the years spent active beforehand. And no matter if restful doesn't help either because trying hard not only does nothing but worsens matters further causing greater exhaustion regardless whether one tries deep",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 117,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight loss or changes in your appetite over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I haven’t been feeling hungry much lately. It seems strange because even my favorite foods don't tempt me these days – it feels really weird not having that little rumble after eating them before. Also, while getting dressed this morning, putting on a belt felt harder than usual - had to ask for help from Martha here at home since she usually lifts her dresses up alone without trouble. Oh, and just last weekend, when we went out shopping together, things looked blurry sooner compared to how they used to be. Always thought needin' glasses was part of growin' old, but maybe there could be more behind all this weariness too… And",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 114,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient has community-acquired pneumonia.\n\nClinical Justification: The patient's symptoms of difficulty breathing, fatigue, fever, chills, and recent weight loss, along with gastrointestinal changes such as constipation and decreased appetite, suggest an infectious process affecting multiple systems. The presence of blurred vision may indicate hypoxia or metabolic derangement secondary to severe infection. These findings, combined with the patient's recent history of increased shortness of breath and fatigue, particularly exacerbated by movement and improved with rest, point towards a diagnosis of community-acquired pneumonia.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 112,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 117,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 114,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into informal expressions ('gotta', 'makes sense') and colloquialisms ('lays down')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes various symptoms, including difficulty breathing, fatigue, weight loss, changes in stool consistency, nausea, and blurred vision. However, the connection between these symptoms and potential underlying conditions is not explicitly made, and some symptoms (e.g., weight loss) are mentioned inconsistently throughout the conversation."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally exhibits behaviors more typical of a healthcare provider (e.g., asking questions like 'Makes sense how eating might affect things since we talked about possible connections between food issues and respiratory problems earlier on today')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and describing symptoms, but falls short in coherently connecting these symptoms to potential underlying conditions and maintaining a consistent patient role. With refinement, the patient could improve their ability to articulate a clear narrative and maintain a more authentic patient persona."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Questions were not targeted at the key symptoms of pneumonia, such as cough, purulent sputum, or pleuritic chest pain. Questions focused more on gastrointestinal symptoms rather than respiratory symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect. There was no mention of the patient's cough, purulent sputum, or pleuritic chest pain, which are crucial symptoms of community-acquired pneumonia. The justification provided also mentioned 'difficulty breathing' but it wasn't explicitly stated that the patient had difficulty breathing."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed relatively professional throughout the interview, but there was a slight deviation from professionalism when making assumptions about the patient's blurred vision being due to hypoxia or metabolic derangement without explicit information from the patient."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor-patient interaction showed potential in terms of staying professional, but lacked in asking targeted and clinically relevant questions. The final diagnosis was incorrect due to the lack of consideration of key pneumonia symptoms. With further training, this doctor could improve their questioning skills and diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 10
+}

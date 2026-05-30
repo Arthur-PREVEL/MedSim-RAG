@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good day, doc. To be honest, I'm feeling pretty frustrated. I've been having some trouble sleeping because every night, I'm getting up multiple times to use the bathroom. And sometimes, I just wake up with wet sheets. It's not just when I'm sleeping, though - I've noticed I'm losing control of my bladder during the day too. It's happened a few times when I'm out shopping or visiting friends. It's so embarrassing! I've tried to hold it in, but it seems like once it starts, there's nothing I can do. My husband has even started leaving me a towel next to my chair in case something happens while we're watching TV together. I feel like I'm getting older and this",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of prostate problems?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I don't think so. My husband passed away a few years ago, but he didn't have any issues with his prostate that I recall. He was a bit...well, let's just say, a bit uncomfortable sometimes, but nothing too serious. But that was many years ago. As for me, I'm worried about my, ahem, accidents. You see, I've been having trouble sleeping through the night without...leaking. And when I do get up to use the bathroom, I feel like I'm racing against time, if you know what I mean. It's quite frustrating, really.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any discharge from your penis?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I don't think so. But my back has been acting up something awful lately. Sometimes it feels like there's a burning sensation when I sit down. And sometimes, especially at night, I get this...this...I guess you'd call it a little trickle. Nothing too bad, but enough to make me feel like I've peed myself even though I'm pretty sure I didn't. It's just embarrassing, you know?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 67,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of prostate issues or urinary tract infections?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I don't think so, doc. I mean, I've had some trouble going to the bathroom when I need to, but I figured it's just because I'm getting older. Sometimes I'll get up at night and feel like I gotta go, but by the time I make it to the bathroom, nothing comes out. But sometimes... well, sometimes things do come out when they shouldn't. And let me tell you, it's quite embarrassing. My wife gets frustrated with me too. She always asks if I went to the bathroom this morning before we leave the house. \n\nOh, and I did see my urologist last year, and he said everything looks fine down there, but he did say I should take these beta",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "The final diagnosis is overactive bladder (OAB). The patient's symptoms of frequent urination, urgency, and leakage both day and night, as well as the presence of nocturia, are consistent with OAB. The patient's age and history of prostatitis may contribute to their symptoms, but the absence of other symptoms such as dysuria, hematuria, or cloudy urine suggests that OAB is the most likely cause. The patient's history of enuresis as a child also supports the diagnosis of OAB.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 94,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 67,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal tone, e.g., 'doc', 'goodness gracious'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient described nocturnal and diurnal incontinence, but failed to mention the frequency, duration, and impact on daily life, which are crucial aspects of the diagnostic criteria."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character, but occasionally revealed knowledge of medical terminology ('beta blockers') and showed awareness of her own medical history ('urologist')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good natural language usage, but lacked coherence in symptom description and adherence to the role. The patient's responses were generally relatable and engaging, but could benefit from further development to ensure consistency with the clinical context and avoidance of revealing medical knowledge."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked by the doctor were not targeted towards the key symptoms of enuresis, such as frequency, nocturnal or diurnal patterns, or distress caused by the condition. Instead, they focused on unrelated topics like prostate problems and urinary tract infections."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of overactive bladder (OAB) does not align with the clinical truth. The patient's symptoms described do not match those typically associated with OAB, such as dysuria, hematuria, or cloudy urine. Furthermore, there is no indication that the patient has a history of prostatitis, which could potentially contribute to OAB symptoms. The mention of the patient's history of enuresis as a child is irrelevant to the current diagnosis of OAB."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional throughout the interview, but failed to maintain a neutral tone when discussing the patient's history of enuresis, implying a personal connection to the condition."
+        },
+        "total_score_out_of_10": 2,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated several critical flaws. The doctor failed to ask relevant questions about the patient's symptoms, leading to an inaccurate diagnosis. Additionally, the doctor showed a lack of understanding of the condition being discussed, as evident from the incorrect diagnosis of overactive bladder. To improve, the doctor should focus on asking targeted questions and staying neutral during the conversation."
+    },
+    "llm_judge_total_out_of_20": 9
+}

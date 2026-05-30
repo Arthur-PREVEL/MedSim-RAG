@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning doc, I'm so glad you're here to help me out. I've been feeling quite uncomfortable lately. It hurts when I go to the bathroom, especially when I try to start peeing. Sometimes I feel like I have to rush because I don't know how long I'll be able to hold it in. And sometimes, after I pee, I feel like I still need to go again right away, even though my bladder doesn't seem full. It's just really frustrating.\n\nAlso, I've noticed that my urine has been looking a bit cloudy lately, and it smells...well, let's just say it doesn't smell like fresh water anymore. I'm worried something might be wrong.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any burning sensation or discomfort during or after urination, or notice blood in your urine?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes. It's been bothering me for a while now. When I go to the bathroom, I feel like I'm doing something wrong, if you know what I mean. It's hard to explain, but it's like my insides are being pinched or something. And sometimes I get this little trickle of blood when I wipe myself. My granddaughter noticed it too and said we should come see someone about it. I've also been waking up a lot at night to use the restroom, and it feels like I have to hurry. That's just not right for an old lady like me!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 100,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any changes in your bowel movements, such as diarrhea, constipation, or a change in their frequency or consistency?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 21,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dearie, I don't think so. My bowels have been behaving normally, thank goodness! Although, now that you mention it, I have been getting up quite frequently at night to use the bathroom. It's almost like my body is telling me something, but I'm not sure what. Sometimes it feels like I've got a burning sensation down there too, especially when I try to go pee. And I must admit, sometimes I feel like I really gotta go, but nothing comes out... it's like my bladder is empty, but I still feel like I'm trying to hold something back. Does that make any sense?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 104,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any blood in your urine or any changes in its color, frequency, or smell?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dear doc, I've been noticing that my bathroom trips have been increasing lately. I feel like I'm running to the bathroom all the time! And, oh dear, sometimes it burns when I pee. It's like a little pinch down there. But, you know, I haven't seen anything... unusual in the water itself. No blood or anything like that. Just a regular yellow color. Although, I must admit, it does smell a bit stronger than usual. Not terrible, but just a bit... earthy, I suppose. You know how some people say their pee smells after eating certain foods? Yeah, it's like that. Does that make sense?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Uncomplicated Urinary Tract Infection (UTI)\n\nClinical Justification: The patient presents with common symptoms associated with UTIs, including dysuria (painful urination), frequent urination, urgency, and urinary frequency. Additionally, the patient reports a foul-smelling urine and occasionally observes a trace amount of blood in the urine. These symptoms, along with the absence of other significant findings, suggest an uncomplicated UTI.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 100,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 104,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 21,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, avoiding medical terms, but occasionally used colloquial expressions like 'good morning doc,' 'oh dearie,' and 'dear doc.' These expressions were not overly frequent, and the overall tone remained conversational."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally consistent with uncomplicated UTIs, including painful urination, urinary frequency, urgency, and suprapubic pain/discomfort. However, the patient did not consistently describe hematuria, and the description of cloudy urine was inconsistent across turns."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character and avoided acting like a doctor, but occasionally exhibited behaviors that could be interpreted as seeking reassurance or validation, such as asking if they were doing something wrong or if their symptoms made sense."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good symptom coherence and role adherence, but showed room for improvement in using everyday language and providing consistent descriptions of symptoms. The patient's responses were engaging and conversational, but occasionally relied on colloquial expressions or sought reassurance. With further refinement, this patient could effectively communicate their concerns and experiences in a way that is both relatable and medically accurate."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions related to urinary symptoms but missed opportunities to inquire about other relevant symptoms such as suprapubic pain or discomfort, bladder spasms, and hematuria. Questions 2 and 3 were not directly related to the key symptoms of uncomplicated UTIs."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was correct, but the justification could have been more comprehensive, considering the absence of fever, chills, nausea, vomiting, or back/flank pain, which would have suggested a possible pyelonephritis. The doctor also did not discuss the importance of urinalysis results or the need for a urine culture to confirm the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional but showed some deviation from a neutral role by providing unsolicited explanations and justifications for the diagnosis, which could have been presented in a more objective manner."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy but could improve by asking more targeted and comprehensive questions, staying strictly within their role, and providing more objective justifications for their diagnoses."
+    },
+    "llm_judge_total_out_of_20": 14
+}

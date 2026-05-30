@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, I'm having some trouble walking lately. My knees ache something awful after I get up from sitting for a while. And it's not just my knees, my back has been acting up too. Sometimes I feel like I've been hit by a truck when I stand up. My hands have been bothering me too - these little bumps on my fingers, they hurt if I move them a certain way. And my hip... well, it feels like it's going to give out on me sometimes. I've been feeling pretty stiff in the mornings, especially in my knees. It takes me a bit longer than usual to get moving. That's about it, really.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any swelling or redness around your joints?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Oh dear, yeah... my fingers have been feeling pretty stiff lately, especially when I wake up in the morning. And my hands do get a bit swollen, especially after I've been gardening or doing chores for too long. It's not super painful, but it's just annoying. My wife, Edna, has been complaining about how I've been holding onto things with my knuckles instead of using my fingertips, haha! But, honestly, sometimes I feel like my whole body aches, especially after sitting for too long.\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 84,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have your symptoms improved at all during rest periods throughout the day?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Honey, you know, I've been trying to take it easy when I sit down or lie down for a bit. My hands and hips do feel a little better, but not by much, if you want the truth. It's just that my back and knees ache something fierce most of the time now. When I'm sitting still, they seem to calm down a mite, but as soon as I get up or start moving around again... well, let me tell you, it's like someone's poking me with hot needles all over! (winces) Sorry, it's just so uncomfortable.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 97,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Do your symptoms improve at any point during the day?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, you know, it's funny. My hip always feels worst when I'm getting up from bed in the morning. It takes me a little while to get going, and I have to move slow because every movement seems to hurt. But once I'm up and about for a bit, the pain doesn't go away completely, but it gets a bit better. If I sit down again after being active, it tends to flare up some. And if I've been sitting still for too long, like on a car ride or something, my knee starts to ache pretty good. But the thing is, it's not just the pain – it's the stiffness. Getting out of a chair or taking a shower is hard because everything creaks",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 125,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Primary osteoarthritis affecting multiple joints including the knees, hips, and small joints such as those found in the hand. The patient exhibits classic signs consistent with this diagnosis—joint pain exacerbated by activity and relieved somewhat by rest; visible deformities due to cartilage loss; reported chronic dull aches accompanied by intermittent sharp pains upon specific movements indicating inflammation within affected joints. Clinically, their presentation aligns closely with typical age-related degenerative changes seen in primary osteoarthritis wherein mechanical wear and tear lead to articular cartilage breakdown, subchondral sclerosis, formation of osteophytes, synovial membrane thickening, and potential development of cysts which can cause significant discomfort and functional impairment across various activities of daily living.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 113,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 113,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 84,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 97,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 125,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 113,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, avoiding complex medical terms, but occasionally slipped into colloquial expressions ('hitting me like a truck', 'poke me with hot needles')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient consistently reported symptoms related to osteoarthritis, including joint pain, stiffness, and locomotor restriction, but did not explicitly mention other common symptoms such as muscle weakness and balance issues."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character and avoided acting like a doctor, but occasionally exhibited a conversational tone and used colloquial expressions, which detracted from their role."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation was generally strong, with the patient effectively conveying their experiences with osteoarthritis. However, there were moments where the language became overly casual, and the symptomatology could have been more comprehensive. With refinement, this patient could convincingly portray the complexities of living with osteoarthritis."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 3 were targeted and clinically relevant, but Question 2 was not directly related to the key symptoms of osteoarthritis. It could have been rephrased to explore symptom severity or impact on daily life."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was accurate, considering the symptoms described, but it would benefit from more specificity regarding the stage of the disease and the exact joints involved."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional, but occasionally used phrases that slightly resembled patient-like expressions ('reported chronic dull aches')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good understanding of osteoarthritis symptoms and provided a mostly accurate diagnosis. However, minor improvements in questioning strategy and adherence to a professional tone would enhance overall performance."
+    },
+    "llm_judge_total_out_of_20": 14
+}

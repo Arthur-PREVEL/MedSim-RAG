@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I appreciate your attention. I've been noticing a few things that concern me lately. I seem to feel excessively tired throughout the day, even after a full night's rest. Sometimes, I even find myself nodding off unintentionally, like when watching TV or sitting in a chair. This has been happening quite frequently, to the point where it interferes with my daily activities. Additionally, I've been waking up with headaches quite regularly.\n\nRegarding my sleep, I do snore rather loudly, sometimes so much so that it wakes me up. I've noticed that I sometimes stop breathing briefly during sleep, which I think might be causing these problems. I haven",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience periods of gasping for air during your sleep?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I occasionally have moments where I feel like I'm struggling for breath during my sleep. It's quite unsettling.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do these episodes also involve loud snoring?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doctor, I believe they do. During my sleep, my partner has often mentioned that I snore quite loudly. It wakes them up sometimes, even though our bedroom door is closed.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you ever feel tired or sleepy during the day despite getting enough sleep?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I often find myself feeling tired and fatigued even though I believe I am getting enough sleep at night. This persisting weariness has become quite bothersome for me, Doctor.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Obstructive Sleep Apnea (OSA)\n\n**Clinical Justification:** The patient presents with classic symptoms of OSA, including excessive daytime sleepiness, witnessed apneas (pauses in breathing), loud snoring, morning headaches, and gasps for air during sleep.  These findings strongly suggest an obstruction of the airway during sleep, leading to repeated awakenings and poor sleep quality. \n\n\nLet me know if you'd like to explore other potential diagnoses or discuss treatment options!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 69,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 7,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 69,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient uses everyday language, avoiding complex medical terms and explaining their symptoms clearly."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's symptoms align well with the clinical context provided, including excessive daytime sleepiness, loud snoring, and brief breathing cessations during sleep."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient stays in character, presenting as a concerned individual seeking medical attention, and avoids acting like a healthcare professional."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation demonstrates excellent communication skills, effectively conveying their concerns and experiences related to suspected OSA. Their responses are coherent with the clinical context and showcase a clear understanding of their symptoms. They maintain a patient-centered approach, adhering to their role and avoiding any semblance of a medical professional. Overall, this simulation presents a realistic portrayal of a patient discussing their health issues."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as morning headaches, nocturnal reflux, insomnia, and nocturia, which are relevant to obstructive sleep apnea."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the symptoms presented, but the doctor could have considered alternative explanations for the patient's symptoms before arriving at the conclusion of obstructive sleep apnea."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated good question-asking skills and a clear understanding of the condition. However, there were opportunities to gather more comprehensive information about the patient's symptoms and consider alternative diagnoses. With further refinement, the doctor could improve their diagnostic accuracy and provide more well-rounded care."
+    },
+    "llm_judge_total_out_of_20": 17
+}

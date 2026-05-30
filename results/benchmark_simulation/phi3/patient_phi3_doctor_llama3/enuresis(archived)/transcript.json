@@ -1,0 +1,219 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hey Doc, thanks for seeing me. Lately, things have been tough when it comes to staying dry while taking care of business after eating dinner but before going upstairs each evening; seems quite frequent - maybe around twice this past month, every single day if possible! Would there perhaps be ways to get better hold over my bodily functions so these situations don’t happen anymore? Oh, by the way – no one else in our big fam has had similar troubles growing old themselves except for some pets now passed away... Not much changes though since childhood because those were the only instances ever observed back home too where we all could manage without unintended water escapes until older folks got involved. If needful",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any urgency or discomfort during the day that might suggest an underlying issue with your bladder or prostate rather than just nocturnal incontinence?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 26,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Not really doc; my life hasn't been too hard because I sometimes don't make when nature calls right away even though there seems like lots happening without me knowing why. My wife tells me some stuff each morning before we head off together - but I usually forget by late afternoon – especially if she didn’t reminded again today until after our stroll around Block Island yesterday evening. She noticed last Thursday how things were going differently between us both since he had his stroke back six summers ago... But maybe something changed recently one way time passed quickly past full moon phase made feel very tired feeling instead getting up early every single mornings starting becoming bit harder doing so compared earlier ones couple weeks previous now could explain much better",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 132,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any difficulty with your memory or cognitive function prior to this recent period of fatigue?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Sure doc! Lately I feel really tired all the time; even though my kids say they don’t see me leaking around here much anymore compared to when we were younger folks back home, but trust them – their stories aren’t too far off. There ain't no needles jabbing by themselves unless someone else poke ‘em near where my belly sits down low there. Aside from these sudden bursts leading right over onto grandkid pajamas if mom isn’t looking carefully enough nowhere close to naps makes little ones miss school because why would one want pee-soaked shoes just before morning starts up loud cries for breakfast… Oh yeah plus those gig",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ra"
+                ],
+                "word_count": 110,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any weight loss or changes in your appetite?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, I haven't noticed much change in my eating habits recently. But tell me more—what kind of tests did they perform when looking into this issue before we talk further?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is likely suffering from Nocturnal Enuresis (Bedwetting) due to a combination of factors including age-related decline in bladder control, potential underlying neurological issues such as dementia or Alzheimer's disease, and possibly a side effect of medication or other health conditions.\n\nClinical Justification: The patient's history suggests a long-standing issue with nocturnal enuresis, which has worsened with increasing age and fatigue. The lack of urgency or discomfort during the day, combined with the presence of cognitive impairment and recent changes in sleep patterns, point towards a neurogenic cause rather than a purely mechanical or anatomical issue. Further investigation may be necessary to rule out underlying conditions such as dementia or other neurological disorders.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 116,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 132,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ra"
+                ],
+                "word_count": 110,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 26,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 18,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 116,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses colloquial expressions and informal language, but occasionally slips into vague descriptions of symptoms and unclear explanations. They also mention unrelated topics, such as pets passing away and a family member having a stroke, which detract from the coherence of the conversation."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient's descriptions of their symptoms are inconsistent and lack clarity. They describe different scenarios and experiences, making it difficult to pinpoint a clear understanding of their condition. For example, they mention being 'tired' and having 'bursts,' but do not explicitly connect these feelings to their nocturnal enuresis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays within the role of a person experiencing nocturnal enuresis, but occasionally exhibits behaviors that suggest they are trying to manipulate the conversation or deflect attention from their symptoms. For instance, they ask about tests performed before discussing their own experiences."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some potential in conveying the emotional impact of nocturnal enuresis, but struggles with providing clear and coherent descriptions of their symptoms. Their responses often veer off-topic or fail to directly address the clinical context. To improve, the patient could focus on providing more concrete examples and sticking to the topic at hand."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects of the clinical criteria for enuresis, such as frequency, distress, and exclusion of other medical conditions. Questions did not directly address the DSM-5 diagnostic criteria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was partially accurate but lacked clear evidence-based reasoning. The conclusion jumped to a broad range of possible causes without sufficient supporting information from the interview. The connection between nocturnal enuresis and age-related decline, potential neurological issues, and medication side effects was not clearly justified by the provided symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated some understanding of the patient's symptoms, their questioning strategy failed to comprehensively cover the essential aspects of enuresis diagnosis. The final diagnosis lacked clarity and justification based on the provided information. To improve, the doctor should focus on asking targeted, symptom-specific questions that align with the DSM-5 diagnostic criteria and ensure a more logical, evidence-based approach to diagnosis."
+    },
+    "llm_judge_total_out_of_20": 11
+}

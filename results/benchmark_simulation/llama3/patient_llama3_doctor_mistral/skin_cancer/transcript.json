@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Skin Cancer",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dear doc, I'm not sure where to start. I've been noticing this...this thing on my arm for a while now. It's just above my elbow, on the outside. It's been itching something fierce lately, especially after I shower. Sometimes it gets red and swollen too. And yesterday, it started bleeding a bit. That scared me. I'm worried it might be serious.\n\nI've also had some pain there, but it's more of a dull ache, like a gentle buzzing. It doesn't hurt when I touch it, though. Just when I try to scratch it, and sometimes when I move my arm. \n\nTo be honest, I haven't given it much thought until recently, but now that I think",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in shape, size, or color of the lesion over time?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been noticing this spot on my shoulder for a while now. It's been there for a few months, but lately, it seems to have gotten bigger and turned a darker shade of brown. Sometimes it itches a bit too. I'm not sure if it's just normal aging or something else entirely. My granddaughter said it looked a little odd last time she visited, but I didn't think much of it until recently when I started feeling some discomfort when I move my arm. Now I'm getting a bit worried.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 91,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Has the spot on your shoulder ever bled, crusted over, or developed any irregular borders?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I've been scratchin' at it something fierce lately, and I think I might have scratched it open a bit yesterday. It did bleed a little, but just for a second. The crust came off pretty quick, though. As for the border, I'm not sure... it's just gotten a mite bigger since it first appeared, and it's starting to look a bit... uneven, I suppose. But honestly, I was worried about the itching more than anything else. That stuff has been driving me crazy!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your weight, appetite, or bowel movements recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I don't think so. I've been eating my usual meals, maybe a bit less since my grandkids moved away and I'm not cooking for them anymore. But that's about it. As for weight, I'm pretty sure I haven't gained or lost any. My stomach's been feeling a little off lately, but that's just because I had some beans for lunch yesterday. Nothing out of the ordinary, really. What made you ask?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Basal Cell Carcinoma\n\nClinical Justification: The patient's description of an itchy, growing, and changing (in terms of color and shape) lesion on their arm and shoulder, along with occasional bleeding and a dull ache, aligns with the symptoms of basal cell carcinoma, a common type of skin cancer. The fact that the lesions have become larger, darker, and exhibit irregular borders further supports this diagnosis. Additionally, the patient's age and lack of significant changes in weight, appetite, or bowel movements suggest that these symptoms are unlikely to be related to internal diseases.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 94,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 91,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 94,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into colloquial expressions ('scratchin', 'mite')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient described multiple symptoms (itching, bleeding, pain), but failed to mention other relevant symptoms (size, color, shape, borders) consistently throughout all turns."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character, but occasionally exhibited behaviors inconsistent with a concerned patient (e.g., downplaying concerns, asking questions unrelated to their condition)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good use of everyday language, but struggled with symptom coherence and role adherence. While they effectively conveyed concern and physical sensations, they failed to consistently describe relevant symptoms and sometimes asked irrelevant questions. With refinement, this patient could better engage in a realistic conversation with a healthcare provider."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but Question 3 was not directly related to the symptoms of skin cancer. Questions could have been more comprehensive and specific about the characteristics of skin lesions."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis of Basal Cell Carcinoma was partially accurate, considering the symptoms described by the patient. However, the justification provided did not fully account for the possibility of other types of skin cancers, such as melanoma, which also presented with similar symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills and professionalism, but could improve by asking more comprehensive and targeted questions about the symptoms of skin cancer. The diagnosis was partially accurate, but could benefit from a more thorough consideration of all possibilities. With some refinement, this doctor has potential to excel in diagnosing skin cancer cases."
+    },
+    "llm_judge_total_out_of_20": 14
+}

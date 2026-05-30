@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I've been feeling a bit uncomfortable lately. There's this constant feeling of discomfort around my stomach area that I would describe as a dull ache, it's not severe but it's persistent. occasionally, I feel a burning sensation there, it's particularly bothersome after eating. Also, I've noticed that I'm not as hungry as I used to be, and sometimes I feel full even before finishing a meal. Sometimes, foods come back up after eating, and I experience bloating and gas as well. Lastly, I've been losing weight without any conscious effort to diet or exercise more. These symptoms have been troubling me for quite some time now, hope we can figure",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 111,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your bowel movements, such as diarrhea or constipation?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have. Lately, my bowel movements have been more unpredictable than usual. Some days I find myself going to the bathroom too often, having loose stools that are sometimes hard to control, while other days I struggle to pass motion at all. It's quite uncomfortable, doc.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant changes in your diet or stress levels recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been experiencing some changes in my diet and stress levels lately. I find that my appetite is decreasing, and I feel full quickly, which is unusual for me. I've also noticed that I often feel discomfort in my stomach area, especially after eating. This discomfort is sometimes accompanied by nausea and heartburn. Additionally, I've lost a bit of weight without trying, which concerns me. Stress-wise, I've been dealing with more worries than usual, and I believe this could be contributing to these feelings.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any difficulty swallowing or regurgitation of food?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I have been experiencing some trouble swallowing lately. It feels like the food gets stuck sometimes and it's rather uncomfortable. And yes, occasionally, I feel a bit of food coming back up after eating, which is not pleasant at all.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient presents with symptoms consistent with **Achlorhydria**, a condition characterized by the absence of hydrochloric acid production in the stomach, leading to impaired digestion and absorption of nutrients.\n\nClinical Justification: The patient's complaints of persistent epigastric discomfort, postprandial burning sensations, early satiety, weight loss, and regurgitation of food are indicative of achlorhydria. The presence of dyspeptic symptoms such as bloating, gas, and unpredictable bowel movements further supports this diagnosis, as achlorhydria can lead to malabsorption of nutrients and altered gut motility.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 111,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 86,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient uses everyday language throughout the conversation, effectively conveying their symptoms without resorting to medical terminology."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's symptoms are generally consistent with the clinical context provided, although they don't explicitly mention epigastric pain until Turn 3. However, the overall symptomatology aligns with achlorhydria."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient stays within the role, there are instances where they exhibit knowledge typical of a healthcare professional (e.g., 'it's quite uncomfortable, doc')."
+        },
+        "total_score_out_of_10": 9,
+        "overall_feedback": "This patient simulation demonstrates strong natural language usage and symptom coherence, reflecting a good understanding of the condition. However, slight deviations from the patient role indicate areas for improvement. Overall, the simulation provides valuable insights into the patient's experiences with achlorhydria."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions [1] and [3] were targeted and clinically relevant, but question [2] was somewhat vague and could be improved upon. Question [1] directly addressed a key symptom (constipation/diarrhea), while question [3] touched on another important symptom (difficulty swallowing/regurgitation). However, question [2] did not clearly relate to achlorhydria symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of achlorhydria was generally accurate, considering the symptoms presented. However, the justification provided focused more on general symptoms rather than specific ones related to achlorhydria, such as decreased gastric acid production."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills, particularly when targeting specific symptoms. Their diagnostic accuracy was also satisfactory, although some improvement could be made in providing a more precise explanation for the chosen diagnosis. Overall, they remained professional during the interaction."
+    },
+    "llm_judge_total_out_of_20": 16
+}

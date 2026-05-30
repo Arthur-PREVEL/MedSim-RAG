@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I just wanted to share some things that have been happening recently. I've noticed I'm feeling really tired all the time and it takes a lot more effort than before to get through my daily activities. I also find myself getting cold very easily, even in warmer temperatures.\n\nAnother thing is that I've been having trouble digesting food properly, which leads to me feeling bloated and constipated most days. I've even started noticing swelling in my legs and feet, which is something I've never experienced before.\n\nI've also noticed that my mood has become quite unstable. I can go from being perfectly fine one moment to feeling really irritable or down the",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 114,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have there been any changes in your weight lately?\" \n\nThis single-question approach focuses on gathering information about potential thyroid issues (fatigue, temperature intolerance) while simultaneously addressing gastrointest0inal symptoms (bloating, constipation), edema (swelling of extremities), and psychological disturbances (irregular mood). The goal here isn’t merely diagnosis but rather narrowing down possible causes by correlating these diverse yet interconnected symptoms with common endocrine disorders such as hypothy",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 65,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doctor, I must say that my reflection in the mirror seems a bit different these days. It feels like I've lost some weight, which wasn't my intention. However, it's not just about the numbers on the scale for me. I've noticed I feel quite cold more often lately, even when everyone else around me is comfortable. And speaking of comfort, digestion has become a real challenge - bloating and constipation have become regular companions, making daily life a bit tougher than usual.\n\nI've also struggled with swollen feet and hands recently, which can be uncomfortable and sometimes painful. Aside from those physical concerns, my energy levels just aren't where they used to be",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 114,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any changes or stressors in your personal life that may correlate with the timing of these symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 20,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Dr., I must admit there have been quite a few changes recently in my life. My husband and I lost our beloved dog, which was a shock for us both. Plus, my granddaughter moved away for college, and it feels empty without her here. On top of that, I've had some financial difficulties and a friend passed away suddenly. I suppose all this has taken its toll on me, even if I didn't realize how much it was affecting me until now.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have any recent events triggered feelings similar to what we discussed today?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I find myself reflecting on our conversation and it has stirred up some thoughts in me. Yes, there have been moments that have felt similar to those we spoke about today. I guess you could say they've brought back old feelings of self-doubt and anxiety. But please understand, I'm trying hard to deal with them differently now.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Eating Disorder Not Otherwise Specified (EDNOS), likely Bulimia Nervosa given binge eating behavior combined with compensatory behaviors leading to dental erosion; however, an underlying Thyroid Dysfunction cannot be ruled out due to reported fatigue, sensitivity to cold, and irregular menstrual cycles suggesting Hypothyroidism. Clinical Justification: Patient exhibits signs consistent with bulimic episodes including enamel erosion possibly related to purging, alongside systemic manifestations suggestive of Hashimoto's thyroiditis—a form of autoimmune thyroid disease causing hypothyroidism. These coexisting conditions necessitate further investigation into their respective etiologies and management strategies tailored to each condition.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 92,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 114,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 114,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 83,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 65,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 20,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 92,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language but occasionally slips into somewhat formal tone, especially in Turn 3 and 4. However, overall, their descriptions are clear and easy to understand."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient describes several symptoms (fatigue, cold intolerance, constipation, extremity edema), they fail to explicitly mention amenorrhea, which is a key symptom of the condition. Their descriptions are mostly coherent with the clinical context, but some connections between symptoms and the underlying condition are not made."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "In Turns 3 and 4, the patient deviates significantly from the expected role by discussing unrelated personal issues rather than focusing on their physical symptoms. This makes it challenging to assess their understanding of the condition."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation shows potential but requires improvement in staying within the expected role and maintaining coherence with the clinical context. While their language is generally clear, they struggle to connect their symptoms to the underlying condition and often divert from the topic at hand."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The questions were somewhat targeted and clinically relevant, but they didn't fully explore all key symptoms associated with Anorexia Nervosa. Questions 1 and 2 showed some promise, but Question 3 was too vague and failed to address crucial aspects like restrictive eating behaviors, purging methods, and excessive exercise."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of EDNOS/Bulimia Nervosa was partially accurate, but it missed the primary diagnosis of Anorexia Nervosa. The mention of Thyroid Dysfunction was a good attempt at considering other possible explanations, but it wasn't thoroughly investigated or justified based on the provided symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, asking questions and providing a clear explanation for the diagnosis."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "While the doctor demonstrated some understanding of the case, the questioning strategy could have been more comprehensive, and the diagnosis should have focused more directly on Anorexia Nervosa. With refinement, this doctor has the potential to excel in simulating real-world consultations."
+    },
+    "llm_judge_total_out_of_20": 12
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I've been feeling a bit uncomfortable recently, especially around my stomach area. It's a sort of persistent discomfort or pain that comes and goes. I've also noticed that after eating, I feel very full quite quickly and I don't seem to be able to eat much before feeling that way. Sometimes, I get this burning sensation in my chest, which can be quite bothersome. I've lost a bit of weight lately without trying, and it's been hard for me to gain it back. Also, I've been having occasional episodes of nausea and vomiting, especially after meals. I hope this helps, doc.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 103,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Do these symptoms worsen when lying down or bending over?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, my symptoms seem to get worse when I lie down or bend over. The discomfort in my stomach becomes more pronounced and sometimes, it leads to acid reflux, making me uncomfortable during sleep.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Do your symptoms improve after eating smaller, less fatty meals?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, they seem to help a bit. I find that when I eat smaller, less fatty meals, my stomach feels more comfortable afterward. However, sometimes I still experience discomfort or pain, but it's definitely less intense than with larger or fattier meals.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Do these symptoms occur only during eating or do you also notice them at other times?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, these uncomfortable feelings I've been having don't stick to just mealtime. They seem to pop up throughout the day too, not just after I eat. It's quite unsettling, really.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Gastroesophageal Reflux Disease (GERD) secondary to achlorhydria leading to delayed gastric emptying.\nClinical Justification: Patients often present with dyspepsia characterized by early satiety due to reduced gastric motility associated with low levels of hydrochloric acid production as seen in achlorhydria; their relief from symptoms upon consuming small, nonfatty meals supports impaired digestion likely related to GERD exacerbated by altered pH balance affecting lower esophageal sphincter function.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 68,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 103,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 68,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into a somewhat formal tone ('doc', 'doctor')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient described several common symptoms of achlorhydria (epigastric pain, heartburn, nausea, bloating), some symptoms were less typical (weight loss, postprandial fullness) or not directly related (vibration sense)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character as a patient, but occasionally exhibited behaviors more characteristic of a doctor (e.g., asking if the symptoms seemed to worsen certain situations)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, but could benefit from further refinement to ensure consistency with the clinical context and adherence to the patient role. While the patient effectively communicated their symptoms, there were instances where they deviated from expected behaviors and introduced less relevant information."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions [1] and [3] were targeted and clinically relevant, but question [2] was not directly related to the key symptoms of achlorhydria. Question [2] could be considered more relevant if it was phrased to inquire about symptom improvement after eating smaller meals in relation to the specific symptoms of epigastric pain or weight loss."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of GERD secondary to achlorhydria leading to delayed gastric emptying is partially accurate, but it does not fully align with the provided clinical truth. The primary condition described is achlorhydria, and while GERD may be a potential complication, it's not the direct cause. A more accurate diagnosis would focus on achlorhydria itself rather than its secondary effects."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding any behavior that might be perceived as unprofessional or overly familiar."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in maintaining professionalism and asking targeted questions, but struggled with providing an accurate diagnosis based on the provided clinical truth. Further training on accurately diagnosing gastrointestinal conditions, particularly achlorhydria, would be beneficial."
+    },
+    "llm_judge_total_out_of_20": 13
+}

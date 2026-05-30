@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, lately my throat feels really scratchy, kinda like when I get a cold coming on. And I've had this pain in my neck, right where my throat meets my collarbone, for the past couple of weeks.  It's been bothering me pretty bad, especially when I swallow.  Sometimes it even hurts just to turn my head.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any difficulty swallowing solid foods or have you noticed any changes in your voice?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't been able to eat some things comfortably lately.  My throat feels a bit sore when I swallow big bites, especially tougher foods. And my voice... it seems a little hoarse sometimes. Not all the time, just off and on.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any difficulty swallowing liquids or only solids?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"That's an interesting question. Mostly I just feel like my throat's been scratchy lately.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you had any difficulty swallowing or shortness of breath with this scratchiness?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Well, sometimes it feels a bit tight in my throat, like something's stuck. And I've been feeling a little winded lately, especially when I climb stairs.\"  \n\n\n(Jean pauses, coughing softly.)\n\n\n \"...It's just not like me, doc. \"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is diagnosed with Acute Subacute Thyroiditis.\n\nClinical Justification: The patient presents with a 2-week history of thyroid region pain, particularly upon swallowing, which suggests inflammation of the thyroid gland. Additionally, her symptoms of dysphagia (difficulty swallowing), hoarseness, and shortness of breath, along with her recent onset of these symptoms, point towards an inflammatory process affecting the thyroid gland, consistent with acute subacute thyroiditis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 67,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 67,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language, but occasionally slipped into informal expressions ('doc')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but lacked specificity and detail."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient deviated from their role by occasionally speaking informally and showing awareness of being in a medical setting ('That's an interesting question', 'It's just not like me, doc')."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed potential, but struggled to maintain a consistent narrative voice and provide specific details about their symptoms. They demonstrated some understanding of their condition, but often resorted to vague descriptions. With further refinement, they could improve their ability to convey their experiences in a more engaging and informative manner."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were partially targeted and clinically relevant, but missed key aspects such as fever, neck pain, and history of radiation exposure that could indicate different types of thyroiditis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, but the justification lacked consideration of other possible causes of dysphagia and hoarseness, such as Riedel thyroiditis or large goiter."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "The doctor demonstrated good questioning skills, but could improve by considering more potential causes of symptoms and providing a more comprehensive justification for their diagnosis. They maintained a professional demeanor during the interview."
+    },
+    "llm_judge_total_out_of_20": 12
+}

@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "It's nice to meet you too, Doctor. Well, I've been feeling pretty crummy for a while now. To start with, my stomach has been acting up something fierce. Whenever I eat, I get this burning sensation just below my breastbone. It's hard to describe, but it's almost like someone's poking me with a sharp object. Sometimes it gets so bad that I have to stop eating, even when I'm really hungry.\n\nAnd if I do happen to eat, I feel bloated and uncomfortable afterwards. My clothes seem tighter than usual, and I just don't feel right. Occasionally, I'll wake up in the middle of the night with this gnawing hunger, even though I had dinner just before bedtime.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 118,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any weight loss or gain recently, or noticed any changes in your bowel movements?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dearie, I've definitely lost some weight lately. My daughter's been complaining about how loose my clothes have become. At first, I thought it was just because I'd been feeling more tired and not eating as much after meals, but now that you mention it... (pauses) Oh, and my stomach has been acting up something fierce. I've had these bloated feelings, like I'm going to burst. And then there's this cramping in my tummy. Sometimes it's like someone's punching me from the inside out. It's really uncomfortable.\n\nNow, about those bowel movements... well, let's just say they're not regular anymore. Some days it's like water, other days it's hard as rocks. My",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 111,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your stool color or consistency, such as blood or mucus?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Oh dear, well... I've been going to the bathroom a lot more often than usual, but it's not really regular, if you know what I mean. Sometimes it's soft and runny, other times it's just sort of...well, there's nothing left over, if you catch my drift. And I do get this feeling like I'm not finished after I go, even though I think I have. It's quite unsettling, actually.\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any blood in your stool or changes in its color recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness, I don't think so... although, to be honest, my bowel movements have been a bit off lately. They're not as regular as they used to be. Sometimes it's hard to go, other times it's too easy if you know what I mean. And sometimes I do get this funny feeling that something's stuck inside me. Like, you know, like food is just sitting there, waiting to come out.\n\nBut, oh dear, I did notice my stools look a bit...well, pale. Not black or anything, but just sort of light-colored. Does that make any difference?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Gastroesophageal Reflux Disease (GERD) with possible Achlorhydria (low stomach acid production).\n\nClinical Justification: The patient presents with recurring symptoms of heartburn, bloating, and discomfort after meals, which are common signs of GERD. Additionally, the patient reports an unusual weight loss, irregular bowel movements, and pale stools, suggesting potential malabsorption due to low stomach acid levels (achlorhydria), which can exacerbate GERD symptoms by allowing acid reflux to persist longer in the esophagus. The patient's description of infrequent, loose, and incomplete bowel movements also supports the possibility of malabsorption.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 118,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 111,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 69,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 89,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions of symptoms ('it's hard to describe', 'you know what I mean')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient describes several symptoms, some inconsistencies arise between turns (e.g., initially mentioning epigastric pain, later describing cramping, and finally mentioning a feeling of being 'not finished' after bowel movements)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient occasionally exhibits behaviors inconsistent with a non-medical background (e.g., using phrases like 'if you know what I mean,' which implies a level of medical knowledge)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good effort in conveying symptoms, but could benefit from more consistency in symptom description and adherence to a non-medical role. The language used is generally clear, but occasional lapses into vagueness or medical terminology detract from the overall realism."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked targeted questions about weight loss, bowel movements, and stool color, but missed opportunities to explore other key symptoms like epigastric pain, nausea, vomiting, and decreased position and vibration sense, which are crucial for a comprehensive differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor suspected achlorhydria, the final diagnosis of GERD was not entirely accurate given the presence of weight loss, irregular bowel movements, and pale stools, which suggest a more complex condition involving malabsorption. A more accurate diagnosis would have considered these factors."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in asking targeted questions and maintaining professionalism, but fell short in exploring all relevant symptoms and providing an accurate diagnosis. With further refinement, they could improve their ability to consider multiple possibilities and arrive at a more precise conclusion."
+    },
+    "llm_judge_total_out_of_20": 14
+}

@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I've been feeling quite uncomfortable lately. It seems like I have small, hard, black spots appearing on my skin, particularly on my arms and legs. They look a bit like tiny blotches, and they're making me a bit itchy. Also, I've noticed some difficulty in breathing recently, and it feels like there's something stuck deep in my throat. I hope we can find a solution for these issues soon. Thank you for your help.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 76,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any other symptoms such as joint pain or swelling?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "As a patient, I haven't experienced any unusual joint pain or swelling. My focus has been on dealing with the skin irritations and the blackish blotches that have appeared on my skin lately. These spots are rather uncomfortable and distracting, making daily activities challenging at times. However, I haven't observed any pain or swelling specifically in my joints.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any difficulty in moving your joints?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I am finding it quite challenging to move my joints smoothly. It feels as if they're stuck and stiff, especially in the morning. Sometimes, I also notice small red bumps around the affected areas that appear blotchy and dark, reminiscent of pepper spots. This condition causes discomfort and limits my mobility, making daily activities more difficult.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any swelling or warmth in your joints?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I have been experiencing a strange sensation in my joints lately. They seem to feel larger than usual, and sometimes they also feel warm to the touch. It's been bothering me quite a bit, especially when I move around. Could there be something wrong?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Microsporidiosis\nClinical Justification: The patient presented with multiple symptoms including skin rash, difficulty in breathing, and joint pain and swelling. The skin rash was characterized by small, hard, black spots that were itchy and resembled tiny blotches. The patient also reported difficulty in moving their joints, which felt stiff and limited their mobility. Additionally, the patient experienced joint swelling and warmth. Based on these symptoms, a diagnosis of microsporidiosis was made. Microsporidia are parasites that can cause skin rashes, respiratory problems, and joint pain and swelling. Treatment options include antimicrobial medications and physical therapy.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 96,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 76,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 96,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally mentions 'blackish blotches' which could imply some knowledge of medical terminology. However, overall, the language remains accessible and understandable."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes multiple symptoms including skin irritation, difficulty breathing, and joint stiffness. However, the connection between these symptoms and the provided clinical context is unclear, suggesting a lack of coherence."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some understanding of their condition, mentioning specific details such as 'blackish blotches.' However, they also demonstrate a lack of adherence to the role by asking about unrelated symptoms like joint pain and swelling, which deviates from the initial presentation of skin issues."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and describing specific symptoms. However, the narrative lacks coherence with the provided clinical context, and the patient's questions stray from the expected scenario. With further refinement, the patient's responses could better align with the role and the clinical context."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "None of the questions asked by the doctor during the interview were targeted towards identifying the symptoms of Microsporidium. Questions about joint pain, swelling, and difficulty in moving joints may be relevant to some diseases, but they do not align with the clinical truth provided."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of 'Microsporidiosis' is incorrect because it does not match the clinical truth provided. Microsporidium is a type of parasite that affects insects, not humans. The symptoms described in the clinical truth do not align with those presented by the patient in the interview."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This doctor simulation demonstrated poor question quality and diagnostic accuracy. The doctor failed to ask relevant questions and arrived at an incorrect diagnosis. However, the doctor maintained a professional demeanor throughout the interaction."
+    },
+    "llm_judge_total_out_of_20": 9
+}

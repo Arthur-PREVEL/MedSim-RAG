@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, thank you for seeing me today. I have been feeling quite exhausted during the day, even when I get enough sleep at night. Sometimes I even fall asleep unintentionally, like when watching TV or sitting in a quiet room. I also tend to wake up several times during the night. In addition, I've been experiencing frequent headaches upon waking up.\n\nI should mention that I do snore loudly, sometimes so much that it wakes others up, and I believe I might stop breathing briefly during my sleep, although no one has observed this.\n\nI am a man, over 50 years old, and my neck circumference is larger than 40 cm. My BMI is",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have noticed some changes in my appetite and weight. Lately, I've been feeling hungry more frequently than usual, and I find myself eating larger portions of food than I used to. This has resulted in a noticeable increase in my weight. I'm not sure if this is normal at my age, but I thought it was worth mentioning.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 60,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any other symptoms such as difficulty sleeping or mood changes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I occasionally find myself struggling to fall asleep at night, which we call sleep-onset insomnia. In addition, I have noticed that my mood seems a bit more unstable lately. There hasn't been a specific trigger that I can identify, but it feels like I am experiencing more emotional ups and downs compared to before.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant changes in your appetite or weight recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have noticed some changes in my appetite and weight lately. I find myself feeling hungrier more frequently than before, and I've been gaining weight, particularly around my neck area. This hasn't happened overnight, but over the past few months, I've become more aware of it.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Obstructive Sleep Apnea (OSA)\n\nClinical Justification: The patient presents with excessive daytime sleepiness, falling asleep unintentionally, and waking up multiple times during the night. These symptoms are consistent with OSA. Additionally, the patient reports loud snoring and a large neck circumference, both of which are risk factors for OSA. The patient's recent weight gain and increased hunger may be related to OSA as well. Finally, the patient reports sleep-onset insomnia and mood changes, which are also common symptoms associated with OSA. Overall, the patient's symptoms and risk factors suggest a diagnosis of OSA.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 95,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 60,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 95,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language, avoiding complex medical terms throughout the conversation."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's symptoms were generally consistent with the clinical context provided, including excessive daytime sleepiness, loud snoring, and potential sleep apnea. However, the patient did not explicitly mention other relevant symptoms such as nocturnal reflux or insomnia until later turns."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character and avoided acting like a doctor, but occasionally slipped into a somewhat passive role, especially in Turn 2 where they asked about their weight gain rather than describing their experiences."
+        },
+        "total_score_out_of_10": 9,
+        "overall_feedback": "This patient simulation demonstrated strong adherence to the clinical context and everyday language usage. While there were minor deviations in role-playing, the overall narrative remained coherent and engaging. With slight adjustments to maintain consistency in symptom reporting and role-playing, this simulation could be further improved."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of obstructive sleep apnea, such as excessive daytime sleepiness, loud snoring, and breathing cessation during sleep. Questions about appetite and weight changes, difficulty sleeping, and mood changes are not directly relevant to the diagnosis of OSA."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor mentioned some symptoms consistent with OSA, such as excessive daytime sleepiness, loud snoring, and a large neck circumference, they failed to consider other crucial symptoms like breathing cessation during sleep and obesity, which are strong indicators of OSA. The final diagnosis was partially accurate but lacked comprehensive consideration of all relevant factors."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient. They provided a clear justification for their diagnosis, citing relevant symptoms and risk factors."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "The doctor demonstrated some understanding of obstructive sleep apnea symptoms and risk factors but failed to ask targeted questions and consider all relevant clinical truths. Their final diagnosis was partially accurate but could have been improved with more comprehensive questioning and consideration of all symptoms and risk factors."
+    },
+    "llm_judge_total_out_of_20": 15
+}

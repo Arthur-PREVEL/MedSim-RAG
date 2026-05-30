@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I've been feeling really tired all the time lately, even after a full night's sleep. And my husband says I snore very loudly, sometimes so loud he can hear me from across the room. He's even said he's seen me stop breathing for a few seconds while I'm sleeping!  😴😩  I get these bad headaches in the mornings too, which I didn't use to have before.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 67,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any episodes of falling asleep during the day or difficulty staying awake when watching TV or engaging in quiet activities?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes I get awfully tired during the day.  I might doze off on the couch while watching TV, even if it's something interesting.  And sometimes I just feel really drained and have trouble keeping my eyes open during the day.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 41,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced these symptoms at night when you're trying to fall asleep?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I do snore pretty loud sometimes, my family complains about it! And I do find myself waking up feeling really out of breath and needing a little sip of water.  It seems like I might not be sleeping soundly through the night.  Maybe that's why I get so tired during the day.   Sometimes my head feels a bit fuzzy when I wake up too.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 65,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever noticed any episodes where you stop breathing for a few seconds while you're asleep?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, my wife tells me she hears me sometimes gasp for air in the night.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is diagnosed with Obstructive Sleep Apnea (OSA).\n\nClinical Justification: The patient's symptoms of excessive daytime fatigue, loud snoring, witnessed apneic events by her spouse, morning headaches, and episodes of falling asleep during the day strongly suggest OSA. Additionally, the patient's reports of waking up feeling short of breath and having a fuzzy head upon waking further support this diagnosis, as they are common consequences of repeated nocturnal hypoxia and fragmented sleep patterns characteristic of OSA.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 79,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 67,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 41,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 65,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 15,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 23,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 79,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally uses colloquial expressions like 'awfully' and 'dozes off'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes some symptoms consistently throughout the conversation, such as excessive daytime sleepiness and loud snoring, but others, like morning headaches, are mentioned sporadically."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally slips into a more introspective tone, e.g., 'Maybe that's why I get so tired during the day.'"
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good use of everyday language and a reasonable understanding of their symptoms. However, there are moments where the narrative becomes less coherent and the patient's role adherence wavers slightly. With further refinement, the patient could better maintain consistency in describing their symptoms and stay within character."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects such as snoring, observed breathing cessation, and obesity. They did not cover all relevant symptoms of obstructive sleep apnea."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was correct, but the justification provided was incomplete. The doctor mentioned some relevant symptoms, but failed to discuss the importance of the STOP-BANG questionnaire results and the patient's physical examination findings."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor mostly stayed professional, but occasionally slipped into describing the patient's experiences instead of asking questions."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient interaction showed promise, but could benefit from more comprehensive questioning and attention to detail. While the diagnosis was ultimately correct, the justification lacked depth and clarity. With refinement, this doctor has potential to excel in identifying obstructive sleep apnea."
+    },
+    "llm_judge_total_out_of_20": 14
+}

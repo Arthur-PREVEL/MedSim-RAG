@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning doc. It's nice to finally meet you. To be honest, I've been having some issues with my, ah, business trips to the bathroom lately. You know how sometimes you gotta go really bad? That's been happening to me nonstop. And let me tell you, it hurts something fierce when I pee. I mean, it's like someone's poking me right between the legs. \n\nI've also been getting up a lot during the night to use the restroom. My husband keeps telling me I'm being a bit too frequent, but I just can't help it. It's like my bladder's always full, even after I've gone.\n\nSometimes, when I sit down to pee, I feel a little bit of",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of kidney stones or urinary tract infections?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I think I've had my fair share of trouble with those pesky urinary tract infections over the years. You know, I've been getting them since I was younger, but they've become more frequent lately. I just feel like I'm always running to the bathroom, and when I do go, it's like burning! It's so uncomfortable. Sometimes I even get a little bit of blood in my urine, which scares me half to death. But my old doctor used to just give me some antibiotics and tell me it'd take care of itself. Lately, though, I've been having some issues with my memory, and I'm worried maybe it's not just the usual UTI causing problems. My grandkids say",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "uti"
+                ],
+                "word_count": 119,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of head injuries or seizures?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No dear, I don't think so. I've had my fair share of falls over the years, but nothing too serious. I've always been a bit clumsy, you know. But no head injuries or seizures that I recall. Just getting old, I suppose! *laughs*",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any episodes of dizziness or vertigo?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I don't think so. Although, I did get up from my favorite armchair last week and felt a bit...well, off-balance, I suppose. My legs felt wobbly underneath me, and I had to grab onto the table to steady myself. But I think it was just because I'd gotten up too quickly after sitting for a while. You know how it is when you're getting older - everything seems to take a bit longer to settle down. But no, I wouldn't say I've had any proper dizzy spells. Just little things like that. Now, about these symptoms I'm here today...my belly's been acting up something awful lately. This burning sensation whenever I pee is quite uncomfortable.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's history of recurrent urinary tract infections (UTIs) and the presence of dysuria (painful urination), the final diagnosis is uncomplicated UTIs. The patient's history of frequent UTIs and the presence of pain and discomfort during urination are consistent with this diagnosis. Additionally, the patient's history of blood in the urine may indicate a more severe infection. However, the patient's lack of other concerning symptoms such as fever, chills, nausea, vomiting, or flank pain suggests an uncomplicated infection.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "uti"
+                ],
+                "word_count": 119,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 43,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally resorts to colloquial expressions ('business trips to the bathroom', 'goodness gracious')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes common symptoms of UTIs, such as painful urination, urinary frequency, and urgency. However, the mention of blood in the urine is inconsistent with the initial presentation of uncomplicated UTIs, which typically do not involve hematuria."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but exhibits some inconsistencies in their narrative, such as mentioning past experiences with UTIs and recent memory issues, which deviate from the expected role of a patient presenting with uncomplicated UTI symptoms."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good use of everyday language and coherent symptom description, but lacks consistency in adhering to the role and exhibits some minor deviations from the expected clinical scenario."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as urinary frequency, hesitancy, urgency, suprapubic pain or discomfort, bladder spasms, and hematuria. Questions 1 and 2 were somewhat relevant, but Question 3 was not directly related to the case."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of uncomplicated UTIs was generally accurate, considering the patient's history of recurrent UTIs and symptoms of dysuria. However, the mention of a 'more severe infection' due to hematuria could be misleading, as it might suggest pyelonephritis rather than an uncomplicated UTI."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional tone throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor simulation showed promise, but could benefit from more comprehensive questioning to cover all possible symptoms of uncomplicated UTIs. The diagnosis was mostly accurate, but required some interpretation. Overall, the doctor demonstrated good role-playing skills."
+    },
+    "llm_judge_total_out_of_20": 14
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon! How would you describe how you’re feeling right now? Let me understand more about that if we can. Have there been changes since this started perhaps after an incident where something might hit or shake out your throat area maybe at work too recently? That seems pretty common when someone experiences issues around their vocal cords which makes it difficult for them not only to speak clearly but even breathe smoothly sometimes – kind of explaining why they feel uncomfortably full up here *gestures towards neck* Does anything happen before food goes down during meals such as sips getting stuck easily; does it ever hurt when pressing against the side of your face near your shoulder blades while munching away? This",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any difficulty swallowing liquids, especially water?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, it feels like an obstruction when I try taking big sips of drinks; my throat seems blocked for a bit afterward, which isn’t normal right now since all this time I've been enjoying meals without such trouble before coming here today. This new discomfort started showing up only recently – not long ago actually. Would that suggest anything specific about how things might be developing inside me based on our previous conversations? And if there were some particular food substances making matters worse than others at different times during the day, would those need mentioning too? Anything else bothering you besides feeling restricted while having more liquid nourishment? What kind of overall changes have happened over past few weeks",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any difficulty swallowing solids or liquids?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Hello Doctor, I wanted to ask about something that's been bothering me lately. Recently, when I try to eat my dinner—whether it’s solid food like steak or even sipping soup—there seems to be this strange feeling where my throat just doesn’t seem quite cooperative. It feels tight almost all of a sudden, making every bite feel more uncomfortable than normal, sometimes leaving me frustrated midway through each meal.\"",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any difficulty breathing or coughing during these episodes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Dr., thanks for asking about my experience so far. I remember one time when suddenly it felt really uncomfortable right here around where they said might get irritated if we had an issue there - that must mean some sort of throat problem causing me trouble while smiling at friends who didn’t understand why their jokes weren't landing. Not sure how much this matters exactly – maybe even just being tired more often than usual doesn't directly tell us anything new apart from feeling worn out all the time without getting better rest no matter how many hours pass by sleepily under covers trying to catch up on lost days outside work before bedtime was always too early already though sometimes dreams were awry making waking",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of difficulty swallowing both solids and liquids, tightness in the throat, and feeling uncomfortable while eating, the final diagnosis is likely thyroiditis. The patient's description of feeling uncomfortable while smiling and being tired more often than usual may also be related to thyroiditis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 48,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 48,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal tone, e.g., 'I wanted to ask about something that's been bothering me lately.'"
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's descriptions of symptoms were generally coherent with the clinical context, but lacked specificity regarding the duration and progression of symptoms. They mentioned recent onset, but did not elaborate on the exact timing or any potential triggers."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient mostly stayed in character, but occasionally exhibited behaviors more typical of a healthcare provider (e.g., asking questions like 'Does that suggest anything specific about how things might be developing inside me?'"
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient demonstrated a good understanding of their symptoms and communicated effectively, but could benefit from providing more specific details about symptom duration, progression, and potential triggers. Additionally, they occasionally displayed behaviors more characteristic of a healthcare provider, which detracted from their role adherence."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of thyroiditis such as fever, neck pain, or history of radiation exposure. They focused primarily on swallowing difficulties which is only relevant to specific types of thyroiditis (e.g., Riedel thyroiditis)."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect as it did not consider the possibility of Riedel thyroiditis, which is strongly suggested by the symptoms of difficulty swallowing both solids and liquids, and the presence of a fixed, hard, painless goiter. Additionally, the symptoms described do not align with typical presentations of thyroiditis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some areas of strength, particularly in maintaining a professional tone. However, the questioning strategy was inadequate, leading to an inaccurate diagnosis. A more comprehensive approach would involve asking about symptoms such as fever, neck pain, and history of radiation exposure to better narrow down the possible causes of thyroiditis."
+    },
+    "llm_judge_total_out_of_20": 11
+}

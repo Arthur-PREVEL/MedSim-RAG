@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I'm experiencing discomfort and pain in my hands, especially around the knuckles of my fingers and the base of my thumb. It hurts when I try to make a fist, grasp things or move my fingers for extended periods. Sometimes it swells and feels tight, and I hear a grating sound when I move them. Also, walking has become a bit difficult due to pain in my knees and hips. They usually hurt after standing or walking for long periods, but resting helps relieve the pain. Lately, I've noticed some changes in the shape of my fingers and thumb, which worries me. Can we discuss these issues further? Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent trauma or injury that could have triggered this onset of symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't had any recent accidents or injuries that might have caused these symptoms, Doctor. It seems my hands have been bothering me a lot lately. The joints feel swollen sometimes, and they hurt when I move them too much. Sometimes it feels like they're catching or locking up, which makes it difficult to do everyday tasks. It's particularly uncomfortable in the morning when I wake up, but the pain eases off a bit as the day goes on. The bases of my thumb and some of my fingers have become a bit wider and more prominent, and I find myself limping a little now and then due to discomfort in my knees. I hope we can figure out what's going on",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any morning stiffness lasting longer than an hour?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been experiencing morning stiffness in my hands for quite some time now. It usually takes me over an hour each morning to work out the stiffness and start moving my fingers comfortably again. This stiffness has been making it difficult for me to perform my daily tasks such as buttoning my shirt or opening jars.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any pain or numbness in your fingers when this stiffness is present?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doctor, I've been experiencing some discomfort and occasionally numbness in my fingers whenever they feel stiff. It's particularly noticeable when I try to grip things or make a fist. The numbness usually goes away after a while, but it does add to the difficulty of performing basic tasks sometimes.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 50,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is diagnosed with Osteoarthritis (OA), specifically Primary Osteoarthritis affecting multiple joints including the hands (Heberden's nodes) and weight-bearing joints (knees and hips).\n\nClinical Justification: The patient's symptoms of joint pain, swelling, morning stiffness lasting over an hour, grating sounds upon movement, and changes in joint shape (Heberden's nodes) are classic indicators of osteoarthritis. Additionally, the presence of OA in weight-bearing joints (knees and hips) supports the diagnosis, suggesting a systemic degenerative process rather than localized injury or other conditions.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 83,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 20.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 58,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 50,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 83,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language, avoiding complex medical terms and explaining their symptoms clearly."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently described symptoms related to osteoarthritis, including joint pain, stiffness, and locomotor restrictions, but did not explicitly mention all typical exam findings."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient stayed in character and avoided acting like a doctor throughout the conversation, asking relevant questions and seeking clarification."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation was highly effective in conveying the experiences and concerns of someone suffering from osteoarthritis. Their descriptions of symptoms were clear and relatable, and they demonstrated a good understanding of their condition's impact on daily life. While they could have mentioned more specific exam findings, their overall portrayal was convincing and engaging."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore key aspects such as duration of symptoms, impact on daily activities, and specific joint involvement. Questions 1 and 2 were relevant, but Question 3 was not directly related to the presenting symptoms."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was mostly accurate, considering the provided symptoms and clinical truth. However, the mention of 'Primary Osteoarthritis' might be misleading without further clarification, as primary OA is less common than secondary OA. Nonetheless, the overall conclusion aligns well with the expected presentation of osteoarthritis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally maintained a professional demeanor but occasionally used phrases that slightly resembled patient-like expressions ('grating sounds upon movement,' 'changes in joint shape'). More precise language would enhance role adherence."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated some strengths in questioning and diagnostic accuracy but fell short in exploring key symptoms and maintaining a strictly professional tone. With refinement, they could improve their interviewing skills and communication style to better serve patients."
+    },
+    "llm_judge_total_out_of_20": 17
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "It's so nice to finally get some answers about what's been going on with my body. To be honest, doc, I've just been feeling a lot of discomfort lately. My hands have been hurting, especially when I'm doing anything that requires gripping or twisting. Like cooking dinner or playing cards with my friends - it's hard for me to hold onto the utensils or cards without wincing.\n\nAnd it's not just my hands, sir. My knees have been acting up too. They ache after I walk or climb stairs, which isn't fun when I'm getting older and climbing stairs is already a bit of an effort. Sometimes I'll wake up in the middle of the night with a sharp pain in one of them, making",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 125,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any joint swelling or stiffness?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I do get these awful swellings on my fingers when it's cold outside, especially after sitting for a while. My hands feel stiff too - it's like my joints have gotten stuck somehow. It takes me a bit longer than usual to move around or even just turn the pages of a book. Sometimes my hands ache too, like they're protesting from being used so much.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 67,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any other symptoms such as skin rashes, fatigue, or fever?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness, no! It's just this constant ache in my hands and knees that's been bothering me lately. Sometimes it feels like my joints are creaking when I move them, especially after sitting for a bit. And if I overdo something, it gets worse. But aside from that, I feel pretty well. My energy levels are fine, and I haven't had any trouble sleeping.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of gout or kidney stones?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dear, I don't think so. I've had some kidney problems when I was younger, but it was just a minor issue that my doctor handled back then. I'm not sure about this gout thing, though. My sister has it, poor thing. She's always complaining about her toes hurting. But me, I've never really experienced anything like that before.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Osteoarthritis\n\nCLINICAL JUSTIFICATION: The patient presented with chronic joint pain and stiffness, particularly affecting the hands and knees. This pain was exacerbated by activities involving gripping or twisting, and by cold weather. The patient also reported swelling and stiffness of the fingers, as well as creaking joints. There were no reports of skin rashes, fatigue, or fever. The patient had a history of kidney problems but no history of gout. Based on these symptoms and medical history, the most likely diagnosis is osteoarthritis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 20.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 125,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 67,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions ('it's hard for me to hold onto the utensils or cards without wincing')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistently with osteoarthritis, but mentions 'awful swellings' which could imply inflammation, contradicting the non-inflammatory nature of osteoarthritis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but occasionally displays knowledge of medical conditions ('I don't think so', implying familiarity with gout) and exhibits a lack of concern for their condition ('Aside from that, I feel pretty well')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good use of everyday language and adherence to the role, but shows inconsistencies in symptom coherence and occasional lapses into medical terminology. With refinement, the patient's responses could better align with the clinical context and maintain a more authentic, layperson perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but Question 3 seemed unrelated to the primary complaint of joint pain and stiffness. A more comprehensive question about the nature of the joint pain (e.g., constant vs. activity-related) would have been beneficial."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of osteoarthritis was generally accurate, considering the symptoms of joint pain and stiffness. However, the lack of specific mention of classic signs such as Heberden's nodes or Bouchard's nodes might have led to a more nuanced diagnosis. Nonetheless, the overall conclusion was reasonable."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills, although some areas could be improved. The diagnostic accuracy was mostly sound, but could benefit from more attention to detail regarding specific clinical signs. Overall, the doctor remained professional and provided a clear explanation for their diagnosis."
+    },
+    "llm_judge_total_out_of_20": 14
+}

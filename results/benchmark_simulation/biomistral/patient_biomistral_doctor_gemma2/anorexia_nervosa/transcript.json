@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, hello there. I'm Jean, and I've been feeling unwell lately. I haven't had my period in a while, and that's not normal for me. I also feel really cold all the time, even when it isn't cold outside. My legs get swollen, and I feel tired a lot. Sometimes I overdo it with eating and then I try to make myself throw up. It's like this never-ending cycle of obsessing about calories and weight loss. And then, of course, I end up neglecting healthy foods and only eating junk to spare myself the discomfort of having more food in my stomach. I've lost so much weight, but I don",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When was your last menstrual period?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven't had a menstrual period in a long time now... It's been so long that it starts to worry me. I don't remember the exact date, but it must have been months ago.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any other changes, like weight gain or hair loss?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I’m not sure how this is going to be helpful since everything that has happened to me is because of that awful illness I have. It's always been there, it never goes away no matter how much I try. And yes, I have lost a lot of weight recently but it's not like I want to be thin, it just happens! And my hair doesn't fall out or anything like that, in fact I feel like I've got too much of it on my head sometimes. But what good does it do if I can't take care of myself properly because of this stupid illness?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 106,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Can you describe the symptoms of this illness?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doctor, I've been feeling really weak and tired lately. I also get cold very easily no matter how much I wear. But perhaps the most noticeable thing is that I'm not having my period anymore. And it seems like my hands and feet always feel swollen. I used to love food, but now I find myself sort of dreading meals. Sometimes I even throw up after eating certain foods. And sometimes, when I can't help it, I take laxatives to make myself feel better. It's strange because I used to be really active too. I would run every day without stopping. But now I feel like I don't have the energy to do anything at all.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Anorexia Nervosa\n\n**Clinical Justification:**  Jean exhibits classic signs of anorexia nervosa, including amenorrhea (absence of menstruation), significant weight loss, intense fear of gaining weight, distorted body image, and engaging in purging behaviors (self-induced vomiting and laxative use). Her preoccupation with calories and restrictive eating patterns further support this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 51,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 34,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 106,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 51,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into somewhat formal tone, especially in Turn 3."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes some symptoms consistently (amenorrhea, cold intolerance, fatigue), but others are less coherent with the clinical context (e.g., 'my hair doesn't fall out' in Turn 3)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but occasionally displays insight into their condition, which might be unusual for someone with anorexia nervosa (e.g., 'it's not like I want to be thin')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation shows potential, but could benefit from further refinement to ensure consistency in symptom description and adherence to the role. The narrative is engaging, but some responses reveal a slightly inconsistent portrayal of the condition."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions [1] and [2] were targeted and clinically relevant, but question [3] was too broad and could have been more specific to guide the conversation towards key symptoms of anorexia nervosa."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis of Anorexia Nervosa was accurate, considering the reported symptoms of amenorrhea, restrictive eating patterns, and purging behaviors. However, the justification provided did not explicitly mention all key symptoms mentioned in the clinical truth section."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 8,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills, made a generally accurate diagnosis, and maintained a professional demeanor. However, there's room for improvement in asking more targeted questions to ensure comprehensive symptom exploration and providing a more thorough justification for the diagnosis."
+    },
+    "llm_judge_total_out_of_20": 15
+}

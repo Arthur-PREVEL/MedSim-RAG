@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doc, I've been having some tummy troubles lately. Mostly it's just this uncomfortable feeling right around my stomach button, like a dull ache sometimes. And I seem to be losing weight, though I haven't changed anything about what I eat.  I also get heartburn pretty bad after meals, and sometimes things just feel kinda backed up.   I don't know...it all feels just off, you know?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 66,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Can you describe your bowel movements in more detail?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes I get really bad diarrhea, but other times I'm just really backed up. It's like my tummy is playing tricks on me!  One day I might run to the bathroom all the time, the next I can barely go at all. It's just not regular.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any blood in your stool or mucus?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, not that I recall.  Sometimes my tummy feels a bit upset after eating, but nothing like that.  It's more of a rumbling and bloating kind of thing.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 28,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of heartburn or acid reflux?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've had some trouble with that off and on for a while now. It feels like a burning feeling in my chest sometimes, especially after I eat.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of epigastric discomfort, weight loss, heartburn, and irregular bowel movements, as well as their history of acid reflux, the final diagnosis is Gastroesophageal Reflux Disease (GERD). The clinical justification for this diagnosis is that the patient's symptoms are consistent with those of GERD, and their history of acid reflux further supports this diagnosis. Additionally, the patient's test results showed evidence of achlorhydria, which is commonly found in individuals with GERD.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 75,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 66,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 28,
+                "total": 7
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 75,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into colloquial expressions ('tummy troubles', 'stomach button')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient described several symptoms consistently with achlorhydria (epigastric pain, weight loss, heartburn), but failed to mention others (abdominal pain, acid regurgitation, early satiety, vomiting, postprandial fullness, constipation, dysphagia, glossitis)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character as a patient, but occasionally exhibited behaviors more typical of a doctor (e.g., asking if they recalled any specific symptom onset)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, but could benefit from further development to ensure consistency in describing symptoms and adherence to the role. The language was mostly natural, but could be improved by avoiding colloquialisms and staying true to the character's perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions [1] and [3] were targeted and clinically relevant, but question [2] was not directly related to achlorhydria symptoms; however, it could be seen as a general inquiry about gastrointestinal issues."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of GERD was incorrect because achlorhydria is not typically associated with GERD; instead, achlorhydria is often caused by other factors such as autoimmune disorders or certain medications."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "While the doctor demonstrated some understanding of the patient's symptoms, they failed to accurately diagnose achlorhydria and its underlying causes. Further education on gastrointestinal conditions is recommended to improve diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 12
+}

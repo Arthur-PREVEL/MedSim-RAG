@@ -201,19 +201,44 @@ def load_model(model_key: str):
     free, total = torch.cuda.mem_get_info()
     print(f"   VRAM free: {free/1e9:.1f}GB / {total/1e9:.1f}GB")
     print(f"⌛ Loading {model_key.upper()} ({model_id})...")
+
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_use_double_quant=True,
         bnb_4bit_quant_type="nf4",
         bnb_4bit_compute_dtype=torch.float16
     )
+
     tokenizer = AutoTokenizer.from_pretrained(model_id, clean_up_tokenization_spaces=False)
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token_id = tokenizer.eos_token_id
-    model = AutoModelForCausalLM.from_pretrained(
-        model_id, quantization_config=bnb_config, device_map="auto",
-        llm_int8_enable_fp32_cpu_offload=True
-    )
+
+    if model_key in ("gemma2", "phi3"):
+        # Répartition sur les 2 GPUs — GPU 1 réservé pour overflow
+        print(f"   Dual-GPU mode activated for {model_key.upper()}")
+        model = AutoModelForCausalLM.from_pretrained(
+            model_id,
+            quantization_config=bnb_config,
+            device_map="auto",
+            max_memory={
+                0: "4GiB",   # limite stricte sur GPU 0 (déjà occupé par patient+judge)
+                1: "14GiB",  # GPU 1 quasi exclusif pour Gemma2/Phi3
+                "cpu": "48GiB"
+            }
+        )
+    else:
+        # BioMistral, Llama3, Mistral → GPU 0 uniquement, limité à 7GiB
+        # pour laisser de la place à l'inférence
+        model = AutoModelForCausalLM.from_pretrained(
+            model_id,
+            quantization_config=bnb_config,
+            device_map="auto",
+            max_memory={
+                0: "7GiB",
+                "cpu": "48GiB"
+            }
+        )
+
     print(f"✅ {model_key.upper()} ready.")
     return model, tokenizer
 

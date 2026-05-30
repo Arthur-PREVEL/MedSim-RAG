@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello Doctor, I appreciate your care and attention. To answer your question, here are some things I've been noticing lately:\n\n1. Excessive Daytime Sleepiness: I find myself feeling unusually tired during the day, even when I believe I've had enough sleep at night. Sometimes, this makes it difficult for me to focus on tasks or carry out daily activities.\n\n2. Loud Snoring: My family has mentioned that they hear me snore loudly at night, even through closed doors.\n\n3. Gasping or Choking: Occasionally, I wake up because I feel like I'm not getting enough air while asleep. It feels as though I might choke or gas",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 106,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever woken up with a headache?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have experienced waking up with a headache on several occasions. It's not always every morning, but it does happen more frequently than I would prefer. These headaches usually subside as the day progresses, although they can occasionally linger.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any triggers or activities that seem to bring on these headaches?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I've been noticing that my morning headaches often come after a long period of sleep, especially when I haven't slept well during the night. Also, they seem to appear more frequently when I consume alcohol before going to bed. Sometimes, even simple physical exertion, like walking, seems to trigger them too. I don't have a clear pattern yet, but these are some things I've noticed might cause my headaches.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any visual disturbances or aura symptoms, such as flashing lights or zigzag patterns, before the headache begins?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 21,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I haven't noticed any visual disturbances or auras, like seeing flashing lights or zigzag patterns, before my headaches start. Just the usual discomfort that wakes me up in the morning. Thank you for asking.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Obstructive Sleep Apnea (OSA)\n\nClinical Justification: The patient's symptoms of excessive daytime sleepiness, loud snoring, and episodes of gasping or choking during sleep strongly suggest OSA. Additionally, the patient's frequent morning headaches, which are exacerbated by poor sleep quality and relieved by activity, are also consistent with OSA, as they may be related to nocturnal hypoxia and increased intrathoracic pressure.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "snoring"
+                ],
+                "word_count": 106,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 21,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally mentions specific medical terms such as 'excessive daytime sleepiness', 'snore loudly', and 'gasping or choking'."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistently with the clinical context, mentioning excessive daytime sleepiness, loud snoring, and difficulty sleeping, which are all relevant to OSA. However, the mention of headaches seems somewhat disconnected from the primary topic of OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character and avoids acting like a doctor, but occasionally provides detailed explanations and observations, which slightly detract from their role as a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good adherence to the role and coherent symptom descriptions, but could benefit from further refinement in using everyday language and staying focused on the primary topic of OSA."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the key symptoms of obstructive sleep apnea, such as excessive daytime sleepiness, loud snoring, or episodes of breathing cessation during sleep. Instead, the questions focused on headaches, which are not directly related to the clinical truth."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect because there was no mention of assessing the patient's symptoms of excessive daytime sleepiness, loud snoring, or episodes of breathing cessation during sleep, which are crucial indicators of obstructive sleep apnea. The justification provided also did not align with the clinical truth, as morning headaches are not a primary symptom of OSA."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, but failed to ask relevant questions about the patient's symptoms."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated a lack of understanding of the key symptoms and diagnostic criteria for obstructive sleep apnea. The doctor failed to ask relevant questions and made an incorrect diagnosis based on unrelated symptoms. To improve, the doctor should focus on asking targeted questions about the patient's sleep habits, snoring, and other relevant symptoms."
+    },
+    "llm_judge_total_out_of_20": 10
+}

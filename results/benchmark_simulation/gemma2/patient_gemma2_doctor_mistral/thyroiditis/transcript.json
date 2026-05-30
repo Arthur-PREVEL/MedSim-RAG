@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doctor, I've been feeling pretty run down lately.  I've got this persistent sore throat that just won't quit, and my neck feels really stiff and painful when I move it. I even have a bit of a fever.   It's making it difficult to sleep and eat properly.  Oh, and I've noticed I'm getting tired more easily than usual.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any swollen lymph nodes or noticeable rash on your body?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't had any swollen glands that I've noticed, and my skin hasn't been acting up either.  Mostly just this persistent throat soreness.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any difficulty swallowing or pain when you try to swallow recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, sometimes it feels like something is stuck in my throat. It doesn't hurt all the time, just sometimes when I'm eating.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 22,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any difficulty swallowing liquids or solids, or does this sensation occur mainly with specific types of food?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 20,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes I feel like it's a little harder to swallow, especially if I'm eating something thick or chewy.  It doesn't always happen, though.  Mostly it just feels a bit uncomfortable.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Subacute Thyroiditis\nClinical Justification: The patient presents with symptoms such as fatigue, persistent sore throat, neck pain, fever, difficulty swallowing (dysphagia), and thyroid tenderness, which are common indicators of subacute thyroiditis. Additionally, the absence of swollen lymph nodes or rash, along with the fact that the difficulty swallowing occurs mainly with specific types of food, supports this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 59,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 24,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 22,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 20,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 60,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally mentioned some symptoms that could be considered somewhat formal (e.g., 'persistent sore throat', 'stiff and painful')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally consistent with the clinical context, but there was some inconsistency regarding the presence of swollen glands (mentioned in Turn 2) which contradicts the overall presentation of thyroiditis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character for the most part, but occasionally exhibited behaviors that suggested they might be knowledgeable about their condition (e.g., mentioning specific symptoms like 'difficulty swallowing' in Turn 4)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, but required some refinement to ensure consistency in symptom reporting and adherence to the role. The patient's language was mostly natural, but some formal expressions detracted from the realism. Symptom coherence was partially compromised by inconsistencies in the presentation. Role adherence was good, but the patient occasionally slipped into a more informed tone."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 2 were targeted and clinically relevant, but Question 3 was not directly related to thyroiditis symptoms. Questions did not cover all possible causes of thyroiditis, such as medication history, personal history of autoimmune disease, or history of recent radiation."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis of Subacute Thyroiditis was partially accurate, but it was based on incomplete information. The presence of difficulty swallowing with specific types of food was not a clear indicator of subacute thyroiditis, and the absence of swollen lymph nodes or rash was not a strong argument against other forms of thyroiditis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated some understanding of thyroiditis symptoms but failed to ask comprehensive questions and arrived at a diagnosis based on incomplete information. Further training is needed to improve diagnostic accuracy and question quality."
+    },
+    "llm_judge_total_out_of_20": 13
+}

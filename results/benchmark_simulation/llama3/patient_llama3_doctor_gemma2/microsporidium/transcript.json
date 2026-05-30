@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, I'm feeling just terrible. My joints ache something fierce, especially my knees and hips. It's like someone's been poking me with a stick every step I take. And don't even get me started on my back - it's been acting up again. I've had this nagging pain behind my shoulders, you know, where my spine meets my neck. It's like there's a big ol' knot stuck right there.\n\nAnd I've been having these strange, vivid dreams lately. Not nightmares exactly, just... unsettling. Like my mind's trying to tell me something, but I don't quite understand what. Oh, and my appetite's gone down the drain. I just can't seem to stomach much of anything.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any swelling in your joints?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! My knees have been acting up something fierce lately. It's hard to walk around the house without feeling a bit stiff, especially in the mornings after I've been sitting for a while. And my hands... well, I've always had a bit of arthritis in my fingers, but it seems to be getting worse. I find myself having trouble doing simple tasks like buttoning my shirt or tying my shoelaces.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Is there any swelling in your knees or joints?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, my knees ache something awful. It's been bothering me for weeks now. I feel like I've got a weight on each knee, making it hard to move around. Sometimes, especially after sitting for a long time, the pain gets so bad I need to use a cane to get up. My hips and ankles feel stiff too, but the knees are the worst.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 64,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do your knees also swell?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 5,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, my poor knees get quite swollen after I've been sitting for too long. It's like they're filled with air, you know? And sometimes I feel this dull ache, like someone's pressing down on me from the inside out. It's hard to describe, but it's just...uncomfortable. Like my joints are protesting something. My granddaughter says I should try one of those new medicines that'll help with inflammation, but I'm not sure about putting more pills into my body. What do you think?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 82,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:**  Microsporidiosis\n\n**CLINICAL JUSTIFICATION:** The patient presents with arthralgia (joint pain), particularly affecting the knees and hips, accompanied by swelling and stiffness. These symptoms, along with fatigue and altered mental status (vivid dreams), are consistent with microsporidiosis, a parasitic infection known to cause musculoskeletal manifestations. \n\n\nLet me know if you'd like to explore other potential diagnoses or delve deeper into the specifics of microsporidiosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 65,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 64,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 82,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 5,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 65,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally resorts to metaphors ('like someone's been poking me with a stick') and vague descriptions ('a big ol' knot')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes multiple symptoms, including joint pain, vivid dreams, and decreased appetite, but fails to connect them to any specific underlying condition. Some symptoms seem unrelated to the others (e.g., vivid dreams)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some knowledge of medical concepts (e.g., 'arthritis'), but often strays from the role by providing excessive information about unrelated topics (e.g., the history of microsporidia)."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and describing symptoms, but falls short in connecting symptoms to a coherent narrative and staying within the role. The patient's tendency to provide excessive background information detracts from the assessment process."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the specific symptoms of microsporidiosis, such as gastrointestinal issues, skin rashes, or eye problems, and did not cover the full range of possible symptoms associated with the condition."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of microsporidiosis was incorrect because the provided symptoms (arthralgia, swelling, and stiffness in the knees and hips) could be indicative of various conditions, including rheumatoid arthritis, osteoarthritis, or other musculoskeletal disorders. There was no clear connection made between the symptoms and the parasitic infection."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview, but failed to establish a rapport with the patient and did not ask follow-up questions to clarify the symptoms or gather more information about the patient's medical history."
+        },
+        "total_score_out_of_10": 2,
+        "overall_feedback": "This doctor-patient interaction demonstrated poor question quality and diagnostic accuracy. The doctor failed to tailor the questioning to the specific symptoms presented and arrived at an incorrect diagnosis. While maintaining a professional demeanor, the doctor missed opportunities to build trust with the patient and gather crucial information. To improve, the doctor should focus on asking targeted, clinically relevant questions and considering alternative diagnoses before arriving at a conclusion."
+    },
+    "llm_judge_total_out_of_20": 8
+}

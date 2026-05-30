@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I'm really struggling with my hands lately. It feels like they're swollen and have these lumps on them, especially towards the end near my fingertips. They hurt when I move them too much and sometimes it's hard for me to grip things properly because of the pain. At night, the discomfort keeps me awake because I can't find a comfortable position for my hands. Sometimes, they crackle when I move them, and it seems like they're getting wider at the base of my thumbs. I know this might sound weird, but it almost looks like a square shape forming there. Walking has become difficult too, as my knees and hips seem to catch painfully whenever I",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any stiffness or difficulty straightening your fingers?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been experiencing some stiffness in my fingers and finding it challenging to fully straighten them out completely, especially when I wake up in the morning. It eases up a bit as the day goes on but comes back after long periods of not moving them much, like when I'm resting or sleeping.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do your fingers also feel painful or swollen?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doctor, my fingers often hurt, especially after I've been doing certain tasks for a while like gripping objects tightly or typing on a keyboard. They can also feel swollen, particularly around the knuckles, making it hard to bend them as easily as before. It's quite uncomfortable and sometimes even causes me to wake up at night.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 57,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do these symptoms come and go, or are they constant?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "These symptoms come and go, doctor. I have periods where my hands are particularly uncomfortable, especially after prolonged use, but they get better when I rest for a while. However, lately, it has been becoming more persistent and affecting my daily activities, which concerns me.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Osteoarthritis\n\n**Clinical Justification:** The patient presents with classic symptoms of osteoarthritis, including joint pain, stiffness, swelling, crepitus, and functional limitations in the hands, knees, and hips.  The progressive nature of the symptoms and their worsening over time further support this diagnosis. \n\n\nLet me know if you'd like to explore other potential diagnoses or discuss treatment options!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 57,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, avoiding complex medical terms, but occasionally mentioned specific conditions like 'Heberden's nodes' implicitly through descriptions ('lumps', 'crackle')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were generally consistent with osteoarthritis, including joint pain, stiffness, and swelling. However, the mention of 'crackling' and 'square shape forming' could be interpreted as less typical symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed within their role, describing personal experiences rather than providing medical explanations, but occasionally slipped into observational statements about their condition ('it almost looks like a square shape forming')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated good adherence to the role and coherent symptom description, but showed minor lapses in using everyday language and staying within the character. With refinement, the patient could improve by avoiding explicit medical terminology and maintaining a consistent narrative voice throughout the conversation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to inquire about systemic symptoms such as morning stiffness, weight loss, or fatigue which could have supported a broader differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was correct, but the justification lacked specificity regarding the diagnostic criteria used to arrive at the conclusion."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed mostly professional but occasionally slipped into a patient-like tone when discussing 'classic symptoms' and 'functional limitations'."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy but could improve by asking more comprehensive questions and maintaining a strictly professional demeanor throughout the interaction."
+    },
+    "llm_judge_total_out_of_20": 14
+}

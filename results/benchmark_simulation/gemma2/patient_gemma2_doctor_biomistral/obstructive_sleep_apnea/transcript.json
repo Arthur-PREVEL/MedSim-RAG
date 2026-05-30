@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, I've been feeling really tired all the time, even after a full night's sleep.  And my family tells me I snore something awful! Sometimes I wake up gasping for air too.  Other than that, I just get these bad headaches every morning.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of high blood pressure or heart disease?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I did have high blood pressure for many years, Doc.  But I've been taking medicine for it and my last check-up showed things were looking good.   Heartwise, no  serious issues thank goodness.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your current height and weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I'm 5 foot 4 inches tall and weigh about 180 pounds.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 11,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "What is your blood pressure?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 5,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "My blood pressure has been a little high lately.  I just started taking medicine for it last month.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 18,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of excessive daytime sleepiness, loud snoring, and waking up gasping for air, as well as their history of hypertension and obesity, the final diagnosis is Obstructive Sleep Apnea (OSA). The clinical justification for this diagnosis is that OSA is a common disorder characterized by recurrent episodes of partial or complete obstruction of the upper airway during sleep, leading to interrupted breathing and reduced oxygen levels in the blood. This can cause excessive daytime sleepiness, loud snoring, and other symptoms such as waking up gasping for air. OSA is also associated with an increased risk of hypertension and cardiovascular disease, which may explain the patient's history of high blood pressure. Additionally, obesity is a major risk factor for OSA, as excess body weight can contribute to the development of a larger tongue and soft tissues in the throat, which can obstruct the airway during sleep.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 149,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 32,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 11,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 18,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 5,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 149,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language but occasionally slips into informal tone ('doc')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes some relevant symptoms (excessive daytime sleepiness, snoring, and gasping for air) but fails to mention others (morning headaches, nocturnal reflux, insomnia, nocturia)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character but occasionally reveals knowledge of medical concepts (e.g., 'high blood pressure', 'medicine') which might indicate a lack of role adherence."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in describing personal experiences and symptoms, but could benefit from more comprehensive symptom reporting and improved role adherence to maintain a non-medical persona."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as snoring, gasping/choking, and witnessed breathing cessation during sleep, which are crucial for diagnosing OSA."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was correct, but the doctor failed to consider alternative explanations for the patient's symptoms, such as sleep disorders other than OSA. However, the provided clinical justification for the diagnosis was accurate and comprehensive."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview but occasionally acted like a patient when asking questions, particularly in Question 3, where they asked for the patient's blood pressure instead of ordering a medical professional to do so."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy and professionalism but could improve by asking more targeted and clinically relevant questions to rule out alternative diagnoses and maintain a neutral role during the interview."
+    },
+    "llm_judge_total_out_of_20": 14
+}

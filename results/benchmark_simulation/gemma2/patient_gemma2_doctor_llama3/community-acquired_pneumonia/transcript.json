@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I've been feeling pretty awful lately.  I have this terrible coughing that just won't quit, and it feels like phlegm is stuck in my chest. It hurts when I take deep breaths, like someone's stabbing me right there. And I feel so weak, like I could fall over.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any fever or chills along with these symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't felt feverish... but sometimes I get real shivery, especially at night.  It makes me grab for my blanket real quick!",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 23,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced this shivering sensation when your body is exposed to cold temperatures or drafts?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I do get that sometimes.  It happens more often these days, though. Like even a slight breeze makes me shiver.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced this type of sensitivity to temperature changes before?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Not really. I haven't felt this cold in years even when it's chilly outside.\"  \n\n\nPlease let me know if you want me to continue the dialogue!",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms and history, my FINAL DIAGNOSIS is:\n\n**Community-Acquired Pneumonia**\n\nClinical Justification: The patient presents with a persistent cough productive of phlegm, difficulty breathing (pleuritic chest pain), and systemic symptoms such as weakness and shivering, which are classic signs of pneumonia. Additionally, the patient's recent onset of these symptoms suggests an acute infection, likely acquired from the community, rather than a chronic condition or other underlying disease process.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 71,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 23,
+                "total": 7
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 21,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 71,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into colloquial expressions ('like someone's stabbing me right there', 'real quick')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient initially described typical pneumonia symptoms (cough, difficulty breathing), but later mentioned not having a fever, which is inconsistent with the common presentation of pneumonia."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character, but occasionally exhibited behaviors more characteristic of a doctor (e.g., describing symptoms in a somewhat detached manner)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, but required refinement to better adhere to the role and maintain consistency in symptom description. The patient's responses were generally clear and relatable, but lacked polish in their expression and occasionally strayed from the expected clinical scenario."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of pneumonia, such as cough productive of purulent sputum, dyspnea, and pleuritic chest pain. Question 1 was somewhat relevant but did not cover all possible symptoms. Questions 2 and 3 were irrelevant to the diagnosis of pneumonia."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of Community-Acquired Pneumonia was correct, but the justification provided only mentioned a few symptoms without considering alternative diagnoses that could present similarly. The doctor failed to discuss potential complications or comorbidities that might affect the presentation of pneumonia."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally stayed professional during the interview, but there was no clear attempt to establish a rapport with the patient or explore their concerns, which would be ideal in real-world practice."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated some understanding of pneumonia symptoms and made a correct diagnosis, but fell short in asking targeted questions and providing a comprehensive justification for the diagnosis. With more attention to questioning and consideration of alternative diagnoses, this doctor could improve their diagnostic accuracy and overall performance."
+    },
+    "llm_judge_total_out_of_20": 13
+}

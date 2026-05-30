@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning! Lately things haven’t felt quite right down here – my body just isn’t cooperating the way it used to before all those aches started creeping in over time. It feels almost as though everyone has their hands pressing against me whenever they touch around where people walk into rooms. And now every month... Oh boy, talk about annoying. My private area gets incredibly tender during certain times each month. There have been brief moments when the sudden rush needs seems impossible to handle—like trying to catch water off a duck pond but failing miserably instead. Sometimes even going outside makes us restlessness take hold quickly because we feel like our stomach doesn’t understand its place properly and",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"I see, thank you for sharing your concerns. To help better understand what might be causing these symptoms, could you tell me if you've noticed any irregularities in your menstrual cycle or bleeding patterns?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 34,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I appreciate how worried we both must feel about my situation. Your advice helps clarify things for me—now let' house our focus slightly, shallwe? My lady days have been quite normal thus far... No new beginnings nor endings really marked apart those steady times before all this started up. But here’s where confusion knocks soft upon my doorstep – Forsooth! It seems mine own body hath begun playing tricks o'the mind again even though none appeared so long ago but now they return. Is it possible - pray, perhaps something within myself gone awry yet invisible to thee eyes unaided? Could ye advise further still on matters concerning health beyond just physical pains spoken earlier? Surely thou",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your vision or hearing recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven't really had problems seeing either better lately nor has my ears been much trouble. But yes, some days have felt off – maybe because I just don't feel quite right overall? My knee hurt once when getting up last month after sitting all day but nothing since then so far. No worries about bathroom issues except being here now trying to figure out why things seem different today than before due to our chat earlier... Let’s discuss how we keep tackling those health hiccups properly moving forward! What steps might help ensure progress stays constant against usual upsets & get rid quick enough annoying feelings whenever they pop up still happening occasionally despite knowing risks already explained previously - something related perhaps involving lack certain",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have there been any changes in your diet or lifestyle recently that could potentially be causing these occasional discomforts?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven’t made any significant changes in how I eat or live my daily life because whenever something bothers me now, it feels quite different than before. It doesn’t hurt terribly much right now – just enough to make you think about whether you might have eaten too many things years ago, perhaps? Things like fish had always given us funny smells afterward but never trouble until today. Maybe stress affects some people differently each time they go through tough periods professionally due maybe our past experiences teach them better coping mechanisms over lifetimes rather quickly adapt instead slowly adjust themselves according their personal situations unique circumstances occur continuously while growing up learning new skills every day helps keep balance between mind body spirit knowing keeps",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 126,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms, which include lower abdominal pain, tenderness in the private area, and frequent urges to urinate, the most likely diagnosis is an uncomplicated Urinary Tract Infection (UTI). The clinical justification for this diagnosis is that the patient's symptoms align with common UTI symptoms, such as pelvic pain, a strong urge to urinate frequently, and urinary urgency or frequency. Additionally, the patient does not report any changes in their menstrual cycle, vision, hearing, or lifestyle that would suggest other underlying conditions. However, it is important to note that further testing may be necessary to confirm the diagnosis and rule out other potential causes of the patient's symptoms.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 110,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 118,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 126,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 34,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 110,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 1,
+            "justification": "The patient uses colloquial expressions and informal language, but also employs archaic phrases ('Forsooth', 'pray') and unclear sentences, indicating a mix of modern and old-fashioned communication styles."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes various symptoms, but they are not consistently linked to the clinical context of a urinary tract infection (UTI). Some symptoms mentioned, such as knee pain and eating fish causing odors, are unrelated to UTIs."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits inconsistent role-playing, sometimes speaking in a formal tone and using medical terminology ('uncomplicated UTIs'), while at other times employing colloquial language and metaphors ('catch water off a duck pond')."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using colloquial language, but struggles with symptom coherence and staying in character. The patient's responses are disjointed and sometimes unrelated to the clinical context, making it difficult to assess their understanding of the condition. With refinement, the patient could improve their ability to describe relevant symptoms and maintain a consistent tone throughout the conversation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The doctor asked some relevant questions but missed opportunities to inquire about key symptoms such as dysuria, urinary frequency, and hematuria, which are crucial for a proper UTI diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the patient's symptoms, but the doctor failed to consider alternative diagnoses such as vaginal infections or other urinary issues related to the patient's age or medical history."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor simulation showed promise, but could benefit from more comprehensive questioning to ensure a thorough understanding of the patient's condition. While the diagnosis was generally accurate, it would have been strengthened by consideration of alternative explanations for the patient's symptoms. Overall, the doctor demonstrated professionalism and a good bedside manner."
+    },
+    "llm_judge_total_out_of_20": 10
+}

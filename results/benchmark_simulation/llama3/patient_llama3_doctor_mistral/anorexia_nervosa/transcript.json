@@ -1,0 +1,233 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Dear doc, I'm so glad you asked. I've been feeling just terrible lately. My period hasn't come this month, which is unusual for me since I'm normally regular. And on top of that, I've been getting these awful hot flashes. Sometimes my hands and feet feel like ice cubes, it's quite uncomfortable. I've also noticed that I've lost interest in doing things I used to enjoy, like gardening. My husband has even commented on how irritable I seem. Lately, I've had some trouble sleeping too... it takes me ages to fall asleep, and then I wake up several times during the night.\n\nOh, and have you noticed anything about my skin? It looks a bit dry and thinning, especially",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 119,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Given your symptoms, have there been any significant changes in your weight or appetite recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I don't know if it's just my age, but I've lost a bit of weight lately. I think it started after my husband passed away last year. I've just not had much of an appetite, and when I do eat, I find myself getting full very quickly. But I've also noticed that I've been having some... digestive issues, I suppose you could say. Nothing too severe, but I feel bloated most days and sometimes I go to the bathroom only once a day. It's just not right, you know?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 89,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any changes in your bowel movements, such as diarrhea or constipation, along with the bloating and decreased appetite?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 21,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I have been feeling so... sluggish, doc. I don't know if it's just my age, but I feel like everything is moving slower these days. Constipation's been a problem lately. It's hard to go to the bathroom when you gotta strain that much. And even when I do, nothing comes out. My stomach feels like there's a big knot inside, and sometimes I get this awful crampy pain. I'm also feeling really full after meals, which is strange since I haven't eaten much lately. But even though I'm not hungry, I still feel bloated and uncomfortable. It's quite frustrating, to be honest.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 102,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your weight or significant unintentional weight loss recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I've been feeling so tired lately, I think it's because my appetite has been off. I just don't feel hungry anymore. And if I do eat something, it feels heavy on my stomach. I have to be careful not to overdo it, or I get this awful nausea. You see, I used to be pretty active, walked every day, but now walking feels like climbing stairs. I just can't seem to muster up the energy.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 75,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Anorexia Nervosa\nClinical Justification: The patient exhibits signs of intentional weight loss (losing a bit of weight lately), decreased appetite, feelings of fullness after eating small amounts, bloating, constipation, and a lack of interest in activities they previously enjoyed. Additionally, the patient mentions irregular periods, hot flashes, and dry/thinning skin, which may indicate hormonal imbalances often associated with Anorexia Nervosa.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 119,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 89,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 102,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 75,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 15,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 21,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions (e.g., 'it's just not right')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Some symptoms reported by the patient are inconsistent with the clinical context (e.g., hot flashes, cold intolerance). The patient primarily focuses on symptoms related to eating disorders rather than those expected for anorexia nervosa."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some knowledge of medical concepts (e.g., 'constipation', 'nausea') and describes their experiences in a somewhat detached manner, suggesting a deviation from the role."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language, but struggles with symptom coherence and staying within the role. While they exhibit some knowledge of medical concepts, their narrative often diverges from the expected clinical context of anorexia nervosa. To improve, the patient should focus on describing symptoms more consistently with the condition and maintain a more authentic, non-expert voice."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore other key symptoms such as purging methods, excessive exercise, and emotional/behavioral aspects of anorexia nervosa."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate but lacked consideration of some key symptoms like purging methods and excessive exercise, which are crucial for a comprehensive diagnosis of anorexia nervosa."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good understanding of anorexia nervosa symptoms but could improve by asking more comprehensive questions that cover all aspects of the condition. With minor adjustments, their diagnostic accuracy would be even higher."
+    },
+    "llm_judge_total_out_of_20": 13
+}

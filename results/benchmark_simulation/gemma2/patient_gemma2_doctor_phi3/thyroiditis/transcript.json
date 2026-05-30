@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, I've had this awful sore throat for a while now. And my neck feels really stiff and painful to touch.  I haven't felt myself lately - tired all the time, and things just seem harder than usual.   I've even lost a bit of weight, which isn't normal for me.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any fever or night sweats along with your symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've had some pretty bad chills lately, especially at night.  I feel that fever coming on sometimes, too.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have your symptoms of shivering and low-grade fevers been accompanied by any other signs such as cough or sore throat?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've had a bit of a cough and my throat feels scratchy too.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any fever or body aches along with your symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Yes, I've had a bit of both. Not real bad, just enough to make me feel out of sorts.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Hashimoto's thyroiditis (Chronic autoimmune thyroiditis)\nClinical Justification: The patient presents with classic symptoms suggestive of an inflammatory process affecting the thyroid gland including fatigue, unexplained weight loss despite no change in dietary habits, persistent cold intolerance indicated by frequent chills and mild fevers without significant infectious cause; these findings align well with chronic autoimmune destruction seen in Hashimoto’s thyroiditis leading to hypothyroidism over time. Further investigation through blood tests revealing elevated TSH levels alongside abnormalities in free T4 would confirm suspicion based upon physical examination showing goiter indicative of potential thyroid involvement.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 94,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 19,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 94,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally mentioned 'doc' which might not be typical in a non-clinical setting."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but they didn't explicitly mention thyroid-related issues; however, their description of general malaise and weight loss could hint at thyroid problems."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but their responses seemed slightly rehearsed and lacked emotional depth, which might be expected in a more immersive simulation."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed potential, but could benefit from more nuanced symptom descriptions and a stronger sense of role adherence. The patient's language was mostly natural, but some phrases felt forced or overly formal. While the symptoms presented were somewhat relevant to thyroid conditions, they weren't explicitly linked to thyroiditis. With further refinement, this simulation could become more engaging and believable."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked three targeted questions that were somewhat relevant to the symptoms of thyroiditis, but missed opportunities to explore key aspects such as medication history, personal/family history of autoimmune disease, and specific symptoms like difficulty swallowing or hoarseness of the voice."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect, as the patient presented with symptoms more consistent with acute or subacute thyroiditis rather than chronic autoimmune thyroiditis. The presence of fever, night sweats, and body aches suggested an infectious or inflammatory process, not typical of Hashimoto's thyroiditis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This doctor simulation showed some promise, but fell short in terms of diagnostic accuracy. The doctor failed to consider alternative diagnoses and relied too heavily on a narrow interpretation of the symptoms. With further training and attention to detail, this doctor could improve their diagnostic skills and provide better care for patients."
+    },
+    "llm_judge_total_out_of_20": 12
+}

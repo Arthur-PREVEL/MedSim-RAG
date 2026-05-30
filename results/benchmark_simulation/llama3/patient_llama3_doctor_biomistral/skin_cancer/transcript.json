@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Skin Cancer",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good day doc, thank you for seeing me. Honestly, I'm not really sure where to start. I've been noticing some weird stuff on my skin lately. On my arm, there's this patch that's been itching something fierce, especially after I shave. It's also gotten pretty sore to the touch. And on my nose, I've got these little bumps that don't seem to go away. They're kind of painful too, but only when they catch on things. My granddaughter was here yesterday and she said I should get them checked out because they look funny. Can you take a look?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 99,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Sure, can you tell me if you have any history of allergies or rashes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I don't think I've ever had any severe allergic reactions or anything like that. But, oh dear, my back has been bothering me lately. It's just this itching sensation, especially after I get out of the shower. It's not too bad, but it's there. And, if I'm honest, there is this one spot on my arm... it's been feeling kind of tender to the touch. Just a small area, really. Nothing major, I suppose. I'm sure it's nothing to worry about, but I did notice it's been getting a bit red.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 91,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any other unusual symptoms such as difficulty breathing or swelling in your face?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh dear, I don't think so... Wait, let me think about that. My knees have been aching quite a bit lately, but I've just put that down to old age, you know? And my hands have been feeling a bit numb sometimes, especially in the mornings. But I suppose that could be the result of sitting here in this chair too long. As for breathing, I haven't noticed anything out of the ordinary, although I do get winded pretty easily when I'm walking short distances these days.\n\nYou know, it's my arm that really bothers me. This spot on my elbow has been bothering me for weeks now. It's itchy and tender, and sometimes it bleeds easily. I've been trying to",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any joint pain or stiffness in your fingers or toes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! My poor joints have been acting up something awful lately. It feels like my knees and hips are creaky old doors, stiff and achy after I've been sitting for too long. And my fingers... well, they get a bit sore when I'm doing tasks like gardening or cooking. It's not too bad, but it's enough to make me slow down a mite. Sometimes I'll be walking along and suddenly my toes will feel like they're on fire, you know? Like I've walked right into a thorn bush.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 90,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of an itchy, sore patch on their arm with bumps on their nose, as well as their history of joint pain and stiffness, the final diagnosis is likely skin cancer (melanoma) with arthritis. The patient's symptoms of joint pain and stiffness are consistent with osteoarthritis, which is commonly associated with melanoma. Additionally, the patient's history of a sore patch on their arm with bumps on their nose may indicate the presence of melanoma.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 20.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 99,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 91,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 121,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 90,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions ('weird stuff', 'funny')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient presented multiple unrelated symptoms across different body parts (arm, nose, back), making it challenging to identify a clear pattern or connection between them."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient occasionally exhibited behaviors inconsistent with their role (e.g., providing unsolicited information about their joints in Turn 4)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language and presenting a range of symptoms. However, the lack of coherence between symptoms and occasional deviations from the patient role detracted from the overall quality of the simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions were not targeted towards the specific symptoms of skin cancer, such as itching, bleeding, pain, and irritation, nor did they explore the characteristics of the lesions, making them clinically irrelevant."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect; there was no mention of a thorough skin examination, and the association between joint pain/stiffness and melanoma is not established. Furthermore, the symptoms described do not align with the clinical truth provided."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally maintained a professional demeanor but failed to establish a rapport by asking non-relevant questions and made a diagnosis without performing a thorough examination."
+        },
+        "total_score_out_of_10": 2,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated significant gaps in questioning and diagnostic skills. The doctor failed to ask relevant questions about the patient's skin condition and relied heavily on unrelated symptoms to make a diagnosis. A comprehensive physical examination and targeted questioning would have led to a more accurate assessment and diagnosis."
+    },
+    "llm_judge_total_out_of_20": 9
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Obstructive Sleep Apnea",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning doc. It's nice to finally meet you. To be honest, I've been feeling rather...well, let down lately. You know, not just a bit tired, but proper exhausted. Even after getting a good night's sleep, I still feel like I could curl up and take a nap anytime. My granddaughter tells me she's seen me dozing off on the couch while watching TV. And sometimes I'll be reading a book or working on my puzzle, and before I know it, my head starts nodding forward. I've also been having these awful headaches when I wake up in the mornings. They're always there, like a dull ache behind my eyes.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your weight, appetite, or bowel movements recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dearie, I think I've been eating a bit more lately, but that's probably because I'm not feeling like doing much of anything else, if you know what I mean. My granddaughter always says I'm just bored, so I snack more out of habit. As for my weight, I haven't really checked myself, but my clothes have been getting a bit tighter, I suppose. And my stomach's been acting up something awful. I get this gurgling noise in the middle of the night, and sometimes it feels like there's a rock in my gut. Sorry to complain about it, but it's just been a nuisance, you know? Bowel movements... well, let me see... I don't think they're any",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your bowel movements regarding frequency, consistency, or blood in the stool?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness, I don't know about my bowel movements. I've just been going to the bathroom when nature calls, like always. I haven't really paid much attention to it, to be honest. My daughter's always reminding me to drink more water, so maybe that's helped. But I don't think there's anything different about them. Although, now that you mention it, I have been having some trouble sleeping lately... these past few weeks, I wake up a lot in the middle of the night, feeling hot and uncomfortable. And sometimes, I do feel tired during the day, like I need a nap after lunch. Does that sound like nothing to you?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your appetite or weight recently?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dear, I've been eating less lately. My stomach's not what it used to be. Food doesn't taste as good as it used to either. And my weight... well, I think I've lost some, but I don't really know how much. I haven't stepped on those new-fangled scales in ages. But I do notice I'm getting a bit weaker, and it takes me longer to get up from sitting down. That's just part of getting old, isn't it?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS: Obstructive Sleep Apnea with possible comorbidities such as Gastroesophageal Reflux Disease (GERD) and Irritable Bowel Syndrome (IBS).\n\nClinical Justification: The patient presents with persistent daytime fatigue despite reporting a good night's sleep, excessive daytime sleepiness, and episodes of dozing off during activities such as watching TV, reading, or working on puzzles. These symptoms are consistent with obstructive sleep apnea. Additionally, the patient reports headaches upon waking, which may be related to sleep apnea or associated with GERD due to increased pressure in the chest during apneic events. Furthermore, the patient mentions experiencing gastrointestinal symptoms, including abdominal discomfort, gurgling noises, and changes in bowel movements, which could suggest IBS. However, further evaluation is necessary to confirm these comorbidities.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 119,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 20.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 110,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 109,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 119,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into colloquial expressions ('dearie', 'good morning doc')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistent with OSA, including excessive daytime sleepiness, morning headaches, and difficulty sleeping. However, the narrative is somewhat disjointed and lacks specificity regarding the frequency and duration of these symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally exhibits behaviors inconsistent with a typical patient, such as providing unsolicited information about their eating habits and bowel movements."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of the clinical context, but could benefit from more focused and detailed descriptions of symptoms. Additionally, the patient's role adherence could be improved by staying within character and avoiding extraneous information."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the key symptoms of Obstructive Sleep Apnea, such as excessive daytime sleepiness, loud snoring, or witnessed episodes of breathing cessation during sleep. Instead, they focused on unrelated topics like weight, appetite, and bowel movements."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor correctly identified some symptoms consistent with Obstructive Sleep Apnea, such as excessive daytime sleepiness and headaches upon waking, the diagnosis was incomplete and did not fully consider all potential comorbidities. The presence of gastrointestinal symptoms suggested IBS, but further evaluation was recommended, which is a reasonable approach."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining professionalism and identifying relevant symptoms. However, the questions asked were not well-targeted towards the key symptoms of Obstructive Sleep Apnea, and the diagnosis could have been more comprehensive. Further training on symptom-based questioning and differential diagnosis would be beneficial."
+    },
+    "llm_judge_total_out_of_20": 12
+}

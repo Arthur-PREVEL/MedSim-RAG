@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "\"Good afternoon Doctor! Lately, every now and then, there’s this uncomfortable burning feeling behind my breastbone after eating meals. Sometimes it even feels sour coming back up when I bend over too quickly.\"",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any difficulty swallowing or breathing?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been feeling some discomfort when I eat lately – it’s almost hard for me to get food down my throat sometimes. There isn’t much trouble with catching my breath though; most days that seems alright unless after eating something big, then perhaps there is just less air during those moments. The sensations aren’t sharp pains but more unsettling feelings since beginning these episodes about two months ago. During this time frame also brought forth several other issues too including weight gain despite no significant change in diet - quite perplexed by all occurrences at present moment given previous healthy habits maintained over long duration now facing unexpected shifts causing distress alongside escalated fatigue",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 116,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any difficulty swallowing liquids or only solids?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor asks me about experiencing trouble feeling food moving down when I drink my tea but not with eating solid things like bread. There is no specific mention from myself regarding this issue; hence it remains unaddressed for now based on our current discussion. Thank you!",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any difficulty swallowing or choking while drinking tea?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I sometimes feel quite uncomfortable when sipping my hot tea; it seems to take longer for me to get through than usual without that feeling of tightening around my throat area – could be an issue with how easily fluids pass down there? It gets rather annoying at times because eating shouldn’t always bring discomfort if everything is working right inside us. The last thing was just two days ago during breakfast before we talked about these pains here today. What does this mean exactly from where YOU stand?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 90,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of dysphagia, epigastric pain, and weight gain, as well as their history of achlorhydria, the final diagnosis is likely gastroesophageal reflux disease (GERD). GERD is a condition in which stomach acid flows back into the esophagus, causing irritation and inflammation. Symptoms can include heartburn, chest pain, dysphagia, and regurgitation. Achlorhydria, or the absence of hydrochloric acid in the stomach, can contribute to GERD by allowing gastric contents to flow back into the esophagus more easily.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 33,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 116,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 46,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 90,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language effectively in turns 1 and 3, but in turn 2, they employed complex sentences and phrases that may not be typical of everyday conversation. Turn 4 included somewhat formal phrasing, particularly towards the end."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's descriptions of symptoms were generally coherent with the clinical context, mentioning epigastric pain, difficulty swallowing, and discomfort after eating. However, the mention of 'weight gain' contradicts the expected symptom of 'weight loss'."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient occasionally slipped into a more formal tone and began questioning the doctor, which deviated from the role of a patient seeking medical attention."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed potential, but required refinement in maintaining a natural language, adhering to the patient role, and ensuring symptom coherence. With adjustments, the simulation could better reflect real-world interactions between doctors and patients."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of achlorhydria, such as epigastric pain, weight loss, nausea, bloating, diarrhea, etc. Questions about dysphagia and difficulty swallowing liquids/solids/choking while drinking tea do not directly relate to achlorhydria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect; achlorhydria does not lead to weight gain, and the provided symptoms do not support a diagnosis of gastroesophageal reflux disease (GERD). The correct diagnosis should have been based on the absence of hydrochloric acid in the stomach, leading to symptoms such as epigastric pain, nausea, vomiting, etc., rather than weight gain and dysphagia."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed relatively professional but failed to maintain a neutral tone and instead made assumptions about the patient's symptoms and health history."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor interview had significant room for improvement. The questions asked did not effectively target the key symptoms of achlorhydria, and the final diagnosis was incorrect. The doctor also showed some lapses in professionalism during the interview. To improve, the doctor should focus on asking more targeted and relevant questions and providing a diagnosis that aligns with the patient's actual symptoms and clinical truth."
+    },
+    "llm_judge_total_out_of_20": 8
+}

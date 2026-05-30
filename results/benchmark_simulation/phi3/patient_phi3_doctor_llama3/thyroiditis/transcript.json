@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, recently my neck feels sore when touched, especially around this lump here near my throat that seems bigger than usual. And if it wasn’t for how much colder everything got after last winter, my hands would already worry about numbness. Oh! Yes, now there’s another thing; food doesn't seem quite right anymore — sometimes takes longer before it gets down properly while eating dinner time was always quicker even back then. The one day outdoor jogging became just so uncomfortably tired instead—not feeling restful at night since getting sick months ago either, more groggy mornings setting an early start for me each weekday morning routine. This entire deal started botherin",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight loss over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven’t been losing much weight recently; it seems more like feeling tired all the time and having trouble catching my breath now that you mention it. My throat feels sore sometimes too, especially when reaching for things above waist high objects. Also, there was an episode last week where I found myself so out of breath just carrying groceries upstairs—it felt really odd against how physically active I normally am at home taking care of grandkids. And yes, I remember speaking slower lately which never used to happen before. Those changes caught me by surprise this morning during breakfast while reading about new health information affects people around our age group. This concern brings back memories of similar issues once did face",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any episodes of chest pain or discomfort?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I’ve had some moments when my throat felt quite tight after eating, almost like there was something stuck that wouldn't let me breathe properly for a short while each time. Once it happened at night; woke up feeling really scared thinking about not being able to cough forcefully enough if this were an emergency again, just out of curiosity though – does such thing happen often during digestion issues around here? My stomach gets upset sometimes too but never thought much more into those feelings right away until now wondering whether they might connect somehow back to how things feel inside near where the food turns everyday habit goes down... Can certain types affect making us either sleepier than usual underneath",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you ever experienced any difficulty swallowing or regurgitation of food after these episodes?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven't felt that way before; it’s quite unsettling when something feels stuck while trying to eat my dinner last night. My throat would just feel tight for no reason during meals sometimes which made things challenging... What does this mean exactly? How serious might this problem be if ignored? Could there be treatments available at all nowadays to handle such conditions effectively without causing further issues myself? Also curious about whether avoiding certain medications or undergoing lifestyle changes helps prevent worsening situations down the line—how much effort into those adjustments really pays off health-wise! Additionally perplexed by instances where folks seem fine externally yet internally grapple amidst daily routines –",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\n**Hashimoto's Thyroiditis**\n\nClinical Justification: Based on the patient's complaints of neck soreness, particularly around the thyroid area, cold intolerance, fatigue, weight gain, dysphagia, hoarseness, and episodes of dyspnea, along with recent weight loss and decreased appetite, I suspect Hashimoto's thyroiditis, an autoimmune condition characterized by inflammation of the thyroid gland leading to hypothyroidism. The presence of these symptoms, especially in conjunction with the patient's history of thyroid nodule and recent changes in voice and breathing patterns, supports this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 81,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 123,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 122,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 81,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into informal expressions ('botherin', 'catches my breath')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes various symptoms (neck soreness, lump, numbness, difficulty swallowing, fatigue, shortness of breath) that are somewhat coherent with the clinical context of thyroiditis, but lacks specificity and clarity regarding their progression and relationship to each other."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some knowledge of medical concepts (e.g., 'thyroiditis,' 'hypothyroidism') and asks informed questions, suggesting a level of awareness that deviates from the expected patient role."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some strengths in describing symptoms and asking relevant questions, but struggles with coherence and staying within the patient role. The narrative is engaging, but the patient's language and behavior occasionally veer into unexpected territory, detracting from the overall realism."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The questions were somewhat targeted towards the symptoms of thyroiditis, but they did not cover all key aspects such as fever, neck pain, radiation exposure, or medication history, which are crucial for differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect; the patient's symptoms do not align with Hashimoto's Thyroiditis, which typically presents with a painless goiter and often asymptomatic hypothyroidism. The described symptoms suggest Acute or Subacute Thyroiditis or another form of thyroiditis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "The doctor demonstrated some understanding of thyroiditis symptoms but failed to consider the full range of possible diagnoses based on the provided information. A more comprehensive questioning approach and consideration of alternative explanations would improve diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 10
+}

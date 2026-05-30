@@ -1,0 +1,231 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon, Doctor. I've been feeling quite a bit under the weather lately. To start, I've noticed I haven't had my monthly cycle for a long time now, which is unusual for me. I feel colder than usual and it seems to take longer for me to warm up, even in warmer rooms. I've also been having some digestion issues; my bowel movements aren't regular anymore and sometimes I feel bloated.\n\nMy legs have been swelling too, especially after spending long hours on my feet. I get really tired easily, both physically and mentally. Despite that, I find myself unable to rest much because I'm trying to stay active most of the day. This",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 114,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight changes over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh, doctor, I've noticed that I seem to be losing a bit more weight than I intended. It's not something I planned, but it feels like my clothes are becoming looser, and I can see my bones more clearly in the mirror. I wish it wasn't happening because I know it's not healthy for me.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 55,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your appetite or hunger levels over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doctor, I must admit that I've noticed some changes in my appetite lately. It seems like I don't feel hungry as often as I used to, and when I do eat, I find myself feeling full quite quickly. This is something new for me, and I thought it was just getting older, but now I'm wondering if there might be more to it. I guess I should talk to you about this further, huh?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 75,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any unintentional weight loss over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh, Doctor, I guess I haven't noticed much change in my weight. But I've been eating less these days, and I think it might be because I find myself feeling full quicker than before. I've also been trying to wear some of my older clothes again, and they seem looser now, which is unexpected. Could that be related to weight loss, do you think?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 64,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient is diagnosed with Anorexia Nervosa, a serious eating disorder characterized by a distorted body image and an intense fear of gaining weight, leading to restrictive eating habits and significant weight loss.\n\nClinical Justification: The patient's self-reported weight loss, amenorrhea (absence of menstrual period), cold intolerance, fatigue, and digestive issues, along with her decreased appetite and early satiety, are all indicative of malnutrition and caloric restriction, which are hallmarks of Anorexia Nervosa. Additionally, the patient's denial of her weight loss and lack of concern about her health suggest a psychological component to her condition, consistent with the neurotic and obsessive behaviors commonly seen in individuals with Anorexia Nervosa.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 111,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 114,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 55,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 75,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 64,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 111,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions (e.g., 'I've been feeling quite a bit under the weather lately')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Some symptoms are consistently reported throughout the conversation (amenorrhea, cold intolerance, fatigue), while others appear later or are vaguely mentioned (constipation, extremity edema)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but exhibits some inconsistencies in their narrative (e.g., Turn 3 implies concern about weight loss, whereas Turns 4 downplays its significance)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates good effort in describing symptoms, but could benefit from more consistency in reporting and staying within the established role. The narrative sometimes veers off course, and certain aspects of the condition are not thoroughly explored."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions [1] and [3] were targeted and clinically relevant, but question [2] was somewhat vague and did not directly address potential purging behaviors or restrictive eating habits, which are key components of Anorexia Nervosa."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was accurate, considering the symptoms presented, although it could have been more specific regarding the psychological aspects of the condition."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview, but there was some room for improvement in maintaining a neutral tone and avoiding leading questions that might have inadvertently reinforced the patient's denial of her weight loss."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good understanding of Anorexia Nervosa symptoms and provided a generally accurate diagnosis. However, the questioning process could be improved by incorporating more targeted and comprehensive inquiries into the patient's eating habits and psychological state. Additionally, the doctor should strive to maintain a more neutral tone during the interview to encourage honest responses from the patient."
+    },
+    "llm_judge_total_out_of_20": 14
+}

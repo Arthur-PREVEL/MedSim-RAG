@@ -1,0 +1,231 @@
+{
+    "pathology_target": "Anorexia Nervosa",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "I'm so glad you're here to see me. To be honest, I've been feeling just awful lately. I haven't had my period in months, which is really worrying me. And my feet and ankles have been swelling up something fierce. I've also been getting these awful headaches and my joints ache after walking more than a block. Sometimes I feel like I'm going to pass out from exhaustion. I just can't seem to get any energy.\n\nAnd it's not just my body that's suffering. My mind feels foggy, like I'm stuck in this haze all day. I get irritated over the smallest things - my family does it, but even I get frustrated with myself! It's just... ugh. I don't",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 120,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your skin or hair?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, yes! My skin feels so dry and tight lately. It's like it's not getting enough moisture or something. And my hair... well, it used to be thick and shiny, but now it's thinning in some places and feels brittle. I've been using more conditioner than ever before, but it still looks dull and doesn't grow very much. I'm worried about this, dear doc. I hope it's not just because I'm getting older.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 74,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any changes in your appetite or weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, I'm just so tired all the time. I've been feeling really weak lately, but I don't know if it's because I'm not eating much or if something else is wrong. To be honest, my stomach hasn't been feeling right. Sometimes it feels empty, other times it feels too full after eating. And I've noticed I've lost some weight. My clothes feel looser on me, that's how I knew something was off.\n\nI used to love cooking and trying new recipes, but now the thought of food makes me anxious. I find myself skipping meals or only eating tiny portions. I know it sounds silly, but I feel like I'm being careful, making sure I don't eat too much.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 119,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you had any changes in your appetite or taste preferences?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "(sighing) Oh dear, I've lost my appetite lately. It's just not as strong as it used to be. Sometimes I'll eat a little bit and then feel full really quickly. Like, yesterday I made myself some oatmeal, but even that didn't sit well in my stomach. And don't even get me started on the thought of sweets... (shaking head) My granddaughter was over last week and brought me some homemade cookies. Normally, I'd have eaten one or two, but now they just don't appeal to me like they used to. It's all a bit puzzling, if you ask me.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 99,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of amenorrhea, swelling, fatigue, headache, joint pain, cognitive impairment, dry skin, hair loss, decreased appetite, and weight loss, the final diagnosis is Anorexia Nervosa. The patient's fear of gaining weight despite being underweight, obsessive focus on calorie intake, and distorted body image are classic signs of this disorder. Additionally, the patient's lack of interest in food and preference for sweet foods may indicate a restrictive type of anorexia nervosa.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 74,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.75,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 17.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 120,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 74,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ed"
+                ],
+                "word_count": 119,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa",
+                    "ed"
+                ],
+                "word_count": 99,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 74,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into vague descriptions ('feeling awful', 'awful headaches')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes a range of symptoms consistent with anorexia nervosa, including amenorrhea, weight loss, and restrictive eating behaviors. However, some symptoms like dry skin and hair thinning could be attributed to malnutrition, but aren't directly linked to the primary concerns."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some knowledge of their condition, describing specific symptoms and behaviors. This suggests she may be aware of her illness, undermining her role as a patient seeking help."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates a good understanding of anorexia nervosa symptoms and behaviors. However, the patient's occasional use of vague language and awareness of her condition detract from her portrayal as a genuine patient seeking help. With refinement, this simulation could better capture the nuances of a patient's experience while maintaining a convincing narrative."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions were not targeted towards the key symptoms of Anorexia Nervosa (amenorrhea, cold intolerance, constipation, extremity edema, fatigue, and irritability) and did not cover restrictive behaviors or purging methods. Questions 1 and 3 were irrelevant to the condition, while Question 2 was partially relevant but incomplete."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis of Anorexia Nervosa was correct, but it was based on some incorrect assumptions about the patient's symptoms (headache, joint pain, cognitive impairment). However, the presence of amenorrhea, weight loss, and fear of gaining weight despite being underweight supported the diagnosis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview, but showed some empathy by mentioning 'classic signs' which slightly compromised their role-playing."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This simulated doctor demonstrated some understanding of Anorexia Nervosa, but failed to ask targeted questions during the interview and made some errors in diagnosing the condition. With more focused questioning and attention to detail, they could improve their diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 9
+}

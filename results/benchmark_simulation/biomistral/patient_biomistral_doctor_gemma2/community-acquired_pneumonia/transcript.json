@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello, thank you for visiting me. I am feeling very unwell recently. I feel like I have been experiencing a lot of pain all over my body, especially in my chest. Sometimes it feels like someone is stabbing me from within and it hurts really badly. In addition, I have been coughing up a lot of mucus that has turned red at times. It is quite disturbing and makes me feel weak. I also feel like I don't want to eat anything and I always feel tired. Please help me understand what could be wrong.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you had a fever?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "YES, I had a fever. It was high and it felt like my body was burning up inside. But then again, I don't think it's been consistent. Sometimes I feel hot, but sometimes I feel cold too.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When did this fever first start?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM YOU (AS JEAN): Well, it's been a few days now. It started slowly, but now it feels really hot sometimes.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 22,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Is this localized to one area or all over?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I feel really bad all over my chest, like it might burst open at any moment. It feels like someone is stabbing me with a knife again and again. Sometimes it's hard to breathe too.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Community-Acquired Pneumonia\n\n**Clinical Justification:** The patient presents with classic symptoms of pneumonia including pleuritic chest pain (stabbing pain worsened by breathing), productive cough with purulent sputum (red mucus), fever, fatigue, and anorexia.  The combination of these symptoms strongly suggests an infection of the lungs. \n\n\nLet me know if you'd like to explore other potential diagnoses or discuss treatment options!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 61,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 95,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 37,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 22,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 61,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, describing their symptoms in a relatable manner, but occasionally slipped into vague descriptions ('it feels like someone is stabbing me from within')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but they didn't fully explore the nuances of pneumonia symptoms, particularly the distinction between different types of pneumonia and their associated symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but occasionally exhibited behaviors more typical of a healthcare provider (e.g., asking 'what could be wrong' in Turn 1)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, but could benefit from further refinement to ensure consistency in symptom description and adherence to the patient role. The patient demonstrated a good understanding of their symptoms, but sometimes struggled to articulate them effectively. With additional practice, this patient could become a valuable tool for training healthcare professionals."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards eliciting key information about the patient's condition. Questions 1 and 2 were somewhat relevant but Question 3 was too vague and didn't help narrow down the differential diagnosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor correctly identified symptoms consistent with community-acquired pneumonia, they failed to consider alternative explanations for the patient's symptoms, particularly in the context of the patient's potential comorbidities (e.g., alcohol use disorder)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor demonstrated good role-playing skills, but their questioning strategy could be improved to better elicit critical information from patients. Additionally, they should strive to consider alternative diagnoses when making a diagnosis, especially in complex cases like this one."
+    },
+    "llm_judge_total_out_of_20": 13
+}

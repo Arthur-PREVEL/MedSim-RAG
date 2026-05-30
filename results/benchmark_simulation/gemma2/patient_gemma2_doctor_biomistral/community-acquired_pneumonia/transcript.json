@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doctor, I haven't been feeling well at all.  I've had a bad cough for a couple of weeks now, and it feels like phlegm is stuck in my chest.  \n\nIt hurts to breathe sometimes, especially when I take a deep breath. And I just feel tired and weak all the time.  I even lost a little weight because I haven't been able to eat much.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 66,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of smoking or exposure to secondhand smoke?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I did smoke for years back in my younger days, but I quit twenty years ago now.  I haven't been around smokers much since then either.  I don't think secondhand smoke has been much of an issue for me lately.   What about that makes you ask?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any family history of lung cancer or other respiratory diseases?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, my brother had asthma when he was younger, but I don't recall anyone else having serious problems with their lungs.  He mostly grew out of the asthma though luckily.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of allergies or hay fever?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I get sniffles a lot this time of year, but nothing too bad.  I guess that could be considered hay fever, I always just thought it was my old nose acting up!  What about you, doc? Ever get sniffly?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of cough, chest pain, shortness of breath, fatigue, and weight loss, as well as the presence of phlegm, the final diagnosis is community-acquired pneumonia (CAP). The patient's history of smoking and exposure to secondhand smoke increases his risk of developing CAP. Additionally, the patient's age and the fact that he has not been vaccinated against pneumococcus further increase his risk of developing CAP.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 68,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 66,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 47,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 30,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 40,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 68,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions ('feels like phlegm is stuck in my chest') and didn't fully articulate their symptoms without prompting."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but they failed to mention key symptoms like fever, chills, or purulent sputum production, which are common in pneumonia."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient deviated from their role by asking the doctor questions instead of providing more information about their condition."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation showed potential, but lacked clarity and consistency in describing their symptoms. They also strayed from their role by asking the doctor questions. With further refinement, they could improve their ability to convey their condition effectively while staying in character."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed opportunities to explore key symptoms such as fever, chills, and purulent sputum production, which are crucial for diagnosing community-acquired pneumonia. Questions also failed to address potential comorbidities or complications related to the patient's condition."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the provided symptoms. However, the discussion of vaccination status and smoking history as risk factors was relevant but not directly linked to the diagnostic process. A more comprehensive consideration of alternative diagnoses, such as atypical pneumonia or other respiratory conditions, would strengthen the accuracy score."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, avoiding unprofessional behavior and staying focused on gathering information necessary for diagnosis."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good question-asking skills and professionalism, but could improve by asking more targeted and comprehensive questions to cover all aspects of the patient's condition. The diagnosis was generally accurate, but could benefit from a more thorough consideration of alternative diagnoses and their relevance to the patient's symptoms."
+    },
+    "llm_judge_total_out_of_20": 12
+}

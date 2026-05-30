@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doctor, sometimes, even though I try really hard, I have accidents.  It happens mostly when I'm asleep. I just wake up wet and uncomfortable. It makes me feel embarrassed, especially since I'm older now.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any other symptoms such as difficulty urinating or pain during urination?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, sometimes when I try to go, it feels like...  well, like something's blocking it. And it takes awhile to get everything out. But it doesn't hurt exactly.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any difficulty with urination in addition to the sensation of blockage?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Sometimes I have trouble starting to go... like it takes a while before anything comes out.  And sometimes it feels kind of squirmy,  like something's off.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you ever experience any difficulty with swallowing?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I don't have any problems swallowing.",
+            "score": {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 7,
+                "total": 7
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's history of enuresis and difficulty initiating urination, the final diagnosis is likely bladder dysfunction. The patient's description of feeling like \"something's blocking\" their urine flow and having difficulty starting to urinate could be indicative of bladder obstruction or an overactive bladder. Bladder dysfunction can be caused by a variety of factors including neurological disorders, urinary tract infections, and certain medications. Further testing such as a urinalysis and imaging studies may be necessary to confirm the diagnosis and determine the underlying cause.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 16.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            },
+            {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 7,
+                "total": 7
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 14,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 85,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions ('something's blocking it', 'it feels kind of squirmy')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, mentioning nocturnal enuresis and difficulty initiating urination, but lacked specificity and detail."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but showed some awareness of their situation ('especially since I'm older now') and didn't fully adhere to the role of someone experiencing enuresis."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language and staying within the role, but struggled with providing clear and specific symptoms, particularly in describing the nature of their difficulties with urination. With further refinement, the patient could benefit from developing more nuanced and detailed descriptions of their experiences."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were somewhat targeted but failed to cover key aspects of enuresis, such as frequency, nocturnal vs. diurnal, and potential triggers like toileting habits and hydration history."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of 'bladder dysfunction' was incorrect because it did not align with the clinical truth of enuresis. The symptoms described do not support a diagnosis of bladder obstruction or overactive bladder, and further testing would not be indicated for these conditions based on the information provided."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional throughout the interview, but there was some deviation from a neutral tone when asking about difficulty swallowing, which is unrelated to the primary complaint of enuresis."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining a professional demeanor, but fell short in terms of questioning technique and diagnostic accuracy. The doctor failed to explore critical aspects of the patient's history and instead jumped to an incorrect conclusion. To improve, the doctor should focus on asking targeted, clinically relevant questions and staying true to the clinical truth of the presenting condition."
+    },
+    "llm_judge_total_out_of_20": 10
+}

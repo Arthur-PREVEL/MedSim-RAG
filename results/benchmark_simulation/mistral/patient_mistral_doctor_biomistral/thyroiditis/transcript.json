@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I've been feeling quite unwell recently. I've had a sore throat for about a week now, and it seems to have spread to my neck area. Along with that, I've been running a fever and I feel a sharp pain when I touch my neck. To add to my discomfort, I've been having some trouble swallowing food, and sometimes I even choke a little. My voice sounds a bit hoarse too. I've never experienced these symptoms before, so I thought I should get them checked out. Additionally, I've noticed some weight gain lately, and I've felt tired much more often than usual. Lastly, I want to mention that I've had",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of difficulty breathing?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No doctor, I haven't had any trouble breathing recently. However, I did experience some discomfort in my neck area and a bit of difficulty swallowing a few days ago. I didn't think much about it at the time, but now that you mention it, I guess I should tell you about that. Apart from that, my breathing has been normal and easy.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Can you describe the nature of the discomfort you experienced in your neck area?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Certainly, Doctor. I've been experiencing a persistent and mildly uncomfortable sensation in my neck region. It feels similar to having a sore throat, but it's actually located higher up. The discomfort seems to intensify when I swallow or move my neck in certain ways. It's not unbearable, but it's definitely noticeable and a bit worrying. Thank you for asking about this, Doctor. I appreciate your concern and care.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any swelling or redness in your neck?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been noticing a swelling in my neck that feels slightly unpleasant and seems to be getting bigger over time. It's also been red at times, causing me some discomfort when I try to move my head.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of a sore throat, fever, difficulty swallowing, hoarseness, weight gain, fatigue, and swollen and red neck, the final diagnosis is thyroiditis. The clinical justification for this diagnosis is that thyroiditis is an inflammation of the thyroid gland that can cause many of the symptoms described by the patient, including a sore throat, fever, difficulty swallowing, hoarseness, weight gain, fatigue, and swollen and red neck.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 69,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 112,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 62,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 68,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 14,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 69,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally mentioned symptoms without directly relating them to their overall condition, e.g., 'I've been feeling quite unwell recently' instead of describing specific symptoms in detail."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but they lacked specificity and consistency throughout the conversation. They mentioned various symptoms (sore throat, fever, neck pain, difficulty swallowing, hoarseness) but failed to connect them to potential causes like thyroiditis until later turns."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but occasionally slipped into a more passive role by providing information only when prompted, rather than actively sharing concerns or questions."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, but required more attention to coherence and consistency in symptom description. With further refinement, the patient could better articulate their concerns and relate them to potential conditions, making the interaction more engaging and realistic."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions, but they were not comprehensive enough to cover all possible causes of thyroiditis. Questions about medication history, personal/family history of autoimmune disease, and specific symptoms like dysphagia or odynophagia would have been more informative."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "While the doctor identified some symptoms consistent with thyroiditis (sore throat, fever, difficulty swallowing), the final diagnosis was overly broad and did not account for the possibility of other conditions causing similar symptoms (e.g., laryngitis)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor simulation showed promise, but fell short in terms of asking comprehensive questions and providing a nuanced diagnosis. With further training, the doctor could improve their ability to consider multiple potential causes of symptoms and provide more accurate diagnoses."
+    },
+    "llm_judge_total_out_of_20": 13
+}

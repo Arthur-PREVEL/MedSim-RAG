@@ -1,0 +1,235 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, it feels fine at first when talking about my health issues here because there might be problems if we miss something early on, right Doc? Can’t really pinpoint anything specific myself but maybe just not feeling up to par lately—weak more than usual... Uh oh, this could actually mean several things given how our bodies respond differently based on various conditions that people come into contact with day by day. It would indeed help us figure out exactly where these signs point so they don't hide behind each other making everything confusing for both identifying triggers quickly enough!",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 99,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When did you first notice this feeling of weakness?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I started noticing that things were off a few weeks back when gardening got tougher than usual for me. Even lifting my watering can became difficult - it felt heavier each time. Now I just feel drained all day long. And sometimes at night, I wake up from sleep looking so tired if any little noise doesn’t bother me otherwise throughout my whole life here in town since before marrying Mary nearly fifty years ago! Plus there was one evening last month where after taking her out on our small boat trip down by Salt Creek -- right along Lake Willowshore near Old Oak Tree Park – she found herself suddenly huffing heavy during their walk around Winding Paths Trail until finally collapsing",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 123,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any recent changes in your appetite?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No doc I haven’t felt much different about my eating recently, but maybe it ain’t perfect nowadays after this whole lung thing started happening. It feels heavy when breathin', kind of drains me out even if there doesn't seem too bad on top for others looking at only one part cause they don't know all sides, ya get me? But yeah, might be why food just isn't appealing these past few days – not feeling hungry until late afternoons most times. And that thirst is something new... makes sense considering everything else goin' on inside here. Doc always say we gotta keep body fueled right best way possible so heal up quicker from whatever",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 114,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any blood in your phlegm or cough?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, sometimes my throat feels really tight after I cough too much at night, almost burning it inside me for a couple days each time. It gets better once that burn goes away but still kinda scares me when it happens again because there might be something wrong deep down in here causing all this commotion around here (points towards lungs). And yeah if asked why am getting tired quicker these past weeks – maybe just aging catches up on us alright?? But shouldn’t we figure out whatever keeps making my body feel off faster than usual before things get worse from going unchecked longer rather waiting ‘til tomorrow since feeling good today seem tiring already compared last month where everything felt fine despite being bus",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 1,
+                "role_score": 3,
+                "jargon_found": [
+                    "ards",
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 127,
+                "total": 7
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "## FINAL DIAGNOSIS: Community-Acquired Pneumonia\n\n**Clinical Justification:** The patient presents with classic symptoms of pneumonia including fatigue, shortness of breath, productive cough (with potential hemoptysis), and fever (implied by his statement of feeling \"off\" and \"not feeling up to par\").  The onset of symptoms over several weeks and the presence of chest discomfort further support this diagnosis.\n\n\nLet me know if you have any other medical histories you'd like me to review!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 72,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.25,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 16.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 99,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 2,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 123,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 114,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 1,
+                "role_score": 3,
+                "jargon_found": [
+                    "ards",
+                    "ra",
+                    "oa"
+                ],
+                "word_count": 127,
+                "total": 7
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 72,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses everyday language, but occasionally slips into colloquial expressions and vague descriptions, which detract from the overall coherence and clarity."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient's symptoms are somewhat inconsistent with the clinical context provided. They mention fatigue, difficulty breathing, and coughing, but also mention gardening and walking without apparent exertion-related distress. Additionally, the patient's description of their condition seems to shift between 'feeling weak,' 'not feeling up to par,' and 'drained all day long.'"
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, but occasionally exhibits behaviors that suggest they are aware of their own health concerns and are trying to convey them in a way that might elicit a particular response from the doctor. This is seen in phrases like 'it feels heavy when breathin'' and 'makes sense considering everything else goin' on inside here'."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and staying in character, but struggles with symptom coherence and role adherence. While the patient provides some relevant information, their descriptions are often vague and inconsistent, and they occasionally exhibit behaviors that suggest they are trying to manipulate the doctor's response. With further refinement, this patient could provide a more convincing and coherent portrayal of their health concerns."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of community-acquired pneumonia, such as fever, cough, and dyspnea. Questions about weakness and appetite change are not directly related to pneumonia."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly correct but lacked consideration of alternative diagnoses that could explain the patient's symptoms, such as Legionella infection or hemolytic anemia. The justification provided focused on classic symptoms of pneumonia but didn't address the atypical presentation mentioned in the clinical truth."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated some understanding of community-acquired pneumonia but failed to ask relevant questions and consider alternative diagnoses. With more targeted questioning and attention to atypical presentations, the diagnosis would be more accurate and comprehensive."
+    },
+    "llm_judge_total_out_of_20": 11
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, Doc, lately I've been having some real trouble with my stomach.  Mostly it hurts right in the middle, sort of around my belly button. It feels kind of gnawy, and sometimes it comes and goes. And I've just not been feeling right, kinda weak really. Food doesn't sit well with me either. Sometimes I feel full before I've even finished eating.  I get this burning feeling coming up too, not very pleasant at all.   And, honestly, I've lost a bit of weight, don't know why that is.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 88,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any blood in your stool or vomit?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't noticed any blood, thank goodness.  It's mostly just been a lot of indigestion and feeling full really quickly after eating.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight loss over the past few months?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I've been feeling a lot lighter than usual.  My clothes feel looser.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or weight loss?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, I haven't been feeling very hungry lately.  And yeah, I've probably lost a few pounds without even trying. It's just not appealing to eat much these days.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient has achlorhydria, a condition characterized by the reduced production of gastric acid, leading to impaired digestion and absorption of nutrients.\n\nClinical Justification: The patient's symptoms of epigastric pain, early satiety, weight loss, and lack of hunger despite adequate caloric intake are consistent with achlorhydria. Additionally, the absence of blood in the stool or vomit suggests that the condition is likely related to a reduction in gastric acid production rather than an ulcer or other gastrointestinal pathology.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.5,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 88,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 23,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 14,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 28,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 80,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into vague descriptions (e.g., 'gnawy', 'kinda weak')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient mentioned several symptoms, they didn't always connect them coherently or explain how they relate to each other. For instance, they linked epigastric pain to feeling weak, but didn't explicitly mention its connection to achlorhydria."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character for most of the conversation, but occasionally exhibited behaviors more typical of a doctor (e.g., asking if there was blood)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed potential, but could benefit from more coherent symptom description and adherence to the role. The patient's use of everyday language was generally good, but could be improved by providing more specific details about their experiences."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions [1] and [2] were targeted and clinically relevant, but question [3] was somewhat redundant and did not add new information. Question [1] could have been more specific about the type of blood (e.g., melena) to better assess the likelihood of upper GI bleeding. However, the questions generally covered some key aspects of achlorhydria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis was accurate and well-supported by the provided symptoms. The doctor correctly identified the key features of achlorhydria and distinguished it from other potential causes of similar symptoms."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor mostly stayed professional during the interview, but occasionally slipped into a slightly informal tone when explaining the diagnosis. This minor deviation from professionalism did not significantly impact the overall assessment."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills, accurately diagnosed achlorhydria based on the provided symptoms, and maintained a professional demeanor throughout the interaction. However, there is room for improvement in terms of specificity and consistency in questioning style."
+    },
+    "llm_judge_total_out_of_20": 14
+}

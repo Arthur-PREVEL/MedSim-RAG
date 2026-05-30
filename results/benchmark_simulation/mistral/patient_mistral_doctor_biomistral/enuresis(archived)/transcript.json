@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I've been having issues with bedwetting during the night. It's happened several times a week for quite some time now. I find it very embarrassing and it's causing me stress, especially when it affects my sleep. This problem has been going on for a few months now. I haven't noticed any daytime accidents though. Is there anything that could be done about this issue? I'm also open to answering questions that might help figure out what's happening.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting"
+                ],
+                "word_count": 79,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your daily activities or diet that could be contributing to this issue?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've been thinking about this, Doctor. There might be some changes that could be related to my problem. For instance, I've found myself drinking more fluids than usual, especially water. Also, I've noticed that my sleep patterns have been irregular lately, and I often wake up during the night. These things might be affecting how often I need to use the bathroom during the day and night. Additionally, I've been under a lot of stress recently, and that could potentially make things worse. However, I'm unsure if these factors are directly causing the issue or if there might be something else going on.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 104,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any burning or pain while urinating?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I often feel a burning sensation when I urinate, Doctor. It's quite uncomfortable and has been happening for a few weeks now. I thought it might just be a temporary issue, but it seems to persist. I hope we can find a solution soon.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any discomfort or pain in your genital area?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I have been experiencing some discomfort and pain in my genital area, Doctor. This has been continuing for quite some time now, and it's been causing me a lot of inconvenience at night. I would appreciate if we could discuss this further and explore possible causes and solutions.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's history of enuresis, nocturnal polyuria, and dysuria, the final diagnosis is likely bladder infection (cystitis). The patient's symptoms of frequent urination, urgency, and discomfort during urination are consistent with cystitis. The patient's history of increased fluid intake and irregular sleep patterns may contribute to the development of cystitis. The patient's history of enuresis suggests that the bladder may not be fully emptying during urination, which could lead to bacterial growth and subsequent infection. The patient's history of dysuria is also consistent with cystitis. Therefore, the patient should be evaluated for a urinary tract infection (UTI) and treated accordingly.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 102,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "bedwetting"
+                ],
+                "word_count": 79,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 104,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 45,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 49,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 102,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal tone, e.g., 'I'm also open to answering questions that might help figure out what's happening.'"
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's descriptions of symptoms were generally coherent, but lacked specificity and detail. They failed to mention key aspects of their condition, such as the frequency of nocturnal episodes, the presence of urgency, or any potential triggers."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed within the role, but occasionally exhibited behaviors more characteristic of a healthcare provider, e.g., 'I've been thinking about this, Doctor' and 'I'd appreciate if we could discuss this further'."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language and staying within the role. However, they struggled to provide detailed and coherent descriptions of their symptoms, and occasionally exhibited behaviors more characteristic of a healthcare provider. To improve, the patient could focus on providing more specific information about their experiences and maintaining a consistent patient-centric tone throughout the conversation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "Questions were somewhat targeted but failed to address key aspects of enuresis, such as frequency, distress, and potential underlying causes like urinary tract infections or sleep habits."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of bladder infection (cystitis) was incorrect; the patient's symptoms and clinical truth pointed towards enuresis rather than a UTI. The patient's history of nocturnal polyuria and dysuria does not align with cystitis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview but occasionally strayed from the role by making assumptions and jumping to conclusions based on incomplete information."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated some strengths in maintaining a professional demeanor but struggled with asking targeted and clinically relevant questions, leading to an inaccurate diagnosis. The doctor should have explored the patient's history of enuresis in greater depth and considered alternative explanations for the symptoms presented."
+    },
+    "llm_judge_total_out_of_20": 10
+}

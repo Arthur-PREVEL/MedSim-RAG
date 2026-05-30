@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doc, it's nice to finally see someone about this. To be honest, I've been feeling pretty crummy lately. My throat hurts something awful, and my neck feels like it's been squeezed by an invisible hand. I've had a bit of a sore throat, and when I swallow, it feels like there's something scratchy in there. Sometimes it feels like food is getting stuck, which makes me anxious.\n\nI've also noticed that I'm feeling really tired all the time. Simple tasks feel like climbing a mountain. And my skin is so dry, it's like the Sahara out here! My joints ache a bit, too, especially after I walk or do anything strenuous. And to top it all off, I've gained",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you had a fever?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness, yes! I've been feeling just miserable for a week now. My temperature's been up and down, and I've had this awful ache in my neck that just won't quit. I've been taking some medicine for it, but it hasn't seemed to do much good. And to make matters worse, I've been having trouble sleeping at night - I just lie there and toss and turn, trying to get comfortable. Sometimes I feel like I'm burning up inside, and then suddenly I'll shiver like crazy. It's just been a right old mess, if you know what I mean.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "sle"
+                ],
+                "word_count": 98,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have a cough?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 5,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I do have a bit of a cough. It's been bothering me for a few days now. Sometimes it feels like there's something stuck in my throat. And my throat hurts when I swallow. It's not too bad, but it's annoying.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any fever?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I've been feeling rather warm for the past few days. I think it's just my age catching up with me, but it might be this...this swelling in my neck. Sometimes it feels like it's burning when I swallow food down. It's quite uncomfortable, actually.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:** Subacute thyroiditis (De Quervain's thyroiditis)\n\n**CLINICAL JUSTIFICATION:** The patient presents with classic symptoms of subacute thyroiditis including pain and tenderness in the neck, fever, fatigue, weight gain, dry skin, joint aches, and difficulty swallowing.  The combination of these symptoms, along with the history of recent viral illness, strongly suggests inflammation of the thyroid gland. \n\n\nLet me know if you'd like me to elaborate on any specific aspect of the diagnosis or treatment options.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 75,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "sle"
+                ],
+                "word_count": 98,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 42,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 44,
+                "total": 9
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 5,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 5,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 75,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat dramatic descriptions (e.g., 'crummy', 'invisible hand')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Some symptoms were inconsistent with the clinical context provided; e.g., the patient mentioned a sore throat and difficulty swallowing, but later mentioned a cough without mentioning any respiratory symptoms. Additionally, the patient's mention of joint aches was not clearly linked to the thyroiditis context."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient generally stayed in character, they occasionally exhibited behaviors more typical of a healthcare provider, such as asking for reassurance ('it might be my age catching up with me') and providing a diagnosis ('this...this swelling in my neck')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, but required refinement to better adhere to the role and provide more coherent symptom descriptions. The patient's language was mostly natural, but sometimes veered into overly dramatic or even diagnostic territory. With further practice, this patient could become a strong simulator."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The doctor asked only three questions that were not targeted towards the key symptoms of thyroiditis. Questions about fever were repeated, which was unnecessary."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of subacute thyroiditis was incorrect. The patient presented with symptoms such as difficulty swallowing, which would suggest Riedel thyroiditis or another form of chronic thyroiditis rather than subacute thyroiditis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview, but failed to ask follow-up questions to clarify the patient's symptoms and history, which might have led to a more accurate diagnosis."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This doctor simulation showed some potential, but lacked thorough questioning and diagnostic accuracy. A more comprehensive approach to gathering information and considering alternative diagnoses would improve future interactions."
+    },
+    "llm_judge_total_out_of_20": 10
+}

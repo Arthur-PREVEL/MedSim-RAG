@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hey doc, things ain’t too good lately... Every time I go pee, my body just doesn’t feel right – hurts quite bad down here… And uh, yeah, sometimes I gotta rush all over again because something feels really wrong deep inside me. But heck, drinking lots hasn’t done much help either. Also noticed some parts don't work properly now after being stuck one way till forever last year... Not sure whether everything else might be part of whatever bug bit me yet. Plus always been tired instead of sick but maybe its related somehow since I figured out about that tube thingie before getting surgery stuff put through. Feeling kinda off overall - got those shivers",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When did these symptoms first start?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I recently started having some trouble going to the bathroom because every time I try, things don’t feel right – they burn quite badly especially during my water breaks throughout the day. It seems weird but now even just walking hurts down there too, though barely feels any better than usual before all this mess began happening. Plus with healing pains here sometimes last longer after being rubbed against while moving about - kinda makes me wonder whether something isn’t correct inside causing both feelings stuck outside & deep within so maybe we ought check out why exactly might explain stuff go wrong whenever stray germ bug invades otherwise wouldn't notice much except regular aches until sudden sharp ones hit left overnight forcing rest upwards",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Are these symptoms primarily focused on urination or bowel movements?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "It feels awful whenever I go pee—like burning heat every time! And now my belly hurts something fierce too... Makes me feel sick all over sometimes. Is there anything wrong inside? What could be causing this chaos? Did you say maybe some bug went boo-boo up here *points area above his pubic bone* because last night’s dinner might have been off somehow. Now they keep saying things about “fuzzy” stuff coming out during those trips but nothing much happens otherwise… Can we fix whatever bit us so soon after having lunch together again next Saturday party plans remain safe?? How long before getting relief won't hurt anymore than right now did already while holding onto breath",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "When you urinate, is it painful or just a burning sensation?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I sometimes feel soreness while going potty because something might have gotten into my urethra causing me trouble during digestion cycles – maybe due to bad eats habits before restroom visits but also could relate to medicines taken recently. This feels quite harsh compared to normal bathroom duties yet comes occasionally afterward instead being constant every time situation arises each day consistently unlike usual patterns found common amongst peers sharing similar age groups around myself suggesting issues lie elsewhere apart from daily routine activities affecting regular health state otherwise observed throughout group commonly possessing same years lived thus far beyond youth phase upon completion studying life stages pursuits seeking personal care requirements amidst society engaging practices leading individual identifying unique experiences contrastive towards collect",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "## FINAL DIAGNOSIS:  Uncomplicated Urinary Tract Infection (UTI)\n\n**Clinical Justification:** The patient presents with classic UTI symptoms including dysuria (painful urination), frequency, urgency, and suprapubic pain. Additionally, he mentions \"fuzzy\" discharge, which can be indicative of infection.\n\n\nLet me know if you'd like me to elaborate on any aspect of the diagnosis or discuss potential treatment options.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 20.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 124,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 6,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 57,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses colloquial expressions and informal language, but occasionally slips into somewhat formal or technical terms ('bug', 'germ', 'boo-boo')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistent with uncomplicated UTIs, but also mentions some atypical symptoms (e.g., 'shivers', 'healing pains', 'autonomous dysreflexia-like symptoms') that require further clarification."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient exhibits some knowledge of medical concepts and terminology, particularly in Turn 4, indicating a lack of role adherence."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some strengths in describing typical UTI symptoms, but struggles with coherence and role adherence. While the patient's language is generally conversational, they occasionally employ medical jargon, and their symptom description includes some atypical features that require further exploration. To improve, the patient should focus on staying in character and providing more consistent, coherent descriptions of their symptoms."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key aspects such as fever, chills, nausea, vomiting, or back/flank pain, which are important for distinguishing between uncomplicated UTIs and pyelonephritis. Questions also failed to explore the patient's history of prior antibiotic use and previous UTIs."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, considering the presented symptoms. However, the mention of 'fuzzy' discharge as indicative of infection might be misleading, as it could be caused by various factors unrelated to UTIs. More consideration should have been given to alternative explanations."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally maintained a professional demeanor during the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor demonstrated good questioning skills but fell short in exploring critical aspects of the patient's history and symptoms. The diagnosis was mostly accurate but could benefit from further consideration of alternative explanations for the presented symptoms. Overall, the doctor showed promise but needs improvement in comprehensive assessment and diagnostic reasoning."
+    },
+    "llm_judge_total_out_of_20": 12
+}

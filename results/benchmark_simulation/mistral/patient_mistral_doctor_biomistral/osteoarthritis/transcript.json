@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Osteoarthritis",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hi Doctor, I'm experiencing a lot of discomfort in my hands, especially in the knuckles and finger ends. It hurts when I try to grasp things or make a fist. The pain is worse after I've been active for a while, but it eases off a bit when I rest. Sometimes, I notice a slight swelling in these areas too. It's becoming hard to move my fingers properly, and they feel stiff in the morning, particularly after a long day. Also, I've noticed some changes in the shape of my thumb base, it seems wider and looks a bit different than before. I hope there might be something we can do about this. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any history of joint injuries or trauma?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No sir, I don't have a history of any significant joint injuries or trauma. However, over the years, I've noticed a slow development of pain and stiffness in some of my joints, especially in my hands, knees, and hips. It usually starts after prolonged periods of activity, but it doesn't go away completely even when I rest. Sometimes, it becomes difficult for me to perform simple tasks because of this discomfort, and I find myself limping or needing to grab onto something for balance. The affected joints feel larger than usual, and they sometimes make a grating sound when I move them. My fingers, specifically the ends of my fingers, and the base of my thumb have become somewhat square",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you have any family members who were diagnosed with arthritis?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I don't recall anyone in my immediate family being diagnosed with arthritis. However, it seems to be a common condition among people as I've seen many friends and acquaintances dealing with its effects on their daily lives.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Do you experience any joint pain or stiffness?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I often feel aches and discomfort, particularly in my fingers and knees. It hurts when I try to bend them or walk long distances, especially after prolonged periods of inactivity. Sometimes it even makes me limp a bit. The pain tends to subside when I rest for a while, but it does keep me from doing certain things I used to enjoy.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of joint pain, stiffness, and deformity, as well as the presence of osteophytes (bone spurs) on X-ray, the final diagnosis is osteoarthritis. Osteoarthritis is a degenerative joint disease characterized by the gradual deterioration of cartilage, leading to bone-on-bone contact and subsequent inflammation. The most commonly affected joints include the hands, knees, hips, and spine. While there is no cure for osteoarthritis, treatment options include physical therapy, medications such as nonsteroidal anti-inflammatory drugs (NSAIDs), joint replacement surgery, and other interventions.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.75,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 115,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 120,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 38,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 84,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient uses everyday language, avoiding complex medical terms and explaining symptoms in a relatable manner."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently describes symptoms that align with osteoarthritis, including pain, stiffness, joint swelling, and functional limitations. However, some minor inconsistencies exist regarding the progression of symptoms and the specific joints involved."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient generally stays in character, describing personal experiences and observations without displaying knowledge of medical concepts or terminology. However, some subtle hints of medical awareness appear in Turn 2, where the patient mentions 'grating sounds' and 'square fingers,' which could indicate a slight deviation from the role."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation demonstrates strong adherence to the role, coherent symptom descriptions, and effective use of everyday language. While minor deviations occur, the overall performance showcases a good understanding of the condition and its impact on daily life. With further refinement, the patient could better navigate the nuances of the condition and maintain consistency throughout the conversation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions 1 and 3 were targeted and clinically relevant, but Question 2 was not directly related to the key symptoms of osteoarthritis. A more relevant question could have been 'Have you experienced any progressive joint pain or stiffness over time?'"
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 3,
+            "justification": "The final diagnosis of osteoarthritis was correct, considering the symptoms of joint pain, stiffness, and deformity, as well as the mention of osteophytes on X-ray. However, the explanation of the disease process was somewhat incomplete."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interaction, but did not fully engage in a patient-centered approach, instead providing some educational content without asking follow-up questions to clarify the patient's understanding."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient encounter demonstrated some strengths in diagnostic accuracy and professionalism, but fell short in terms of questioning technique and patient engagement. With further practice, the doctor could improve their ability to ask targeted and clinically relevant questions, while maintaining a patient-centered approach."
+    },
+    "llm_judge_total_out_of_20": 17
+}

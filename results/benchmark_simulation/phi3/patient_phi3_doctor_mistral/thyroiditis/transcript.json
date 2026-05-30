@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good day! Thanks for asking about how I feel; it helps me explain things better when we talk directly. Lately, my throat felt super sore, almost like there was always something annoying at that spot. And whenever I try having dinner, sometimes food doesn’t slide down easily—it feels stuck up here by my windpipe area. My hands were shaking more than usual too, which made chopping veggies quite tricky last weekend. Oh yeah, another thing – ever since starting one pill called amiodarona some time ago now, I put on extra pounds even though nothing much changed elsewise. Just didn't seem right so thought this must mean somethin'. Lastly, after delivering",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any symptoms of nausea, vomiting, or difficulty swallowing liquid in addition to the symptoms you mentioned?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I’ve been feeling unwell lately since it started this spring when I was run over by some kids playing near my place while they were throwing stones around wildly. They seemed really young and wouldn't stop even after being scolded several times – never seen such disrespect for elders! Before things went downhill healthwise, everything would just feel fine during dinner at our grandchild’s school activities—quiet mornings mostly where we discuss books together, nothing too exciting there except maybe hearing loud conversations outside about how busy folks seem always rushing past us without knowing their own names anymore. My wife Mary Jane who passed away last year used her garden tools quite often so she didn't",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any persistent headaches, dizziness, or memory issues since the accident, apart from the initial shock and pain?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Oh good morning, Doctor! Since I had this bad fall not too long ago... Well, my head hasn't been quite right lately either. Maybe there was that one time when everything just seemed spinny for no reason at all afterward? And sometimes it feels like folks call me over their left shoulder before they speak—makes remembering things trickier than usual. But surely it wasn’t anything major because nowadays seems normal again somewhat.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your balance or coordination since the fall, apart from the initial disorientation?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, I did feel quite off when I first fell last week – everything felt unsteady for one moment there. As for my throat area feeling sore nowad0r after that incident? Yes, it sure feels puffy down here where this arm used to rest against while standing up straight earlier today looking at how big it’s gotten compared to before we talked about all those different types...umm maybe just something minor though! Could they possibly mean arsenal by chance if their records mention another case nearby who had similar issues post injury—that sounds worrisome indeed considering our discussion prior regarding potential risks linked specifically relating directly towards thyroid conditions within ourselves alongside broader scope exploring diverse possible alternatives whilst",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms, including a sore throat, difficulty swallowing solids and liquids, hand tremors, unexplained weight gain, and cognitive impairment (headaches, dizziness, and memory issues), the final diagnosis is Subacute Thyroiditis. The clinical justification for this diagnosis is that these symptoms are commonly associated with inflammation of the thyroid gland, leading to temporary hyperthyroidism and hypothyroidism, which can cause various systemic manifestations as described by the patient. Additionally, the patient's recent history of trauma may have triggered the onset of thyroiditis, although further investigation would be necessary to confirm this association.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 93,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 111,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 72,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 119,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 20,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 93,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 1,
+            "justification": "The patient uses simple language, but occasionally slips into informal expressions ('somethin', 'worries') and unclear sentences ('ever since starting one pill called amiodarona')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 0,
+            "justification": "The patient's symptoms are inconsistent across turns and do not align with the clinical context provided. In Turn 1, the patient mentions sore throat, difficulty swallowing, hand tremors, and weight gain. In Turn 2, the patient claims to have been injured by children, which is unrelated to the symptoms mentioned in Turn 1. In Turn 3, the patient reports dizziness and confusion, which is unrelated to the previous symptoms. In Turn 4, the patient mentions a fall and a sore throat, but the connection between the two is unclear."
+        },
+        "role_adherence": {
+            "score_out_of_3": 0,
+            "justification": "The patient does not stay in character throughout the conversation. The patient's responses are disjointed and lack coherence, suggesting that the patient is not adhering to the role of a person experiencing thyroid-related symptoms."
+        },
+        "total_score_out_of_10": 1,
+        "overall_feedback": "This patient simulation lacks coherence and consistency, making it difficult to assess their symptoms accurately. The patient's responses are disjointed and lack a clear narrative, indicating a poor understanding of the clinical context and the role of a patient experiencing thyroid-related symptoms."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions, but they were not entirely clinically relevant to the specific case of thyroiditis. Questions about nausea, vomiting, and difficulty swallowing could be relevant, but the second and third questions seem unrelated to the key symptoms provided."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was close, but it was not entirely accurate. While the symptoms presented do suggest subacute thyroiditis, the presence of cognitive impairment (headaches, dizziness, and memory issues) might also point towards Riedel thyroiditis, especially considering the mention of difficulty swallowing solids and liquids. A more thorough consideration of the symptoms and potential causes is needed."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally stayed professional during the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This doctor showed promise in their questioning approach, but their diagnostic accuracy could improve by considering a broader range of possible conditions based on the patient's symptoms. Further training on thyroiditis cases, particularly those involving Riedel thyroiditis, would be beneficial."
+    },
+    "llm_judge_total_out_of_20": 8
+}

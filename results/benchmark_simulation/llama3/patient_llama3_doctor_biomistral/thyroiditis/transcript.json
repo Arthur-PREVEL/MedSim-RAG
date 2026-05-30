@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "It's nice to meet you too, doc. To be honest, I've been feeling pretty miserable lately. My throat hurts when I swallow food, and it feels like something's stuck there. Sometimes I get this weird lumpiness in my neck, especially when I eat or drink something hot. It's quite uncomfortable. And I've had this constant soreness in my neck for weeks now - it feels like someone's pinched me really hard. Sometimes it even radiates down into my chest. Oh, and I've noticed I'm getting rather tired easily, and my clothes feel tighter than they used to.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 97,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent weight loss?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't really lost much weight lately, but I do feel a bit tired all the time. It's like my batteries just drain quickly nowadays. And I've been having some trouble sleeping too. I wake up during the night feeling a bit hot and sweaty, which doesn't make for a good rest.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "sle"
+                ],
+                "word_count": 53,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or digestion recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dearie, I've been feeling like I'm not hungry as much as I used to be. My stomach's been a bit...off, if you know what I mean. Sometimes it feels like there's a knot in my gut. And eating doesn't seem to agree with me lately either. I've had some discomfort after meals, a little nausea here and there. It's not too bad, but it's definitely different than how I normally feel.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your weight or appetite?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dear, I've been feeling a bit sluggish lately, and my clothes feel tighter than they used to. I'm not sure if it's just my age catching up with me, but I've gained a few pounds over the past few months. As for appetite, well... I'm not hungry like I used to be. Meals seem like such an effort now. Sometimes I get so tired after eating that I think about taking a nap instead of doing anything else.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 78,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of difficulty swallowing, lumpiness in the neck, soreness in the neck, fatigue, and weight gain, the final diagnosis is thyroiditis. The patient's symptoms are consistent with those of hypothyroidism, which can be caused by thyroiditis. Hypothyroidism occurs when the thyroid gland does not produce enough thyroid hormones, leading to a variety of symptoms including fatigue, weight gain, and difficulty swallowing. The patient's symptoms of difficulty swallowing and lumpiness in the neck may also be indicative of a goiter, which is an enlargement of the thyroid gland due to hyperthyroidism. However, the patient's symptoms of fatigue, weight gain, and difficulty sleeping suggest that their thyroid function is actually underactive, indicating hypothyroidism.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 115,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 97,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "sle"
+                ],
+                "word_count": 53,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 71,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 78,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 7,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 115,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally uses colloquial expressions like 'dearie' and 'doc', which might not be typical in a real-life conversation."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes various symptoms, but some of them (e.g., soreness radiating to the chest) don't clearly align with the provided clinical context of thyroiditis. The connection between symptoms and potential causes is not always clear."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays within their role, but sometimes uses phrases that imply a level of self-awareness or introspection ('I'm not sure if it's just my age catching up with me'), which might not be characteristic of a patient in a real consultation."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and staying within their role. However, the coherence of symptoms and adherence to the role could be improved by providing more direct connections between symptoms and potential causes, and avoiding self-aware or introspective statements."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions were not targeted towards the specific symptoms of thyroiditis, such as neck pain, fever, or recent radiation exposure. They focused more on general symptoms like weight loss and appetite changes, which are not directly relevant to the clinical truth."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was partially accurate, as it mentioned hypothyroidism, which can be caused by thyroiditis. However, the explanation was incomplete and did not consider other possible causes of the patient's symptoms, such as postpartum thyroiditis or Riedel thyroiditis."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor stayed professional throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "The doctor showed some understanding of the patient's symptoms, but failed to ask targeted questions and provide a comprehensive diagnosis. Further training on thyroiditis and its various presentations would be beneficial."
+    },
+    "llm_judge_total_out_of_20": 12
+}

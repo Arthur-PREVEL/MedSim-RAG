@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "As Jean, the patient, I am feeling very sick. I have been having a lot of chest pain and coughing up a lot of sputum that is yellowish-green. I also feel very tired and dizzy, and it feels like my breathing is getting harder every day. Can you help me figure out why I'm feeling so unwell?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 57,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any fever or night sweats along with your other symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Hello there, I'm Jean. I apologize for not answering this earlier but I was just trying to gather my thoughts on how best to describe my symptoms in the simplest way possible. As for your question, unfortunately, yes I have been experiencing both fever and night sweats along with the other symptoms I mentioned before.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any unexplained weight loss or persistent cough?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER: I haven't experienced any weight loss, but I have been coughing up yellow mucus for about two weeks now. It started off small, but it's getting worse. Sometimes, the coughing feels so intense that it feels like my chest might explode. It's really starting to worry me, especially since I smoke occasionally. But I haven't been feeling sick otherwise, no fever or chills or anything.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 66,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed if your cough worsens after smoking?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I don't smoke, so it doesn't affect me.",
+            "score": {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Acute Bronchitis secondary to community-acquired pneumonia (CAP). The presence of productive cough characterized by yellowish-green sputum combined with systemic symptoms such as fatigue and shortness of breath suggests an infectious process within the respiratory tract; these findings align more closely with acute bronchitis rather than COPD exacerbation which would be expected from chronic heavy smokers without prior lung disease. Given the absence of significant risk factors apart from occasional cigarette use reported by the patient, we can infer that his condition may likely stem from recent bacterial colonization leading to inflammation of the airways consistent with acute bronchitis superimposed upon underlying susceptibility due to past exposure to irritants through smoking.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 112,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.25,
+        "doctor_avg_score": 10.0,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 57,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 55,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 66,
+                "total": 10
+            },
+            {
+                "length_score": 0,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 8,
+                "total": 7
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 112,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language effectively, avoiding complex medical terms in most turns, although they did mention 'yellowish-green' which could be considered somewhat technical."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "While the patient described several relevant symptoms, their Turn 3 response introduced inconsistent information regarding smoking habits, which contradicts the original statement in Turn 3. Additionally, the lack of fever and chills in Turn 3 seems inconsistent with the overall clinical context provided."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character throughout the conversation, but their Turn 4 response seemed out of place due to its abrupt correction of a previous statement, which detracted from the narrative flow."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, with effective use of everyday language and coherent symptom descriptions in many instances. However, inconsistencies in smoking habits and symptom reporting detracted from the overall believability of the scenario. With further refinement, the patient's responses could better align with the clinical context and maintain a more cohesive narrative."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were partially targeted but missed key symptoms such as pleuritic chest pain, altered mental status, and weight loss. Question 3 was not relevant to the case at hand."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect. The patient's symptoms suggest community-acquired pneumonia, not acute bronchitis. The presence of productive cough, fever, and dyspnea strongly point towards pneumonia, especially considering the lack of mention of alternative diagnoses such as COPD exacerbation."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This simulated doctor showed potential in maintaining professionalism but struggled with asking relevant questions and accurately diagnosing the patient's condition. They failed to consider critical symptoms associated with community-acquired pneumonia and instead jumped to an incorrect conclusion based on incomplete information."
+    },
+    "llm_judge_total_out_of_20": 12
+}

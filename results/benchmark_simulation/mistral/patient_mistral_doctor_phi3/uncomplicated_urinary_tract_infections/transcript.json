@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor, hello. I've been having a bit of discomfort when I go to the bathroom, it's painful actually. It feels like a sharp sting each time I pee. Besides that, I notice I'm going to the bathroom more frequently than usual. Also, sometimes I feel a sudden urge to go even though I've just gone a moment ago. I don't know if it matters, but my pee has been looking a bit cloudy recently too. Sometimes it has a strange smell. Other than that, I haven't really felt any sickness or unusual sensations. I hope this helps you understand what I'm dealing with.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 103,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in color such as blood or clumps?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, Doctor, I have observed some changes in the color of my urine. It seems to have a reddish tinge, and I've even noticed some small clots in there. This started a few days ago, and it's been causing me some discomfort while urinating. Should I be concerned?",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 48,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any recent injuries or engaged in activities that might cause trauma to your kidneys?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I haven't had any recent injuries or activities that could potentially harm my kidneys. I have been mindful to avoid anything that might lead to such issues given my age and overall health condition.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your urine color or frequency of urination?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doctor, I've noticed that my urine has become a bit darker lately, more like tea instead of its usual clear color. Also, I've had to go to the bathroom more frequently than usual during the night, even though I drink plenty of water throughout the day. Is it possible that I might have an infection?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Acute Cystitis (Uncomplicated)\nClinical Justification: The patient presents classic signs of cystitis including dysuria (painful urination), increased frequency and urgency of micturition, hematuria (reddish tint indicating potential presence of red blood cells), pyuria (cloudiness suggesting pus due to white blood cells). These findings align well with uncomplicated acute cystitis without evidence of systemic involvement or upper UTI which would suggest other diagnoses such as urethritis or prostatitis respectively. Given no reported fever, flank pain, nausea/vomiting, or significant past medical history indicative of complicated cases, simple lower tract inflammation is most likely at play here. Further investigation may include urinalysis for leukocyte esterase, nitrite, bacterial culture, especially considering the noted change from normal transparency to turbidity accompanied by foul odor; these tests will help confirm E. coli etiology commonly associated with community-acquired cystitis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 134,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 17.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 103,
+                "total": 10
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 48,
+                "total": 9
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 35,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 56,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 17,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 134,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language, avoiding complex medical terms and explaining their symptoms clearly."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient's symptoms were generally consistent with the clinical context provided, but they did not explicitly mention urinary frequency, hesitancy, or bladder spasms in Turn 1. They also mentioned hematuria in Turn 2, which is not typical for uncomplicated UTIs."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stayed in character and avoided acting like a doctor, but showed some awareness of medical concepts and terminology, particularly in Turns 2 and 4."
+        },
+        "total_score_out_of_10": 9,
+        "overall_feedback": "This patient simulation was strong in terms of natural language usage and symptom coherence, but could benefit from further attention to detail regarding the typical symptoms of uncomplicated UTIs and adherence to the patient role. The patient demonstrated good understanding of their symptoms and asked relevant questions, but occasionally displayed knowledge of medical concepts that may not be expected in a real-world scenario."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked some targeted questions but missed opportunities to inquire about key symptoms such as urinary frequency, hesitancy, urgency, and suprapubic pain or discomfort. Questions were also somewhat vague and did not directly address the possibility of atypical presentations in certain patient populations."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 1,
+            "justification": "The final diagnosis was incorrect because the patient's presentation was consistent with uncomplicated urinary tract infections rather than acute cystitis. The doctor incorrectly focused on the presence of hematuria and pyuria as definitive indicators of cystitis, overlooking the fact that these symptoms can also be present in uncomplicated UTIs."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This doctor simulation demonstrated some strengths in maintaining a professional tone, but struggled with asking clinically relevant questions and accurately diagnosing the condition. The doctor failed to consider alternative explanations for the patient's symptoms and relied too heavily on limited information. With further training and practice, this doctor could improve their critical thinking skills and diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 15
+}

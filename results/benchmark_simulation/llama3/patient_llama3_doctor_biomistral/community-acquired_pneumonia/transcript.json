@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Community-Acquired Pneumonia",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "I've just been feeling so miserable for days now. My body aches all over, especially my back and legs. It's hard to get comfortable, even lying down. And my chest feels tight, like someone's squeezing it. I've had this nasty cough too, and when I do cough, it brings up this yucky stuff - sorry, I don't know how else to describe it. I'm not really hungry, and my appetite is off. Sometimes I feel so tired, I just want to go back to bed. And last night, I woke up with this awful sensation in my chest... like I was breathing into a vacuum, you know?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 107,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent trauma or injury?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, nothing out of the ordinary. I slipped on the ice a few weeks ago, but that's about it. Nothing too serious, just a scrape on my hand. Other than that, I've been feeling pretty well, considering my age. Although... (coughs) Excuse me. It's this coughing that's been bothering me lately. I wake up at night with a terrible tickle in my chest, and it feels like there's something stuck in my throat. And sometimes I feel really short of breath when I'm walking upstairs or doing chores around the house. But I thought maybe it was just old bones creaking, you know? (smiles weakly)",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or weight recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven't been feeling very hungry lately. I've been making myself eat because I know I need to keep my strength up, but it's just not appetizing anything right now. Maybe it's just the soup and broth that's been sitting around in the fridge. But honestly, everything tastes kind of bland. And I think I might be losing weight too, 'cause my clothes feel looser than they used to be.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your energy levels or mood?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dearie, I've been feeling just exhausted lately. Can't seem to get out of bed without getting winded, if you know what I mean. And my joints ache something awful, especially after I've been sitting for a while. It's like my body is just heavy, like a weight is pressing down on me. As for my mood... well, I'm just not feeling myself, if you ask me. A bit down, a bit irritable. Just not my usual self.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of chest pain, cough, difficulty breathing, fatigue, loss of appetite, and weight loss, as well as their history of falling on ice a few weeks ago, the final diagnosis is community-acquired pneumonia. The patient's symptoms are consistent with those of pneumonia, and the fall may have contributed to the development of the condition.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.5,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 107,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 70,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 77,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 8,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 11,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, describing their symptoms in a relatable manner, although occasionally using metaphors ('like someone's squeezing it', 'breathing into a vacuum')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes symptoms consistent with pneumonia, including fever-like symptoms (body aches, fatigue), respiratory issues (chest tightness, cough, difficulty breathing), and decreased appetite. However, the absence of fever and some systemic symptoms (e.g., weakness, lethargy) could suggest an atypical presentation."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stays in character, describing their symptoms and experiences from their perspective. However, in Turn 2, they mention a recent slip and fall, which slightly disrupts the coherence of their narrative."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrates a good balance between symptom description and adherence to role. While the patient effectively conveys their experiences, there are moments where they deviate from their character's persona or introduce extraneous information. With refinement, this simulation could more convincingly portray a patient with pneumonia, particularly in terms of symptom coherence and role adherence."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 1,
+            "justification": "The questions were not targeted towards the key symptoms of pneumonia, such as respiratory issues, fever, or cough. They were more focused on general health and lifestyle questions."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "While the doctor considered the patient's symptoms, they did not fully account for atypical presentations of pneumonia, such as the absence of fever in immunocompromised patients. However, the final diagnosis was generally accurate given the provided information."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interaction, asking questions and providing a clear diagnosis without deviating from a medical role."
+        },
+        "total_score_out_of_10": 6,
+        "overall_feedback": "This simulated doctor demonstrated good diagnostic accuracy but could improve by asking more targeted questions about specific symptoms related to pneumonia. Additionally, they should consider alternative diagnoses that might present differently in certain populations."
+    },
+    "llm_judge_total_out_of_20": 13
+}

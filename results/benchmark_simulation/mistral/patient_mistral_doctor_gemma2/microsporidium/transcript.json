@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "mistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Hello there, Doctor. I've been feeling unusually tired and weak lately, and I've noticed strange dots appearing on my skin. They seem to change color from day to day, but mostly blackish in tone. I'm also having trouble breathing deeply and sometimes feel a shortness of breath. It's as if something is occupying space within me, making it harder to take a full breath. I've also lost my appetite recently, and foods don't taste as vibrant as they once did.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 80,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent fever or chills?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I've noticed that my body has been feeling unusually hot at times, and I've had episodes of shivering, too. It's been quite uncomfortable and worrying.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your sweating patterns?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, doctor, I've noticed something unusual about my sweating recently. It seems to be much heavier than before, and sometimes I feel clammy or damp even when it's not particularly hot outside. My clothes seem to get wet more easily, too. Could this be something normal or should I be concerned?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Are these episodes of excessive sweating accompanied by any other symptoms, like rapid heartbeat or dizziness?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Dear Doctor, I've noticed that I've been sweating more than usual lately. This isn't just during exercise or hot weather, but even when I'm sitting still or at rest. I didn't notice anything else unusual along with it, such as a fast heartbeat or feeling lightheaded or dizzy. However, sometimes I feel a bit tired, but I attribute that to getting older. If there's something specific you're looking for, please let me know. Thank you.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 75,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:**  Microsporidiosis\n\n**CLINICAL JUSTIFICATION:** The patient presents with fatigue, weakness, dyspnea (shortness of breath), skin lesions, fever, chills, and hyperhidrosis (excessive sweating). These symptoms, especially the presence of atypical skin lesions and respiratory distress, are highly suggestive of microsporidiosis, a parasitic infection often affecting immunocompromised individuals. \n\n\nLet me know if you have any other medical histories you'd like me to review!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.5,
+        "doctor_avg_score": 8.5,
+        "total_grade_out_of_20": 18.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 80,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 26,
+                "total": 8
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 51,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 75,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 8,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 9,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 62,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient uses everyday language, but occasionally mentions 'vibrant' which could imply some medical knowledge. However, overall, the language is clear and easy to understand."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient describes fatigue, skin changes, difficulty breathing, loss of appetite, and sweating issues, which could be related to various conditions. However, the connection between these symptoms and the provided clinical context is unclear."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient stays in character, but occasionally slips into a somewhat formal tone ('Could this be something normal or should I be concerned?')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation shows some promise, but lacks clarity in connecting symptoms to the provided clinical context. The language is generally accessible, but minor lapses into more formal tone detract from the realism. With further refinement, this patient could convincingly portray a person experiencing symptoms related to microsporidia infection."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the specific symptoms of microsporidiosis, such as skin lesions, respiratory distress, or immunocompromised state. They were general and did not cover key aspects of the condition."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of microsporidiosis was incorrect because the provided symptoms (fever, chills, excessive sweating, etc.) could be associated with various conditions, and there was no clear indication of the typical skin lesions or respiratory distress commonly seen in microsporidiosis. Additionally, the patient's immunocompromised status was not established."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview, avoiding acting like a patient."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This simulated doctor-patient interaction demonstrated poor question quality and diagnostic accuracy. The doctor failed to ask targeted questions about the patient's symptoms and history, leading to an incorrect diagnosis. However, the doctor remained professional during the interaction."
+    },
+    "llm_judge_total_out_of_20": 10
+}

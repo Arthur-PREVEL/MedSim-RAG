@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "BioMistral/BioMistral-7B-DARE",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "biomistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning, Doctor. *coughs slightly* I've been feeling quite uncomfortable lately. My stomach's been acting up something awful. You see, I had a lovely bowl of oatmeal for breakfast yesterday, but ever since then, I've had this...this...I don't know how to describe it...this gnawing sensation in my belly. It feels like someone's poking me from the inside out. And after meals, I feel rather bloated, if you know what I mean. * winces slightly*\n\nOh, and I've also been having these dreadful nightmares. I dreamt I was drowning in a lake, but when I woke up, I felt so thirsty! My mouth felt like the Sahara desert. I couldn",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 109,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or weight?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, doc. I've been feeling rather off lately. To be honest, my appetite hasn't been the same since my sister passed away last year. I just don't feel like eating much, and when I do, it's just little nibbles here and there. As for weight, well... I think I might have lost a bit, but I'm not sure. My clothes still fit, but I feel like I've shrunk somehow. My joints ache more easily than before too. Now, I know that's probably just old age, but still... It's hard to shake off these feelings, you know?\n\nAnd you know what really gets me? Is this exhaustion. I get tired so easily nowadays. Just walking from",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your mood or energy levels recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, I'm so tired all the time lately. It's like I've lost my spring in my step. Even just walking from the car to the doctor's office has me huffing and puffing. And don't even get me started on trying to remember things - my mind feels foggy, like someone's left a thick blanket over my brain. I'm just not feeling like myself anymore. My wife, Edna, she's been telling me to take it easy and rest more, but I feel like I should be doing something productive, you know? I'm worried about getting old, but I want to stay active, keep up with my garden and our grandkids... (sigh) Sorry, it's just",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your appetite or weight recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning, doc. I've been feelin' kinda off lately. My stomach's been acting up, if you know what I mean. Sometimes I'm hungry, sometimes I'm not. And my meals haven't been agreeing with me too well either. To be honest, I think I've lost a bit of weight since last summer. Not that I'm complainin', mind you! It's just...I don't know, I feel lighter, somehow. But I'm still eatin' plenty, I think. My wife always says I've got a good appetite. Now, what about that cough I've had goin' on for weeks? That's really gettin' to me.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 97,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms of abdominal pain, bloating, and loss of appetite, as well as their recent change in weight, I would recommend further testing for microsporidia infection. Microsporidia is a parasitic infection that can cause gastrointestinal symptoms such as diarrhea, abdominal pain, and weight loss. The patient's history of consuming oatmeal, which is a common food source for microsporidia, also supports this diagnosis. Additionally, the patient's report of nightmares and fatigue could be related to the infection. Further testing, such as a stool sample or blood test, may be necessary to confirm the diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 96,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 109,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 116,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 97,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 10,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 12,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 11,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 96,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses colloquial expressions and everyday language, but occasionally slips into vague descriptions of symptoms ('feels like someone's poking me from the inside out') and unclear explanations ('my mind feels foggy, like someone's left a thick blanket over my brain')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient reports multiple unrelated symptoms across different turns, including gastrointestinal issues, fatigue, memory problems, and a cough. These symptoms do not appear to be consistently connected to a specific underlying condition."
+        },
+        "role_adherence": {
+            "score_out_of_3": 0,
+            "justification": "The patient frequently deviates from their role as a concerned patient seeking medical advice, instead providing tangential information (e.g., discussing their sister's passing, their garden, or their wife's opinions). They also exhibit a lack of concern for their own health, stating 'not that I'm complainin'' and expressing relief at losing weight."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This patient simulation demonstrates inconsistent symptom reporting, unclear explanations, and a lack of adherence to their role as a concerned patient. While they use colloquial language, their responses often stray from the topic at hand, making it challenging to diagnose and address their concerns effectively."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions asked were not targeted towards the key symptoms of microsporidium infection, such as gastrointestinal issues, and did not cover the patient's exposure to potential sources of the infection."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis was incorrect as microsporidium infection does not typically cause nightmares and fatigue, and there is no established link between oatmeal consumption and microsporidium infection."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional during the interview, but failed to maintain a neutral tone and showed a bias towards a specific diagnosis based on incomplete information."
+        },
+        "total_score_out_of_10": 2,
+        "overall_feedback": "The doctor's performance was subpar due to inadequate questioning and a misinformed diagnosis. They failed to consider the key symptoms and risk factors associated with microsporidium infection, leading to an inaccurate diagnosis. A more thorough and evidence-based approach is required to improve diagnostic accuracy."
+    },
+    "llm_judge_total_out_of_20": 5
+}

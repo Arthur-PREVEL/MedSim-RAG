@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Achlorhydria",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, lately my tummy has been really bothering me.  I get this burning feeling right up here, just below my ribs. Sometimes it feels like something is churning inside me.  And I've been losing weight without even trying, not that that's something I mind too much at my age! But I haven't been able to keep my food down sometimes either, makes me feel real queasy.   Just an all-around yucky feeling most days.  Hope you can figure out what's wrong.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any frequent heartburn or acid reflux symptoms along with these abdominal issues?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Yes, I get a lot of burning in my chest lately, especially after meals. Sometimes it even comes up into my throat.  It's just awful.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 25,
+                "total": 7
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any symptoms such as heartburn, acid regurgitation, or difficulty swallowing associated with this chest burning, especially at night or when lying down?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "\"Yes, I have. Sometimes it feels like there's something hot rising up from my stomach and then it just kinda...burns.\"",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any symptoms related to heartburn, such as acid reflux or chest pain after eating?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doc, I have been having some discomfort right up here after meals. It feels kind of like a burning sensation, sometimes even goes up my throat a little.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 29,
+                "total": 7
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the patient's symptoms, including persistent abdominal pain, weight loss, nausea, and frequent heartburn or acid reflux, the final diagnosis is Gastroesophageal Reflux Disease (GERD). The clinical justification for this diagnosis is that the patient's symptoms align with common signs of GERD, such as recurrent acid reflux, chest pain, and difficulty swallowing, which are exacerbated by lying down or consuming food. Additionally, the patient's reported achlorhydria, a condition characterized by low or absent gastric acid secretion, may contribute to the development and persistence of GERD symptoms.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 17.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 25,
+                "total": 7
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 20,
+                "total": 8
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "oa"
+                ],
+                "word_count": 29,
+                "total": 7
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 15,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 25,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 17,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 87,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 4,
+            "justification": "The patient used everyday language throughout the conversation, avoiding complex medical terms and explaining their symptoms in simple, relatable ways."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient consistently described symptoms related to acid reflux or gastroesophageal reflux disease (GERD), such as epigastric pain, heartburn, nausea, and postprandial fullness, but did not explicitly mention achlorhydria until the end of Turn 4."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The patient generally stayed in character and avoided acting like a doctor, asking for help and describing their symptoms rather than providing diagnoses or treatment suggestions."
+        },
+        "total_score_out_of_10": 10,
+        "overall_feedback": "This patient simulation was strong across all aspects, effectively conveying their symptoms and concerns in a clear, non-medical manner while staying within the role of a patient seeking medical attention."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "The doctor asked targeted questions about heartburn and acid reflux symptoms, but failed to explore other key symptoms such as epigastric pain, bloating, diarrhea, and decreased position and vibration sense, which are also prevalent in achlorhydria."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Gastroesophageal Reflux Disease (GERD) was incorrect because it did not account for the underlying cause of achlorhydria, which is the primary condition described in the clinical truth. The symptoms presented were more indicative of achlorhydria itself rather than GERD."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor maintained a professional demeanor throughout the interview and avoided acting like a patient."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "While the doctor demonstrated some understanding of the patient's symptoms, they failed to accurately diagnose the underlying condition due to a narrow focus on secondary symptoms. A more comprehensive approach would have led to a correct diagnosis of achlorhydria."
+    },
+    "llm_judge_total_out_of_20": 15
+}

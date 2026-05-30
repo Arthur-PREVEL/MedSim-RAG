@@ -1,0 +1,217 @@
+{
+    "pathology_target": "Microsporidium",
+    "patient_model": "BioMistral/BioMistral-7B-DARE",
+    "doctor_model": "google/gemma-2-9b-it",
+    "patient_model_key": "biomistral",
+    "doctor_model_key": "gemma2",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Answer from Patient (Jean): Hi there, Doctor. I am currently experiencing a lot of pain around my chest area. It feels like someone is stabbing me with a needle from within. It started a few days ago when I felt a little cramping sensation. But now it's become really intense. I also feel extremely tired and sometimes shortness of breath. Is this normal?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Does the pain radiate down your arm or jaw?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am Jean, a 70-year-old patient, and currently experiencing the symptoms of a microsporidian infection. The infection that I am dealing with was initially discovered in a small fish named Gluge in 1838. It was named Glugea anomala by the scientist who found it. The microscopic organism was later identified as Nosema bombycis in 1857. This disease affected silkworms and caused a terrible disease to spread among the silk industry worldwide. The disease eventually led to the development of Pasteur's germ theory of disease. Although scientists believe Microsporidia is degenerate, the characteristics of this organism include an o",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "microsporidia"
+                ],
+                "word_count": 98,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you recently traveled or been exposed to contaminated water?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "ANSWER FROM PATIENT: I have traveled to Asia last year where I went white-water rafting and camping. I was always careful about eating food from street vendors or restaurants but my friends made me try a worm soup because \"it would be an adventure.\" Turns out, I got really sick afterward and had intense pain all over my body. It feels like tiny needles are pricking me from within. How did I get such a strange disease from slurping down worms?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Did this pain come on suddenly after eating the soup, or has it been gradually worsening?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I am Jean, a 70-year-old patient. My symptoms started recently, and I have noticed some unusual discomfort in my stomach. It seems like I get these strange pains in my tummy whenever I eat something, especially soup. I don't see any obvious reason why I would feel pain, but it happens every time. Sometimes it feels like someone is stabbing me in the abdomen with a knife. The pain comes on suddenly, and it feels very sharp. I hope you can help me figure out what's going on.",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 88,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "**FINAL DIAGNOSIS:**  Microsporidiosis\n\n**CLINICAL JUSTIFICATION:** The patient presents with sudden onset, sharp chest pain radiating to other areas, fatigue, and shortness of breath. Her recent travel history and consumption of raw/undercooked animal products (worm soup) strongly suggest ingestion of a parasite, consistent with microsporidiosis. \n\n\nLet me know if you'd like to explore specific diagnostic tests or treatment options!",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 9.75,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 63,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "microsporidia"
+                ],
+                "word_count": 98,
+                "total": 9
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 81,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 88,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 9,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 10,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 58,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "Patient uses everyday language in turns 1, 3, and 4, but uses technical terms 'microsporidian infection' in turn 2, indicating some knowledge of the subject matter."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "Symptoms described in turns 1 and 4 seem inconsistent with the clinical context provided, which focuses on a parasitic infection affecting silkworms. Turn 3 hints at a possible connection to the topic, but the narrative is unclear."
+        },
+        "role_adherence": {
+            "score_out_of_3": 1,
+            "justification": "Patient deviates from the role in turn 2 by providing a lengthy, informative passage about microsporidia rather than describing personal experiences or feelings."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This patient simulation demonstrates some strengths in using everyday language and expressing physical sensations, but struggles with coherence and staying in character. The narrative jumps between unrelated topics and fails to effectively connect the symptoms to the provided clinical context."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "Questions were not targeted towards identifying the key symptoms of microsporidiosis such as gastrointestinal issues, respiratory problems, or skin manifestations. Questions focused more on general pain and exposure to contaminated water, which are not directly relevant to the diagnosis of microsporidiosis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of microsporidiosis was incorrect because the provided symptoms (sharp chest pain radiating to other areas, fatigue, and shortness of breath) could be indicative of various conditions, including heart disease, pneumonia, or musculoskeletal disorders. There was no clear connection made between the symptoms and the actual cause of microsporidiosis, which involves the ingestion of a parasite through contaminated food or water."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor stayed professional throughout the interview, but failed to establish a rapport with the patient and did not ask follow-up questions to clarify the patient's symptoms or medical history."
+        },
+        "total_score_out_of_10": 2,
+        "overall_feedback": "This doctor-patient interaction demonstrated significant gaps in questioning and diagnostic skills. The doctor failed to identify key symptoms associated with microsporidiosis and provided an inaccurate diagnosis. To improve, the doctor should focus on asking targeted questions about the patient's medical history, symptoms, and potential exposures to parasites. Additionally, the doctor should consider ordering diagnostic tests to confirm the diagnosis before providing a final conclusion."
+    },
+    "llm_judge_total_out_of_20": 7
+}

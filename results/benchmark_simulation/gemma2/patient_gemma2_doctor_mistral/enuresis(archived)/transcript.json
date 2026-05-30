@@ -1,0 +1,221 @@
+{
+    "pathology_target": "Enuresis(Archived)",
+    "patient_model": "google/gemma-2-9b-it",
+    "doctor_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "patient_model_key": "gemma2",
+    "doctor_model_key": "mistral",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Well, doctor,  I just can't seem to stay dry at night anymore.  It's been happening quite often lately, maybe a couple nights a week, even though I haven't had an accident since I was a kid.   I sometimes feel embarrassed and uncomfortable about it.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 44,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you noticed any changes in your fluid intake or consumption of diuretics before these bedwetting episodes occur?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, no, not really. I try to drink water throughout the day, but I wouldn't say I've been drinking more or less than usual. And I don't take any special medications.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your urine color, frequency, or consistency recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, lately I've been having accidents more often, mostly at night.  And sometimes when I go to the bathroom, it feels like I just can't even empty myself fully.",
+            "score": {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 29,
+                "total": 8
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you noticed any changes in your frequency of urination during the day or any burning sensation while urinating?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Well, lately I've been going to the bathroom a little more often than usual, especially in the evenings.  And sometimes, when I pee, it feels kind of scratchy. Like something is irritating me.",
+            "score": {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 33,
+                "total": 8
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Based on the provided history, the patient appears to be experiencing Nocturnal Enuresis (bedwetting). The clinical justification for this diagnosis is that the patient reports frequent nighttime bedwetting incidents without a clear correlation to increased fluid intake or use of diuretics, and also mentions occasional difficulty emptying their bladder and a scratchy sensation while urinating, which could indicate bladder irritation or dysfunction. However, further investigation may be necessary to rule out other potential underlying conditions such as urinary tract infections or neurological issues.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 83,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 8.25,
+        "doctor_avg_score": 7.75,
+        "total_grade_out_of_20": 16.0,
+        "patient_turn_scores": [
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 44,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 31,
+                "total": 9
+            },
+            {
+                "length_score": 1,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 29,
+                "total": 8
+            },
+            {
+                "length_score": 2,
+                "jargon_score": 3,
+                "role_score": 3,
+                "jargon_found": [
+                    "ra"
+                ],
+                "word_count": 33,
+                "total": 8
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 18,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 19,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 83,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, avoiding complex medical terms, but occasionally slipped into somewhat formal tone ('I try to drink water throughout the day')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but there were inconsistencies (e.g., initially stating they hadn't had an accident since childhood, later mentioning recent frequent accidents)."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but occasionally exhibited behaviors more typical of a healthcare provider (e.g., asking if they'd been drinking more or less water 'than usual', rather than describing their own habits)."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation demonstrated some strengths in using everyday language and staying within the role, but struggled with symptom coherence and occasionally adopting a more formal or healthcare-provider-like tone. With further refinement, the patient could improve by maintaining consistency in their narrative and adhering more closely to the patient perspective."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 2,
+            "justification": "Questions were somewhat targeted but missed key aspects of the DSM-5 criteria, such as the impact on daily life and the presence of nocturnal or diurnal subtypes. Questions did not adequately cover the need to rule out differential diagnoses like urinary tract infections or constipation."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The diagnosis of Nocturnal Enuresis was partially accurate, but the reasoning was incomplete. The doctor failed to consider the lack of information about the patient's voiding diary, which would have provided crucial data on the patient's voiding patterns, hydration history, and urge to urinate. Additionally, the doctor did not fully address the possibility of underlying conditions like urinary tract infections or neurological issues."
+        },
+        "role_adherence": {
+            "score_out_of_3": 3,
+            "justification": "The doctor generally maintained a professional demeanor throughout the interview, avoiding acting like a patient. However, there were some minor lapses in tone and language that could be improved upon."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This simulated doctor-patient interaction showed promise, but fell short in several areas. While the doctor demonstrated a good understanding of the key symptoms and diagnostic criteria for enuresis, they failed to ask comprehensive questions and provide a thorough explanation for their diagnosis. To improve, the doctor should focus on gathering more detailed information about the patient's voiding patterns, hydration history, and potential underlying conditions. With refinement, this doctor has the potential to become highly effective in diagnosing and treating patients with enuresis."
+    },
+    "llm_judge_total_out_of_20": 14
+}

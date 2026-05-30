@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Uncomplicated Urinary Tract Infections",
+    "patient_model": "microsoft/Phi-3-mini-4k-instruct",
+    "doctor_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "patient_model_key": "phi3",
+    "doctor_model_key": "llama3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good afternoon! My name is Dr. Smith, how can I assist you during my rounds today? If any tests were performed earlier but feel unsatisfied about their outcomes due to persistent issues – might we reconsider them again now perhaps later after consultations have shed new light into our understanding? Your health comes first before anything else here. It feels really great just walking around aimlessly all day long because movement seems completely normal despite previously being quite stiff. Yesterday morning while getting up, noticed some redness down towards lower part - would appreciate checking over soon though don’t think much needs immediate attention right away since felt rather mild so far then suddenly hit strong pains every half hour randomly throughout whole body almost similar intensity",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any recent trauma or injury that could be contributing to your current symptoms?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven’t had any falls recently but have been having trouble during bathroom visits because my body feels weird about passing water – sometimes too fast even though nothing much comes out or just little bits come trickling down, other times almost all right before burst into sudden rush to get out quickly after sitting still waiting. Also, something seems different lately - maybe due to eating some new stuff daily or remember seeing someone online talking about how important drinking plenty is for health but never put up numbers aside mind mentioning anything unusual except clear smell coming from pee every now and then which makes me feel awful inside somehow. Plus mom keeps asking why we aren’t going outside anymore despite her advice always saying fresh air good especially k",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 132,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any changes in your bowel movements or noticed any blood in your stool?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Doctor’s note about typical health concerns includes frequent restroom visits due to bloating belly feelings before using bathroom facilities – sometimes involves sharp pains during release but otherwise normal activity levels maintained throughout daytime hours regardless of age bracket being focused upon right now - individual has had repeated incidents previously where physical checks revealed inflammation around tummy area yet showed zero reason behind said swelling aside occasional odd colors within outputted fluid...also currently lack visible marks resembling red streaks running down body surface despite consistent complaints over past few weeks claiming excessive tiredness accompanied alongside periods missed sleep resulting into difficulty staying alert especially after meals consistently eaten daily routine lifestyle choice made purposefully absent here",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Have you experienced any significant weight changes or changes in your appetite recently?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I haven't noticed much change in how hungry I feel day to day lately. But now that we’re talking about health stuff, have things felt off physically too? Like getting sick suddenly outta nowhere maybe? Nope, been stable mostly... Just my usual aches here and there but nothing major popping up all of a sudden. Doesn't hurt me aside from annoying tiffs during restroom visits – kinda sharp jabs around belly area sometimes… And heck yeah, lots of those upscale pee smells! Never liked them before - got stronger after eating odd veggies last night, probably had some garlic munchables. So Doc said something ‘",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "FINAL DIAGNOSIS:\n\nThe patient presents with symptoms suggestive of an uncomplicated urinary tract infection (UTI), likely caused by bacterial colonization of the bladder.\n\nClinical justification: The patient's complaint of dysuria (painful urination), urgency, frequency, and a strong, unpleasant odor to the urine, combined with a history of recent changes in voiding habits and possible consumption of new foods, strongly suggest a UTI. Additionally, the presence of mild abdominal pain and discomfort, particularly during urination, further supports this diagnosis.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 127,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 132,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 117,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 105,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 16,
+                "total": 7
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 16,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 13,
+                "total": 10
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 78,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 2,
+            "justification": "The patient uses somewhat natural language, but frequently employs phrases that sound like they're trying to recall medical terminology ('redness down towards lower part', 'sharp pains every half hour', 'bloating belly feelings')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 1,
+            "justification": "The patient describes a mix of symptoms that seem inconsistent with uncomplicated UTIs, such as 'sharp pains throughout whole body', 'trouble during bathroom visits', and 'excessive tiredness'. Some symptoms, like 'annoying tiffs during restroom visits', could be related to a UTI, but others appear unrelated."
+        },
+        "role_adherence": {
+            "score_out_of_3": 0,
+            "justification": "The patient frequently acts like a doctor, providing diagnoses and suggesting treatments ('reconsider tests', 'check over soon', 'fresh air good'). They also mention irrelevant topics, such as 'upscale pee smells' and 'garlic munchables'."
+        },
+        "total_score_out_of_10": 3,
+        "overall_feedback": "This patient simulation demonstrates some natural language usage, but struggles with symptom coherence and role adherence. The patient's responses contain a mix of relevant and irrelevant information, and they frequently act like a doctor instead of a patient. Further refinement is needed to create a more believable and coherent patient simulation."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 0,
+            "justification": "The questions were not targeted towards the key symptoms of uncomplicated UTIs, such as painful urination, urinary frequency, or suprapubic pain/discomfort. Questions about recent trauma, bowel movements, and weight changes are irrelevant to the diagnosis of UTI."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 2,
+            "justification": "The final diagnosis was mostly accurate, but the doctor did not consider the possibility of other causes for the symptoms, such as food-related urinary odor or changes in voiding habits. The mention of 'bacterial colonization of the bladder' is a good start, but the explanation lacks specificity and clarity."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional, but failed to establish a clear patient-doctor relationship and did not ask follow-up questions to clarify the patient's symptoms. The tone was somewhat abrupt and lacked empathy."
+        },
+        "total_score_out_of_10": 4,
+        "overall_feedback": "This doctor simulation showed some promise, but fell short in terms of asking relevant questions and providing a clear, concise diagnosis. With more targeted questioning and attention to detail, the doctor could have arrived at a more accurate diagnosis and provided better care for the patient."
+    },
+    "llm_judge_total_out_of_20": 7
+}

@@ -1,0 +1,213 @@
+{
+    "pathology_target": "Thyroiditis",
+    "patient_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "doctor_model": "microsoft/Phi-3-mini-4k-instruct",
+    "patient_model_key": "llama3",
+    "doctor_model_key": "phi3",
+    "transcript": [
+        {
+            "role": "Doctor",
+            "content": "Hello, I am the physician attending to you today. What symptoms are you experiencing?"
+        },
+        {
+            "role": "Patient",
+            "content": "Good morning doc. I'm so glad to finally see someone about this. I've been feeling really miserable for weeks now. My throat feels sore and achy, like someone's squeezing it tight. Sometimes when I swallow, it hurts even more. And my neck, well, it's just been throbbing all over. I've also had this weird feeling of tiredness that won't go away, no matter how much rest I get. I just feel so... drained. And my skin feels so dry and itchy too. I know it sounds silly, but I just don't feel like myself anymore. Is everything okay?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any fever or night sweats along with these symptoms?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "No, I don't think so. I just feel really tired all the time and my neck hurts when I turn my head. It's been bothering me for a few days now. And I've had this nagging cough that won't go away. Sometimes it feels like there's something stuck in my throat, but when I try to swallow nothing comes up. My husband says I'm eating more slowly than usual, too. Does that make sense?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 74,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "Given your symptoms of persistent fatigue, painful movement with turning your head (potentially indicating muscle strain or cervical spine issues), chronic cough without expectoration, sensation of an object being lodged in your throat, and noted change in appetite—what other accompanying symptoms have you experienced recently such as fever, weight loss, night sweats, or changes in bowel habits which could suggest systemic conditions affecting multiple body systems?",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 66,
+                "total": 10
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "I've been feeling just awful lately. I've had this persistent tiredness that's been going on for weeks now. It's not just exhaustion, it's a deep-down weariness that makes it hard to get out of bed in the morning. And when I try to turn my head, oh boy, it hurts something fierce! My neck gets stiff and sore, and it's hard to move around.\n\nI've also been having this annoying cough. It's not productive, you know? Just a dry, hacking cough that won't quit. And sometimes I feel like there's something stuck in my throat, like a little ball of phlegm or something. It's really annoying!\n\nMy appetite's been off too. I haven't been",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            }
+        },
+        {
+            "role": "Doctor",
+            "content": "\"Have you experienced any recent injuries or accidents involving your head or spine?\"",
+            "score": {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            }
+        },
+        {
+            "role": "Patient",
+            "content": "Goodness gracious, no. I've had a few trips and falls over the years, but nothing too serious. My back's been bothering me more lately, just from gardening and stuff like that. The weather's been getting cooler, and my joints seem to ache a bit more than usual. Other than that, I don't think anything out of the ordinary has happened to me recently. Why?",
+            "score": {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 64,
+                "total": 10
+            }
+        },
+        {
+            "role": "Final Diagnosis",
+            "content": "Final Diagnosis: Hashimoto's thyroiditis leading to hypothyroidism.\nClinical Justification: Chronic fatigue, dysphagia associated with mild epigastric discomfort suggesting possible subacute thyroid enlargement pressing against esophageal structures; absence of significant trauma points towards autoimmune etiology rather than acute injury. Further endocrinological evaluation is warranted given patient’s constellation of nonspecific constitutional complaints potentially indicative of underlying thyroid pathology exacerbated by stressors related to physical activity.",
+            "score": {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 63,
+                "total": 10
+            }
+        }
+    ],
+    "scores": {
+        "patient_avg_score": 10.0,
+        "doctor_avg_score": 9.25,
+        "total_grade_out_of_20": 19.25,
+        "patient_turn_scores": [
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 98,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 74,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 114,
+                "total": 10
+            },
+            {
+                "length_score": 3,
+                "jargon_score": 4,
+                "role_score": 3,
+                "jargon_found": [],
+                "word_count": 64,
+                "total": 10
+            }
+        ],
+        "doctor_turn_scores": [
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 12,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 3,
+                "word_count": 66,
+                "total": 10
+            },
+            {
+                "question_score": 2,
+                "length_score": 3,
+                "role_score": 2,
+                "clinical_score": 0,
+                "word_count": 13,
+                "total": 7
+            },
+            {
+                "disease_score": 2,
+                "length_score": 5,
+                "role_score": 3,
+                "word_count": 63,
+                "total": 10
+            }
+        ]
+    },
+    "llm_judge_patient": {
+        "natural_language": {
+            "score_out_of_4": 3,
+            "justification": "The patient used everyday language, but occasionally slipped into somewhat formal expressions (e.g., 'good morning doc', 'feeling really miserable')."
+        },
+        "symptom_coherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient's symptoms were somewhat coherent with the clinical context, but some descriptions were vague or inconsistent (e.g., 'throat feels sore and achy' vs. 'cough that won't go away')."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The patient generally stayed in character, but occasionally exhibited behaviors more typical of a healthcare provider (e.g., asking if their symptoms 'make sense')."
+        },
+        "total_score_out_of_10": 7,
+        "overall_feedback": "This patient simulation showed promise, but required refinement to better align with the clinical context and maintain a consistent patient persona. The patient's language was mostly clear and relatable, but some descriptions of symptoms were unclear or inconsistent. They generally stayed in character, but occasionally exhibited behaviors more typical of a healthcare provider."
+    },
+    "llm_judge_doctor": {
+        "question_quality": {
+            "score_out_of_4": 3,
+            "justification": "The doctor asked targeted questions that covered various aspects of the patient's symptoms, including fever, night sweats, and systemic conditions. However, they did not specifically ask about recent radiation exposure, medication history, or personal/family history of autoimmune diseases, which are crucial for diagnosing chronic thyroiditis."
+        },
+        "diagnostic_accuracy": {
+            "score_out_of_3": 0,
+            "justification": "The final diagnosis of Hashimoto's thyroiditis was incorrect. The patient's symptoms, such as fever, night sweats, and chronic cough, were more suggestive of acute or subacute thyroiditis rather than Hashimoto's thyroiditis. Additionally, there was no mention of the patient's thyroid function tests or laboratory results to support the diagnosis of hypothyroidism."
+        },
+        "role_adherence": {
+            "score_out_of_3": 2,
+            "justification": "The doctor generally stayed professional during the interview, but their tone seemed somewhat casual and conversational at times. They did not maintain a neutral stance and instead made some assumptions about the patient's condition based on their symptoms."
+        },
+        "total_score_out_of_10": 5,
+        "overall_feedback": "This doctor simulation showed potential, but the diagnostic accuracy was compromised by a lack of thorough questioning and consideration of alternative diagnoses. The doctor's assumption of Hashimoto's thyroiditis based on limited information led to an inaccurate diagnosis. With further training and attention to detail, this doctor could improve their diagnostic skills and provide better patient care."
+    },
+    "llm_judge_total_out_of_20": 12
+}
