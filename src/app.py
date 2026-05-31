@@ -18,7 +18,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 # ==========================================
 # FILE PATHS & MODEL REGISTRY SETUP
 # ==========================================
-# Assuming app.py is in /script/ and images are in /images/
+# Assuming app.py is in /src/ and images are in /images/
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMG_DIR = os.path.join(BASE_DIR, "../images")
 
