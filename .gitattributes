@@ -1,0 +1,9 @@
+# Force line break normalization for code and text*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+
+# Strictly declare images as binaries (prevent Git from modifying them)
+*.png binary
+*.ico binary
+*.jpg binary
