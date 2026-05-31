@@ -37,7 +37,7 @@ This project was developed as part of the **INF 3600 - Generative Artificial Int
 
 A massive portion of the workload for this project was dedicated to rigorous MLOps benchmarking. Validating a medical AI system manually is methodologically flawed and impossible to scale. To solve this, we engineered a fully automated **Tri-Agent Sandbox**.
 
-Before deploying the dual-agent application for human users, we replaced the human medical student with an automated **"Doctor Agent"**. By deploying a combinatorial evaluation matrix across 5 different open-weight models (acting interchangeably as the Patient, Doctor, and Judge), we generated and evaluated extensive automated clinical interactions. 
+Before deploying the dual-agent application for human users, we replaced the human medical student with an automated **"Doctor Agent"**. By deploying a combinatorial evaluation matrix across 5 different open-weight models (acting interchangeably as the Patient, Doctor, and Judge), we generated and evaluated extensive automated clinical interactions.
 
 This intensive research phase was crucial to:
 * **Benchmark Reasoning Limits:** Evaluate model performances across varying parameter sizes (from 3.8B to 9B) on complex medical traps.
@@ -55,7 +55,6 @@ We highly recommend using a dedicated Conda environment to avoid dependency conf
 ```bash
 conda create -n medsim_env python=3.11
 conda activate medsim_env
-
 ```
 
 ### 2. Install Dependencies
@@ -64,7 +63,6 @@ Install the required packages. The `requirements.txt` is pre-configured to downl
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
 ---
@@ -78,7 +76,6 @@ To build the complete RAG database locally, run the scraper. It will use `pubmed
 
 ```bash
 python etl/web_scrapping.py
-
 ```
 
 *⚠️ **Note:** This process respects server rate limits and will take several hours to complete. For immediate testing, the repository includes a lightweight `knowledge_base_extract.json`.*
@@ -89,7 +86,6 @@ To launch the interactive clinical simulator designed for human medical students
 
 ```bash
 streamlit run app.py
-
 ```
 
 This boots the dual-agent environment, featuring dynamic VRAM swapping to fit heavily quantized 7B-9B parameter models onto a single 16GB GPU.
@@ -102,29 +98,17 @@ Run the flagship algorithms in the following order:
 
 1. **Generate the interactions:**
 ```bash
-
-```
-
-
-
 python scripts/run_benchmark.py
-
 ```
-2. **Extract and aggregate the JSON data into a CSV:**
-   ```bash
-python scripts/extract_results.py
 
+2. **Extract and aggregate the JSON data into a CSV:**
+```bash
+python scripts/extract_results.py
 ```
 
 3. **Generate metrological visualizations:**
 ```bash
-
-```
-
-
-
 python scripts/generate_graphs.py
-
 ```
 
 You can view the final metrics, including sycophancy bias and clinical reasoning variance, inside the `/results/graphs/` directory.
@@ -133,10 +117,8 @@ You can view the final metrics, including sycophancy bias and clinical reasoning
 
 ## 👨‍💻 Authors & Acknowledgments
 
-* **Arthur Prevel** 
-* **Aloïs Kamber** 
+* **Arthur Prevel**
+* **Aloïs Kamber**
 
-Developed at **UiT - The Arctic University of Norway**.
+Developed at **UiT - The Arctic University of Norway**.  
 Data sourced ethically from the **NCBI StatPearls Database**.
-
-```
