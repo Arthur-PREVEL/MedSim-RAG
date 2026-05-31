@@ -18,9 +18,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 # ==========================================
 # FILE PATHS & MODEL REGISTRY SETUP
 # ==========================================
-# Assuming app.py is in /src/ and images are in /images/
+# Assuming app.py is at the root and images are in /images/
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-IMG_DIR = os.path.join(BASE_DIR, "../images")
+IMG_DIR = os.path.join(BASE_DIR, "images")
 
 ICON_PATH = os.path.join(IMG_DIR, "medsim_logo.ico")
 LOGO_PATH = os.path.join(IMG_DIR, "medsim_logo.png")
@@ -136,7 +136,7 @@ def load_model_dynamic(model_id):
 
 @st.cache_data
 def load_knowledge_base():
-    path = os.path.join(BASE_DIR, '../data/knowledge_base_extract.json')
+    path = os.path.join(BASE_DIR, 'data/knowledge_base_extract.json')
     if os.path.exists(path):
         with open(path, 'r', encoding='utf-8') as f:
             return json.load(f)
