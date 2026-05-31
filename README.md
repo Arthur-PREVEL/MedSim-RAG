@@ -1,6 +1,6 @@
 <div align="center">
   <h1>
-    <img src="./images/medsim_logo.png" alt="MedSim Logo" width="40" style="vertical-align: middle; margin-right: 10px;"/>
+    <img src="images/medsim_logo.png" alt="MedSim Logo" width="40" style="vertical-align: middle; margin-right: 10px;"/>
     MedSim: High-Fidelity Clinical Simulator
   </h1>
   <p><i>An AI-powered medical simulation ecosystem secured by RAG and evaluated via MLOps benchmarking.</i></p>
