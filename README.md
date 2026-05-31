@@ -71,7 +71,7 @@ pip install -r requirements.txt
 
 ### Phase 1: Data Engineering (ETL)
 
-To respect GitHub file size limits and copyright distributions, the full database of 9,500+ pathologies is **not included** in this repository.
+To respect GitHub file size limits and copyright distributions, the full database of 4,500+ pathologies is **not included** in this repository.
 To build the complete RAG database locally, run the scraper. It will use `pubmed-statpearls-set.txt` as a seed to query the NCBI database.
 
 ```bash
