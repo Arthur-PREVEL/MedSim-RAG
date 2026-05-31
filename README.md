@@ -14,7 +14,7 @@ Before diving into the code, watch our full system demonstration showcasing the 
 
 <div align="center">
   <a href="https://youtu.be/M3fey_6fyeY">
-    <img src="images/app_screenshot.png/>
+    <img src="https://img.youtube.com/vi/M3fey_6fyeY/maxresdefault.jpg" alt="MedSim Demo Video" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"/>
   </a>
   <br>
   <p><i>👉 Click the image above to watch the MedSim Demo on YouTube 👈</i></p>
