@@ -56,7 +56,7 @@ def extract_validated_data(nbk_id):
         return None
 
 # --- GLOBAL EXECUTION ---
-# Adjusted paths based on the new directory structure (/scripts and /data)
+# Adjusted paths based on the new directory structure (/etl and /data)
 input_file = '../data/pubmed-statpearls-set.txt'
 output_file = '../data/knowledge_base_clean.json'
 
