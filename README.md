@@ -12,7 +12,13 @@
 
 Before diving into the code, watch our full system demonstration showcasing the dynamic VRAM swapping and our customizable Multi-Agent Engine, allowing you to seamlessly switch between 5 different LLMs (Llama-3, Gemma-2, Mistral, BioMistral, and Phi-3) for both the RAG-augmented Patient and the Virtual Professor:
 
-👉 **[Watch the MedSim Demo on YouTube](https://youtu.be/M3fey_6fyeY)** 👈
+<div align="center">
+  <a href="https://youtu.be/M3fey_6fyeY">
+    <img src="https://img.youtube.com/vi/M3fey_6fyeY/maxresdefault.jpg" alt="MedSim Demo Video" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"/>
+  </a>
+  <br>
+  <p><i>👉 Click the image above to watch the MedSim Demo on YouTube 👈</i></p>
+</div>
 
 ---
 
