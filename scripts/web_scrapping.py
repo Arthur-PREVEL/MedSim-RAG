@@ -61,7 +61,7 @@ def extract_validated_data(nbk_id):
         return None
 
 # --- MAIN EXECUTION ---
-ids = extract_ids_from_file('pubmed-statpearls-set.txt')
+ids = extract_ids_from_file('data/pubmed-statpearls-set.txt')
 knowledge_base = []
 
 print(f" Analysis started: {len(ids)} IDs detected.")
