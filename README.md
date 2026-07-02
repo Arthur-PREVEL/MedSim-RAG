@@ -1,56 +1,66 @@
+![License: Proprietary](https://img.shields.io/badge/License-Proprietary_&_All_Rights_Reserved-red.svg)
+
+> **Copyright Notice:** This repository is a portfolio showcase. The code is made available for viewing purposes only. No reproduction, modification, or distribution is allowed without explicit written permission from the authors. See the `LICENSE` file for more details.
+
 <div align="center">
   <h1>
     <img src="images/medsimlogo.png" alt="MedSim Logo" width="40" style="vertical-align: middle; margin-right: 10px;"/>
     MedSim: High-Fidelity Clinical Simulator
   </h1>
-  <p><i>An AI-powered medical simulation ecosystem secured by RAG and evaluated via MLOps benchmarking.</i></p>
+  <p><i>An AI-powered medical simulation ecosystem secured by RAG and evaluated via an MLOps benchmarking pipeline.</i></p>
 </div>
 
 ---
 
-## 🎥 Project Demonstration
+## Project Demonstration
 
-Before diving into the code, watch our full system demonstration showcasing the dynamic VRAM swapping and our customizable Multi-Agent Engine, allowing you to seamlessly switch between 5 different LLMs (Llama-3, Gemma-2, Mistral, BioMistral, and Phi-3) for both the RAG-augmented Patient and the Virtual Professor:
+The following video demonstrates the complete system architecture in action, highlighting the dynamic VRAM swapping mechanism and the customizable Multi-Agent Engine. The interface allows seamless transition between various Instruction-Tuned models (Llama-3, Gemma-2, Mistral, BioMistral, Phi-3) for both the Patient Agent and the Supervisor Agent.
 
 <div align="center">
   <a href="https://youtu.be/sl_wyVNGyYw?si=X8N37PXTsvnKNsEK">
-    <img src="https://img.youtube.com/vi/sl_wyVNGyYw/maxresdefault.jpg" alt="MedSim Demo Video" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"/>
+    <img src="https://img.youtube.com/vi/sl_wyVNGyYw/maxresdefault.jpg" alt="MedSim Demo Video" width="700" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
   </a>
   <br>
-  <p><i>👉 Click the image above to watch the MedSim Demo on YouTube 👈</i></p>
+  <p><i>Click the image above to watch the MedSim Demo on YouTube</i></p>
 </div>
 
 ---
 
-## 📖 Overview
+## Executive Summary
 
-Clinical interviewing is a cornerstone of medical practice, yet students lack a "safe space" to make clinical errors and receive immediate expert feedback. **MedSim** solves this by providing a dual-agent simulation environment:
+Clinical interviewing is a cornerstone of medical practice, yet scalable environments for students to practice diagnostic formulation and receive immediate expert feedback remain limited. **MedSim** addresses this gap by providing a dual-agent simulation environment:
 
-1. **The Patient Agent:** A RAG-augmented LLM that simulates realistic symptoms based on validated medical literature, stripped of medical jargon.
-2. **The Supervisor Agent (LLM-as-a-Judge):** A highly analytical evaluator that grades the student's clinical reasoning, diagnostic accuracy, and patient safety protocols.
+1. **The Patient Agent:** A Retrieval-Augmented Generation (RAG) LLM that simulates realistic symptoms based on validated medical literature. It is strictly prompted to avoid medical jargon and prevent diagnostic leakage.
+2. **The Supervisor Agent (LLM-as-a-Judge):** A highly analytical evaluator that grades the student's clinical reasoning, diagnostic accuracy, and patient safety protocols, outputting deterministic JSON reports.
 
-This project was developed as part of the **INF 3600 - Generative Artificial Intelligence** course at **UiT The Arctic University of Norway**.
+## Technical Architecture & Innovations
+
+### Dynamic VRAM Swapping
+A core constraint of the project was running multiple heavily quantized 7B-9B parameter models concurrently on a single NVIDIA Tesla V100 (16GB GPU) to optimize infrastructure costs. To prevent Out-Of-Memory (OOM) crashes, we engineered a state-managed Dynamic VRAM Swapping protocol. The memory is explicitly purged (`torch.cuda.empty_cache()`) and models are swapped on the fly between the interview phase and the grading phase.
+
+### MLOps Evaluation Factory (The Tri-Agent Sandbox)
+To validate the pedagogical accuracy of the system at scale, we developed an automated benchmarking pipeline. By replacing the human user with a "Doctor Agent", we ran a combinatorial evaluation matrix across 5 open-weight models.
+
+This automated metrology phase allowed us to:
+* Evaluate model reasoning capabilities and context window limits across complex clinical scenarios.
+* Quantitatively measure and mitigate LLM vulnerabilities, such as compliance bias (sycophancy) and medical hallucinations.
+* Identify the most rigorous LLM pairings for production deployment.
+
+## Technical Stack
+
+* **Language:** Python 3.11
+* **Deep Learning Frameworks:** PyTorch (CUDA 12.1), Hugging Face Transformers, Accelerate
+* **Optimization:** BitsAndBytes (4-bit NF4 Quantization)
+* **Frontend:** Streamlit
+* **Data Engineering:** BeautifulSoup (ETL parsing), Pandas
 
 ---
 
-## 🔬 Research & Metrology: The Tri-Agent Sandbox
-
-A massive portion of the workload for this project was dedicated to rigorous MLOps benchmarking. Validating a medical AI system manually is methodologically flawed and impossible to scale. To solve this, we engineered a fully automated **Tri-Agent Sandbox**.
-
-Before deploying the dual-agent application for human users, we replaced the human medical student with an automated **"Doctor Agent"**. By deploying a combinatorial evaluation matrix across 5 different open-weight models (acting interchangeably as the Patient, Doctor, and Judge), we generated and evaluated extensive automated clinical interactions.
-
-This intensive research phase was crucial to:
-* **Benchmark Reasoning Limits:** Evaluate model performances across varying parameter sizes (from 3.8B to 9B) on complex medical traps.
-* **Expose Critical LLM Flaws:** Detect and analyze behaviors such as compliance bias (sycophancy), persona drift, and medical hallucinations.
-* **Determine Optimal Pairings:** Mathematically identify the safest and most rigorous model combinations to deploy in the final production UI.
-
----
-
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### 1. Environment Preparation
 
-We highly recommend using a dedicated Conda environment to avoid dependency conflicts, especially regarding PyTorch and CUDA versions.
+To ensure compatibility with CUDA 12.1 and specific hardware optimizations, deploying within an isolated Conda environment is highly recommended.
 
 ```bash
 conda create -n medsim_env python=3.11
@@ -59,66 +69,61 @@ conda activate medsim_env
 
 ### 2. Install Dependencies
 
-Install the required packages. The `requirements.txt` is pre-configured to download the PyTorch version compatible with CUDA 12.1 (optimized for V100/Sigma2 nodes).
-
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-## ⚙️ How to Use MedSim
+## Usage Guide
+
+The repository is structured around three main execution phases.
 
 ### Phase 1: Data Engineering (ETL)
 
-To respect GitHub file size limits and copyright distributions, the full database of 4,500+ pathologies is **not included** in this repository.
-To build the complete RAG database locally, run the scraper. It will use `pubmed-statpearls-set.txt` as a seed to query the NCBI database.
+To respect repository size limits and data licensing, the full database of 4,500+ pathologies is not distributed. You must run the scraper to build the complete RAG database locally, using the provided `pubmed-statpearls-set.txt` seed.
 
 ```bash
 python etl/web_scrapping.py
 ```
 
-*⚠️ **Note:** This process respects server rate limits and will take several hours to complete. For immediate testing, the repository includes a lightweight `knowledge_base_extract.json`.*
+*(Note: This pipeline enforces rate limits to respect NCBI server policies and will take several hours. A lightweight `knowledge_base_extract.json` is provided for immediate UI testing).*
 
-### Phase 2: The Interactive UI (Streamlit)
+### Phase 2: Interactive Web Application
 
-To launch the interactive clinical simulator designed for human medical students:
+To launch the client-facing clinical simulator:
 
 ```bash
 streamlit run app.py
 ```
 
-This boots the dual-agent environment, featuring dynamic VRAM swapping to fit heavily quantized 7B-9B parameter models onto a single 16GB GPU.
+### Phase 3: MLOps Benchmarking Pipeline
 
-### Phase 3: The MLOps Evaluation Factory
+To run the automated model evaluation factory and generate the statistical metrics:
 
-To objectively determine which LLM makes the best pedagogical judge, the system includes a fully automated benchmarking pipeline. It evaluates models like Meta Llama-3, Google Gemma-2, Mistral, BioMistral, and Phi-3.
+1. **Execute the Multi-Agent Interactions:**
 
-Run the flagship algorithms in the following order:
-
-1. **Generate the interactions:**
 ```bash
 python scripts/run_benchmark.py
 ```
 
-2. **Extract and aggregate the JSON data into a CSV:**
+2. **Data Aggregation:** Parse the generated JSON outputs into a centralized CSV dataset.
+
 ```bash
 python scripts/extract_results.py
 ```
 
-3. **Generate metrological visualizations:**
+3. **Data Visualization:** Generate the performance heatmaps and variance boxplots (outputs saved to `/results/graphs/`).
+
 ```bash
 python scripts/generate_graphs.py
 ```
 
-You can view the final metrics, including sycophancy bias and clinical reasoning variance, inside the `/results/graphs/` directory.
-
 ---
 
-## 👨‍💻 Authors & Acknowledgments
+## Authors & Context
 
-* **Arthur Prevel**
-* **Aloïs Kamber**
+* **Arthur Prevel** (ISIS Castres)
+* **Aloïs Kamber** (CESI)
 
-Developed at **UiT - The Arctic University of Norway**.  
-Data sourced ethically from the **NCBI StatPearls Database**.
+Developed as part of the **INF 3600 - Generative Artificial Intelligence** course at **UiT The Arctic University of Norway** (Tromsø). Data sourced ethically from the NCBI StatPearls Database.
